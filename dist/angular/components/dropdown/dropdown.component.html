@@ -1,0 +1,27 @@
+<!-- Pajamas-inspired (MIT) -->
+<div class="gl-dropdown" (document:click)="close()">
+  <button type="button" class="gl-dropdown-toggle" [disabled]="disabled" (click)="toggle(); $event.stopPropagation()">
+    <span>{{ text }}</span>
+    <span class="gl-dropdown-caret" aria-hidden="true"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+  </button>
+  <div class="gl-dropdown-menu" *ngIf="open" (click)="$event.stopPropagation()" role="menu">
+    <ng-container *ngFor="let item of items">
+      <div *ngIf="item.header" class="gl-dropdown-header">{{ item.label }}</div>
+      <div *ngIf="item.divider" class="gl-dropdown-divider"></div>
+      <div
+        *ngIf="!item.header && !item.divider"
+        class="gl-dropdown-item"
+        [class.gl-is-checked]="item.checked"
+        [class.gl-is-disabled]="item.disabled"
+        role="menuitem"
+        (click)="onSelect(item)"
+      >
+        <span class="gl-dropdown-check" aria-hidden="true"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8.5 6.5 12 13 4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="gl-dropdown-label">{{ item.label }}</span>
+      </div>
+    </ng-container>
+    <div class="gl-dropdown-clear" *ngIf="showClearAll">
+      <button type="button" class="gl-clear-all" (click)="clearAll()">Clear all</button>
+    </div>
+  </div>
+</div>

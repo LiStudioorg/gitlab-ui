@@ -1,0 +1,153 @@
+/* Pajamas-inspired (MIT, from shared design tokens) */
+.gl-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: var(--gl-zindex-4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--gl-spacing-scale-5);
+  background-color: var(--gl-color-alpha-dark-40);
+}
+.gl-modal {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: var(--gl-spacing-scale-48);
+  max-height: calc(100vh - var(--gl-spacing-scale-10));
+  overflow: hidden;
+  background-color: var(--gl-background-color-default);
+  color: var(--gl-text-color-default);
+  border-radius: var(--gl-modal-border-radius);
+  box-shadow: var(--gl-shadow-lg);
+  animation: gl-modal-in 160ms ease-out;
+}
+.gl-modal--sm {
+  max-width: var(--gl-spacing-scale-30);
+}
+.gl-modal--lg {
+  max-width: var(--gl-spacing-scale-75);
+}
+.gl-modal--leaving {
+  animation: gl-modal-out 130ms ease-in forwards;
+}
+@keyframes gl-modal-in {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes gl-modal-out {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+}
+.gl-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--gl-spacing-scale-3);
+  padding: var(--gl-spacing-scale-4) var(--gl-spacing-scale-5);
+  border-bottom: 1px solid var(--gl-border-color-subtle);
+}
+.gl-modal-title {
+  margin: 0;
+  font-size: var(--gl-heading-scale-500-font-size);
+  font-weight: var(--gl-font-weight-bold);
+  line-height: var(--gl-line-height-28);
+  color: var(--gl-text-color-heading);
+}
+.gl-modal-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--gl-spacing-scale-2);
+  border: 0;
+  border-radius: var(--gl-border-radius-default);
+  background: transparent;
+  color: var(--gl-text-color-subtle);
+  cursor: pointer;
+}
+.gl-modal-close:hover {
+  background-color: var(--gl-color-alpha-dark-6);
+}
+.gl-modal-close:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--gl-focus-ring-inner-color), 0 0 0 4px var(--gl-focus-ring-outer-color);
+}
+.gl-modal-body {
+  padding: var(--gl-spacing-scale-5);
+  font-size: var(--gl-font-size-base);
+  line-height: var(--gl-line-height-24);
+  overflow-y: auto;
+}
+.gl-modal-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: var(--gl-spacing-scale-3);
+  padding: var(--gl-spacing-scale-4) var(--gl-spacing-scale-5);
+  border-top: 1px solid var(--gl-border-color-subtle);
+}
+.gl-modal-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gl-spacing-scale-2);
+  min-height: var(--gl-spacing-scale-8);
+  padding: 0 var(--gl-spacing-scale-4);
+  border: 1px solid var(--gl-border-color-default);
+  border-radius: var(--gl-button-border-radius);
+  font: inherit;
+  font-size: var(--gl-font-size-base);
+  font-weight: var(--gl-font-weight-bold);
+  cursor: pointer;
+}
+.gl-modal-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--gl-focus-ring-inner-color), 0 0 0 4px var(--gl-focus-ring-outer-color);
+}
+.gl-modal-btn--default {
+  background-color: var(--gl-action-neutral-background-color-default);
+  color: var(--gl-action-neutral-foreground-color-default);
+  border-color: var(--gl-border-color-default);
+}
+.gl-modal-btn--default:hover {
+  background-color: var(--gl-action-neutral-background-color-hover);
+  border-color: var(--gl-border-color-strong);
+}
+.gl-modal-btn--confirm {
+  background-color: var(--gl-button-confirm-primary-background-color-default);
+  color: var(--gl-button-confirm-primary-foreground-color-default);
+  border-color: var(--gl-button-confirm-primary-border-color-default);
+}
+.gl-modal-btn--confirm:hover {
+  background-color: var(--gl-button-confirm-primary-background-color-hover);
+}
+.gl-modal-btn--danger {
+  background-color: var(--gl-button-danger-primary-background-color-default);
+  color: var(--gl-button-danger-primary-foreground-color-default);
+  border-color: var(--gl-button-danger-primary-border-color-default);
+}
+.gl-modal-btn--danger:hover {
+  background-color: var(--gl-button-danger-primary-background-color-hover);
+}
+@media (max-width: 576px) {
+  .gl-modal-footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .gl-modal-footer .gl-modal-btn {
+    width: 100%;
+  }
+}
+

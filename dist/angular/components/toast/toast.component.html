@@ -1,0 +1,8 @@
+<!-- Pajamas-inspired (MIT) -->
+<div class="gl-toast-stack" *ngIf="visible">
+  <div class="gl-toast" role="status" aria-live="polite">
+    <div class="gl-toast-body">{{ message }}</div>
+    <button *ngIf="action" type="button" class="gl-toast-action" (click)="onAction()">{{ action.text }}</button>
+    <button type="button" class="gl-toast-close" (click)="dismiss()" aria-label="Dismiss"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+  </div>
+</div>

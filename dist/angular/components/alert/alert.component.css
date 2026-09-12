@@ -1,0 +1,28 @@
+/* Pajamas-inspired (MIT) */
+:host { display: block; }
+.gl-alert {
+  display: flex; align-items: flex-start; gap: 12px; padding: 12px 16px;
+  border: 1px solid var(--gl-alert-info-border-color);
+  border-radius: var(--gl-alert-border-radius);
+  background-color: var(--gl-alert-info-background-color);
+  color: var(--gl-text-color-default);
+}
+.gl-alert-success { background-color: var(--gl-alert-success-background-color); border-color: var(--gl-alert-success-border-color); }
+.gl-alert-success .gl-alert-title { color: var(--gl-alert-success-title-color); }
+.gl-alert-warning { background-color: var(--gl-alert-warning-background-color); border-color: var(--gl-alert-warning-border-color); }
+.gl-alert-warning .gl-alert-title { color: var(--gl-alert-warning-title-color); }
+.gl-alert-danger { background-color: var(--gl-alert-danger-background-color); border-color: var(--gl-alert-danger-border-color); }
+.gl-alert-danger .gl-alert-title { color: var(--gl-alert-danger-title-color); }
+.gl-alert-icon-container {
+  display: inline-flex; margin-top: 2px;
+  color: var(--gl-feedback-info-icon-color);
+}
+.gl-alert-content { flex: 1; }
+.gl-alert-title { margin: 0 0 4px; font-size: 14px; font-weight: 700; color: var(--gl-alert-info-title-color); }
+.gl-alert-body { font-size: 14px; }
+.gl-alert-close {
+  border: 0; background: transparent; cursor: pointer; padding: 4px;
+  color: var(--gl-text-color-subtle); display: inline-flex;
+}
+.gl-alert-close:hover { color: var(--gl-text-color-strong); }
+.gl-alert-sticky { position: sticky; top: 0; z-index: 2; }

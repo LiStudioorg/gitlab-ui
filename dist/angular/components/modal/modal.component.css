@@ -1,0 +1,49 @@
+/* Pajamas-inspired (MIT) */
+.gl-modal-backdrop {
+  position: fixed; inset: 0; z-index: var(--gl-zindex-4);
+  display: flex; align-items: center; justify-content: center;
+  background-color: var(--gl-color-alpha-dark-40);
+}
+.gl-modal {
+  width: 100%; display: flex; flex-direction: column; overflow: hidden;
+  background-color: var(--gl-background-color-default);
+  border-radius: var(--gl-modal-border-radius);
+  box-shadow: var(--gl-shadow-lg);
+}
+.gl-modal-sm { max-width: 20rem; }
+.gl-modal-md { max-width: 24rem; }
+.gl-modal-lg { max-width: 48rem; }
+.gl-modal-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 16px 8px;
+}
+.gl-modal-title {
+  margin: 0; font-size: var(--gl-heading-scale-500-font-size);
+  color: var(--gl-text-color-strong); font-weight: 600;
+}
+.gl-modal-close {
+  border: 0; background: transparent; cursor: pointer;
+  color: var(--gl-text-color-subtle);
+  display: inline-flex; padding: 4px;
+}
+.gl-modal-close:hover { color: var(--gl-text-color-strong); }
+.gl-modal-body { padding: 16px; font-size: 14px; color: var(--gl-text-color-default); }
+.gl-modal-footer {
+  display: flex; justify-content: flex-start; gap: 8px;
+  padding: 16px; border-top: 1px solid var(--gl-border-color-default);
+}
+.gl-modal-btn {
+  font: inherit; font-size: 14px; font-weight: 600; line-height: 20px;
+  padding: 6px 12px; border-radius: 8px; cursor: pointer;
+}
+.gl-modal-btn.gl-secondary {
+  background-color: var(--gl-button-default-primary-background-color-default);
+  color: var(--gl-button-default-primary-foreground-color-default);
+  border: 1px solid var(--gl-button-default-primary-border-color-default);
+}
+.gl-modal-btn.gl-primary {
+  background-color: var(--gl-button-confirm-primary-background-color-default);
+  color: var(--gl-button-confirm-primary-foreground-color-default);
+  border: 1px solid transparent;
+}
+@media (max-width: 640px) { .gl-modal-footer { flex-direction: column; } }

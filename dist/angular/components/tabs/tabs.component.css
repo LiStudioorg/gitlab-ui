@@ -1,0 +1,28 @@
+/* Pajamas-inspired (MIT) */
+:host { display: block; }
+.gl-tabs-wrapper { border-bottom: 1px solid var(--gl-border-color-default); }
+.gl-tabs-nav { display: flex; }
+.gl-tab-nav-item {
+  position: relative; border: 0; background: transparent; cursor: pointer;
+  font: inherit; font-size: var(--gl-font-size-base);
+  padding: 16px 16px; color: var(--gl-text-color-default);
+  display: inline-flex; align-items: center; gap: 8px;
+}
+.gl-tab-nav-item::before {
+  content: ''; position: absolute; left: 0; right: 0; bottom: -1px; height: 2px;
+  background-color: transparent;
+}
+.gl-tab-nav-item:hover::before { background-color: var(--gl-border-color-strong); }
+.gl-tab-nav-item.gl-tab-nav-item-active {
+  font-weight: 700; color: var(--gl-text-color-strong);
+}
+.gl-tab-nav-item.gl-tab-nav-item-active::before {
+  background-color: var(--gl-tab-selected-indicator-color-default);
+}
+.gl-tab-count {
+  background-color: var(--gl-badge-neutral-background-color-default);
+  color: var(--gl-badge-neutral-text-color-default);
+  border-radius: var(--gl-border-radius-full);
+  font-size: 12px; padding: 0 8px; line-height: 18px;
+}
+.gl-tab-content { padding: 12px 0; font-size: var(--gl-font-size-base); }

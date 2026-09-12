@@ -1,0 +1,16 @@
+<!-- Pajamas-inspired (MIT) -->
+<div *ngIf="visible" class="gl-modal-backdrop" (click)="onBackdrop($event)">
+  <div class="gl-modal" [ngClass]="classes" role="dialog" aria-modal="true" [attr.aria-label]="title">
+    <div class="gl-modal-header">
+      <h4 class="gl-modal-title">{{ title }}</h4>
+      <button type="button" class="gl-modal-close" (click)="onClose()" aria-label="Close"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+    </div>
+    <div class="gl-modal-body">
+      <ng-content></ng-content>
+    </div>
+    <div class="gl-modal-footer" *ngIf="primaryAction || secondaryAction">
+      <button *ngIf="secondaryAction" type="button" class="gl-modal-btn gl-secondary" (click)="onSecondary()">{{ secondaryAction.text }}</button>
+      <button *ngIf="primaryAction" type="button" class="gl-modal-btn gl-primary" (click)="onPrimary()">{{ primaryAction.text }}</button>
+    </div>
+  </div>
+</div>

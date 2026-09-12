@@ -1,0 +1,15 @@
+gitlab-ui-kit
+Copyright 2026 li63050a
+
+This product includes content derived from GitLab Pajamas, @gitlab/ui and
+@gitlab/svgs, which are licensed under the MIT License (see LICENSE-MIT).
+The original MIT copyright notice and permission notice are retained and
+apply to all such derived content.
+
+New content added in this repository (including component implementations
+for additional frameworks, build scripts, adapters and documentation) is
+licensed under the Apache License, Version 2.0 (see LICENSE).
+
+This is not an official GitLab project and is not affiliated with, endorsed
+by, or sponsored by GitLab Inc. No GitLab logo, tanuki graphic, GitLab
+trademark or GitLab Sans font files are included or used.

@@ -1,0 +1,9 @@
+<!-- Pajamas-inspired (MIT) -->
+<a *ngIf="href" class="gl-badge" [ngClass]="tokenTag" [href]="href">
+  <span class="gl-badge-icon" *ngIf="icon" aria-hidden="true"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><circle cx="8" cy="8" r="3.5" fill="currentColor"/></svg></span>
+  <span class="gl-badge-content"><ng-content></ng-content></span>
+</a>
+<span *ngIf="!href" class="gl-badge" [ngClass]="tokenTag">
+  <span class="gl-badge-icon" *ngIf="icon" aria-hidden="true"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><circle cx="8" cy="8" r="3.5" fill="currentColor"/></svg></span>
+  <span class="gl-badge-content"><ng-content></ng-content></span>
+</span>

@@ -1,4 +1,4 @@
-/** Tailwind config generated from GitLab Pajamas tokens (MIT).
+/** Tailwind config generated from Pajamas-inspired tokens (MIT).
  * 用法：module.exports = { presets: [require('./tailwind.config.js')] }
  * 颜色值引用 CSS 变量以便暗色模式工作；需额外引入 dist/css/variables.css。 */
 const colors = {
@@ -1268,10 +1268,10 @@ module.exports = {
 },
       fontFamily: {
   "monospace": [
-    "var(--default-mono-font, 'GitLab Mono'),'GitLab Mono','JetBrains Mono',Menlo,'DejaVu Sans Mono','Liberation Mono',Consolas,'Ubuntu Mono','Courier New','andale mono','lucida console',monospace"
+    "var(--default-mono-font, 'JetBrains Mono'),'JetBrains Mono','JetBrains Mono',Menlo,'DejaVu Sans Mono','Liberation Mono',Consolas,'Ubuntu Mono','Courier New','andale mono','lucida console',monospace"
   ],
   "regular": [
-    "var(--default-regular-font, 'GitLab Sans'),'GitLab Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Noto Sans',Ubuntu,Cantarell,'Helvetica Neue',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji'"
+    "var(--default-regular-font, 'Inter'),'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Noto Sans',Ubuntu,Cantarell,'Helvetica Neue',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji'"
   ]
 }
     }

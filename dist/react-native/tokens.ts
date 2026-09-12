@@ -1,4 +1,4 @@
-//  GitLab Pajamas design tokens (MIT)
+//  Pajamas-inspired design tokens (MIT)
 //  Generated from @gitlab/ui by scripts/build-tokens.js. Do not edit.
 
 export const colors = {

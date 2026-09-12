@@ -1,4 +1,4 @@
-//  GitLab Pajamas design tokens (MIT)
+//  Pajamas-inspired design tokens (MIT)
 //  Generated from @gitlab/ui by scripts/build-tokens.js. Do not edit.
 
 // Element Plus 主题 tokens（设置 CSS 变量）。
@@ -12,5 +12,5 @@ export const pajamasElementColors = {
   '--el-color-info': '#428fdc',
   '--el-text-color-primary': '#3a383d',
   '--el-border-radius-base': '8px',
-  '--el-font-family': 'GitLab Sans, Inter, sans-serif',
+  '--el-font-family': 'Inter, sans-serif',
 };

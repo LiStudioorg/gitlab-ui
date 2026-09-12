@@ -1,0 +1,26 @@
+<!-- Pajamas-inspired (MIT) -->
+<div class="gl-table-wrap">
+  <table class="gl-table">
+    <thead>
+      <tr>
+        <th
+          *ngFor="let field of fields"
+          [class.gl-sortable]="field.sortable"
+          (click)="onSort(field)"
+        >
+          <span class="gl-th-label">{{ field.label }}</span>
+          <span class="gl-th-arrow">{{ arrow(field) }}</span>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of sortedItems()">
+        <td *ngFor="let col of fields">{{ cell(row, col) }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div *ngIf="loading" class="gl-table-loading" aria-live="polite">
+    <span class="gl-spinner"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><circle cx="8" cy="8" r="6" fill="none" stroke="currentColor" stroke-width="2" opacity="0.35"/><path d="M14 8a6 6 0 0 0-6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span>Loading…</span>
+  </div>
+  <div *ngIf="!loading && items.length === 0" class="gl-table-empty">No items.</div>
+</div>

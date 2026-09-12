@@ -1,0 +1,11 @@
+<!-- Pajamas-inspired (MIT) -->
+<div *ngIf="visible" class="gl-alert" [ngClass]="['gl-alert-' + variant, classes]" [attr.role]="role">
+  <div class="gl-alert-icon-container">
+    <span class="gl-alert-icon" aria-hidden="true"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><circle cx="8" cy="8" r="3.5" fill="currentColor"/></svg></span>
+  </div>
+  <div class="gl-alert-content">
+    <h5 *ngIf="title" class="gl-alert-title">{{ title }}</h5>
+    <div class="gl-alert-body"><ng-content></ng-content></div>
+  </div>
+  <button *ngIf="dismissible" type="button" class="gl-alert-close" (click)="dismiss()" aria-label="Dismiss"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+</div>

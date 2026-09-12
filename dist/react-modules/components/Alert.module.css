@@ -1,0 +1,96 @@
+/* Pajamas-inspired (MIT, from shared design tokens) */
+.gl-alert {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--gl-spacing-scale-3);
+  border: 1px solid var(--gl-alert-info-border-color);
+  border-radius: var(--gl-alert-border-radius);
+  padding: var(--gl-spacing-scale-4) var(--gl-spacing-scale-5);
+  background-color: var(--gl-alert-info-background-color);
+  font-size: var(--gl-font-size-base);
+}
+.gl-alert--success {
+  background-color: var(--gl-alert-success-background-color);
+  border-color: var(--gl-alert-success-border-color);
+}
+.gl-alert--warning {
+  background-color: var(--gl-alert-warning-background-color);
+  border-color: var(--gl-alert-warning-border-color);
+}
+.gl-alert--danger {
+  background-color: var(--gl-alert-danger-background-color);
+  border-color: var(--gl-alert-danger-border-color);
+}
+.gl-alert--tip {
+  background-color: var(--gl-alert-neutral-background-color);
+  border-color: var(--gl-alert-neutral-border-color);
+}
+.gl-alert--sticky {
+  position: sticky;
+  top: 0;
+  z-index: var(--gl-zindex-2);
+}
+.gl-alert-icon {
+  display: inline-flex;
+  flex-shrink: 0;
+}
+.gl-alert--info .gl-alert-icon {
+  color: var(--gl-feedback-info-icon-color);
+}
+.gl-alert--success .gl-alert-icon {
+  color: var(--gl-feedback-success-icon-color);
+}
+.gl-alert--warning .gl-alert-icon {
+  color: var(--gl-feedback-warning-icon-color);
+}
+.gl-alert--danger .gl-alert-icon {
+  color: var(--gl-feedback-danger-icon-color);
+}
+.gl-alert--tip .gl-alert-icon {
+  color: var(--gl-icon-color-default);
+}
+.gl-alert-body {
+  flex: 1;
+  min-width: 0;
+}
+.gl-alert-title {
+  margin: 0 0 var(--gl-spacing-scale-2);
+  font-size: var(--gl-font-size-base);
+  font-weight: var(--gl-font-weight-bold);
+  color: var(--gl-alert-info-title-color);
+}
+.gl-alert--success .gl-alert-title {
+  color: var(--gl-alert-success-title-color);
+}
+.gl-alert--warning .gl-alert-title {
+  color: var(--gl-alert-warning-title-color);
+}
+.gl-alert--danger .gl-alert-title {
+  color: var(--gl-alert-danger-title-color);
+}
+.gl-alert--tip .gl-alert-title {
+  color: var(--gl-alert-neutral-title-color);
+}
+.gl-alert-content {
+  margin: 0;
+  line-height: var(--gl-line-height-24);
+}
+.gl-alert-dismiss {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--gl-spacing-scale-2);
+  border: 0;
+  border-radius: var(--gl-border-radius-default);
+  background: transparent;
+  color: var(--gl-text-color-subtle);
+  cursor: pointer;
+}
+.gl-alert-dismiss:hover {
+  background-color: var(--gl-color-alpha-dark-6);
+}
+.gl-alert-dismiss:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--gl-focus-ring-inner-color), 0 0 0 4px var(--gl-focus-ring-outer-color);
+}
+

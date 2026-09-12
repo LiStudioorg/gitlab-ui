@@ -1,4 +1,4 @@
-//  GitLab Pajamas design tokens (MIT)
+//  Pajamas-inspired design tokens (MIT)
 //  Generated from @gitlab/ui by scripts/build-tokens.js. Do not edit.
 
 // Vuetify 3 主题映射。

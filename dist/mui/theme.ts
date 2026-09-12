@@ -1,4 +1,4 @@
-//  GitLab Pajamas design tokens (MIT)
+//  Pajamas-inspired design tokens (MIT)
 //  Generated from @gitlab/ui by scripts/build-tokens.js. Do not edit.
 
 // Material UI (MUI) 主题映射。
@@ -16,5 +16,5 @@ export const pajamasMui = createTheme({
     background: { default: '#fff', paper: '#fff' },
   },
   shape: { borderRadius: 8 },
-  typography: { fontFamily: 'GitLab Sans, Inter, -apple-system, sans-serif', fontSize: 14 },
+  typography: { fontFamily: 'Inter, -apple-system, sans-serif', fontSize: 14 },
 });

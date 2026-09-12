@@ -1,0 +1,25 @@
+/* Pajamas-inspired (MIT) */
+:host { display: block; }
+.gl-table-wrap { position: relative; overflow-x: auto; }
+table.gl-table {
+  width: 100%; border-collapse: collapse;
+  font-size: 14px; color: var(--gl-text-color-default);
+}
+.gl-table thead th {
+  text-align: left; padding: 8px 12px; white-space: nowrap;
+  box-shadow: inset 0 -1px 0 var(--gl-border-color-default);
+  background-color: var(--gl-color-alpha-0);
+  color: var(--gl-text-color-strong); font-weight: 600;
+}
+.gl-table thead th.gl-sortable { cursor: pointer; user-select: none; }
+.gl-table th.gl-sortable:hover .gl-th-label { color: var(--gl-table-sorting-icon-color); }
+.gl-th-arrow { color: var(--gl-table-sorting-icon-color); font-weight: 700; }
+.gl-table tbody td { padding: 8px 12px; border-top: 1px solid var(--gl-border-color-default); }
+.gl-table tbody tr:hover td { background-color: var(--gl-table-row-background-color-hover); }
+.gl-table-loading {
+  display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px;
+  color: var(--gl-text-color-subtle);
+}
+.gl-spinner { display: inline-flex; animation: glspin 0.8s linear infinite; }
+.gl-table-empty { padding: 24px; text-align: center; color: var(--gl-text-color-subtle); }
+@keyframes glspin { to { transform: rotate(360deg); } }

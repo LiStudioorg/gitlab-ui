@@ -1,0 +1,104 @@
+/* Pajamas-inspired (MIT, from shared design tokens) */
+.gl-dropdown {
+  position: relative;
+  display: inline-block;
+}
+.gl-dropdown-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--gl-spacing-scale-2);
+  border: 1px solid var(--gl-border-color-default);
+  border-radius: var(--gl-control-border-radius);
+  background-color: var(--gl-action-neutral-background-color-default);
+  color: var(--gl-action-neutral-foreground-color-default);
+  padding: var(--gl-spacing-scale-3) var(--gl-spacing-scale-4);
+  font: inherit;
+  font-size: var(--gl-font-size-base);
+  font-weight: var(--gl-font-weight-bold);
+  cursor: pointer;
+}
+.gl-dropdown-toggle:hover,
+.gl-dropdown-toggle[aria-expanded='true'] {
+  background-color: var(--gl-action-neutral-background-color-hover);
+  border-color: var(--gl-border-color-strong);
+}
+.gl-dropdown-toggle:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--gl-focus-ring-inner-color), 0 0 0 4px var(--gl-focus-ring-outer-color);
+}
+.gl-dropdown-chevron {
+  display: inline-flex;
+  color: var(--gl-text-color-subtle);
+}
+.gl-dropdown-menu {
+  position: absolute;
+  left: 0;
+  top: calc(100% + var(--gl-spacing-scale-2));
+  min-width: var(--gl-spacing-scale-48);
+  margin: 0;
+  padding: var(--gl-spacing-scale-2) 0;
+  list-style: none;
+  background-color: var(--gl-dropdown-background-color);
+  border: 1px solid var(--gl-dropdown-border-color);
+  border-radius: var(--gl-dropdown-border-radius);
+  box-shadow: var(--gl-shadow-sm);
+  z-index: var(--gl-zindex-3);
+}
+.gl-dropdown-header {
+  padding: var(--gl-spacing-scale-2) var(--gl-spacing-scale-4);
+  font-size: var(--gl-font-size-sm);
+  font-weight: var(--gl-font-weight-bold);
+  color: var(--gl-text-color-subtle);
+}
+.gl-dropdown-divider {
+  height: 1px;
+  margin: var(--gl-spacing-scale-2) 0;
+  background-color: var(--gl-dropdown-divider-color);
+}
+.gl-dropdown-item {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: var(--gl-spacing-scale-3);
+  padding: var(--gl-spacing-scale-3) var(--gl-spacing-scale-4);
+  border: 0;
+  background: transparent;
+  text-align: left;
+  font: inherit;
+  font-size: var(--gl-font-size-base);
+  color: var(--gl-text-color-default);
+  cursor: pointer;
+}
+.gl-dropdown-item:hover:not(:disabled) {
+  background-color: var(--gl-dropdown-option-background-color-unselected-hover);
+}
+.gl-dropdown-item--checked {
+  font-weight: var(--gl-font-weight-semibold);
+}
+.gl-dropdown-item:disabled {
+  color: var(--gl-dropdown-option-text-color-disabled);
+  cursor: not-allowed;
+}
+.gl-dropdown-item:focus-visible {
+  outline: none;
+  background-color: var(--gl-dropdown-option-background-color-unselected-focus);
+}
+.gl-dropdown-check {
+  margin-left: auto;
+  display: inline-flex;
+  color: var(--gl-dropdown-option-indicator-color-selected-default);
+}
+.gl-dropdown-clear {
+  display: inline-flex;
+  padding: var(--gl-spacing-scale-2) var(--gl-spacing-scale-4);
+  border: 0;
+  background: transparent;
+  color: var(--gl-button-link-text-color-default);
+  font: inherit;
+  font-size: var(--gl-font-size-sm);
+  cursor: pointer;
+}
+.gl-dropdown-clear:hover {
+  text-decoration: underline;
+}
+

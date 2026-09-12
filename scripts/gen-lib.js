@@ -84,6 +84,11 @@ const FRAMEWORKS = {
   htmx: path.join(ROOT, 'dist', 'htmx', 'components'),
   'web-components': path.join(ROOT, 'dist', 'web-components'),
   lit: path.join(ROOT, 'dist', 'lit', 'components'),
+  svelte: path.join(ROOT, 'dist', 'svelte', 'components'),
+  sveltekit: path.join(ROOT, 'dist', 'sveltekit', 'components'),
+  solid: path.join(ROOT, 'dist', 'solid', 'components'),
+  qwik: path.join(ROOT, 'dist', 'qwik', 'components'),
+  astro: path.join(ROOT, 'dist', 'astro', 'components'),
 };
 
 module.exports = {

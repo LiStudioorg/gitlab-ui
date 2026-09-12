@@ -1,0 +1,42 @@
+/* Pajamas-inspired (MIT, from shared design tokens) */
+.gl-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gl-spacing-scale-5);
+}
+.gl-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gl-spacing-scale-2);
+}
+.gl-form-label {
+  display: flex;
+  align-items: baseline;
+  gap: var(--gl-spacing-scale-2);
+  font-size: var(--gl-font-size-base);
+  font-weight: var(--gl-font-weight-bold);
+  color: var(--gl-text-color-strong);
+}
+.gl-form-optional {
+  font-size: var(--gl-font-size-sm);
+  font-weight: var(--gl-font-weight-normal);
+  color: var(--gl-text-color-subtle);
+}
+.gl-form-helper {
+  margin: 0;
+  font-size: var(--gl-font-size-sm);
+  line-height: var(--gl-line-height-16);
+  color: var(--gl-text-color-subtle);
+}
+.gl-form-feedback {
+  margin: 0;
+  font-size: var(--gl-font-size-sm);
+  line-height: var(--gl-line-height-16);
+}
+.gl-form-feedback--valid {
+  color: var(--gl-control-text-color-valid);
+}
+.gl-form-feedback--invalid {
+  color: var(--gl-control-text-color-error);
+}
+

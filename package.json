@@ -2,7 +2,7 @@
   "name": "gitlab-ui-kit",
   "version": "1.0.0",
   "description": "GitLab Pajamas design system UI knowledge base",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "private": true,
   "dependencies": {
     "@gitlab/svgs": "^3.164.0",

@@ -1,0 +1,36 @@
+/* Pajamas-inspired (MIT) */
+:host { display: block; }
+input.gl-form-input {
+  width: 100%; box-sizing: border-box; font: inherit; font-size: 14px; line-height: 20px;
+  padding: 6px 12px;
+  border: 1px solid var(--gl-control-border-color-default);
+  border-radius: 8px;
+  background-color: var(--gl-control-background-color-default);
+  color: var(--gl-text-color-default);
+  transition: box-shadow 150ms ease, border-color 150ms ease;
+}
+input.gl-form-input:hover:not(:disabled):not([readonly]) {
+  border-color: var(--gl-control-border-color-hover);
+}
+input.gl-form-input:focus {
+  outline: none;
+  border-color: var(--gl-control-border-color-focus);
+  box-shadow: 0 0 0 2px var(--gl-focus-ring-inner-color), 0 0 0 4px var(--gl-focus-ring-outer-color);
+}
+input.gl-form-input::placeholder { color: var(--gl-control-placeholder-color); }
+input.gl-form-input.is-valid { border-color: var(--gl-control-text-color-valid); }
+input.gl-form-input.is-invalid {
+  border-color: var(--gl-control-border-color-error);
+  color: var(--gl-control-text-color-error);
+}
+input.gl-form-input:disabled,
+input.gl-form-input.gl-readonly {
+  background-color: var(--gl-control-background-color-disabled);
+  border-color: var(--gl-control-border-color-disabled);
+  cursor: not-allowed;
+}
+input.gl-form-input-xs { max-width: 12rem; }
+input.gl-form-input-sm { max-width: 16rem; }
+input.gl-form-input-md { max-width: 24rem; }
+input.gl-form-input-lg { max-width: 32rem; }
+input.gl-form-input-xl { max-width: 100%; }

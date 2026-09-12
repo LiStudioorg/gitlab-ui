@@ -1,0 +1,50 @@
+---
+// Pajamas-inspired (MIT, from @gitlab/ui tokens)
+const {
+  visible = false,
+  message = '',
+  action = null,
+  autoHideDelay = 5000,
+  onDismiss = null,
+} = Astro.props;
+---
+<div
+  class="g-toast fixed bottom-[var(--gl-spacing-scale-6)] left-[var(--gl-spacing-scale-6)] z-[var(--gl-zindex-200)] flex max-w-[var(--gl-spacing-scale-48)] items-center gap-[var(--gl-spacing-scale-3)] rounded-[var(--gl-border-radius-full)] px-[var(--gl-spacing-scale-4)] py-[var(--gl-spacing-scale-3)] text-[length:var(--gl-font-size-base)] bg-[var(--gl-feedback-strong-background-color)] text-[color:var(--gl-feedback-strong-text-color)] shadow-[var(--gl-shadow-md)]"
+  data-gl-toast
+  data-message={message}
+  data-auto-hide-delay={autoHideDelay}
+  data-visible={visible}
+  role="status"
+>
+  <span class="flex-1">{message}</span>
+  {action && <button type="button" class="bg-transparent border-0 p-0 font-bold cursor-pointer text-[color:var(--gl-feedback-strong-link-color)]">{action.text}</button>}
+  <button type="button" class="inline-flex bg-transparent border-0 p-[var(--gl-spacing-scale-1)] cursor-pointer text-[color:var(--gl-feedback-strong-text-color)]" data-dismiss aria-label="Dismiss"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg></button>
+</div>
+
+<style>
+  .g-toast[data-visible='false'] { display: none; }
+  .g-toast { transition: opacity 200ms ease, transform 200ms ease; }
+  .g-toast[data-leaving='true'] { opacity: 0; transform: translateY(-8px); }
+</style>
+
+<script is:inline>
+  (() => {
+    const toast = document.querySelector('[data-gl-toast]');
+    if (!toast) return;
+    const delay = Number(toast.dataset.autoHideDelay || 0);
+    const close = () => {
+      toast.setAttribute('data-leaving', 'true');
+      window.setTimeout(() => {
+        toast.setAttribute('data-visible', 'false');
+      }, 220);
+    };
+    toast.querySelectorAll('[data-dismiss]').forEach((b) => b.addEventListener('click', close));
+    if (delay > 0) window.setTimeout(close, delay);
+    if (typeof onDismiss === 'function') toast.addEventListener('gl:dismiss', () => onDismiss());
+    toast.addEventListener('transitionend', () => {
+      if (toast.getAttribute('data-leaving') === 'true' && toast.getAttribute('data-visible') === 'false') {
+        toast.dispatchEvent(new CustomEvent('gl:dismiss'));
+      }
+    });
+  })();
+</script>

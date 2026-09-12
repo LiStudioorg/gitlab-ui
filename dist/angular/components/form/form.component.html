@@ -1,0 +1,10 @@
+<!-- Pajamas-inspired (MIT) -->
+<div class="gl-form-group">
+  <label class="gl-form-label">
+    <span class="gl-label-text">{{ label }}</span>
+    <span *ngIf="optional" class="gl-optional-label">(optional)</span>
+  </label>
+  <span *ngIf="helper" class="gl-label-description">{{ helper }}</span>
+  <div class="gl-form-control-slot"><ng-content></ng-content></div>
+  <div *ngIf="invalid" class="gl-invalid-feedback" role="alert">{{ error }}</div>
+</div>

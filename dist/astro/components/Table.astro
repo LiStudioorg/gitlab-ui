@@ -1,0 +1,73 @@
+---
+// Pajamas-inspired (MIT, from @gitlab/ui tokens)
+const {
+  items = [],
+  fields = [],
+  loading = false,
+  sortBy = null,
+  sortDesc = false,
+} = Astro.props;
+---
+{loading ? (
+  <div class="mb-3 flex items-center gap-2 text-[color:var(--gl-text-color-strong)]" role="status"><svg class="g-spin" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><circle cx="8" cy="8" r="6" fill="none" stroke="currentColor" stroke-width="2" opacity="0.35"></circle><path d="M14 8a6 6 0 0 0-6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg> Loading&hellip;</div>
+) : null}
+<div class="overflow-auto">
+  <table
+    class="g-table w-full border-collapse text-[length:var(--gl-font-size-base)] text-[color:var(--gl-text-color-default)]"
+    data-gl-sortable-table
+    data-busy={loading}
+  >
+    <thead>
+      <tr>
+        {fields.map((f) => (
+          <th class="sticky top-0 bg-[var(--gl-color-alpha-0)] p-3 text-left font-bold text-[color:var(--gl-text-color-subtle)] shadow-[inset_0_-1px_0_var(--gl-border-color-default)]" data-sortable={f.sortable ? 'true' : 'false'} data-sort-key={f.sortable ? f.key : undefined}>
+            {f.label}
+            {sortBy === f.key ? <span class="ml-[var(--gl-spacing-scale-2)] text-[color:var(--gl-table-sorting-icon-color)]" aria-hidden="true">{sortDesc ? '&darr;' : '&uarr;'}</span> : null}
+          </th>
+        ))}
+      </tr>
+    </thead>
+    <tbody data-rows>
+      {items.length ? (
+        items.map((row) => (
+          <tr>
+            {fields.map((f) => <td class="p-3 shadow-[inset_0_-1px_0_var(--gl-color-alpha-dark-8)] hover:bg-[var(--gl-table-row-background-color-hover)]">{row[f.key] ?? ''}</td>)}
+          </tr>
+        ))
+      ) : (
+        <tr><td class="p-[var(--gl-spacing-scale-9)] px-[var(--gl-spacing-scale-5)] text-center text-[color:var(--gl-text-color-subtle)]" colspan={fields.length || 1}>No records found.</td></tr>
+      )}
+    </tbody>
+  </table>
+</div>
+
+<style>
+  .g-spin { animation: g-spin 0.8s linear infinite; }
+  @keyframes g-spin { to { transform: rotate(360deg); } }
+  .g-table[data-busy='true'] { opacity: var(--gl-opacity-7); pointer-events: none; }
+  th[data-sortable='true'] { cursor: pointer; user-select: none; }
+  th[data-sortable='true']:hover { color: var(--gl-text-color-strong); }
+</style>
+
+<script is:inline>
+  (() => {
+    const table = document.querySelector('[data-gl-sortable-table]');
+    if (!table) return;
+    table.querySelectorAll('th[data-sort-key]').forEach((th) => {
+      th.addEventListener('click', () => {
+        const body = table.querySelector('tbody[data-rows]');
+        if (!body) return;
+        const rows = Array.from(body.querySelectorAll('tr'));
+        const desc = th.dataset.dir === 'asc';
+        rows.sort((a, b) => {
+          const av = a.children[th.cellIndex].textContent.trim();
+          const bv = b.children[th.cellIndex].textContent.trim();
+          const cmp = av < bv ? -1 : av > bv ? 1 : 0;
+          return desc ? -cmp : cmp;
+        });
+        rows.forEach((r) => body.appendChild(r));
+        th.dataset.dir = desc ? 'desc' : 'asc';
+      });
+    });
+  })();
+</script>

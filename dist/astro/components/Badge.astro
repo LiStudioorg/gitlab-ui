@@ -1,0 +1,28 @@
+---
+// Pajamas-inspired (MIT, from @gitlab/ui tokens)
+const {
+  variant = 'neutral',
+  icon = null,
+  href = null,
+  disabled = false,
+} = Astro.props;
+
+const badgeStyle = '--gbd:var(--gl-badge-' + variant + '-background-color-default);--gbf:var(--gl-badge-' + variant + '-text-color-default);';
+const cls = 'g-badge inline-flex items-center gap-[var(--gl-spacing-scale-2)] rounded-[var(--gl-border-radius-full)] px-[var(--gl-spacing-scale-2)] py-[var(--gl-spacing-scale-1)] text-[length:var(--gl-font-size-sm)] font-bold leading-[var(--gl-line-height-16)] no-underline' + (disabled ? ' opacity-[var(--gl-opacity-7)] pointer-events-none' : '');
+---
+{href ? (
+  <a class={cls} style={badgeStyle} data-variant={variant} href={href || undefined}>
+    {icon && <span class="g-badge-icon" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><circle cx="8" cy="8" r="3.5" fill="currentColor"></circle></svg></span>}
+    <span><slot /></span>
+  </a>
+) : (
+  <span class={cls} style={badgeStyle} data-variant={variant}>
+    {icon && <span class="g-badge-icon" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><circle cx="8" cy="8" r="3.5" fill="currentColor"></circle></svg></span>}
+    <span><slot /></span>
+  </span>
+)}
+
+<style>
+  .g-badge { background-color: var(--gbd); color: var(--gbf); }
+  a.g-badge:hover { box-shadow: inset 0 0 0 1px var(--gl-border-color-strong); }
+</style>

@@ -1,0 +1,11 @@
+<!-- Pajamas-inspired (MIT) -->
+<input
+  [attr.type]="type"
+  class="gl-form-input"
+  [ngClass]="[widthClass, state === 'valid' ? 'is-valid' : '', state === 'invalid' ? 'is-invalid' : '', readonly ? 'gl-readonly' : '']"
+  [placeholder]="placeholder"
+  [value]="value"
+  [disabled]="disabled"
+  [readonly]="readonly"
+  (input)="onValue($event)"
+/>

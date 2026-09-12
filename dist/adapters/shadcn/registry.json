@@ -1,0 +1,233 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "pajamas",
+  "description": "Pajamas-inspired shadcn/ui components mapped to dist/css/variables.css design tokens",
+  "items": [
+    {
+      "name": "button",
+      "type": "registry:ui",
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "files": [
+        {
+          "path": "components/ui/button.tsx"
+        }
+      ],
+      "cssVars": {
+        "colors": {
+          "primary": "var(--gl-button-confirm-primary-background-color-default)",
+          "primaryForeground": "var(--gl-button-confirm-primary-foreground-color-default)",
+          "secondary": "var(--gl-button-default-primary-background-color-default)",
+          "secondaryForeground": "var(--gl-button-default-primary-foreground-color-default)",
+          "border": "var(--gl-button-default-primary-border-color-default)",
+          "destructive": "var(--gl-button-danger-primary-background-color-default)",
+          "destructiveForeground": "var(--gl-button-danger-primary-foreground-color-default)",
+          "ring": "var(--gl-focus-ring-outer-color)",
+          "radius": "var(--gl-button-border-radius)"
+        }
+      }
+    },
+    {
+      "name": "input",
+      "type": "registry:ui",
+      "dependencies": [],
+      "files": [
+        {
+          "path": "components/ui/input.tsx"
+        }
+      ],
+      "cssVars": {
+        "colors": {
+          "background": "var(--gl-control-background-color-default)",
+          "foreground": "var(--gl-text-color-default)",
+          "border": "var(--gl-control-border-color-default)",
+          "placeholder": "var(--gl-control-placeholder-color)",
+          "ring": "var(--gl-focus-ring-outer-color)",
+          "focus": "var(--gl-control-border-color-focus)",
+          "error": "var(--gl-control-text-color-error)",
+          "valid": "var(--gl-control-text-color-valid)"
+        }
+      }
+    },
+    {
+      "name": "modal",
+      "type": "registry:ui",
+      "dependencies": [],
+      "files": [
+        {
+          "path": "components/ui/modal.tsx"
+        }
+      ],
+      "cssVars": {
+        "colors": {
+          "background": "var(--gl-background-color-default)",
+          "foreground": "var(--gl-text-color-default)",
+          "overlay": "var(--gl-color-alpha-dark-40)",
+          "border": "var(--gl-border-color-default)",
+          "heading": "var(--gl-text-color-heading)",
+          "radius": "var(--gl-modal-border-radius)"
+        }
+      }
+    },
+    {
+      "name": "table",
+      "type": "registry:ui",
+      "dependencies": [],
+      "files": [
+        {
+          "path": "components/ui/table.tsx"
+        }
+      ],
+      "cssVars": {
+        "colors": {
+          "foreground": "var(--gl-text-color-default)",
+          "heading": "var(--gl-text-color-heading)",
+          "muted": "var(--gl-text-color-subtle)",
+          "border": "var(--gl-border-color-default)",
+          "hover": "var(--gl-table-row-background-color-hover)",
+          "sort": "var(--gl-table-sorting-icon-color)"
+        }
+      }
+    },
+    {
+      "name": "tabs",
+      "type": "registry:ui",
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "files": [
+        {
+          "path": "components/ui/tabs.tsx"
+        }
+      ],
+      "cssVars": {
+        "colors": {
+          "foreground": "var(--gl-text-color-subtle)",
+          "mutedForeground": "var(--gl-text-color-subtle)",
+          "active": "var(--gl-text-color-strong)",
+          "indicator": "var(--gl-tab-selected-indicator-color-default)",
+          "border": "var(--gl-border-color-default)",
+          "ring": "var(--gl-focus-ring-outer-color)"
+        }
+      }
+    },
+    {
+      "name": "badge",
+      "type": "registry:ui",
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "files": [
+        {
+          "path": "components/ui/badge.tsx"
+        }
+      ],
+      "cssVars": {
+        "colors": {
+          "neutralBg": "var(--gl-badge-neutral-background-color-default)",
+          "neutralText": "var(--gl-badge-neutral-text-color-default)",
+          "infoBg": "var(--gl-badge-info-background-color-default)",
+          "infoText": "var(--gl-badge-info-text-color-default)",
+          "successBg": "var(--gl-badge-success-background-color-default)",
+          "successText": "var(--gl-badge-success-text-color-default)",
+          "warningBg": "var(--gl-badge-warning-background-color-default)",
+          "warningText": "var(--gl-badge-warning-text-color-default)",
+          "dangerBg": "var(--gl-badge-danger-background-color-default)",
+          "dangerText": "var(--gl-badge-danger-text-color-default)",
+          "tierBg": "var(--gl-badge-tier-background-color-default)",
+          "tierText": "var(--gl-badge-tier-text-color-default)"
+        }
+      }
+    },
+    {
+      "name": "toast",
+      "type": "registry:ui",
+      "dependencies": [],
+      "files": [
+        {
+          "path": "components/ui/toast.tsx"
+        }
+      ],
+      "cssVars": {
+        "colors": {
+          "background": "var(--gl-feedback-strong-background-color)",
+          "foreground": "var(--gl-feedback-strong-text-color)",
+          "link": "var(--gl-feedback-strong-link-color)",
+          "border": "var(--gl-border-color-default)"
+        }
+      }
+    },
+    {
+      "name": "dropdown",
+      "type": "registry:ui",
+      "dependencies": [],
+      "files": [
+        {
+          "path": "components/ui/dropdown.tsx"
+        }
+      ],
+      "cssVars": {
+        "colors": {
+          "background": "var(--gl-dropdown-background-color)",
+          "foreground": "var(--gl-dropdown-option-text-color-default)",
+          "border": "var(--gl-dropdown-border-color)",
+          "divider": "var(--gl-dropdown-divider-color)",
+          "hover": "var(--gl-dropdown-option-background-color-unselected-hover)",
+          "selected": "var(--gl-dropdown-option-background-color-selected-default)"
+        }
+      }
+    },
+    {
+      "name": "form",
+      "type": "registry:ui",
+      "dependencies": [],
+      "files": [
+        {
+          "path": "components/ui/form.tsx"
+        }
+      ],
+      "cssVars": {
+        "colors": {
+          "label": "var(--gl-text-color-strong)",
+          "helper": "var(--gl-text-color-subtle)",
+          "error": "var(--gl-control-text-color-error)",
+          "valid": "var(--gl-control-text-color-valid)",
+          "border": "var(--gl-control-border-color-default)"
+        }
+      }
+    },
+    {
+      "name": "alert",
+      "type": "registry:ui",
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "files": [
+        {
+          "path": "components/ui/alert.tsx"
+        }
+      ],
+      "cssVars": {
+        "colors": {
+          "infoBg": "var(--gl-alert-info-background-color)",
+          "infoBorder": "var(--gl-alert-info-border-color)",
+          "infoTitle": "var(--gl-alert-info-title-color)",
+          "successBg": "var(--gl-alert-success-background-color)",
+          "successBorder": "var(--gl-alert-success-border-color)",
+          "successTitle": "var(--gl-alert-success-title-color)",
+          "warningBg": "var(--gl-alert-warning-background-color)",
+          "warningBorder": "var(--gl-alert-warning-border-color)",
+          "warningTitle": "var(--gl-alert-warning-title-color)",
+          "dangerBg": "var(--gl-alert-danger-background-color)",
+          "dangerBorder": "var(--gl-alert-danger-border-color)",
+          "dangerTitle": "var(--gl-alert-danger-title-color)",
+          "infoIcon": "var(--gl-feedback-info-icon-color)",
+          "successIcon": "var(--gl-feedback-success-icon-color)",
+          "warningIcon": "var(--gl-feedback-warning-icon-color)",
+          "dangerIcon": "var(--gl-feedback-danger-icon-color)"
+        }
+      }
+    }
+  ]
+}

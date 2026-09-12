@@ -1,0 +1,69 @@
+/* Pajamas-inspired (MIT, from shared design tokens) */
+.gl-table-wrap {
+  position: relative;
+  overflow: auto;
+  border: 1px solid var(--gl-border-color-default);
+  border-radius: var(--gl-border-radius-lg);
+  background-color: var(--gl-background-color-default);
+}
+.gl-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--gl-font-size-base);
+  color: var(--gl-text-color-default);
+}
+.gl-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  text-align: left;
+  padding: var(--gl-spacing-scale-3);
+  font-weight: var(--gl-font-weight-bold);
+  color: var(--gl-text-color-strong);
+  background-color: var(--gl-background-color-subtle);
+  box-shadow: inset 0 -1px 0 var(--gl-border-color-default);
+}
+.gl-table tbody td {
+  padding: var(--gl-spacing-scale-3);
+  border-bottom: 1px solid var(--gl-border-color-subtle);
+}
+.gl-table tbody tr:hover {
+  background-color: var(--gl-table-row-background-color-hover);
+}
+.gl-table--busy {
+  pointer-events: none;
+  opacity: 0.55;
+}
+.gl-table-sort-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--gl-spacing-scale-2);
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  font-weight: var(--gl-font-weight-bold);
+  color: inherit;
+  cursor: pointer;
+}
+.gl-table-sort-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--gl-focus-ring-inner-color), 0 0 0 4px var(--gl-focus-ring-outer-color);
+}
+.gl-table-sort-icon {
+  color: var(--gl-table-sorting-icon-color);
+  font-size: var(--gl-font-size-sm);
+  line-height: 1;
+}
+.gl-table-loading {
+  margin: 0;
+  padding: var(--gl-spacing-scale-4);
+  font-size: var(--gl-font-size-sm);
+  color: var(--gl-text-color-subtle);
+}
+.gl-table-empty {
+  padding: var(--gl-spacing-scale-5);
+  text-align: center;
+  color: var(--gl-text-color-subtle);
+}
+

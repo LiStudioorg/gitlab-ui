@@ -1,0 +1,15 @@
+/* Pajamas-inspired (MIT) */
+:host { display: block; margin-bottom: 16px; }
+.gl-form-label {
+  display: flex; align-items: baseline; gap: 8px; margin: 0 0 4px;
+  font-size: 14px; font-weight: 700; color: var(--gl-text-color-strong);
+}
+.gl-optional-label { font-weight: 400; color: var(--gl-text-color-subtle); }
+.gl-label-description {
+  display: block; font-size: 12px; margin-bottom: 8px;
+  color: var(--gl-text-color-subtle);
+}
+.gl-invalid-feedback {
+  color: var(--gl-control-text-color-error);
+  font-size: 12px; margin-top: 4px;
+}

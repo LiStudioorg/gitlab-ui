@@ -1,0 +1,38 @@
+/* Pajamas-inspired (MIT) */
+:host { display: inline-flex; }
+button.gl-button {
+  display: inline-flex; align-items: center; justify-content: center; gap: 4px;
+  font: inherit; font-size: 14px; font-weight: 600; line-height: 20px;
+  padding: 6px 12px; border: 1px solid var(--btn-bd, transparent);
+  border-radius: var(--gl-button-border-radius);
+  cursor: pointer; white-space: nowrap; text-decoration: none;
+  background-color: var(--btn-bg, var(--gl-button-default-primary-background-color-default));
+  color: var(--btn-fg, var(--gl-button-default-primary-foreground-color-default));
+  transition: box-shadow 150ms ease, background-color 150ms ease, color 150ms ease, border-color 150ms ease;
+}
+button.gl-button:hover:not(:disabled) {
+  background-color: var(--btn-bg-h); color: var(--btn-fg-h); border-color: var(--btn-bd-h);
+}
+button.gl-button:active:not(:disabled) {
+  background-color: var(--btn-bg-a); color: var(--btn-fg-a); border-color: var(--btn-bd-a);
+}
+button.gl-button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--gl-focus-ring-inner-color), 0 0 0 4px var(--gl-focus-ring-outer-color);
+}
+button.gl-button:disabled {
+  cursor: not-allowed;
+  background-color: var(--gl-action-disabled-background-color);
+  color: var(--gl-action-disabled-foreground-color);
+  border-color: var(--gl-action-disabled-border-color);
+}
+button.gl-button.is-loading { cursor: progress; }
+button.gl-button.gl-button-sm { padding: 2px 8px; font-size: 12px; }
+button.gl-button.gl-block { width: 100%; display: flex; }
+button.gl-button.gl-button-link {
+  background: transparent; border-color: transparent; text-decoration: underline;
+  padding-left: 8px; padding-right: 8px;
+}
+.gl-button-spinner { display: inline-flex; animation: glspin 0.8s linear infinite; }
+.gl-button-icon { display: inline-flex; }
+@keyframes glspin { to { transform: rotate(360deg); } }

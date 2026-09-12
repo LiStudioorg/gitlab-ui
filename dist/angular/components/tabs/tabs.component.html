@@ -1,0 +1,21 @@
+<!-- Pajamas-inspired (MIT) -->
+<div class="gl-tabs-wrapper">
+  <div class="gl-tabs-nav" role="tablist">
+    <button
+      *ngFor="let tab of tabs; let i = index"
+      type="button"
+      class="gl-tab-nav-item"
+      [class.gl-tab-nav-item-active]="i === active"
+      role="tab"
+      [attr.aria-selected]="i === active"
+      (click)="select(i)"
+    >
+      <span>{{ tab.title }}</span>
+      <span *ngIf="tab.count != null && tab.count >= 0" class="gl-tab-count">{{ tab.count }}</span>
+    </button>
+  </div>
+  <div class="gl-tab-content" role="tabpanel">
+    <p *ngIf="tabs[active] && tabs[active]!.content">{{ tabs[active]!.content }}</p>
+    <ng-content></ng-content>
+  </div>
+</div>

@@ -1,4 +1,4 @@
-//  GitLab Pajamas design tokens (MIT)
+//  Pajamas-inspired design tokens (MIT)
 //  Generated from @gitlab/ui by scripts/build-tokens.js. Do not edit.
 
 // Naive UI 主题覆盖。
@@ -16,6 +16,6 @@ export const pajamasNaive: GlobalThemeOverrides = {
     bodyColor: '#fff',
     cardColor: '#fff',
     borderRadius: '8px',
-    fontFamily: 'GitLab Sans, Inter, sans-serif',
+    fontFamily: 'Inter, sans-serif',
   },
 };

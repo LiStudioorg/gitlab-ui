@@ -1,0 +1,41 @@
+package com.example.pajamas.components
+
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import com.example.pajamas.*
+// Pajamas-inspired (MIT)
+
+
+@Composable
+fun GlBadge(text: String,
+    variant: String = "neutral") {
+    val bg = when (variant) {
+        "success" -> GlBadgeSuccessBackgroundColorDefault
+        "warning" -> GlBadgeWarningBackgroundColorDefault
+        "danger" -> GlBadgeDangerBackgroundColorDefault
+        "info" -> GlBadgeInfoBackgroundColorDefault
+        else -> GlBadgeNeutralBackgroundColorDefault
+    }
+    val fg = when (variant) {
+        "success" -> GlBadgeSuccessTextColorDefault
+        "warning" -> GlBadgeWarningTextColorDefault
+        "danger" -> GlBadgeDangerTextColorDefault
+        "info" -> GlBadgeInfoTextColorDefault
+        else -> GlBadgeNeutralTextColorDefault
+    }
+    Box(
+        modifier = Modifier.background(bg, RoundedCornerShape(50)),
+        contentAlignment = androidx.compose.ui.Alignment.Center,
+    ) {
+        Text(text, color = fg, fontSize = 12.sp, fontWeight = FontWeight.SemiBold,
+             modifier = Modifier.padding(horizontal = 8.dp, vertical = 2.dp))
+    }
+}

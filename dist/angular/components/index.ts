@@ -1,0 +1,21 @@
+// Pajamas-inspired (MIT)
+export { GlButtonComponent } from './button/button.component';
+export { GlButtonModule } from './button/button.module';
+export { GlInputComponent } from './input/input.component';
+export { GlInputModule } from './input/input.module';
+export { GlModalComponent } from './modal/modal.component';
+export { GlModalModule } from './modal/modal.module';
+export { GlTableComponent } from './table/table.component';
+export { GlTableModule } from './table/table.module';
+export { GlTabsComponent } from './tabs/tabs.component';
+export { GlTabsModule } from './tabs/tabs.module';
+export { GlBadgeComponent } from './badge/badge.component';
+export { GlBadgeModule } from './badge/badge.module';
+export { GlToastComponent } from './toast/toast.component';
+export { GlToastModule } from './toast/toast.module';
+export { GlDropdownComponent } from './dropdown/dropdown.component';
+export { GlDropdownModule } from './dropdown/dropdown.module';
+export { GlFormComponent } from './form/form.component';
+export { GlFormModule } from './form/form.module';
+export { GlAlertComponent } from './alert/alert.component';
+export { GlAlertModule } from './alert/alert.module';

@@ -1,5 +1,5 @@
 import { defineConfig, presetUno } from 'unocss';
-// GitLab Pajamas preset (MIT). 在 main 中引入 dist/css/variables.css 以启用 var 引用。
+// Pajamas-inspired preset (MIT). 在 main 中引入 dist/css/variables.css 以启用 var 引用。
 export default defineConfig({
   presets: [presetUno()],
   theme: {

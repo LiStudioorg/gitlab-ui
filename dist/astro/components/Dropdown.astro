@@ -1,0 +1,68 @@
+---
+// Pajamas-inspired (MIT, from @gitlab/ui tokens)
+const {
+  text = '',
+  items = [],
+  showClearAll = false,
+  onSelect = null,
+} = Astro.props;
+---
+<div class="g-dropdown relative inline-block" data-gl-dropdown>
+  <button
+    type="button"
+    class="inline-flex cursor-pointer items-center gap-[var(--gl-spacing-scale-2)] rounded-[var(--gl-button-border-radius)] border border-[var(--gl-action-neutral-border-color-default)] px-[var(--gl-spacing-scale-3)] py-[var(--gl-spacing-scale-3)] font-bold text-[length:var(--gl-font-size-base)] bg-[var(--gl-action-neutral-background-color-default)] text-[color:var(--gl-action-neutral-foreground-color-default)] hover:bg-[var(--gl-action-neutral-background-color-hover)]"
+    data-dropdown-toggle
+    aria-haspopup="true"
+    aria-expanded="false"
+  >
+    {text}
+    <span class="inline-flex text-[color:var(--gl-text-color-subtle)]" aria-hidden="true"><svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+  </button>
+  <div class="absolute left-0 top-[calc(100%+var(--gl-spacing-scale-2))] z-[var(--gl-zindex-3)] box-border min-w-[var(--gl-spacing-scale-31)] rounded-[var(--gl-dropdown-border-radius)] border border-[var(--gl-dropdown-border-color)] bg-[var(--gl-dropdown-background-color)] p-[var(--gl-spacing-scale-2)] shadow-[var(--gl-shadow-sm)]" data-dropdown-menu role="menu" aria-label="Options">
+    <div class="p-[var(--gl-spacing-scale-2)] px-[var(--gl-spacing-scale-3)] text-[length:var(--gl-font-size-sm)] font-bold text-[color:var(--gl-text-color-subtle)]">Options</div>
+    {items.map((item) => (
+      <button type="button" class="flex w-full cursor-pointer items-center justify-between gap-[var(--gl-spacing-scale-3)] rounded-[var(--gl-border-radius-default)] border-0 bg-transparent p-[var(--gl-spacing-scale-2)] px-[var(--gl-spacing-scale-3)] text-left text-[length:var(--gl-font-size-base)] text-[color:var(--gl-dropdown-option-text-color-default)] hover:bg-[var(--gl-dropdown-option-background-color-unselected-hover)]" role="menuitemcheckbox" aria-checked={typeof item === 'object' && !!item.checked}>
+        <span>{typeof item === 'string' ? item : item.text}</span>
+        {typeof item === 'object' && item.checked ? <span aria-hidden="true"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8l3.5 3.5L13 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span> : null}
+      </button>
+    ))}
+    {showClearAll ? (
+      <>
+        <div class="my-[var(--gl-spacing-scale-2)] h-px bg-[var(--gl-dropdown-divider-color)]" role="separator" />
+        <button type="button" class="block w-full cursor-pointer border-0 bg-transparent p-[var(--gl-spacing-scale-2)] px-[var(--gl-spacing-scale-3)] text-left text-[length:var(--gl-font-size-sm)] text-[color:var(--gl-text-color-link)] hover:underline">Clear all</button>
+      </>
+    ) : null}
+  </div>
+</div>
+
+<style>
+  button:focus-visible { outline: none; box-shadow: 0 0 0 2px var(--gl-focus-ring-inner-color), 0 0 0 4px var(--gl-focus-ring-outer-color); }
+</style>
+
+<script is:inline>
+  (() => {
+    const root = document.querySelector('[data-gl-dropdown]');
+    if (!root) return;
+    const toggle = root.querySelector('[data-dropdown-toggle]');
+    const menu = root.querySelector('[data-dropdown-menu]');
+    if (!toggle || !menu) return;
+    const open = () => {
+      menu.removeAttribute('hidden');
+      toggle.setAttribute('aria-expanded', 'true');
+    };
+    const close = () => {
+      menu.setAttribute('hidden', '');
+      toggle.setAttribute('aria-expanded', 'false');
+    };
+    toggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      menu.hasAttribute('hidden') ? open() : close();
+    });
+    document.addEventListener('mousedown', (e) => {
+      if (!root.contains(e.target)) close();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') close();
+    });
+  })();
+</script>

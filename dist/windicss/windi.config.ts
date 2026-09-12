@@ -1,5 +1,5 @@
 import { defineConfig } from 'windicss/helpers';
-// GitLab Pajamas preset (MIT).
+// Pajamas-inspired preset (MIT).
 export default defineConfig({
   theme: {
     colors: {

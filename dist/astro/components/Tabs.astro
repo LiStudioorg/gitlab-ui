@@ -1,0 +1,60 @@
+---
+// Pajamas-inspired (MIT, from @gitlab/ui tokens)
+const {
+  tabs = [],
+  active = 0,
+  onChange = null,
+} = Astro.props;
+---
+<div class="g-tabs" data-gl-tabs>
+  <nav class="flex gap-[var(--gl-spacing-scale-2)] overflow-x-auto border-b border-[var(--gl-border-color-default)]" role="tablist" aria-label="Tabs">
+    {tabs.map((tab, i) => (
+      <button
+        type="button"
+        class="g-tab relative inline-flex items-center gap-[var(--gl-spacing-scale-2)] whitespace-nowrap px-[var(--gl-spacing-scale-4)] py-[var(--gl-spacing-scale-4)] text-[length:var(--gl-font-size-base)]"
+        data-tab-btn
+        data-active={i === active}
+        disabled={tab.disabled ? true : undefined}
+        role="tab"
+        aria-selected={i === active}
+      >
+        {tab.title}
+        {tab.count != null ? <span class="inline-flex items-center rounded-[var(--gl-border-radius-full)] bg-[var(--gl-badge-neutral-background-color-default)] px-[var(--gl-spacing-scale-2)] text-[length:var(--gl-font-size-sm)] font-bold leading-[var(--gl-line-height-16)] text-[color:var(--gl-badge-neutral-text-color-default)]">{tab.count}</span> : null}
+      </button>
+    ))}
+  </nav>
+  {tabs.map((tab, i) => (
+    <div class="g-tab-pane pt-[var(--gl-spacing-scale-5)] text-[color:var(--gl-text-color-default)]" data-tab-pane hidden={i !== active} role="tabpanel">
+      {tab.content}
+    </div>
+  ))}
+</div>
+
+<style>
+  .g-tab::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; border-radius: 1px; background-color: var(--gl-color-alpha-0); }
+  .g-tab:hover { color: var(--gl-text-color-strong); }
+  .g-tab:hover::after { background-color: var(--gl-border-color-strong); }
+  .g-tab[data-active='true'] { color: var(--gl-text-color-strong); font-weight: var(--gl-font-weight-bold); }
+  .g-tab[data-active='true']::after { background-color: var(--gl-tab-selected-indicator-color-default); }
+  .g-tab:disabled { color: var(--gl-action-disabled-foreground-color); cursor: not-allowed; }
+</style>
+
+<script is:inline>
+  (() => {
+    const tabs = document.querySelector('[data-gl-tabs]');
+    if (!tabs) return;
+    const btns = Array.from(tabs.querySelectorAll('[data-tab-btn]'));
+    const panes = Array.from(tabs.querySelectorAll('[data-tab-pane]'));
+    btns.forEach((btn, i) => {
+      btn.addEventListener('click', () => {
+        btns.forEach((b, j) => {
+          const on = j === i;
+          b.setAttribute('data-active', String(on));
+          b.setAttribute('aria-selected', String(on));
+        });
+        panes.forEach((p, j) => p.toggleAttribute('hidden', j !== i));
+        if (typeof onChange === 'function') onChange(i, tabs[i]);
+      });
+    });
+  })();
+</script>

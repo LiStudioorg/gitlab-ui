@@ -1,4 +1,4 @@
-//  GitLab Pajamas design tokens (MIT)
+//  Pajamas-inspired design tokens (MIT)
 //  Generated from @gitlab/ui by scripts/build-tokens.js. Do not edit.
 
 // Mantine 主题映射。
@@ -11,7 +11,7 @@ export const pajamasMantine = {
     orange: ['#ab6100', '#ab6100', '#ab6100', '#ab6100', '#ab6100', '#ab6100', '#ab6100', '#ab6100', '#ab6100', '#ab6100'],
     red: ['#dd2b0e', '#dd2b0e', '#dd2b0e', '#dd2b0e', '#dd2b0e', '#dd2b0e', '#dd2b0e', '#dd2b0e', '#dd2b0e', '#dd2b0e'],
   },
-  fontFamily: 'GitLab Sans, Inter, -apple-system, sans-serif',
+  fontFamily: 'Inter, -apple-system, sans-serif',
   radius: { xs: '1px', sm: '2px', md: '4px', lg: '8px', xl: '12px' },
   spacing: { xs: '4px', sm: '8px', md: '12px', lg: '16px', xl: '24px' },
 };

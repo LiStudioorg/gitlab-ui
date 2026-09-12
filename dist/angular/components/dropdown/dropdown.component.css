@@ -1,0 +1,48 @@
+/* Pajamas-inspired (MIT) */
+:host { display: inline-block; position: relative; }
+.gl-dropdown { position: relative; }
+.gl-dropdown-toggle {
+  display: inline-flex; align-items: center; gap: 8px;
+  font: inherit; font-size: 14px; font-weight: 600; line-height: 20px;
+  padding: 6px 12px;
+  border: 1px solid var(--gl-button-default-primary-border-color-default);
+  border-radius: var(--gl-button-border-radius);
+  background-color: var(--gl-button-default-primary-background-color-default);
+  color: var(--gl-button-default-primary-foreground-color-default);
+  cursor: pointer;
+}
+.gl-dropdown-toggle:disabled {
+  cursor: not-allowed;
+  color: var(--gl-action-disabled-foreground-color);
+  background-color: var(--gl-action-disabled-background-color);
+}
+.gl-dropdown-caret { display: inline-flex; }
+.gl-dropdown-menu {
+  position: absolute; top: calc(100% + 4px); left: 0; min-width: 12rem;
+  background-color: var(--gl-dropdown-background-color);
+  border: 1px solid var(--gl-dropdown-border-color);
+  border-radius: var(--gl-dropdown-border-radius);
+  box-shadow: var(--gl-shadow-sm);
+  z-index: var(--gl-zindex-3);
+  overflow: hidden;
+}
+.gl-dropdown-header {
+  padding: 8px 16px 4px; font-size: 12px; font-weight: 700;
+  color: var(--gl-text-color-subtle); text-transform: uppercase;
+}
+.gl-dropdown-divider { height: 1px; background-color: var(--gl-dropdown-divider-color); }
+.gl-dropdown-item {
+  display: flex; align-items: center; gap: 8px;
+  padding: 8px 16px; cursor: pointer; font-size: 14px;
+  color: var(--gl-dropdown-option-text-color-default);
+}
+.gl-dropdown-item:hover { background-color: var(--gl-dropdown-option-background-color-selected-hover); }
+.gl-dropdown-item.gl-is-checked { background-color: var(--gl-dropdown-option-background-color-selected-default); }
+.gl-dropdown-item.gl-is-disabled { color: var(--gl-dropdown-option-text-color-disabled); cursor: not-allowed; }
+.gl-dropdown-check { display: inline-flex; visibility: hidden; }
+.gl-dropdown-item.gl-is-checked .gl-dropdown-check { visibility: visible; }
+.gl-dropdown-clear { border-top: 1px solid var(--gl-dropdown-divider-color); padding: 4px 16px; }
+.gl-dropdown-clear button.gl-clear-all {
+  border: 0; background: transparent; cursor: pointer; font-size: 12px;
+  color: var(--gl-button-link-text-color-default); text-decoration: underline;
+}

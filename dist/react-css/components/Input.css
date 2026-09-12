@@ -1,0 +1,74 @@
+/* Pajamas-inspired (MIT, from shared design tokens) */
+.gl-input-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gl-spacing-scale-2);
+}
+.gl-input {
+  width: 100%;
+  max-width: 100%;
+  font: inherit;
+  font-size: var(--gl-font-size-base);
+  line-height: var(--gl-line-height-20);
+  color: var(--gl-text-color-default);
+  background-color: var(--gl-control-background-color-default);
+  border: 1px solid var(--gl-control-border-color-default);
+  border-radius: var(--gl-control-border-radius);
+  padding: var(--gl-spacing-scale-3) var(--gl-spacing-scale-3);
+  transition: border-color 120ms ease, box-shadow 120ms ease;
+}
+.gl-input::placeholder {
+  color: var(--gl-control-placeholder-color);
+  opacity: 1;
+}
+.gl-input:hover:not(:disabled):not([readonly]) {
+  border-color: var(--gl-control-border-color-hover);
+}
+.gl-input:focus {
+  outline: none;
+  border-color: var(--gl-control-border-color-focus);
+  box-shadow: 0 0 0 2px var(--gl-focus-ring-inner-color), 0 0 0 4px var(--gl-focus-ring-outer-color);
+}
+.gl-input--invalid {
+  border-color: var(--gl-control-border-color-error);
+}
+.gl-input--valid {
+  border-color: var(--gl-control-text-color-valid);
+}
+.gl-input:disabled {
+  background-color: var(--gl-control-background-color-disabled);
+  border-color: var(--gl-control-border-color-disabled);
+  color: var(--gl-text-color-disabled);
+  cursor: not-allowed;
+}
+.gl-input[readonly] {
+  background-color: var(--gl-control-background-color-readonly);
+  border-color: var(--gl-control-border-color-disabled);
+}
+.gl-input--xs {
+  max-width: var(--gl-spacing-scale-30);
+}
+.gl-input--sm {
+  max-width: var(--gl-spacing-scale-34);
+}
+.gl-input--md {
+  max-width: var(--gl-spacing-scale-48);
+}
+.gl-input--lg {
+  max-width: var(--gl-spacing-scale-62);
+}
+.gl-input--xl {
+  max-width: var(--gl-spacing-scale-75);
+}
+.gl-input-feedback {
+  margin: 0;
+  font-size: var(--gl-font-size-sm);
+  line-height: var(--gl-line-height-16);
+}
+.gl-input-feedback--valid {
+  color: var(--gl-control-text-color-valid);
+}
+.gl-input-feedback--invalid {
+  color: var(--gl-control-text-color-error);
+}
+

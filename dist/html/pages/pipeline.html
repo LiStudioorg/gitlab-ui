@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>流水线 · 持续集成</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="../../css/variables.css">
+<style>
+
+*, *::before, *::after { box-sizing: border-box; }
+html { font-size: 16px; }
+body { margin: 0; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: var(--gl-font-size-base); line-height: var(--gl-line-height-24); color: var(--gl-text-color-default); background-color: var(--gl-background-color-default); }
+h1, h2, h3, h4 { margin: 0; color: var(--gl-text-color-heading); font-weight: var(--gl-font-weight-heading); line-height: var(--gl-line-height-heading); }
+a { color: var(--gl-text-color-link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+:focus-visible { outline: none; box-shadow: 0 0 0 2px var(--gl-focus-ring-inner-color), 0 0 0 4px var(--gl-focus-ring-outer-color); border-radius: var(--gl-border-radius-sm); }
+
+/* ---- 顶部导航 ---- */
+.gl-topbar { position: sticky; top: 0; z-index: var(--gl-zindex-3); display: flex; align-items: center; justify-content: space-between; gap: var(--gl-spacing-scale-4); padding: var(--gl-spacing-scale-3) var(--gl-spacing-scale-5); background-color: var(--gl-background-color-overlap); border-bottom: 1px solid var(--gl-border-color-default); }
+.gl-topbar-brand { font-size: var(--gl-font-size-400-fixed); font-weight: var(--gl-font-weight-bold); color: var(--gl-text-color-heading); white-space: nowrap; }
+.gl-topbar-search { display: flex; align-items: center; gap: var(--gl-spacing-scale-2); padding: var(--gl-spacing-scale-2) var(--gl-spacing-scale-3); border: 1px solid var(--gl-border-color-default); border-radius: var(--gl-border-radius-lg); background-color: var(--gl-control-background-color-default); color: var(--gl-text-color-subtle); width: min(22rem, 40vw); }
+.gl-topbar-search input { border: 0; outline: none; background: transparent; color: var(--gl-text-color-default); font-size: var(--gl-font-size-sm); width: 100%; }
+.gl-icon-btn { display: inline-flex; align-items: center; justify-content: center; width: var(--gl-spacing-scale-8); height: var(--gl-spacing-scale-8); border-radius: var(--gl-border-radius-full); border: 0; background: transparent; color: var(--gl-text-color-default); cursor: pointer; }
+.gl-icon-btn:hover { background-color: var(--gl-color-alpha-dark-4); }
+.gl-icon { width: var(--gl-line-height-16); height: var(--gl-line-height-16); flex-shrink: 0; }
+.gl-icon-lg { width: var(--gl-line-height-24); height: var(--gl-line-height-24); }
+.gl-spin { animation: gl-spin 0.8s linear infinite; }
+@keyframes gl-spin { to { transform: rotate(360deg); } }
+
+/* ---- 头像 / 徽章 / 标签 ---- */
+.gl-avatar { display: inline-flex; align-items: center; justify-content: center; border-radius: var(--gl-avatar-circle-border-radius-default); color: var(--gl-text-color-heading); font-size: var(--gl-font-size-sm); font-weight: var(--gl-font-weight-bold); flex-shrink: 0; border: 1px solid var(--gl-avatar-border-color-default); }
+.gl-badge { display: inline-flex; align-items: center; gap: var(--gl-spacing-scale-1); padding: var(--gl-spacing-scale-1) var(--gl-spacing-scale-2); border-radius: var(--gl-border-radius-full); font-size: var(--gl-font-size-sm); font-weight: var(--gl-font-weight-bold); line-height: var(--gl-line-height-16); white-space: nowrap; }
+.gl-badge--neutral { background-color: var(--gl-badge-neutral-background-color-default); color: var(--gl-badge-neutral-text-color-default); }
+.gl-badge--info { background-color: var(--gl-badge-info-background-color-default); color: var(--gl-badge-info-text-color-default); }
+.gl-badge--success { background-color: var(--gl-badge-success-background-color-default); color: var(--gl-badge-success-text-color-default); }
+.gl-badge--warning { background-color: var(--gl-badge-warning-background-color-default); color: var(--gl-badge-warning-text-color-default); }
+.gl-badge--danger { background-color: var(--gl-badge-danger-background-color-default); color: var(--gl-badge-danger-text-color-default); }
+.gl-badge--tier { background-color: var(--gl-badge-tier-background-color-default); color: var(--gl-badge-tier-text-color-default); }
+.gl-label-chip { display: inline-flex; align-items: center; padding: var(--gl-spacing-scale-1) var(--gl-spacing-scale-3); border-radius: var(--gl-border-radius-full); font-size: var(--gl-font-size-sm); font-weight: var(--gl-font-weight-bold); line-height: var(--gl-line-height-16); white-space: nowrap; }
+
+/* ---- 左侧导航 ---- */
+.gl-shell { display: flex; align-items: flex-start; }
+.gl-sidenav { width: var(--gl-spacing-scale-30); flex-shrink: 0; position: sticky; top: var(--gl-spacing-scale-13); max-height: calc(100vh - var(--gl-spacing-scale-13)); overflow-y: auto; padding: var(--gl-spacing-scale-4); border-right: 1px solid var(--gl-border-color-default); min-height: calc(100vh - var(--gl-spacing-scale-13)); }
+.gl-sidenav-project { display: flex; align-items: center; gap: var(--gl-spacing-scale-3); padding: var(--gl-spacing-scale-2); margin-bottom: var(--gl-spacing-scale-4); }
+.gl-sidenav-avatar { display: inline-flex; align-items: center; justify-content: center; width: var(--gl-spacing-scale-8); height: var(--gl-spacing-scale-8); border-radius: var(--gl-border-radius-md); background-color: var(--gl-avatar-fallback-background-color-neutral); color: var(--gl-text-color-default); flex-shrink: 0; }
+.gl-sidenav-name { display: block; font-weight: var(--gl-font-weight-bold); color: var(--gl-text-color-heading); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.gl-sidenav-ns { display: block; font-size: var(--gl-font-size-sm); color: var(--gl-text-color-subtle); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.gl-sidenav-nav { display: flex; flex-direction: column; gap: var(--gl-spacing-scale-1); }
+.gl-sidenav-link { display: flex; align-items: center; gap: var(--gl-spacing-scale-3); padding: var(--gl-spacing-scale-2) var(--gl-spacing-scale-3); border-radius: var(--gl-border-radius-md); color: var(--gl-text-color-default); font-size: var(--gl-font-size-base); }
+.gl-sidenav-link:hover { background-color: var(--gl-color-alpha-dark-4); text-decoration: none; }
+.gl-sidenav-link.is-active { background-color: var(--gl-color-alpha-dark-8); color: var(--gl-text-color-strong); font-weight: var(--gl-font-weight-bold); }
+.gl-sidenav-count { margin-left: auto; font-size: var(--gl-font-size-sm); font-weight: var(--gl-font-weight-bold); color: var(--gl-text-color-subtle); background-color: var(--gl-badge-muted-background-color-default); border-radius: var(--gl-border-radius-full); padding: 0 var(--gl-spacing-scale-2); line-height: var(--gl-line-height-20); }
+.gl-sidenav-parent { font-weight: var(--gl-font-weight-bold); color: var(--gl-text-color-heading); }
+.gl-sidenav-children { display: flex; flex-direction: column; gap: var(--gl-spacing-scale-1); margin: var(--gl-spacing-scale-1) 0 var(--gl-spacing-scale-2); }
+.gl-sidenav-child { padding-left: var(--gl-spacing-scale-9); font-size: var(--gl-font-size-base); }
+
+/* ---- 主内容 / 右栏 ---- */
+.gl-main { flex: 1 1 100%; min-width: 0; padding: var(--gl-spacing-scale-5) var(--gl-spacing-scale-6); }
+.gl-rightbar { width: var(--gl-spacing-scale-37); flex-shrink: 0; position: sticky; top: var(--gl-spacing-scale-13); max-height: calc(100vh - var(--gl-spacing-scale-13)); overflow-y: auto; padding: var(--gl-spacing-scale-5) var(--gl-spacing-scale-5) var(--gl-spacing-scale-5) 0; }
+
+/* ---- 通用卡片 / 按钮 / tabs ---- */
+.gl-card { background-color: var(--gl-background-color-overlap); border: 1px solid var(--gl-border-color-default); border-radius: var(--gl-border-radius-lg); box-shadow: var(--gl-shadow-sm); }
+.gl-btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--gl-spacing-scale-2); padding: var(--gl-spacing-scale-2) var(--gl-spacing-scale-3); border-radius: var(--gl-button-border-radius); border: 1px solid transparent; font-size: var(--gl-font-size-base); font-weight: var(--gl-font-weight-semibold); line-height: var(--gl-line-height-20); cursor: pointer; text-decoration: none; }
+.gl-btn:hover { text-decoration: none; }
+.gl-btn--default { background-color: var(--gl-button-default-primary-background-color-default); border-color: var(--gl-border-color-default); color: var(--gl-button-default-primary-foreground-color-default); }
+.gl-btn--default:hover { background-color: var(--gl-color-alpha-dark-4); }
+.gl-btn--confirm { background-color: var(--gl-button-confirm-primary-background-color-default); color: var(--gl-button-confirm-primary-foreground-color-default); }
+.gl-btn--confirm:hover { filter: brightness(1.1); }
+.gl-btn--danger { background-color: var(--gl-button-danger-primary-background-color-default); color: var(--gl-button-danger-primary-foreground-color-default); }
+.gl-btn--link { border: 0; background: transparent; color: var(--gl-button-link-text-color-default); padding: 0 var(--gl-spacing-scale-2); }
+.gl-btn--link:hover { text-decoration: underline; }
+.gl-btn:disabled { cursor: not-allowed; background-color: var(--gl-action-disabled-background-color); color: var(--gl-action-disabled-foreground-color); border-color: var(--gl-action-disabled-border-color); filter: none; }
+.gl-input { display: flex; align-items: center; gap: var(--gl-spacing-scale-2); border: 1px solid var(--gl-control-border-color-default); border-radius: var(--gl-control-border-radius); background-color: var(--gl-control-background-color-default); padding: var(--gl-spacing-scale-2) var(--gl-spacing-scale-3); color: var(--gl-text-color-default); }
+.gl-input input { border: 0; outline: none; background: transparent; color: var(--gl-text-color-default); width: 100%; font-size: var(--gl-font-size-base); }
+.gl-input input::placeholder { color: var(--gl-control-placeholder-color); }
+.gl-tabs { display: flex; gap: var(--gl-spacing-scale-2); border-bottom: 1px solid var(--gl-border-color-default); overflow-x: auto; }
+.gl-tab { display: inline-flex; align-items: center; gap: var(--gl-spacing-scale-2); padding: var(--gl-spacing-scale-3) var(--gl-spacing-scale-4); border: 0; background: transparent; color: var(--gl-text-color-subtle); font-size: var(--gl-font-size-base); cursor: pointer; position: relative; white-space: nowrap; }
+.gl-tab:hover { color: var(--gl-text-color-strong); }
+.gl-tab.is-active { color: var(--gl-text-color-strong); font-weight: var(--gl-font-weight-bold); }
+.gl-tab.is-active::after { content: ''; position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; border-radius: var(--gl-border-radius-xs); background-color: var(--gl-tab-selected-indicator-color-default); }
+.gl-tab-count { display: inline-flex; align-items: center; border-radius: var(--gl-border-radius-full); background-color: var(--gl-badge-muted-background-color-default); color: var(--gl-badge-muted-text-color-default); font-size: var(--gl-font-size-sm); padding: 0 var(--gl-spacing-scale-2); }
+.gl-h1 { font-size: var(--gl-heading-scale-500-font-size); }
+.gl-subtle { color: var(--gl-text-color-subtle); }
+.gl-divider { border: 0; border-top: 1px solid var(--gl-border-color-subtle); margin: 0; }
+
+/* ---- 页面元素 ---- */
+.gl-ref-chip { display: inline-flex; align-items: center; padding: 0 var(--gl-spacing-scale-2); border-radius: var(--gl-border-radius-default); background-color: var(--gl-badge-muted-background-color-default); color: var(--gl-badge-muted-text-color-default); font-family: ui-monospace, monospace; font-size: var(--gl-font-size-sm); }
+.gl-code { background-color: var(--gl-color-alpha-dark-4); border-radius: var(--gl-border-radius-sm); padding: 0 var(--gl-spacing-scale-1); font-family: ui-monospace, monospace; font-size: var(--gl-font-size-sm); color: var(--gl-text-color-strong); }
+.gl-desc { max-width: var(--gl-spacing-scale-62); }
+.gl-desc p { margin: 0 0 var(--gl-spacing-scale-3); }
+.gl-alert { display: flex; gap: var(--gl-spacing-scale-3); padding: var(--gl-spacing-scale-4); border-radius: var(--gl-alert-border-radius); border: 1px solid var(--gl-alert-info-border-color); background-color: var(--gl-alert-info-background-color); color: var(--gl-alert-info-title-color); }
+.gl-job-node { display: flex; align-items: center; gap: var(--gl-spacing-scale-2); padding: var(--gl-spacing-scale-3); border: 1px solid var(--gl-border-color-default); border-radius: var(--gl-border-radius-lg); background-color: var(--gl-background-color-overlap); min-width: var(--gl-spacing-scale-37); cursor: pointer; }
+.gl-job-node:hover { box-shadow: var(--gl-shadow-sm); }
+.gl-job-node[data-status='success'] { border-color: var(--gl-alert-success-border-color); }
+.gl-job-node[data-status='success'] > svg { color: var(--gl-feedback-success-icon-color); }
+.gl-job-node[data-status='failed'] { border-color: var(--gl-alert-danger-border-color); }
+.gl-job-node[data-status='failed'] > svg { color: var(--gl-feedback-danger-icon-color); }
+.gl-job-node[data-status='running'] > svg { color: var(--gl-feedback-info-icon-color); }
+.gl-job-node[data-status='manual'] > svg, .gl-job-node[data-status='created'] > svg { color: var(--gl-text-color-subtle); }
+.gl-stage-arrow { align-self: center; color: var(--gl-text-color-subtle); font-size: var(--gl-font-size-500-fixed); flex-shrink: 0; }
+.gl-table { width: 100%; border-collapse: collapse; font-size: var(--gl-font-size-base); color: var(--gl-text-color-default); }
+.gl-table th { text-align: left; font-weight: var(--gl-font-weight-bold); color: var(--gl-text-color-subtle); padding: var(--gl-spacing-scale-3) var(--gl-spacing-scale-4); box-shadow: inset 0 -1px 0 var(--gl-border-color-default); white-space: nowrap; }
+.gl-table td { padding: var(--gl-spacing-scale-3) var(--gl-spacing-scale-4); box-shadow: inset 0 -1px 0 var(--gl-border-color-subtle); }
+.gl-table tbody tr:hover { background-color: var(--gl-table-row-background-color-hover); }
+.gl-table tr[data-status='failed'] td:first-child { color: var(--gl-text-color-danger); }
+.gl-issue-row { display: flex; align-items: flex-start; gap: var(--gl-spacing-scale-3); padding: var(--gl-spacing-scale-4) var(--gl-spacing-scale-5); box-shadow: inset 0 -1px 0 var(--gl-border-color-subtle); }
+.gl-issue-row:hover { background-color: var(--gl-table-row-background-color-hover); }
+.gl-board-col { display: flex; flex-direction: column; gap: var(--gl-spacing-scale-3); width: var(--gl-spacing-scale-62); flex-shrink: 0; padding: var(--gl-spacing-scale-3); border: 1px dashed var(--gl-border-color-default); border-radius: var(--gl-border-radius-lg); background-color: var(--gl-background-color-subtle); }
+.gl-board-head { display: flex; align-items: center; gap: var(--gl-spacing-scale-2); }
+.gl-board-dot { width: var(--gl-line-height-16); height: var(--gl-line-height-16); border-radius: var(--gl-border-radius-full); flex-shrink: 0; }
+.gl-board-card { background-color: var(--gl-background-color-overlap); border: 1px solid var(--gl-border-color-default); border-radius: var(--gl-border-radius-lg); padding: var(--gl-spacing-scale-3); box-shadow: var(--gl-shadow-sm); cursor: grab; }
+.gl-board-card:hover { border-color: var(--gl-border-color-strong); }
+.gl-stat { display: flex; flex-direction: column; }
+.gl-stat-num { font-size: var(--gl-font-size-500-fixed); font-weight: var(--gl-font-weight-bold); color: var(--gl-text-color-heading); }
+@media (max-width: 639px) {
+  .gl-sidenav { display: none; }
+  .gl-rightbar { width: 100%; position: static; padding: 0 var(--gl-spacing-scale-5) var(--gl-spacing-scale-5); }
+  .gl-topbar-search { width: auto; flex: 1 1 auto; }
+}
+@media (min-width: 640px) {
+  .gl-main { flex: 1 1 auto; }
+}
+
+</style>
+</head>
+<body>
+<div id="gl-root">
+  <!-- 顶部全局导航 -->
+  <header class="gl-topbar">
+    <div class="flex items-center gap-3 min-w-0">
+      <span class="flex items-center text-[color:var(--gl-text-color-heading)]"><svg class="gl-icon gl-icon-lg" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 1.6v12.8M1.6 8h12.8" stroke="currentColor" stroke-width="1.2"/><circle cx="8" cy="8" r="2" fill="currentColor"/></svg></span>
+      <span class="gl-topbar-brand">代码评审平台</span>
+      <label class="gl-topbar-search">
+        <svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M10.5 10.5L14 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <input type="search" placeholder="搜索或输入命令" aria-label="搜索">
+      </label>
+    </div>
+    <div class="flex items-center gap-2">
+      <button type="button" class="gl-icon-btn" data-gl-theme-toggle title="切换暗色模式" aria-label="切换暗色模式" data-icon-moon="&lt;path d=&quot;M13.2 9.8A5.5 5.5 0 0 1 6.2 2.8a5.5 5.5 0 1 0 7 7z&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.5&quot; stroke-linejoin=&quot;round&quot;/&gt;" data-icon-sun="&lt;circle cx=&quot;8&quot; cy=&quot;8&quot; r=&quot;3&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.5&quot;/&gt;&lt;path d=&quot;M8 1.5v2M8 12.5v2M1.5 8h2M12.5 8h2M3.4 3.4l1.4 1.4M11.2 11.2l1.4 1.4M12.6 3.4l-1.4 1.4M4.8 11.2l-1.4 1.4&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.4&quot; stroke-linecap=&quot;round&quot;/&gt;"><svg class="gl-icon gl-icon-theme" viewBox="0 0 16 16" aria-hidden="true"><path d="M13.2 9.8A5.5 5.5 0 0 1 6.2 2.8a5.5 5.5 0 1 0 7 7z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></button>
+      <button type="button" class="gl-icon-btn" aria-label="新建"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+      <span class="gl-avatar" style="width:var(--gl-spacing-scale-8);height:var(--gl-spacing-scale-8);background-color:var(--gl-avatar-fallback-background-color-blue)" title="王小明">王</span>
+    </div>
+  </header>
+
+  <div class="gl-shell">
+    <!-- 左侧项目导航 -->
+    <aside class="gl-sidenav" id="gl-sidenav" aria-label="项目导航">
+      <div class="gl-sidenav-project">
+        <span class="gl-sidenav-avatar"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 3.5h4.5l1.5 2h7v8h-13z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></span>
+        <span class="min-w-0">
+          <span class="gl-sidenav-name">acme/web</span>
+          <span class="gl-sidenav-ns">代码评审平台</span>
+        </span>
+      </div>
+      <nav class="gl-sidenav-nav">
+        <a class="gl-sidenav-link" href="#overview"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 1.5h5.5L13 5v9.5H4z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 1.5V5h3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>概览</a>
+        <a class="gl-sidenav-link" href="#code"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="4.5" cy="3.5" r="1.8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="4.5" cy="12.5" r="1.8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="11.5" cy="3.5" r="1.8" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M4.5 5.3v5.4M11.5 5.3v1.2c0 1.6-1.2 2.5-2.8 2.5H6.3" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>代码</a>
+        <a class="gl-sidenav-link" href="#issues"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.2" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="8" r="2" fill="currentColor"/></svg>议题<span class="gl-sidenav-count">12</span></a>
+        <a class="gl-sidenav-link" href="#merge-requests"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="4.5" cy="3.5" r="1.8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="11.5" cy="12.5" r="1.8" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M4.5 5.3v1.2c0 1.6 1.2 2.5 2.8 2.5h2.4M9.7 7l1.8 1.8L13.3 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>合并请求<span class="gl-sidenav-count">3</span></a>
+        <div class="gl-sidenav-group">
+          <span class="gl-sidenav-link gl-sidenav-parent"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.8c2.5 1.4 3.8 3.7 3.8 6.4L10 10H6L4.2 8.2c0-2.7 1.3-5 3.8-6.4z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><circle cx="8" cy="6.2" r="1.2" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M6 10.5l-1.2 3M10 10.5l1.2 3M8 11v3.2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>CI/CD</span>
+          <div class="gl-sidenav-children">
+          <a class="gl-sidenav-link gl-sidenav-child is-active" href="#pipelines">流水线</a>
+          <a class="gl-sidenav-link gl-sidenav-child" href="#jobs">作业</a>
+          <a class="gl-sidenav-link gl-sidenav-child" href="#schedules">计划任务</a>
+          </div>
+        </div>
+        <a class="gl-sidenav-link" href="#deploy"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 12l3-7 3 4 3-6 3 9z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>部署</a>
+        <a class="gl-sidenav-link" href="#monitor"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 13.5h11M4.5 13V9M8 13V5.5M11.5 13V7.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>分析与监控</a>
+      </nav>
+    </aside>
+
+    <!-- 主内容 -->
+    <main class="gl-main" style="max-width:62rem">
+
+      <div class="flex items-start justify-between gap-4 flex-wrap">
+        <div class="min-w-0">
+          <div class="flex items-center gap-2 flex-wrap">
+            <h1 class="gl-h1">流水线 #183</h1>
+            <span class="gl-badge gl-badge--info"><svg class="gl-icon gl-spin gl-icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6" fill="none" stroke="currentColor" stroke-width="2" opacity="0.35"/><path d="M14 8A6 6 0 0 0 8 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> 运行中</span>
+          </div>
+          <p class="gl-subtle mt-2 mb-0 flex items-center gap-2 flex-wrap">
+            <span class="gl-ref-chip">feat/keyboard-shortcuts</span>
+            <span>· <code class="gl-code">a1b2c3d4</code> feat: 注册全局快捷键处理器</span>
+            <span>· 由 王小明 触发 · 已运行 4 分 12 秒</span>
+          </p>
+        </div>
+        <div class="flex items-center gap-2 flex-wrap">
+          <button type="button" class="gl-btn gl-btn--default"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M13.5 8a5.5 5.5 0 1 1-1.6-3.9M13.5 2.5v2.6h-2.6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> 重试</button>
+          <button type="button" class="gl-btn gl-btn--default"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M5.5 5.5l5 5M10.5 5.5l-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> 取消</button>
+          <button type="button" class="gl-btn gl-btn--confirm"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3.5v9l7-4.5z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg> 运行流水线</button>
+          <button type="button" class="gl-icon-btn" aria-label="更多操作"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="3.5" cy="8" r="1.2" fill="currentColor"/><circle cx="8" cy="8" r="1.2" fill="currentColor"/><circle cx="12.5" cy="8" r="1.2" fill="currentColor"/></svg></button>
+        </div>
+      </div>
+
+      <div class="mt-5 flex flex-col gap-5">
+        <section class="gl-card p-5" aria-label="流水线阶段图">
+          <div class="flex items-center gap-4 overflow-x-auto pb-2">
+        
+        <div class="flex flex-col gap-3 min-w-[var(--gl-spacing-scale-37)]">
+          <div class="font-bold text-[color:var(--gl-text-color-strong)] flex items-center gap-2"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.5 3.5L13 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>构建</div>
+          <button type="button" class="text-left" title="install · 成功 · 1 分 30 秒"><div class="gl-job-node" data-status="success"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.5 3.5L13 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="min-w-0"><span class="block truncate">install</span><span class="gl-subtle text-[length:var(--gl-font-size-sm)]">1 分 30 秒</span></span></div></button>
+          <button type="button" class="text-left" title="build · 成功 · 2 分 05 秒"><div class="gl-job-node" data-status="success"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.5 3.5L13 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="min-w-0"><span class="block truncate">build</span><span class="gl-subtle text-[length:var(--gl-font-size-sm)]">2 分 05 秒</span></span></div></button>
+        </div>
+        <span class="gl-stage-arrow" aria-hidden="true">→</span>
+        <div class="flex flex-col gap-3 min-w-[var(--gl-spacing-scale-37)]">
+          <div class="font-bold text-[color:var(--gl-text-color-strong)] flex items-center gap-2"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.5 3.5L13 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>测试</div>
+          <button type="button" class="text-left" title="unit · 成功 · 3 分 12 秒"><div class="gl-job-node" data-status="success"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.5 3.5L13 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="min-w-0"><span class="block truncate">unit</span><span class="gl-subtle text-[length:var(--gl-font-size-sm)]">3 分 12 秒</span></span></div></button>
+          <button type="button" class="text-left" title="lint · 失败 · 0 分 48 秒"><div class="gl-job-node" data-status="failed"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M5.5 5.5l5 5M10.5 5.5l-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="min-w-0"><span class="block truncate">lint</span><span class="gl-subtle text-[length:var(--gl-font-size-sm)]">0 分 48 秒</span></span></div></button>
+          <button type="button" class="text-left" title="integration · 运行中 · —"><div class="gl-job-node" data-status="running"><svg class="gl-icon gl-spin gl-icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6" fill="none" stroke="currentColor" stroke-width="2" opacity="0.35"/><path d="M14 8A6 6 0 0 0 8 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span class="min-w-0"><span class="block truncate">integration</span><span class="gl-subtle text-[length:var(--gl-font-size-sm)]">—</span></span></div></button>
+        </div>
+        <span class="gl-stage-arrow" aria-hidden="true">→</span>
+        <div class="flex flex-col gap-3 min-w-[var(--gl-spacing-scale-37)]">
+          <div class="font-bold text-[color:var(--gl-text-color-strong)] flex items-center gap-2"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.5 3.5L13 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>发布</div>
+          <button type="button" class="text-left" title="package · 已创建 · —"><div class="gl-job-node" data-status="created"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.5 3.5L13 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="min-w-0"><span class="block truncate">package</span><span class="gl-subtle text-[length:var(--gl-font-size-sm)]">—</span></span></div></button>
+          <button type="button" class="text-left" title="deploy-staging · 手动 · —"><div class="gl-job-node" data-status="manual"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3.5v9l7-4.5z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg><span class="min-w-0"><span class="block truncate">deploy-staging</span><span class="gl-subtle text-[length:var(--gl-font-size-sm)]">—</span></span></div></button>
+        </div>
+          </div>
+          <hr class="gl-divider my-4">
+          <div class="flex items-center gap-4 flex-wrap text-[length:var(--gl-font-size-sm)] gl-subtle">
+            <span><span class="gl-badge gl-badge--success">成功 3</span></span>
+            <span><span class="gl-badge gl-badge--danger">失败 1</span></span>
+            <span><span class="gl-badge gl-badge--info">运行中 1</span></span>
+            <span><span class="gl-badge gl-badge--neutral">其他 2</span></span>
+            <span class="ml-auto">总耗时 4 分 12 秒</span>
+          </div>
+        </section>
+
+        <div class="gl-tabs" role="tablist" aria-label="流水线分区">
+          <button type="button" class="gl-tab is-active" role="tab" aria-selected="true">概览</button>
+          <button type="button" class="gl-tab" role="tab" aria-selected="false">作业<span class="gl-tab-count">7</span></button>
+          <button type="button" class="gl-tab" role="tab" aria-selected="false">图表</button>
+          <button type="button" class="gl-tab" role="tab" aria-selected="false">下游流水线</button>
+        </div>
+
+        <section class="gl-card overflow-hidden" aria-label="作业列表">
+          <table class="gl-table">
+            <thead>
+              <tr><th>作业</th><th>阶段</th><th>状态</th><th>时长</th><th>覆盖率</th><th>日志</th></tr>
+            </thead>
+            <tbody>
+          <tr data-status="success">
+            <td class="font-bold text-[color:var(--gl-text-color-strong)]">install</td>
+            <td>构建</td>
+            <td><span class="gl-badge gl-badge--success">成功</span></td>
+            <td>1 分 30 秒</td>
+            <td>—</td>
+            <td><button type="button" class="gl-btn gl-btn--link">查看日志</button></td>
+          </tr>
+          <tr data-status="success">
+            <td class="font-bold text-[color:var(--gl-text-color-strong)]">build</td>
+            <td>构建</td>
+            <td><span class="gl-badge gl-badge--success">成功</span></td>
+            <td>2 分 05 秒</td>
+            <td>78.4%</td>
+            <td><button type="button" class="gl-btn gl-btn--link">查看日志</button></td>
+          </tr>
+          <tr data-status="success">
+            <td class="font-bold text-[color:var(--gl-text-color-strong)]">unit</td>
+            <td>测试</td>
+            <td><span class="gl-badge gl-badge--success">成功</span></td>
+            <td>3 分 12 秒</td>
+            <td>86.1%</td>
+            <td><button type="button" class="gl-btn gl-btn--link">查看日志</button></td>
+          </tr>
+          <tr data-status="failed">
+            <td class="font-bold text-[color:var(--gl-text-color-strong)]">lint</td>
+            <td>测试</td>
+            <td><span class="gl-badge gl-badge--danger">失败</span></td>
+            <td>0 分 48 秒</td>
+            <td>—</td>
+            <td><button type="button" class="gl-btn gl-btn--link">查看日志</button></td>
+          </tr>
+          <tr data-status="running">
+            <td class="font-bold text-[color:var(--gl-text-color-strong)]">integration</td>
+            <td>测试</td>
+            <td><span class="gl-badge gl-badge--info"><svg class="gl-icon gl-spin gl-icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6" fill="none" stroke="currentColor" stroke-width="2" opacity="0.35"/><path d="M14 8A6 6 0 0 0 8 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>运行中</span></td>
+            <td>进行中</td>
+            <td>—</td>
+            <td><button type="button" class="gl-btn gl-btn--link">查看日志</button></td>
+          </tr>
+          <tr data-status="created">
+            <td class="font-bold text-[color:var(--gl-text-color-strong)]">package</td>
+            <td>发布</td>
+            <td><span class="gl-badge gl-badge--neutral">已创建</span></td>
+            <td>—</td>
+            <td>—</td>
+            <td><button type="button" class="gl-btn gl-btn--link">查看日志</button></td>
+          </tr>
+          <tr data-status="manual">
+            <td class="font-bold text-[color:var(--gl-text-color-strong)]">deploy-staging</td>
+            <td>发布</td>
+            <td><span class="gl-badge gl-badge--warning">手动</span></td>
+            <td>—</td>
+            <td>—</td>
+            <td><button type="button" class="gl-btn gl-btn--link">查看日志</button></td>
+          </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+
+    </main>
+
+  </div>
+</div>
+<script>
+(function () {
+  var root = document.getElementById('gl-root');
+  var btn = document.querySelector('[data-gl-theme-toggle]');
+  if (!btn) return;
+  var setIcon = function (dark) {
+    var span = btn.querySelector('.gl-icon-theme');
+    if (span) span.innerHTML = dark ? btn.getAttribute('data-icon-sun') : btn.getAttribute('data-icon-moon');
+  };
+  btn.addEventListener('click', function () {
+    var dark = root.classList.toggle('gl-dark');
+    setIcon(dark);
+  });
+})();
+</script>
+</body>
+</html>

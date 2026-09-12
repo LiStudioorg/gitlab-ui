@@ -1,0 +1,18 @@
+/* Pajamas-inspired (MIT) */
+:host { display: inline-flex; }
+.gl-badge {
+  display: inline-flex; align-items: center; gap: 4px;
+  border-radius: var(--gl-border-radius-full);
+  font-size: 12px; font-weight: 600; line-height: 20px;
+  padding: 0 8px; text-decoration: none;
+  background-color: var(--gl-badge-neutral-background-color-default);
+  color: var(--gl-badge-neutral-text-color-default);
+}
+a.gl-badge { cursor: pointer; }
+a.gl-badge:hover { box-shadow: inset 0 0 0 1px currentColor; }
+.gl-badge-info { background-color: var(--gl-badge-info-background-color-default); color: var(--gl-badge-info-text-color-default); }
+.gl-badge-success { background-color: var(--gl-badge-success-background-color-default); color: var(--gl-badge-success-text-color-default); }
+.gl-badge-warning { background-color: var(--gl-badge-warning-background-color-default); color: var(--gl-badge-warning-text-color-default); }
+.gl-badge-danger { background-color: var(--gl-badge-danger-background-color-default); color: var(--gl-badge-danger-text-color-default); }
+.gl-badge-tier { background-color: var(--gl-badge-tier-background-color-default); color: var(--gl-badge-tier-text-color-default); }
+.gl-badge-icon { display: inline-flex; }
