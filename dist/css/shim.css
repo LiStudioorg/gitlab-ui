@@ -1,22 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Button</title>
-<link rel="stylesheet" href="../../css/variables.css">
-    <style>
-      :focus-visible { outline: none; box-shadow: 0 0 0 2px var(--gl-focus-ring-inner-color), 0 0 0 4px var(--gl-focus-ring-outer-color); }
-      .spin { animation: gl-spin .8s linear infinite; }
-      @keyframes gl-spin { to { transform: rotate(360deg); } }
-      .gl-tab-btn { position: relative; }
-      .gl-tab-btn::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; border-radius: 1px; background-color: var(--gl-color-alpha-0); }
-      .gl-tab-btn:hover::after { background-color: var(--gl-border-color-strong); }
-      .gl-tab-btn[data-active='true'] { font-weight: var(--gl-font-weight-bold); }
-      .gl-tab-btn[data-active='true']::after { background-color: var(--gl-tab-selected-indicator-color-default); }
-      body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
-    </style>
-<style id="gl-shim">
 /* Pajamas-inspired (MIT, tokens from @gitlab/ui) — utility shim CSS.
  * Zero-dependency replacement for a Tailwind CDN: only the utility
  * classes actually used by dist/html & dist/alpine & dist/htmx files.
@@ -448,45 +429,3 @@
 .z-\[var\(--gl-zindex-4\)\]{z-index:var(--gl-zindex-4)}
 .space-y-\[var\(--gl-spacing-scale-3\)\] > * + *{margin-top:var(--gl-spacing-scale-3)}
 .space-y-\[var\(--gl-spacing-scale-5\)\] > * + *{margin-top:var(--gl-spacing-scale-5)}
-
-</style>
-</head>
-<body>
-  <main class="max-w-4xl mx-auto my-8 px-8" style="color: var(--gl-text-color-default)">
-    <h1 class="text-[length:var(--gl-heading-scale-500-font-size)] font-bold mb-4" style="color: var(--gl-text-color-heading)">Button</h1>
-    <p class="mb-6" style="color: var(--gl-text-color-subtle)">Categories primary/secondary/tertiary &times; variants default/confirm/danger; disabled &amp; loading are reactive.</p>
-
-    <div x-data="{ loading: false, saved: false, save() { this.loading = true; this.saved = false; setTimeout(() => { this.loading = false; this.saved = true; }, 1800); } }">
-      <div class="flex flex-wrap gap-3 mb-6">
-                <button class="inline-flex items-center gap-2 rounded-[var(--gl-button-border-radius)] bg-[var(--gl-button-default-primary-background-color-default)] text-[color:var(--gl-button-default-primary-foreground-color-default)] px-[var(--gl-spacing-scale-3)] py-[var(--gl-spacing-scale-3)] text-[length:var(--gl-font-size-base)] font-bold cursor-pointer border border-transparent hover:bg-[var(--gl-button-default-primary-background-color-hover)] hover:text-[color:var(--gl-button-default-primary-foreground-color-hover)] active:bg-[var(--gl-button-default-primary-background-color-active)]">Default</button>
-                <button class="inline-flex items-center gap-2 rounded-[var(--gl-button-border-radius)] bg-[var(--gl-button-confirm-primary-background-color-default)] text-[color:var(--gl-button-confirm-primary-foreground-color-default)] px-[var(--gl-spacing-scale-3)] py-[var(--gl-spacing-scale-3)] text-[length:var(--gl-font-size-base)] font-bold cursor-pointer border border-transparent hover:bg-[var(--gl-button-confirm-primary-background-color-hover)] hover:text-[color:var(--gl-button-confirm-primary-foreground-color-hover)] active:bg-[var(--gl-button-confirm-primary-background-color-active)]">Confirm</button>
-                <button class="inline-flex items-center gap-2 rounded-[var(--gl-button-border-radius)] bg-[var(--gl-button-danger-primary-background-color-default)] text-[color:var(--gl-button-danger-primary-foreground-color-default)] px-[var(--gl-spacing-scale-3)] py-[var(--gl-spacing-scale-3)] text-[length:var(--gl-font-size-base)] font-bold cursor-pointer border border-transparent hover:bg-[var(--gl-button-danger-primary-background-color-hover)] hover:text-[color:var(--gl-button-danger-primary-foreground-color-hover)] active:bg-[var(--gl-button-danger-primary-background-color-active)]">Danger</button>
-                <button class="inline-flex items-center gap-2 rounded-[var(--gl-button-border-radius)] bg-[var(--gl-button-default-secondary-background-color-default)] text-[color:var(--gl-button-default-secondary-foreground-color-default)] px-[var(--gl-spacing-scale-3)] py-[var(--gl-spacing-scale-3)] text-[length:var(--gl-font-size-base)] font-bold cursor-pointer border border-transparent hover:bg-[var(--gl-button-default-secondary-background-color-hover)] hover:text-[color:var(--gl-button-default-secondary-foreground-color-hover)] active:bg-[var(--gl-button-default-secondary-background-color-active)]">Secondary</button>
-                <button class="inline-flex items-center gap-2 rounded-[var(--gl-button-border-radius)] bg-[var(--gl-button-confirm-secondary-background-color-default)] text-[color:var(--gl-button-confirm-secondary-foreground-color-default)] px-[var(--gl-spacing-scale-3)] py-[var(--gl-spacing-scale-3)] text-[length:var(--gl-font-size-base)] font-bold cursor-pointer border border-transparent hover:bg-[var(--gl-button-confirm-secondary-background-color-hover)] hover:text-[color:var(--gl-button-confirm-secondary-foreground-color-hover)] active:bg-[var(--gl-button-confirm-secondary-background-color-active)]">Confirm</button>
-                <button class="inline-flex items-center gap-2 rounded-[var(--gl-button-border-radius)] bg-[var(--gl-button-danger-secondary-background-color-default)] text-[color:var(--gl-button-danger-secondary-foreground-color-default)] px-[var(--gl-spacing-scale-3)] py-[var(--gl-spacing-scale-3)] text-[length:var(--gl-font-size-base)] font-bold cursor-pointer border border-transparent hover:bg-[var(--gl-button-danger-secondary-background-color-hover)] hover:text-[color:var(--gl-button-danger-secondary-foreground-color-hover)] active:bg-[var(--gl-button-danger-secondary-background-color-active)]">Danger</button>
-                <button class="inline-flex items-center gap-2 rounded-[var(--gl-button-border-radius)] bg-[var(--gl-button-default-tertiary-background-color-default)] text-[color:var(--gl-button-default-tertiary-foreground-color-default)] px-[var(--gl-spacing-scale-3)] py-[var(--gl-spacing-scale-3)] text-[length:var(--gl-font-size-base)] font-bold cursor-pointer border border-transparent hover:bg-[var(--gl-button-default-tertiary-background-color-hover)] hover:text-[color:var(--gl-button-default-tertiary-foreground-color-hover)] active:bg-[var(--gl-button-default-tertiary-background-color-active)]">Tertiary</button>
-                <button class="inline-flex items-center gap-2 rounded-[var(--gl-button-border-radius)] bg-[var(--gl-button-confirm-tertiary-background-color-default)] text-[color:var(--gl-button-confirm-tertiary-foreground-color-default)] px-[var(--gl-spacing-scale-3)] py-[var(--gl-spacing-scale-3)] text-[length:var(--gl-font-size-base)] font-bold cursor-pointer border border-transparent hover:bg-[var(--gl-button-confirm-tertiary-background-color-hover)] hover:text-[color:var(--gl-button-confirm-tertiary-foreground-color-hover)] active:bg-[var(--gl-button-confirm-tertiary-background-color-active)]">Confirm</button>
-                <button class="inline-flex items-center gap-2 rounded-[var(--gl-button-border-radius)] bg-[var(--gl-button-danger-tertiary-background-color-default)] text-[color:var(--gl-button-danger-tertiary-foreground-color-default)] px-[var(--gl-spacing-scale-3)] py-[var(--gl-spacing-scale-3)] text-[length:var(--gl-font-size-base)] font-bold cursor-pointer border border-transparent hover:bg-[var(--gl-button-danger-tertiary-background-color-hover)] hover:text-[color:var(--gl-button-danger-tertiary-foreground-color-hover)] active:bg-[var(--gl-button-danger-tertiary-background-color-active)]">Danger</button>
-        <a href="#" class="underline inline-flex items-center" style="color: var(--gl-button-link-text-color-default)">Link</a>
-      </div>
-
-      <div class="flex flex-wrap items-center gap-3 mb-6">
-        <button class="inline-flex items-center gap-2 rounded-[var(--gl-button-border-radius)] bg-[var(--gl-button-confirm-primary-background-color-default)] text-[color:var(--gl-button-confirm-primary-foreground-color-default)] px-[var(--gl-spacing-scale-3)] py-[var(--gl-spacing-scale-3)] font-bold disabled:cursor-not-allowed disabled:bg-[var(--gl-action-disabled-background-color)] disabled:text-[color:var(--gl-action-disabled-foreground-color)]" :disabled="loading" @click="save">
-          <svg x-show="loading" class="w-4 h-4 spin" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6" fill="none" stroke="currentColor" stroke-width="2" opacity="0.35"/><path d="M14 8a6 6 0 0 0-6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          <svg x-show="!loading && saved" class="w-4 h-4" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8l3.5 3.5L13 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <span x-text="saved ? 'Saved' : 'Save changes'"></span>
-        </button>
-
-        <button class="inline-flex items-center gap-2 rounded-[var(--gl-button-border-radius)] bg-[var(--gl-button-default-secondary-background-color-default)] text-[color:var(--gl-button-default-secondary-foreground-color-default)] px-[var(--gl-spacing-scale-3)] py-[var(--gl-spacing-scale-3)] font-bold disabled:cursor-not-allowed disabled:bg-[var(--gl-action-disabled-background-color)] disabled:text-[color:var(--gl-action-disabled-foreground-color)]" disabled>Disabled</button>
-
-        <div class="flex gap-2 items-center">
-          <button class="inline-flex items-center rounded-[var(--gl-button-border-radius)] bg-[var(--gl-button-confirm-primary-background-color-default)] text-[color:var(--gl-button-confirm-primary-foreground-color-default)] px-[var(--gl-spacing-scale-2)] py-[var(--gl-spacing-scale-2)] text-[length:var(--gl-font-size-sm)] font-bold">Small</button>
-          <button class="inline-flex items-center rounded-[var(--gl-button-border-radius)] bg-[var(--gl-button-confirm-primary-background-color-default)] text-[color:var(--gl-button-confirm-primary-foreground-color-default)] px-[var(--gl-spacing-scale-3)] py-[var(--gl-spacing-scale-3)] font-bold">Medium</button>
-        </div>
-      </div>
-
-      <button class="w-full flex items-center justify-center gap-2 rounded-[var(--gl-button-border-radius)] bg-[var(--gl-button-danger-primary-background-color-default)] text-[color:var(--gl-button-danger-primary-foreground-color-default)] px-[var(--gl-spacing-scale-3)] py-[var(--gl-spacing-scale-3)] font-bold">Block, danger</button>
-    </div>
-  </main>
-</body>
-</html>
