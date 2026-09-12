@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Table</title>
+<link rel="stylesheet" href="../../css/variables.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <style>
+      :focus-visible { outline: none; box-shadow: 0 0 0 2px var(--gl-focus-ring-inner-color), 0 0 0 4px var(--gl-focus-ring-outer-color); }
+      .spin { animation: gl-spin .8s linear infinite; }
+      @keyframes gl-spin { to { transform: rotate(360deg); } }
+      .gl-tab-btn { position: relative; }
+      .gl-tab-btn::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; border-radius: 1px; background-color: var(--gl-color-alpha-0); }
+      .gl-tab-btn:hover::after { background-color: var(--gl-border-color-strong); }
+      .gl-tab-btn[data-active='true'] { font-weight: var(--gl-font-weight-bold); }
+      .gl-tab-btn[data-active='true']::after { background-color: var(--gl-tab-selected-indicator-color-default); }
+      body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    </style>
+</head>
+<body>
+  <main class="max-w-4xl mx-auto my-8 px-8" x-data="{
+      loading: false,
+      items: [
+        { name: 'main', status: 'passed', duration: '12m 04s' },
+        { name: 'feature/ui', status: 'running', duration: '8m 51s' },
+        { name: 'hotfix/auth', status: 'failed', duration: '3m 02s' },
+        { name: 'release/1.2', status: 'passed', duration: '15m 22s' },
+      ],
+      fields: [ { key: 'name', label: 'Name', sortable: true }, { key: 'status', label: 'Status' }, { key: 'duration', label: 'Duration', sortable: true } ],
+      sortBy: null, sortDesc: false,
+      sorted() {
+        if (!this.sortBy) return this.items;
+        const col = this.sortBy;
+        const arr = [...this.items].sort((a, b) => (a[col] > b[col] ? 1 : a[col] < b[col] ? -1 : 0));
+        return this.sortDesc ? arr.reverse() : arr;
+      },
+      toggle(key) { if (this.sortBy === key) { this.sortDesc = !this.sortDesc; } else { this.sortBy = key; this.sortDesc = false; } },
+      toggleBusy() { this.loading = true; setTimeout(() => (this.loading = false), 1500); },
+    }">
+    <h1 class="text-[length:var(--gl-heading-scale-500-font-size)] font-bold mb-4" style="color: var(--gl-text-color-heading)">Table</h1>
+    <p class="mb-6" style="color: var(--gl-text-color-subtle)">Client-side sorting, loading (busy) state, row hover highlight.</p>
+
+    <div class="mb-3 flex items-center gap-2" x-show="loading" style="color: var(--gl-text-color-strong)"><span class="spin inline-flex"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6" fill="none" stroke="currentColor" stroke-width="2" opacity="0.35"/><path d="M14 8a6 6 0 0 0-6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span> Loading&hellip;</div>
+    <div class="overflow-auto rounded" style="max-height: 320px">
+      <table class="w-full border-collapse text-[length:var(--gl-font-size-base)]" :class="{ 'opacity-[var(--gl-opacity-7)]': loading }">
+        <thead class="sticky top-0" style="background-color: var(--gl-background-color-default)">
+          <tr>
+            <template x-for="f in fields" :key="f.key">
+              <th class="text-left font-bold px-[var(--gl-spacing-scale-3)] py-[var(--gl-spacing-scale-3)] whitespace-nowrap"
+                  style="color: var(--gl-text-color-subtle); box-shadow: inset 0 -1px 0 var(--gl-border-color-default)"
+                  :class="{ 'cursor-pointer select-none hover:text-[color:var(--gl-text-color-strong)]': f.sortable }"
+                  @click="f.sortable && toggle(f.key)">
+                <span class="inline-flex items-center gap-1">
+                  <span x-text="f.label"></span>
+                  <span x-show="sortBy === f.key" style="color: var(--gl-table-sorting-icon-color)" x-text="sortDesc ? '&darr;' : '&uarr;'"></span>
+                </span>
+              </th>
+            </template>
+          </tr>
+        </thead>
+        <tbody>
+          <template x-for="row in sorted()" :key="row.name">
+            <tr class="transition-colors hover:bg-[var(--gl-table-row-background-color-hover)]">
+              <td class="px-[var(--gl-spacing-scale-3)] py-[var(--gl-spacing-scale-3)]" style="box-shadow: inset 0 -1px 0 var(--gl-color-alpha-dark-8)" x-text="row.name"></td>
+              <td class="px-[var(--gl-spacing-scale-3)] py-[var(--gl-spacing-scale-3)]" style="box-shadow: inset 0 -1px 0 var(--gl-color-alpha-dark-8)" x-text="row.status"></td>
+              <td class="px-[var(--gl-spacing-scale-3)] py-[var(--gl-spacing-scale-3)]" style="box-shadow: inset 0 -1px 0 var(--gl-color-alpha-dark-8)" x-text="row.duration"></td>
+            </tr>
+          </template>
+          <tr x-show="!sorted().length">
+            <td colspan="3" class="text-center py-[var(--gl-spacing-scale-9)]" style="color: var(--gl-text-color-subtle)">No records found.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mt-4">
+      <button class="rounded-[var(--gl-button-border-radius)] bg-[var(--gl-button-default-primary-background-color-default)] text-[color:var(--gl-button-default-primary-foreground-color-default)] px-[var(--gl-spacing-scale-3)] py-[var(--gl-spacing-scale-3)] font-bold" @click="toggleBusy">Toggle busy state</button>
+    </div>
+  </main>
+</body>
+</html>

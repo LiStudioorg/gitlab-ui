@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Form</title>
+<link rel="stylesheet" href="../../css/variables.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <style>
+      :focus-visible { outline: none; box-shadow: 0 0 0 2px var(--gl-focus-ring-inner-color), 0 0 0 4px var(--gl-focus-ring-outer-color); }
+      .spin { animation: gl-spin .8s linear infinite; }
+      @keyframes gl-spin { to { transform: rotate(360deg); } }
+      .gl-tab-btn { position: relative; }
+      .gl-tab-btn::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; border-radius: 1px; background-color: var(--gl-color-alpha-0); }
+      .gl-tab-btn:hover::after { background-color: var(--gl-border-color-strong); }
+      .gl-tab-btn[data-active='true'] { font-weight: var(--gl-font-weight-bold); }
+      .gl-tab-btn[data-active='true']::after { background-color: var(--gl-tab-selected-indicator-color-default); }
+      body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    </style>
+</head>
+<body>
+  <main class="max-w-2xl mx-auto my-8 px-8" x-data="{
+      name: 'my-project', email: '', slug: '', submitted: false,
+      emailState() { return this.email && this.email.includes('@') ? 'valid' : 'invalid'; },
+      submitForm() { this.submitted = true; }
+    }" style="color: var(--gl-text-color-default)">
+    <h1 class="text-[length:var(--gl-heading-scale-500-font-size)] font-bold mb-4" style="color: var(--gl-text-color-heading)">Form</h1>
+    <p class="mb-6" style="color: var(--gl-text-color-subtle)">Form group: label (+ optional), description, helper, validity feedback; submit handler.</p>
+
+    <form @submit.prevent="submitForm" class="space-y-[var(--gl-spacing-scale-5)]">
+      <div>
+        <label class="block font-bold mb-2" style="color: var(--gl-text-color-strong)">Project name *</label>
+        <span class="block mb-2 text-[length:var(--gl-font-size-sm)]" style="color: var(--gl-text-color-subtle)">Remember: the name cannot be changed later.</span>
+        <input type="text" x-model="name" class="w-full lg:w-[520px] border border-[var(--gl-control-border-color-default)] rounded-[var(--gl-control-border-radius)] px-[var(--gl-spacing-scale-3)] py-[var(--gl-spacing-scale-3)]"
+               style="background-color: var(--gl-control-background-color-default); color: var(--gl-text-color-default)">
+        <p class="mt-2 text-[length:var(--gl-font-size-sm)]" style="color: var(--gl-control-text-color-valid)">This name is available.</p>
+      </div>
+
+      <div>
+        <label class="block font-bold mb-2" style="color: var(--gl-text-color-strong)">Slug <span class="font-normal" style="color: var(--gl-text-color-subtle)">(optional)</span></label>
+        <input type="text" x-model="slug" placeholder="auto-generated"
+               class="w-full lg:w-[520px] border border-[var(--gl-control-border-color-default)] rounded-[var(--gl-control-border-radius)] px-[var(--gl-spacing-scale-3)] py-[var(--gl-spacing-scale-3)] placeholder-[var(--gl-control-placeholder-color)]"
+               style="background-color: var(--gl-control-background-color-default); color: var(--gl-text-color-default)">
+        <p class="mt-2 text-[length:var(--gl-font-size-sm)]" style="color: var(--gl-text-color-subtle)">Used in the repository URL.</p>
+      </div>
+
+      <div>
+        <label class="block font-bold mb-2" style="color: var(--gl-text-color-strong)">Email *</label>
+        <input type="email" x-model="email" placeholder="name@example.com"
+               class="w-full lg:w-[520px] border rounded-[var(--gl-control-border-radius)] px-[var(--gl-spacing-scale-3)] py-[var(--gl-spacing-scale-3)]"
+               :class="emailState() === 'invalid' ? 'border-[var(--gl-control-border-color-error)]' : 'border-[var(--gl-control-border-color-default)]'"
+               style="background-color: var(--gl-control-background-color-default); color: var(--gl-text-color-default)">
+        <p x-show="emailState() === 'invalid'" class="mt-2 text-[length:var(--gl-font-size-sm)]" style="color: var(--gl-control-text-color-error)">Please enter a valid email address.</p>
+      </div>
+
+      <div class="flex gap-3 items-center">
+        <button type="submit" class="rounded-[var(--gl-button-border-radius)] bg-[var(--gl-button-confirm-primary-background-color-default)] text-[color:var(--gl-button-confirm-primary-foreground-color-default)] px-[var(--gl-spacing-scale-3)] py-[var(--gl-spacing-scale-3)] font-bold">Create project</button>
+        <button type="button" class="rounded-[var(--gl-button-border-radius)] bg-[var(--gl-button-default-secondary-background-color-default)] text-[color:var(--gl-button-default-secondary-foreground-color-default)] px-[var(--gl-spacing-scale-3)] py-[var(--gl-spacing-scale-3)] font-bold">Cancel</button>
+        <p x-show="submitted" class="m-0" style="color: var(--gl-text-color-subtle)">Form submitted (prevented default).</p>
+      </div>
+    </form>
+  </main>
+</body>
+</html>

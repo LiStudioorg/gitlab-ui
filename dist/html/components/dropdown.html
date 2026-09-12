@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dropdown</title>
+<link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="base.css">
+    <style>
+.gl-dropdown-wrap { position: relative; display: inline-block; }
+.gl-dropdown-toggle {
+  display: inline-flex; align-items: center; gap: var(--gl-spacing-scale-2);
+}
+.gl-dropdown-menu {
+  position: absolute; top: calc(100% + var(--gl-spacing-scale-2)); left: 0; min-width: 230px;
+  background-color: var(--gl-dropdown-background-color);
+  border: 1px solid var(--gl-dropdown-border-color);
+  border-radius: var(--gl-dropdown-border-radius);
+  box-shadow: var(--gl-shadow-sm);
+  padding: var(--gl-spacing-scale-2);
+  z-index: var(--gl-zindex-3);
+}
+.gl-dropdown-menu[hidden] { display: none; }
+.gl-dropdown-header {
+  padding: var(--gl-spacing-scale-2) var(--gl-spacing-scale-3);
+  font-weight: var(--gl-font-weight-bold);
+  font-size: var(--gl-font-size-sm);
+  color: var(--gl-text-color-subtle);
+}
+.gl-dropdown-item {
+  display: flex; align-items: center; justify-content: space-between; gap: var(--gl-spacing-scale-3);
+  width: 100%; border: none; background: none; cursor: pointer;
+  padding: var(--gl-spacing-scale-2) var(--gl-spacing-scale-3);
+  border-radius: var(--gl-border-radius-default);
+  color: var(--gl-text-color-default);
+  text-align: left; font-size: var(--gl-font-size-base);
+}
+.gl-dropdown-item:hover { background-color: var(--gl-dropdown-option-background-color-unselected-hover); }
+.gl-dropdown-item--checked { color: var(--gl-text-color-strong); font-weight: var(--gl-font-weight-bold); background-color: var(--gl-dropdown-option-background-color-selected-default); }
+.gl-dropdown-divider { height: 1px; margin: var(--gl-spacing-scale-2); background-color: var(--gl-dropdown-divider-color); }
+.gl-dropdown-clear {
+  display: block; width: 100%; text-align: left; border: none; background: none; cursor: pointer;
+  padding: var(--gl-spacing-scale-2) var(--gl-spacing-scale-3);
+  color: var(--gl-text-color-link); font-size: var(--gl-font-size-sm);
+}</style>
+</head>
+<body>
+  <main class="gl-page">
+    <h1 class="gl-title">Dropdown</h1>
+    <p class="gl-sub">Header, checkable items, divider and "Clear all". Toggle via checkbox hack so it works without JS.</p>
+
+    <section class="gl-section">
+      <div class="gl-dropdown-wrap">
+        <label class="gl-dropdown-toggle gl-button gl-button--secondary--default" for="dd-toggle">Filter: All <span class="gl-tab-item-caret">&#9662;</span></label>
+        <input type="checkbox" id="dd-toggle" hidden>
+        <div class="gl-dropdown-menu">
+          <div class="gl-dropdown-header">Status</div>
+          <button class="gl-dropdown-item gl-dropdown-item--checked"><span>Open</span><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8l3.5 3.5L13 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button class="gl-dropdown-item gl-dropdown-item--checked"><span>Wait</span><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8l3.5 3.5L13 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button class="gl-dropdown-item"><span>Closed</span></button>
+          <div class="gl-dropdown-divider"></div>
+          <button class="gl-dropdown-item"><span>Export as CSV</span></button>
+          <div class="gl-dropdown-divider"></div>
+          <button class="gl-dropdown-clear">Clear all</button>
+        </div>
+      </div>
+    </section>
+
+    <style>
+      #dd-toggle:checked ~ .gl-dropdown-menu { display: block; }
+      #dd-toggle:not(:checked) ~ .gl-dropdown-menu { display: none; }
+    </style>
+    <script>
+      (function () {
+        var items = document.querySelectorAll('.gl-dropdown-item');
+        var clearBtn = document.querySelector('.gl-dropdown-clear');
+        var mark = function (it) {
+          var s = document.createElement('span');
+          s.className = 'gl-icon';
+          s.innerHTML = '<svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8l3.5 3.5L13 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+          return s;
+        };
+        items.forEach(function (it) {
+          it.addEventListener('click', function () {
+            var checked = it.classList.contains('gl-dropdown-item--checked');
+            it.classList.toggle('gl-dropdown-item--checked', !checked);
+            var m = it.querySelector('.gl-icon');
+            if (m) m.remove();
+            if (!checked) it.appendChild(mark(it));
+          });
+        });
+        clearBtn.addEventListener('click', function () {
+          items.forEach(function (it) {
+            it.classList.remove('gl-dropdown-item--checked');
+            var m = it.querySelector('.gl-icon');
+            if (m) m.remove();
+          });
+        });
+      })();
+    </script>
+  </main>
+</body>
+</html>

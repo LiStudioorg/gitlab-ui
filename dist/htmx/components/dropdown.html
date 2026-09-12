@@ -1,0 +1,28 @@
+<!-- Pajamas-inspired (MIT). htmx fragment: dropdown -->
+<style>
+      :focus-visible { outline: none; box-shadow: 0 0 0 2px var(--gl-focus-ring-inner-color), 0 0 0 4px var(--gl-focus-ring-outer-color); }
+      .spin { animation: gl-spin .8s linear infinite; }
+      @keyframes gl-spin { to { transform: rotate(360deg); } }
+      .htmx-indicator { display: none; }
+      .htmx-request .htmx-indicator, .htmx-request.htmx-indicator { display: inline-flex; }
+    </style>
+<div style="color: var(--gl-text-color-default)">
+  <div class="relative inline-block">
+    <button hx-on:click="document.getElementById('gl-dd-menu').toggleAttribute('hidden')"
+            class="inline-flex items-center gap-2 rounded-[var(--gl-button-border-radius)] bg-[var(--gl-button-default-secondary-background-color-default)] text-[color:var(--gl-button-default-secondary-foreground-color-default)] px-3 py-3 font-bold">Filter: All <span>&#9662;</span></button>
+    <div id="gl-dd-menu" hidden class="absolute left-0 z-[var(--gl-zindex-3)] min-w-[230px]"
+         style="top: calc(100% + var(--gl-spacing-scale-2)); background-color: var(--gl-dropdown-background-color); border: 1px solid var(--gl-dropdown-border-color); border-radius: var(--gl-dropdown-border-radius); box-shadow: var(--gl-shadow-sm); padding: var(--gl-spacing-scale-2)">
+      <div class="px-3 py-2 text-[length:var(--gl-font-size-sm)] font-bold" style="color: var(--gl-text-color-subtle)">Status</div>
+      <button hx-post="/filter?v=open"
+              class="flex items-center justify-between w-full text-left px-3 py-2 rounded cursor-pointer text-[color:var(--gl-text-color-strong)]"
+              style="font-weight: var(--gl-font-weight-bold); background-color: var(--gl-dropdown-option-background-color-selected-default)">Open <svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8l3.5 3.5L13 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button hx-post="/filter?v=wait" hx-on:click="this.insertAdjacentHTML('beforeend', '<svg class='gl-icon' viewBox='0 0 16 16' aria-hidden='true'><path d='M3 8l3.5 3.5L13 5' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>')"
+              class="flex items-center justify-between w-full text-left px-3 py-2 rounded cursor-pointer text-[color:var(--gl-text-color-default)]">Wait</button>
+      <button hx-post="/filter?v=closed"
+              class="flex items-center justify-between w-full text-left px-3 py-2 rounded cursor-pointer text-[color:var(--gl-text-color-default)]">Closed</button>
+      <div style="height: 1px; margin: var(--gl-spacing-scale-2); background-color: var(--gl-dropdown-divider-color)"></div>
+      <button hx-post="/filter?clear=1" hx-on:click="document.getElementById('gl-dd-menu').toggleAttribute('hidden')"
+              class="block w-full text-left px-3 py-2 bg-transparent border-0 cursor-pointer text-[length:var(--gl-font-size-sm)]" style="color: var(--gl-text-color-link)">Clear all</button>
+    </div>
+  </div>
+</div>

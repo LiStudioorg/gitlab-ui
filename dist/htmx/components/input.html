@@ -1,0 +1,25 @@
+<!-- Pajamas-inspired (MIT). htmx fragment: input -->
+<style>
+      :focus-visible { outline: none; box-shadow: 0 0 0 2px var(--gl-focus-ring-inner-color), 0 0 0 4px var(--gl-focus-ring-outer-color); }
+      .spin { animation: gl-spin .8s linear infinite; }
+      @keyframes gl-spin { to { transform: rotate(360deg); } }
+      .htmx-indicator { display: none; }
+      .htmx-request .htmx-indicator, .htmx-request.htmx-indicator { display: inline-flex; }
+    </style>
+<div style="color: var(--gl-text-color-default)">
+  <label class="block font-bold mb-2" style="color: var(--gl-text-color-strong)">Email (server-side validation,
+    hx-trigger="change, keyup changed delay:500ms")</label>
+  <input type="email" name="email" placeholder="name@example.com"
+         hx-post="/validate" hx-trigger="change, keyup changed delay:500ms"
+         hx-target="#email-feedback" hx-swap="innerHTML" hx-sync="closest form:abort"
+         class="w-full lg:w-[420px] border rounded-[var(--gl-control-border-radius)] px-[var(--gl-spacing-scale-3)] py-[var(--gl-spacing-scale-3)] placeholder-[var(--gl-control-placeholder-color)] border-[var(--gl-control-border-color-default)] hover:border-[var(--gl-control-border-color-hover)] focus:border-[var(--gl-control-border-color-focus)]"
+         style="background-color: var(--gl-control-background-color-default); color: var(--gl-text-color-default)">
+  <p id="email-feedback" class="mt-2 text-[length:var(--gl-font-size-sm)]" style="color: var(--gl-text-color-subtle)">Server returns an
+    is-invalid/is-valid fragment to swap.</p>
+
+  <div class="flex gap-3 mt-[var(--gl-spacing-scale-4)]">
+    <input hx-post="/width-demo" hx-trigger="change" hx-target="#width-result" hx-swap="innerHTML"
+           class="w-full max-w-[var(--gl-spacing-scale-31)] border border-[var(--gl-control-border-color-default)] rounded-[var(--gl-control-border-radius)] px-[var(--gl-spacing-scale-3)] py-[var(--gl-spacing-scale-3)]" placeholder="xs width">
+    <span id="width-result"></span>
+  </div>
+</div>

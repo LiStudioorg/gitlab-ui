@@ -1,0 +1,28 @@
+<!-- Pajamas-inspired (MIT). htmx fragment: tabs -->
+<style>
+      :focus-visible { outline: none; box-shadow: 0 0 0 2px var(--gl-focus-ring-inner-color), 0 0 0 4px var(--gl-focus-ring-outer-color); }
+      .spin { animation: gl-spin .8s linear infinite; }
+      @keyframes gl-spin { to { transform: rotate(360deg); } }
+      .htmx-indicator { display: none; }
+      .htmx-request .htmx-indicator, .htmx-request.htmx-indicator { display: inline-flex; }
+    </style>
+<div style="color: var(--gl-text-color-default)">
+  <div class="flex gap-2 overflow-x-auto border-b" style="border-color: var(--gl-border-color-default)">
+    <button hx-get="/tabs?tab=overview" hx-target="#tab-content" hx-swap="innerHTML"
+            hx-on:click="this.parentElement.querySelectorAll('button').forEach(b => { b.removeAttribute('data-active'); b.setAttribute('aria-selected', 'false'); }); this.setAttribute('data-active', 'true'); this.setAttribute('aria-selected', 'true');"
+            data-active="true" aria-selected="true"
+            class="gl-tab-btn relative inline-flex items-center gap-2 px-4 py-4 text-[length:var(--gl-font-size-base)] whitespace-nowrap bg-transparent border-0 cursor-pointer"
+            style="color: var(--gl-text-color-strong)">Overview <span class="inline-flex items-center rounded-[var(--gl-border-radius-full)] bg-[var(--gl-badge-neutral-background-color-default)] px-2 text-[length:var(--gl-font-size-sm)] font-bold" style="color: var(--gl-badge-neutral-text-color-default)">3</span></button>
+    <button hx-get="/tabs?tab=commits" hx-target="#tab-content" hx-swap="innerHTML"
+            hx-on:click="this.parentElement.querySelectorAll('button').forEach(b => { b.removeAttribute('data-active'); b.setAttribute('aria-selected', 'false'); }); this.setAttribute('data-active', 'true'); this.setAttribute('aria-selected', 'true');"
+            aria-selected="false"
+            class="gl-tab-btn relative inline-flex items-center gap-2 px-4 py-4 text-[length:var(--gl-font-size-base)] whitespace-nowrap bg-transparent border-0 cursor-pointer"
+            style="color: var(--gl-text-color-subtle)">Commits</button>
+    <button hx-get="/tabs?tab=ci" hx-target="#tab-content" hx-swap="innerHTML"
+            hx-on:click="this.parentElement.querySelectorAll('button').forEach(b => { b.removeAttribute('data-active'); b.setAttribute('aria-selected', 'false'); }); this.setAttribute('data-active', 'true'); this.setAttribute('aria-selected', 'true');"
+            aria-selected="false"
+            class="gl-tab-btn relative inline-flex items-center gap-2 px-4 py-4 text-[length:var(--gl-font-size-base)] whitespace-nowrap bg-transparent border-0 cursor-pointer"
+            style="color: var(--gl-text-color-subtle)">Pipelines <span class="inline-flex items-center rounded-[var(--gl-border-radius-full)] bg-[var(--gl-badge-neutral-background-color-default)] px-2 text-[length:var(--gl-font-size-sm)] font-bold" style="color: var(--gl-badge-neutral-text-color-default)">12</span></button>
+  </div>
+  <div id="tab-content" class="py-5" style="padding: var(--gl-spacing-scale-5) 0; color: var(--gl-text-color-default)">Overview content. Tab clicks swap this pane from the server.</div>
+</div>

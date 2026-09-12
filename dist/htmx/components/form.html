@@ -1,0 +1,43 @@
+<!-- Pajamas-inspired (MIT). htmx fragment: form -->
+<style>
+      :focus-visible { outline: none; box-shadow: 0 0 0 2px var(--gl-focus-ring-inner-color), 0 0 0 4px var(--gl-focus-ring-outer-color); }
+      .spin { animation: gl-spin .8s linear infinite; }
+      @keyframes gl-spin { to { transform: rotate(360deg); } }
+      .htmx-indicator { display: none; }
+      .htmx-request .htmx-indicator, .htmx-request.htmx-indicator { display: inline-flex; }
+    </style>
+<form hx-post="/projects" hx-target="#form-result" hx-swap="outerHTML" hx-indicator="#form-spinner" style="color: var(--gl-text-color-default)">
+  <div style="margin-bottom: var(--gl-spacing-scale-5)">
+    <label class="block font-bold mb-2" style="color: var(--gl-text-color-strong)">Project name *</label>
+    <span class="block mb-2 text-[length:var(--gl-font-size-sm)]" style="color: var(--gl-text-color-subtle)">Remember: the name cannot be changed later.</span>
+    <input type="text" name="name"
+           class="w-full lg:w-[520px] border border-[var(--gl-control-border-color-default)] rounded-[var(--gl-control-border-radius)] px-3 py-3"
+           style="background-color: var(--gl-control-background-color-default); color: var(--gl-text-color-default)">
+  </div>
+
+  <div style="margin-bottom: var(--gl-spacing-scale-5)">
+    <label class="block font-bold mb-2" style="color: var(--gl-text-color-strong)">Slug <span class="font-normal" style="color: var(--gl-text-color-subtle)">(optional)</span></label>
+    <input type="text" name="slug" placeholder="auto-generated"
+           class="w-full lg:w-[520px] border border-[var(--gl-control-border-color-default)] rounded-[var(--gl-control-border-radius)] px-3 py-3 placeholder-[var(--gl-control-placeholder-color)]"
+           style="background-color: var(--gl-control-background-color-default); color: var(--gl-text-color-default)">
+    <p class="mt-2 text-[length:var(--gl-font-size-sm)]" style="color: var(--gl-text-color-subtle)">Used in the repository URL.</p>
+  </div>
+
+  <div style="margin-bottom: var(--gl-spacing-scale-5)">
+    <label class="block font-bold mb-2" style="color: var(--gl-text-color-strong)">Email *</label>
+    <input type="email" name="email"
+           hx-trigger="change" hx-post="/validate" hx-target="closest div .js-feedback" hx-swap="innerHTML"
+           class="w-full lg:w-[520px] border border-[var(--gl-control-border-color-default)] rounded-[var(--gl-control-border-radius)] px-3 py-3"
+           style="background-color: var(--gl-control-background-color-default); color: var(--gl-text-color-default)">
+    <p class="js-feedback mt-2 text-[length:var(--gl-font-size-sm)]" style="color: var(--gl-text-color-subtle)">Server validation feedback swaps here.</p>
+  </div>
+
+  <div class="flex gap-3 items-center">
+    <button type="submit" class="inline-flex items-center gap-2 rounded-[var(--gl-button-border-radius)] bg-[var(--gl-button-confirm-primary-background-color-default)] text-[color:var(--gl-button-confirm-primary-foreground-color-default)] px-3 py-3 font-bold">
+      <svg id="form-spinner" class="htmx-indicator w-4 h-4 spin" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6" fill="none" stroke="currentColor" stroke-width="2" opacity="0.35"/><path d="M14 8a6 6 0 0 0-6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      Create project
+    </button>
+    <button type="reset" class="rounded-[var(--gl-button-border-radius)] bg-[var(--gl-button-default-secondary-background-color-default)] text-[color:var(--gl-button-default-secondary-foreground-color-default)] px-3 py-3 font-bold">Cancel</button>
+  </div>
+</form>
+<div id="form-result" role="status" style="color: var(--gl-text-color-subtle); margin-top: var(--gl-spacing-scale-4)">Submission response lands here.</div>

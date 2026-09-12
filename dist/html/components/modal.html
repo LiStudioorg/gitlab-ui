@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Modal</title>
+<link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="base.css">
+    <style>
+.gl-modal-backdrop {
+  position: fixed; inset: 0;
+  background-color: var(--gl-color-alpha-dark-40);
+  z-index: var(--gl-zindex-4);
+  display: flex; align-items: flex-start; justify-content: center;
+  padding: var(--gl-spacing-scale-9) var(--gl-spacing-scale-4);
+}
+.gl-modal {
+  background-color: var(--gl-background-color-default);
+  border-radius: var(--gl-modal-border-radius);
+  box-shadow: var(--gl-shadow-lg);
+  width: 100%;
+  display: flex; flex-direction: column;
+  max-height: calc(100vh - var(--gl-spacing-scale-9));
+}
+.gl-modal--sm { max-width: var(--gl-spacing-scale-31); }
+.gl-modal--md { max-width: var(--gl-spacing-scale-48); }
+.gl-modal--lg { max-width: var(--gl-spacing-scale-80); }
+.gl-modal-header {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: var(--gl-spacing-scale-3);
+  padding: var(--gl-spacing-scale-4) var(--gl-spacing-scale-5) var(--gl-spacing-scale-3);
+}
+.gl-modal-title { font-size: var(--gl-heading-scale-500-font-size); font-weight: var(--gl-heading-scale-500-font-weight); }
+.gl-modal-close {
+  background: none; border: none; cursor: pointer;
+  color: var(--gl-text-color-subtle);
+  padding: var(--gl-spacing-scale-2); border-radius: var(--gl-border-radius-default);
+}
+.gl-modal-close:hover { background-color: var(--gl-color-alpha-dark-4); }
+.gl-modal-body { padding: var(--gl-spacing-scale-3) var(--gl-spacing-scale-5) var(--gl-spacing-scale-5); overflow: auto; }
+.gl-modal-footer {
+  display: flex; gap: var(--gl-spacing-scale-3);
+  padding: var(--gl-spacing-scale-4) var(--gl-spacing-scale-5) var(--gl-spacing-scale-5);
+  background-color: var(--gl-background-color-default);
+}
+@media (max-width: 576px) { .gl-modal-footer { flex-direction: column; } .gl-modal-footer .gl-button { justify-content: center; } }
+.gl-modal-backdrop.is-hidden { display: none; }</style>
+</head>
+<body>
+  <main class="gl-page">
+    <h1 class="gl-title">Modal</h1>
+    <p class="gl-sub">Sizes md|sm|lg; states closed (is-hidden), opened; close via Esc, backdrop click or &times;. Vanilla JS toggle, no framework.</p>
+
+    <section class="gl-section">
+      <h2>Launch dialogs</h2>
+      <div class="gl-row">
+        <button id="m-open-md" class="gl-button gl-button--primary--danger">Delete project (md)</button>
+        <button id="m-open-sm" class="gl-button gl-button--secondary--default">Show small</button>
+        <button id="m-open-lg" class="gl-button gl-button--secondary--default">Show large</button>
+      </div>
+    </section>
+
+    <div class="gl-modal-backdrop is-hidden" data-modal="md" aria-hidden="true">
+      <div class="gl-modal gl-modal--md" role="dialog" aria-modal="true" aria-label="Delete confirmation">
+        <div class="gl-modal-header">
+          <h3 class="gl-modal-title">Delete project</h3>
+          <button class="gl-modal-close" aria-label="Close"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+        </div>
+        <div class="gl-modal-body">
+          You are about to permanently remove <strong>my-project</strong>. This action cannot be undone.
+        </div>
+        <div class="gl-modal-footer">
+          <button class="gl-button gl-button--primary--danger">Delete</button>
+          <button class="gl-button gl-button--default--secondary">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="gl-modal-backdrop is-hidden" data-modal="sm" aria-hidden="true">
+      <div class="gl-modal gl-modal--sm" role="dialog" aria-modal="true" aria-label="Small">
+        <div class="gl-modal-header"><h3 class="gl-modal-title">Small</h3><button class="gl-modal-close" aria-label="Close"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+        <div class="gl-modal-body">Compact modal content.</div>
+      </div>
+    </div>
+
+    <div class="gl-modal-backdrop is-hidden" data-modal="lg" aria-hidden="true">
+      <div class="gl-modal gl-modal--lg" role="dialog" aria-modal="true" aria-label="Large">
+        <div class="gl-modal-header"><h3 class="gl-modal-title">Large</h3><button class="gl-modal-close" aria-label="Close"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+        <div class="gl-modal-body">Large modal content with a wider body region.</div>
+        <div class="gl-modal-footer">
+          <button class="gl-button gl-button--primary--confirm">Primary</button>
+          <button class="gl-button gl-button--default--secondary">Secondary</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        var backdrops = document.querySelectorAll('.gl-modal-backdrop');
+        var open = function (key) {
+          backdrops.forEach(function (b) {
+            var show = b.getAttribute('data-modal') === key;
+            b.classList.toggle('is-hidden', !show);
+            b.setAttribute('aria-hidden', show ? 'false' : 'true');
+          });
+          document.addEventListener('keydown', onKey);
+        };
+        var close = function () {
+          backdrops.forEach(function (b) {
+            b.classList.add('is-hidden');
+            b.setAttribute('aria-hidden', 'true');
+          });
+          document.removeEventListener('keydown', onKey);
+        };
+        var onKey = function (e) { if (e.key === 'Escape') close(); };
+        document.getElementById('m-open-md').addEventListener('click', function () { open('md'); });
+        document.getElementById('m-open-sm').addEventListener('click', function () { open('sm'); });
+        document.getElementById('m-open-lg').addEventListener('click', function () { open('lg'); });
+        backdrops.forEach(function (b) {
+          b.querySelector('.gl-modal-close').addEventListener('click', close);
+          b.addEventListener('click', function (e) { if (e.target === b) close(); });
+        });
+      })();
+    </script>
+  </main>
+</body>
+</html>

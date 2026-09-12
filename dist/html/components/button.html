@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Button</title>
+<link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="base.css">
+    <style>
+.gl-button {
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: var(--gl-spacing-scale-2);
+  border: 1px solid transparent;
+  border-radius: var(--gl-button-border-radius);
+  font-size: var(--gl-font-size-base);
+  font-weight: var(--gl-font-weight-bold);
+  line-height: var(--gl-line-height-20);
+  padding: var(--gl-spacing-scale-3);
+  cursor: pointer; white-space: nowrap; text-decoration: none;
+  transition: box-shadow 150ms ease, background-color 150ms ease, color 150ms ease, border-color 150ms ease;
+}
+.gl-button:focus-visible { outline: none; outline: none; box-shadow: 0 0 0 2px var(--gl-focus-ring-inner-color), 0 0 0 4px var(--gl-focus-ring-outer-color); }
+.gl-button--size-small { padding: var(--gl-spacing-scale-1) var(--gl-spacing-scale-2); font-size: var(--gl-font-size-sm); }
+.gl-button--block { display: flex; width: 100%; }
+.gl-button .gl-button-text { line-height: 1; }
+.gl-button--primary--default {
+  background-color: var(--gl-button-default-primary-background-color-default);
+  color: var(--gl-button-default-primary-foreground-color-default);
+  border-color: var(--gl-button-default-primary-border-color-default);
+}
+.gl-button--primary--default:hover {
+  background-color: var(--gl-button-default-primary-background-color-hover);
+  color: var(--gl-button-default-primary-foreground-color-hover);
+  border-color: var(--gl-button-default-primary-border-color-hover);
+}
+.gl-button--primary--default:active {
+  background-color: var(--gl-button-default-primary-background-color-active);
+  color: var(--gl-button-default-primary-foreground-color-active);
+  border-color: var(--gl-button-default-primary-border-color-active);
+}
+.gl-button--secondary--default {
+  background-color: var(--gl-button-default-secondary-background-color-default);
+  color: var(--gl-button-default-secondary-foreground-color-default);
+  border-color: var(--gl-button-default-secondary-border-color-default);
+}
+.gl-button--secondary--default:hover {
+  background-color: var(--gl-button-default-secondary-background-color-hover);
+  color: var(--gl-button-default-secondary-foreground-color-hover);
+  border-color: var(--gl-button-default-secondary-border-color-hover);
+}
+.gl-button--secondary--default:active {
+  background-color: var(--gl-button-default-secondary-background-color-active);
+  color: var(--gl-button-default-secondary-foreground-color-active);
+  border-color: var(--gl-button-default-secondary-border-color-active);
+}
+.gl-button--tertiary--default {
+  background-color: var(--gl-button-default-tertiary-background-color-default);
+  color: var(--gl-button-default-tertiary-foreground-color-default);
+  border-color: var(--gl-button-default-tertiary-border-color-default);
+}
+.gl-button--tertiary--default:hover {
+  background-color: var(--gl-button-default-tertiary-background-color-hover);
+  color: var(--gl-button-default-tertiary-foreground-color-hover);
+  border-color: var(--gl-button-default-tertiary-border-color-hover);
+}
+.gl-button--tertiary--default:active {
+  background-color: var(--gl-button-default-tertiary-background-color-active);
+  color: var(--gl-button-default-tertiary-foreground-color-active);
+  border-color: var(--gl-button-default-tertiary-border-color-active);
+}
+.gl-button--primary--confirm {
+  background-color: var(--gl-button-confirm-primary-background-color-default);
+  color: var(--gl-button-confirm-primary-foreground-color-default);
+  border-color: var(--gl-button-confirm-primary-border-color-default);
+}
+.gl-button--primary--confirm:hover {
+  background-color: var(--gl-button-confirm-primary-background-color-hover);
+  color: var(--gl-button-confirm-primary-foreground-color-hover);
+  border-color: var(--gl-button-confirm-primary-border-color-hover);
+}
+.gl-button--primary--confirm:active {
+  background-color: var(--gl-button-confirm-primary-background-color-active);
+  color: var(--gl-button-confirm-primary-foreground-color-active);
+  border-color: var(--gl-button-confirm-primary-border-color-active);
+}
+.gl-button--secondary--confirm {
+  background-color: var(--gl-button-confirm-secondary-background-color-default);
+  color: var(--gl-button-confirm-secondary-foreground-color-default);
+  border-color: var(--gl-button-confirm-secondary-border-color-default);
+}
+.gl-button--secondary--confirm:hover {
+  background-color: var(--gl-button-confirm-secondary-background-color-hover);
+  color: var(--gl-button-confirm-secondary-foreground-color-hover);
+  border-color: var(--gl-button-confirm-secondary-border-color-hover);
+}
+.gl-button--secondary--confirm:active {
+  background-color: var(--gl-button-confirm-secondary-background-color-active);
+  color: var(--gl-button-confirm-secondary-foreground-color-active);
+  border-color: var(--gl-button-confirm-secondary-border-color-active);
+}
+.gl-button--tertiary--confirm {
+  background-color: var(--gl-button-confirm-tertiary-background-color-default);
+  color: var(--gl-button-confirm-tertiary-foreground-color-default);
+  border-color: var(--gl-button-confirm-tertiary-border-color-default);
+}
+.gl-button--tertiary--confirm:hover {
+  background-color: var(--gl-button-confirm-tertiary-background-color-hover);
+  color: var(--gl-button-confirm-tertiary-foreground-color-hover);
+  border-color: var(--gl-button-confirm-tertiary-border-color-hover);
+}
+.gl-button--tertiary--confirm:active {
+  background-color: var(--gl-button-confirm-tertiary-background-color-active);
+  color: var(--gl-button-confirm-tertiary-foreground-color-active);
+  border-color: var(--gl-button-confirm-tertiary-border-color-active);
+}
+.gl-button--primary--danger {
+  background-color: var(--gl-button-danger-primary-background-color-default);
+  color: var(--gl-button-danger-primary-foreground-color-default);
+  border-color: var(--gl-button-danger-primary-border-color-default);
+}
+.gl-button--primary--danger:hover {
+  background-color: var(--gl-button-danger-primary-background-color-hover);
+  color: var(--gl-button-danger-primary-foreground-color-hover);
+  border-color: var(--gl-button-danger-primary-border-color-hover);
+}
+.gl-button--primary--danger:active {
+  background-color: var(--gl-button-danger-primary-background-color-active);
+  color: var(--gl-button-danger-primary-foreground-color-active);
+  border-color: var(--gl-button-danger-primary-border-color-active);
+}
+.gl-button--secondary--danger {
+  background-color: var(--gl-button-danger-secondary-background-color-default);
+  color: var(--gl-button-danger-secondary-foreground-color-default);
+  border-color: var(--gl-button-danger-secondary-border-color-default);
+}
+.gl-button--secondary--danger:hover {
+  background-color: var(--gl-button-danger-secondary-background-color-hover);
+  color: var(--gl-button-danger-secondary-foreground-color-hover);
+  border-color: var(--gl-button-danger-secondary-border-color-hover);
+}
+.gl-button--secondary--danger:active {
+  background-color: var(--gl-button-danger-secondary-background-color-active);
+  color: var(--gl-button-danger-secondary-foreground-color-active);
+  border-color: var(--gl-button-danger-secondary-border-color-active);
+}
+.gl-button--tertiary--danger {
+  background-color: var(--gl-button-danger-tertiary-background-color-default);
+  color: var(--gl-button-danger-tertiary-foreground-color-default);
+  border-color: var(--gl-button-danger-tertiary-border-color-default);
+}
+.gl-button--tertiary--danger:hover {
+  background-color: var(--gl-button-danger-tertiary-background-color-hover);
+  color: var(--gl-button-danger-tertiary-foreground-color-hover);
+  border-color: var(--gl-button-danger-tertiary-border-color-hover);
+}
+.gl-button--tertiary--danger:active {
+  background-color: var(--gl-button-danger-tertiary-background-color-active);
+  color: var(--gl-button-danger-tertiary-foreground-color-active);
+  border-color: var(--gl-button-danger-tertiary-border-color-active);
+}
+.gl-button--link {
+  background-color: transparent; border-color: transparent;
+  color: var(--gl-button-link-text-color-default);
+  border-radius: var(--gl-button-link-border-radius);
+  text-decoration: underline;
+}
+.gl-button--link:hover { color: var(--gl-button-link-text-color-hover); }
+.gl-button--link:active { color: var(--gl-button-link-text-color-active); }
+.gl-button:disabled, .gl-button[aria-disabled='true'] {
+  cursor: not-allowed;
+  background-color: var(--gl-action-disabled-background-color);
+  color: var(--gl-action-disabled-foreground-color);
+  border-color: var(--gl-action-disabled-border-color);
+}</style>
+</head>
+<body>
+  <main class="gl-page">
+    <h1 class="gl-title">Button</h1>
+    <p class="gl-sub">category=primary|secondary|tertiary &times; variant=default|confirm|danger + link; size small|medium; states include hover, active, focus-visible, disabled, loading.</p>
+
+    <section class="gl-section">
+      <h2>Primary</h2>
+      <div class="gl-row">
+        <button class="gl-button gl-button--primary--default">Default</button>
+        <button class="gl-button gl-button--primary--confirm">Confirm</button>
+        <button class="gl-button gl-button--primary--danger">Danger</button>
+      </div>
+    </section>
+
+    <section class="gl-section">
+      <h2>Secondary &amp; tertiary</h2>
+      <div class="gl-row">
+        <button class="gl-button gl-button--secondary--default">Secondary</button>
+        <button class="gl-button gl-button--secondary--confirm">Confirm</button>
+        <button class="gl-button gl-button--secondary--danger">Danger</button>
+        <button class="gl-button gl-button--tertiary--default">Tertiary</button>
+        <button class="gl-button gl-button--tertiary--confirm">Confirm</button>
+        <button class="gl-button gl-button--tertiary--danger">Danger</button>
+        <a class="gl-button gl-button--link" href="#demo">Link button</a>
+      </div>
+    </section>
+
+    <section class="gl-section">
+      <h2>Sizes</h2>
+      <div class="gl-row">
+        <button class="gl-button gl-button--primary--confirm gl-button--size-small">Small</button>
+        <button class="gl-button gl-button--primary--confirm">Medium</button>
+        <button class="gl-button gl-button--primary--default gl-button--size-small">Small default</button>
+      </div>
+    </section>
+
+    <section class="gl-section">
+      <h2>Disabled &amp; loading</h2>
+      <div class="gl-row">
+        <button class="gl-button gl-button--primary--confirm" disabled>Disabled</button>
+        <button class="gl-button gl-button--secondary--default" disabled>Disabled</button>
+        <button class="gl-button gl-button--primary--confirm" aria-disabled="true" aria-busy="true">
+          <span class="gl-icon gl-spinner"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6" fill="none" stroke="currentColor" stroke-width="2" opacity="0.35"/><path d="M14 8a6 6 0 0 0-6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+          <span class="gl-button-text">Loading&hellip;</span>
+        </button>
+        <button class="gl-button gl-button--secondary--default" aria-disabled="true" aria-busy="true">
+          <span class="gl-icon gl-spinner"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6" fill="none" stroke="currentColor" stroke-width="2" opacity="0.35"/><path d="M14 8a6 6 0 0 0-6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+        </button>
+      </div>
+    </section>
+
+    <section class="gl-section">
+      <h2>Icon + block</h2>
+      <div class="gl-col">
+        <button class="gl-button gl-button--primary--confirm"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8l3.5 3.5L13 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="gl-button-text">Save changes</span></button>
+        <button class="gl-button gl-button--primary--danger gl-button--block">Delete</button>
+      </div>
+    </section>
+
+    <section class="gl-section">
+      <h2>Interactive loading</h2>
+      <div class="gl-row">
+        <button id="btn-demo-load" class="gl-button gl-button--primary--confirm">Run job</button>
+      </div>
+    </section>
+
+    <script>
+      (function () {
+        var b = document.getElementById('btn-demo-load');
+        var idle = b.innerHTML;
+        b.addEventListener('click', function () {
+          b.disabled = true;
+          b.setAttribute('aria-busy', 'true');
+          b.innerHTML = '<span class="gl-icon gl-spinner"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6" fill="none" stroke="currentColor" stroke-width="2" opacity="0.35"/><path d="M14 8a6 6 0 0 0-6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span class="gl-button-text">Running&hellip;</span>';
+          setTimeout(function () {
+            b.disabled = false;
+            b.removeAttribute('aria-busy');
+            b.innerHTML = idle;
+          }, 1800);
+        });
+      })();
+    </script>
+  </main>
+</body>
+</html>

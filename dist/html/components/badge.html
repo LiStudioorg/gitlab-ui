@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Badge</title>
+<link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="base.css">
+    <style>
+.gl-badge {
+  display: inline-flex; align-items: center; gap: var(--gl-spacing-scale-2);
+  padding: var(--gl-spacing-scale-1) var(--gl-spacing-scale-2);
+  border-radius: var(--gl-border-radius-full);
+  font-size: var(--gl-font-size-sm);
+  font-weight: var(--gl-font-weight-bold);
+  line-height: var(--gl-line-height-16);
+  text-decoration: none; border: 1px solid transparent;
+}
+.gl-badge--neutral { background-color: var(--gl-badge-neutral-background-color-default); color: var(--gl-badge-neutral-text-color-default); }
+.gl-badge--info { background-color: var(--gl-badge-info-background-color-default); color: var(--gl-badge-info-text-color-default); }
+.gl-badge--success { background-color: var(--gl-badge-success-background-color-default); color: var(--gl-badge-success-text-color-default); }
+.gl-badge--warning { background-color: var(--gl-badge-warning-background-color-default); color: var(--gl-badge-warning-text-color-default); }
+.gl-badge--danger { background-color: var(--gl-badge-danger-background-color-default); color: var(--gl-badge-danger-text-color-default); }
+.gl-badge--tier { background-color: var(--gl-badge-tier-background-color-default); color: var(--gl-badge-tier-text-color-default); }
+a.gl-badge:hover {
+  box-shadow: inset 0 0 0 1px var(--gl-border-color-strong);
+  text-decoration: none;
+}
+.gl-badge:disabled, .gl-badge[aria-disabled='true'] { opacity: var(--gl-opacity-7)); pointer-events: none; }</style>
+</head>
+<body>
+  <main class="gl-page">
+    <h1 class="gl-title">Badge</h1>
+    <p class="gl-sub">Pill capsules; variants neutral/info/success/warning/danger/tier; optional icon and link.</p>
+
+    <section class="gl-section">
+      <h2>Variants</h2>
+      <div class="gl-row">
+        <span class="gl-badge gl-badge--neutral">neutral</span>
+        <span class="gl-badge gl-badge--info">info</span>
+        <span class="gl-badge gl-badge--success">success</span>
+        <span class="gl-badge gl-badge--warning">warning</span>
+        <span class="gl-badge gl-badge--danger">danger</span>
+        <span class="gl-badge gl-badge--tier">Premium</span>
+      </div>
+    </section>
+
+    <section class="gl-section">
+      <h2>With icon</h2>
+      <div class="gl-row">
+        <span class="gl-badge gl-badge--success"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8l3.5 3.5L13 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Passed</span>
+        <span class="gl-badge gl-badge--danger">undefined Failed</span>
+        <span class="gl-badge gl-badge--info"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 11V7.5M8 5v.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> Info</span>
+      </div>
+    </section>
+
+    <section class="gl-section">
+      <h2>Link &amp; disabled</h2>
+      <div class="gl-row">
+        <a class="gl-badge gl-badge--success" href="#demo">enabled link</a>
+        <span class="gl-badge gl-badge--neutral" aria-disabled="true">disabled state</span>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

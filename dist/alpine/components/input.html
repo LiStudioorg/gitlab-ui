@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Input</title>
+<link rel="stylesheet" href="../../css/variables.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <style>
+      :focus-visible { outline: none; box-shadow: 0 0 0 2px var(--gl-focus-ring-inner-color), 0 0 0 4px var(--gl-focus-ring-outer-color); }
+      .spin { animation: gl-spin .8s linear infinite; }
+      @keyframes gl-spin { to { transform: rotate(360deg); } }
+      .gl-tab-btn { position: relative; }
+      .gl-tab-btn::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; border-radius: 1px; background-color: var(--gl-color-alpha-0); }
+      .gl-tab-btn:hover::after { background-color: var(--gl-border-color-strong); }
+      .gl-tab-btn[data-active='true'] { font-weight: var(--gl-font-weight-bold); }
+      .gl-tab-btn[data-active='true']::after { background-color: var(--gl-tab-selected-indicator-color-default); }
+      body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    </style>
+</head>
+<body>
+  <main class="max-w-2xl mx-auto my-8 px-8" style="color: var(--gl-text-color-default)">
+    <h1 class="text-[length:var(--gl-heading-scale-500-font-size)] font-bold mb-4" style="color: var(--gl-text-color-heading)">Input</h1>
+    <p class="mb-6" style="color: var(--gl-text-color-subtle)">Reactive validity (valid/invalid), width steps, disabled &amp; readonly.</p>
+
+    <div x-data="{ value: '', state: null, check() { this.state = this.value && this.value.includes('@') ? 'valid' : 'invalid'; } }" class="space-y-[var(--gl-spacing-scale-5)]">
+      <div>
+        <label class="block font-bold mb-2" style="color: var(--gl-text-color-strong)">Email (x-model + live validation)</label>
+        <input type="email" x-model="value" @input="check" placeholder="name@example.com"
+          class="w-full px-[var(--gl-spacing-scale-3)] py-[var(--gl-spacing-scale-3)] text-[length:var(--gl-font-size-base)] rounded-[var(--gl-control-border-radius)] placeholder-[var(--gl-control-placeholder-color)]"
+          :class="{
+            'border-[var(--gl-control-border-color-default)] hover:border-[var(--gl-control-border-color-hover)]': !state,
+            'border-[var(--gl-control-border-color-error)]': state === 'invalid',
+            'border-[var(--gl-control-text-color-valid)]': state === 'valid'
+          }"
+          style="background-color: var(--gl-control-background-color-default); color: var(--gl-text-color-default)">
+        <p x-show="state === 'invalid'" class="mt-2 text-[length:var(--gl-font-size-sm)]" style="color: var(--gl-control-text-color-error)">Please enter a valid email address.</p>
+        <p x-show="state === 'valid'" class="mt-2 text-[length:var(--gl-font-size-sm)]" style="color: var(--gl-control-text-color-valid)">Looks good.</p>
+      </div>
+
+      <div>
+        <label class="block font-bold mb-2">Width steps (xs/sm/md/lg)</label>
+        <div class="space-y-[var(--gl-spacing-scale-3)]">
+          <input class="block w-full max-w-[var(--gl-spacing-scale-31)] border border-[var(--gl-control-border-color-default)] px-[var(--gl-spacing-scale-3)] py-[var(--gl-spacing-scale-3)] rounded-[var(--gl-control-border-radius)]" placeholder="xs">
+          <input class="block w-full max-w-[var(--gl-spacing-scale-37)] border border-[var(--gl-control-border-color-default)] px-[var(--gl-spacing-scale-3)] py-[var(--gl-spacing-scale-3)] rounded-[var(--gl-control-border-radius)]" placeholder="sm">
+          <input class="block w-full max-w-[var(--gl-spacing-scale-48)] border border-[var(--gl-control-border-color-default)] px-[var(--gl-spacing-scale-3)] py-[var(--gl-spacing-scale-3)] rounded-[var(--gl-control-border-radius)]" placeholder="md">
+          <input class="block w-full max-w-[var(--gl-spacing-scale-62)] border border-[var(--gl-control-border-color-default)] px-[var(--gl-spacing-scale-3)] py-[var(--gl-spacing-scale-3)] rounded-[var(--gl-control-border-radius)]" placeholder="lg">
+        </div>
+      </div>
+
+      <div class="flex gap-3">
+        <input class="flex-1 border border-[var(--gl-control-border-color-default)] rounded-[var(--gl-control-border-radius)] px-[var(--gl-spacing-scale-3)] py-[var(--gl-spacing-scale-3)]" type="text" placeholder="Disabled" disabled style="background-color: var(--gl-control-background-color-disabled)">
+        <input class="flex-1 border border-[var(--gl-control-border-color-default)] rounded-[var(--gl-control-border-radius)] px-[var(--gl-spacing-scale-3)] py-[var(--gl-spacing-scale-3)]" type="text" value="Read only" readonly style="background-color: var(--gl-control-background-color-readonly)">
+      </div>
+    </div>
+  </main>
+</body>
+</html>

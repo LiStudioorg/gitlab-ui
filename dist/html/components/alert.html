@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alert</title>
+<link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="base.css">
+    <style>
+.alert-wrap { display: flex; flex-direction: column; gap: var(--gl-spacing-scale-3); margin-bottom: var(--gl-spacing-scale-6); }
+.gl-alert {
+  display: flex; gap: var(--gl-spacing-scale-3);
+  border: 1px solid transparent;
+  border-radius: var(--gl-alert-border-radius);
+  padding: var(--gl-spacing-scale-4);
+  position: relative;
+}
+.gl-alert--sticky { position: sticky; top: var(--gl-spacing-scale-5); }
+.gl-alert--info { background-color: var(--gl-alert-info-background-color); border-color: var(--gl-alert-info-border-color); }
+.gl-alert--info .gl-alert-icon { color: var(--gl-feedback-info-icon-color); }
+.gl-alert--info .gl-alert-title { color: var(--gl-alert-info-title-color); }
+.gl-alert--success { background-color: var(--gl-alert-success-background-color); border-color: var(--gl-alert-success-border-color); }
+.gl-alert--success .gl-alert-icon { color: var(--gl-feedback-success-icon-color); }
+.gl-alert--success .gl-alert-title { color: var(--gl-alert-success-title-color); }
+.gl-alert--warning { background-color: var(--gl-alert-warning-background-color); border-color: var(--gl-alert-warning-border-color); }
+.gl-alert--warning .gl-alert-icon { color: var(--gl-feedback-warning-icon-color); }
+.gl-alert--warning .gl-alert-title { color: var(--gl-alert-warning-title-color); }
+.gl-alert--danger { background-color: var(--gl-alert-danger-background-color); border-color: var(--gl-alert-danger-border-color); }
+.gl-alert--danger .gl-alert-icon { color: var(--gl-feedback-danger-icon-color); }
+.gl-alert--danger .gl-alert-title { color: var(--gl-alert-danger-title-color); }
+.gl-alert-icon { display: inline-flex; flex: 0 0 auto; }
+.gl-alert-title { font-weight: var(--gl-font-weight-bold); margin: 0 0 var(--gl-spacing-scale-1); }
+.gl-alert-body { margin: 0; color: var(--gl-text-color-default); }
+.gl-alert-content { flex: 1; min-width: 0; }
+.gl-alert-dismiss {
+  background: none; border: none; cursor: pointer;
+  color: var(--gl-text-color-subtle);
+  padding: var(--gl-spacing-scale-1); border-radius: var(--gl-border-radius-default);
+  align-self: flex-start; display: inline-flex;
+}
+.gl-alert:disabled, .gl-alert[aria-disabled='true'] { opacity: var(--gl-opacity-7); pointer-events: none; }</style>
+</head>
+<body>
+  <main class="gl-page">
+    <h1 class="gl-title">Alert</h1>
+    <p class="gl-sub">Embedded alerts with icon, title, body, dismiss &times; and sticky option. role=alert for danger, role=status otherwise.</p>
+
+    <div class="alert-wrap">
+      <div class="gl-alert gl-alert--info" role="status" data-alert>
+        <span class="gl-alert-icon"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 11V7.5M8 5v.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+        <div class="gl-alert-content">
+          <h3 class="gl-alert-title">Information</h3>
+          <p class="gl-alert-body">A scheduled maintenance window starts at 02:00 UTC.</p>
+        </div>
+        <button class="gl-alert-dismiss" aria-label="Dismiss"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      </div>
+
+      <div class="gl-alert gl-alert--success" role="status" data-alert>
+        <span class="gl-alert-icon"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8l3.5 3.5L13 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <div class="gl-alert-content">
+          <h3 class="gl-alert-title">Success</h3>
+          <p class="gl-alert-body">Your changes were published.</p>
+        </div>
+        <button class="gl-alert-dismiss" aria-label="Dismiss"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      </div>
+
+      <div class="gl-alert gl-alert--warning" role="status" data-alert>
+        <span class="gl-alert-icon">undefined</span>
+        <div class="gl-alert-content">
+          <h3 class="gl-alert-title">Warning</h3>
+          <p class="gl-alert-body">This branch has unmerged changes.</p>
+        </div>
+        <button class="gl-alert-dismiss" aria-label="Dismiss"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      </div>
+
+      <div class="gl-alert gl-alert--danger" role="alert" data-alert>
+        <span class="gl-alert-icon">undefined</span>
+        <div class="gl-alert-content">
+          <h3 class="gl-alert-title">Build failed</h3>
+          <p class="gl-alert-body">Job 3 timed out after 10 minutes. Retry or inspect the logs.</p>
+        </div>
+        <button class="gl-alert-dismiss" aria-label="Dismiss"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      </div>
+
+      <div class="gl-alert gl-alert--info gl-alert--sticky" role="status" data-alert>
+        <span class="gl-alert-icon"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.5a4.5 4.5 0 0 0-3 7.9c.6.5 1 1.3 1 2.1v.5h4v-.5c0-.8.4-1.6 1-2.1A4.5 4.5 0 0 0 8 1.5z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M6.5 13.5h3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+        <div class="gl-alert-content">
+          <h3 class="gl-alert-title">Tip (sticky)</h3>
+          <p class="gl-alert-body">This alert stays pinned to the top of the viewport.</p>
+        </div>
+        <button class="gl-alert-dismiss" aria-label="Dismiss"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      </div>
+    </div>
+
+    <script>
+      document.querySelectorAll('[data-alert]').forEach(function (a) {
+        a.querySelector('.gl-alert-dismiss').addEventListener('click', function () {
+          a.classList.add('is-dismissing');
+          setTimeout(function () { a.style.display = 'none'; }, 250);
+        });
+      });
+    </script>
+  </main>
+</body>
+</html>

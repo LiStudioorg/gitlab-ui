@@ -1,0 +1,39 @@
+<!-- Pajamas-inspired (MIT). htmx fragment: alert -->
+<style>
+      :focus-visible { outline: none; box-shadow: 0 0 0 2px var(--gl-focus-ring-inner-color), 0 0 0 4px var(--gl-focus-ring-outer-color); }
+      .spin { animation: gl-spin .8s linear infinite; }
+      @keyframes gl-spin { to { transform: rotate(360deg); } }
+      .htmx-indicator { display: none; }
+      .htmx-request .htmx-indicator, .htmx-request.htmx-indicator { display: inline-flex; }
+    </style>
+<div style="color: var(--gl-text-color-default)">
+  <div id="alert-slot">
+    <div class="flex gap-3 rounded-[var(--gl-alert-border-radius)]" role="alert"
+         style="background-color: var(--gl-alert-danger-background-color); border: 1px solid var(--gl-alert-danger-border-color); padding: var(--gl-spacing-scale-4); margin-bottom: var(--gl-spacing-scale-3)">
+      <span class="inline-flex" style="color: var(--gl-feedback-danger-icon-color)">undefined</span>
+      <div class="flex-1">
+        <h3 class="font-bold m-0 mb-1" style="color: var(--gl-alert-danger-title-color); font-size: var(--gl-font-size-base)">Build failed</h3>
+        <p class="m-0">Job 3 timed out. Retry or inspect the logs.</p>
+      </div>
+      <button hx-delete="/alerts/1" hx-target="closest .flex" hx-swap="outerHTML" hx-on::after-request="this.closest('div#alert-slot').remove()"
+              class="bg-transparent border-0 cursor-pointer" style="color: var(--gl-text-color-subtle)" aria-label="Dismiss"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+    </div>
+  </div>
+
+  <div class="flex gap-3 rounded-[var(--gl-alert-border-radius)]" role="status" style="background-color: var(--gl-alert-info-background-color); border: 1px solid var(--gl-alert-info-border-color); padding: var(--gl-spacing-scale-4); margin-bottom: var(--gl-spacing-scale-3)">
+    <span class="inline-flex" style="color: var(--gl-feedback-info-icon-color)"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 11V7.5M8 5v.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+    <div class="flex-1">
+      <h3 class="font-bold m-0 mb-1" style="color: var(--gl-alert-info-title-color); font-size: var(--gl-font-size-base)">Information</h3>
+      <p class="m-0">A scheduled maintenance window starts at 02:00 UTC.</p>
+    </div>
+  </div>
+
+  <div class="flex gap-3 rounded-[var(--gl-alert-border-radius)]" role="status" style="background-color: var(--gl-alert-warning-background-color); border: 1px solid var(--gl-alert-warning-border-color); padding: var(--gl-spacing-scale-4); margin-bottom: var(--gl-spacing-scale-3)">
+    <span class="inline-flex" style="color: var(--gl-feedback-warning-icon-color)">undefined</span>
+    <div class="flex-1">
+      <h3 class="font-bold m-0 mb-1" style="color: var(--gl-alert-warning-title-color); font-size: var(--gl-font-size-base)">Warning</h3>
+      <p class="m-0">This branch has unmerged changes.</p>
+    </div>
+    <button hx-get="/alert.html" hx-target="#alert-slot" hx-swap="innerHTML" class="bg-transparent border-0 cursor-pointer text-[length:var(--gl-font-size-sm)]" style="color: var(--gl-text-color-link)">load more &rarr;</button>
+  </div>
+</div>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Modal</title>
+<link rel="stylesheet" href="../../css/variables.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <style>
+      :focus-visible { outline: none; box-shadow: 0 0 0 2px var(--gl-focus-ring-inner-color), 0 0 0 4px var(--gl-focus-ring-outer-color); }
+      .spin { animation: gl-spin .8s linear infinite; }
+      @keyframes gl-spin { to { transform: rotate(360deg); } }
+      .gl-tab-btn { position: relative; }
+      .gl-tab-btn::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; border-radius: 1px; background-color: var(--gl-color-alpha-0); }
+      .gl-tab-btn:hover::after { background-color: var(--gl-border-color-strong); }
+      .gl-tab-btn[data-active='true'] { font-weight: var(--gl-font-weight-bold); }
+      .gl-tab-btn[data-active='true']::after { background-color: var(--gl-tab-selected-indicator-color-default); }
+      body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    </style>
+</head>
+<body>
+  <main class="max-w-4xl mx-auto my-8 px-8" x-data="{
+      visible: false, size: 'md',
+      open(s) { this.size = s || 'md'; this.visible = true; },
+      close() { this.visible = false; },
+      primary() { this.close(); },
+    }">
+    <h1 class="text-[length:var(--gl-heading-scale-500-font-size)] font-bold mb-4" style="color: var(--gl-text-color-heading)">Modal</h1>
+    <p class="mb-6" style="color: var(--gl-text-color-subtle)">x-show + x-transition; sizes sm/md/lg; close via backdrop, &times; and Esc.</p>
+
+    <div class="flex flex-wrap gap-3 mb-6" style="color: var(--gl-text-color-default)">
+      <button class="rounded-[var(--gl-button-border-radius)] bg-[var(--gl-button-default-primary-background-color-default)] text-[color:var(--gl-button-default-primary-foreground-color-default)] px-[var(--gl-spacing-scale-3)] py-[var(--gl-spacing-scale-3)] font-bold" @click="open('sm')">Open small</button>
+      <button class="rounded-[var(--gl-button-border-radius)] bg-[var(--gl-button-default-primary-background-color-default)] text-[color:var(--gl-button-default-primary-foreground-color-default)] px-[var(--gl-spacing-scale-3)] py-[var(--gl-spacing-scale-3)] font-bold" @click="open('md')">Open medium</button>
+      <button class="rounded-[var(--gl-button-border-radius)] bg-[var(--gl-button-default-primary-background-color-default)] text-[color:var(--gl-button-default-primary-foreground-color-default)] px-[var(--gl-spacing-scale-3)] py-[var(--gl-spacing-scale-3)] font-bold" @click="open('lg')">Open large</button>
+    </div>
+
+    <template x-teleport="body">
+      <div x-show="visible" x-transition.opacity.duration.250ms class="fixed inset-0 z-[var(--gl-zindex-4)] flex items-start justify-center bg-[var(--gl-color-alpha-dark-40)] p-8" @click.self="close" @keydown.escape.window="close" style="padding: var(--gl-spacing-scale-8)">
+        <div class="w-full rounded-[var(--gl-modal-border-radius)] flex flex-col" style="background-color: var(--gl-background-color-default); box-shadow: var(--gl-shadow-lg); max-width: var(--gl-spacing-scale-80)"
+             :style="size === 'sm' ? { maxWidth: 'var(--gl-spacing-scale-31)' } : size === 'lg' ? { maxWidth: 'var(--gl-spacing-scale-80)' } : { maxWidth: 'var(--gl-spacing-scale-48)' }">
+          <div class="flex items-center justify-between" style="padding: var(--gl-spacing-scale-4) var(--gl-spacing-scale-5)">
+            <h3 class="text-[length:var(--gl-heading-scale-500-font-size)] font-bold m-0" style="color: var(--gl-text-color-heading)" x-text="size === 'sm' ? 'Small dialog' : size === 'lg' ? 'Large dialog' : 'Delete project'"></h3>
+            <button class="rounded hover:bg-[var(--gl-color-alpha-dark-4)]" style="color: var(--gl-text-color-subtle); padding: var(--gl-spacing-scale-2)" aria-label="Close" @click="close"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+          </div>
+          <div style="padding: var(--gl-spacing-scale-5); color: var(--gl-text-color-default)">
+            <p>You are about to make a permanent change. This action cannot be undone.</p>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-[var(--gl-spacing-scale-3)]" style="padding: 0 var(--gl-spacing-scale-5) var(--gl-spacing-scale-5)">
+            <button class="rounded-[var(--gl-button-border-radius)] bg-[var(--gl-button-danger-primary-background-color-default)] text-[color:var(--gl-button-danger-primary-foreground-color-default)] px-[var(--gl-spacing-scale-3)] py-[var(--gl-spacing-scale-3)] font-bold" @click="primary">Delete</button>
+            <button class="rounded-[var(--gl-button-border-radius)] bg-[var(--gl-button-default-secondary-background-color-default)] text-[color:var(--gl-button-default-secondary-foreground-color-default)] px-[var(--gl-spacing-scale-3)] py-[var(--gl-spacing-scale-3)] font-bold" @click="close">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </template>
+  </main>
+</body>
+</html>

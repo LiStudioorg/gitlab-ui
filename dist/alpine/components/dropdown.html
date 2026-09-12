@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dropdown</title>
+<link rel="stylesheet" href="../../css/variables.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <style>
+      :focus-visible { outline: none; box-shadow: 0 0 0 2px var(--gl-focus-ring-inner-color), 0 0 0 4px var(--gl-focus-ring-outer-color); }
+      .spin { animation: gl-spin .8s linear infinite; }
+      @keyframes gl-spin { to { transform: rotate(360deg); } }
+      .gl-tab-btn { position: relative; }
+      .gl-tab-btn::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; border-radius: 1px; background-color: var(--gl-color-alpha-0); }
+      .gl-tab-btn:hover::after { background-color: var(--gl-border-color-strong); }
+      .gl-tab-btn[data-active='true'] { font-weight: var(--gl-font-weight-bold); }
+      .gl-tab-btn[data-active='true']::after { background-color: var(--gl-tab-selected-indicator-color-default); }
+      body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    </style>
+</head>
+<body>
+  <main class="max-w-3xl mx-auto my-8 px-8" x-data="{
+      open: false,
+      items: [ { text: 'Open', checked: true }, { text: 'Wait', checked: true }, { text: 'Closed', checked: false } ],
+      select(item) { item.checked = !item.checked; },
+      clearAll() { this.items.forEach((i) => (i.checked = false)); },
+      count() { return this.items.filter((i) => i.checked).length; }
+    }">
+    <h1 class="text-[length:var(--gl-heading-scale-500-font-size)] font-bold mb-4" style="color: var(--gl-text-color-heading)">Dropdown</h1>
+    <p class="mb-6" style="color: var(--gl-text-color-subtle)">Header, checkable items, divider, &quot;Clear all&quot;; closes on outside click / Esc.</p>
+
+    <div class="relative inline-block" @click.outside="open = false" @keydown.escape.window="open = false">
+      <button class="inline-flex items-center gap-2 rounded-[var(--gl-button-border-radius)] bg-[var(--gl-button-default-secondary-background-color-default)] text-[color:var(--gl-button-default-secondary-foreground-color-default)] px-[var(--gl-spacing-scale-3)] py-[var(--gl-spacing-scale-3)] font-bold" @click="open = !open">
+        Filter: <span x-text="count()"></span> selected <span>&#9662;</span>
+      </button>
+
+      <div x-show="open" x-transition.origin.top.left class="absolute top-[calc(100%+var(--gl-spacing-scale-2))] left-0 min-w-[230px] z-[var(--gl-zindex-3)] p-[var(--gl-spacing-scale-2)]"
+           style="background-color: var(--gl-dropdown-background-color); border: 1px solid var(--gl-dropdown-border-color); border-radius: var(--gl-dropdown-border-radius); box-shadow: var(--gl-shadow-sm)">
+        <div class="px-[var(--gl-spacing-scale-3)] py-[var(--gl-spacing-scale-2)] text-[length:var(--gl-font-size-sm)] font-bold" style="color: var(--gl-text-color-subtle)">Status</div>
+        <template x-for="item in items" :key="item.text">
+          <button class="flex items-center justify-between w-full gap-3 text-left rounded px-[var(--gl-spacing-scale-3)] py-[var(--gl-spacing-scale-2)] cursor-pointer"
+                  :class="item.checked ? 'text-[color:var(--gl-text-color-strong)]' : 'text-[color:var(--gl-text-color-default)]'"
+                  :style="item.checked ? { fontWeight: 'var(--gl-font-weight-bold)', backgroundColor: 'var(--gl-dropdown-option-background-color-selected-default)' } : { backgroundColor: 'var(--gl-color-alpha-0)' }"
+                  style="box-shadow: inset 0 0 0 0 var(--gl-color-alpha-0)" @click="select(item)">
+            <span x-text="item.text"></span>
+            <span x-show="item.checked"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8l3.5 3.5L13 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </button>
+        </template>
+        <div class="h-px my-[var(--gl-spacing-scale-2)]" style="background-color: var(--gl-dropdown-divider-color)"></div>
+        <button class="block w-full text-left px-[var(--gl-spacing-scale-3)] py-[var(--gl-spacing-scale-2)] bg-transparent border-0 cursor-pointer text-[length:var(--gl-font-size-sm)]" style="color: var(--gl-text-color-link)" @click="clearAll">Clear all</button>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

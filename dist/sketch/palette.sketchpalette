@@ -1,0 +1,5389 @@
+{
+  "compatibleVersion": "2.0",
+  "pluginVersion": "2.20",
+  "swatches": [
+    {
+      "name": "black",
+      "red": 5,
+      "green": 4,
+      "blue": 8,
+      "alpha": 1
+    },
+    {
+      "name": "blue-100",
+      "red": 203,
+      "green": 226,
+      "blue": 249,
+      "alpha": 1
+    },
+    {
+      "name": "blue-200",
+      "red": 157,
+      "green": 199,
+      "blue": 241,
+      "alpha": 1
+    },
+    {
+      "name": "blue-300",
+      "red": 99,
+      "green": 166,
+      "blue": 233,
+      "alpha": 1
+    },
+    {
+      "name": "blue-400",
+      "red": 66,
+      "green": 143,
+      "blue": 220,
+      "alpha": 1
+    },
+    {
+      "name": "blue-50",
+      "red": 233,
+      "green": 243,
+      "blue": 252,
+      "alpha": 1
+    },
+    {
+      "name": "blue-500",
+      "red": 31,
+      "green": 117,
+      "blue": 203,
+      "alpha": 1
+    },
+    {
+      "name": "blue-600",
+      "red": 47,
+      "green": 104,
+      "blue": 180,
+      "alpha": 1
+    },
+    {
+      "name": "blue-700",
+      "red": 47,
+      "green": 92,
+      "blue": 160,
+      "alpha": 1
+    },
+    {
+      "name": "blue-800",
+      "red": 40,
+      "green": 71,
+      "blue": 121,
+      "alpha": 1
+    },
+    {
+      "name": "blue-900",
+      "red": 33,
+      "green": 52,
+      "blue": 84,
+      "alpha": 1
+    },
+    {
+      "name": "blue-950",
+      "red": 29,
+      "green": 40,
+      "blue": 62,
+      "alpha": 1
+    },
+    {
+      "name": "brand-charcoal",
+      "red": 23,
+      "green": 19,
+      "blue": 33,
+      "alpha": 1
+    },
+    {
+      "name": "brand-gray-01",
+      "red": 209,
+      "green": 208,
+      "blue": 211,
+      "alpha": 1
+    },
+    {
+      "name": "brand-gray-02",
+      "red": 162,
+      "green": 161,
+      "blue": 166,
+      "alpha": 1
+    },
+    {
+      "name": "brand-gray-03",
+      "red": 116,
+      "green": 113,
+      "blue": 122,
+      "alpha": 1
+    },
+    {
+      "name": "brand-gray-04",
+      "red": 69,
+      "green": 66,
+      "blue": 77,
+      "alpha": 1
+    },
+    {
+      "name": "brand-gray-05",
+      "red": 43,
+      "green": 40,
+      "blue": 56,
+      "alpha": 1
+    },
+    {
+      "name": "brand-orange-01",
+      "red": 252,
+      "green": 163,
+      "blue": 38,
+      "alpha": 1
+    },
+    {
+      "name": "brand-orange-02",
+      "red": 252,
+      "green": 109,
+      "blue": 38,
+      "alpha": 1
+    },
+    {
+      "name": "brand-orange-03",
+      "red": 226,
+      "green": 67,
+      "blue": 41,
+      "alpha": 1
+    },
+    {
+      "name": "brand-purple-01",
+      "red": 169,
+      "green": 137,
+      "blue": 245,
+      "alpha": 1
+    },
+    {
+      "name": "brand-purple-02",
+      "red": 119,
+      "green": 89,
+      "blue": 194,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-aqua-100",
+      "red": 147,
+      "green": 242,
+      "blue": 239,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-aqua-200",
+      "red": 94,
+      "green": 222,
+      "blue": 227,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-aqua-300",
+      "red": 50,
+      "green": 197,
+      "blue": 210,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-aqua-400",
+      "red": 0,
+      "green": 172,
+      "blue": 196,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-aqua-50",
+      "red": 181,
+      "green": 254,
+      "blue": 253,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-aqua-500",
+      "red": 0,
+      "green": 144,
+      "blue": 177,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-aqua-600",
+      "red": 0,
+      "green": 123,
+      "blue": 155,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-aqua-700",
+      "red": 0,
+      "green": 99,
+      "blue": 129,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-aqua-800",
+      "red": 0,
+      "green": 81,
+      "blue": 108,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-aqua-900",
+      "red": 0,
+      "green": 64,
+      "blue": 89,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-aqua-950",
+      "red": 0,
+      "green": 52,
+      "blue": 75,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-blue-100",
+      "red": 210,
+      "green": 220,
+      "blue": 255,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-blue-200",
+      "red": 183,
+      "green": 198,
+      "blue": 255,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-blue-300",
+      "red": 151,
+      "green": 172,
+      "blue": 255,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-blue-400",
+      "red": 121,
+      "green": 146,
+      "blue": 245,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-blue-50",
+      "red": 233,
+      "green": 235,
+      "blue": 255,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-blue-500",
+      "red": 97,
+      "green": 122,
+      "blue": 226,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-blue-600",
+      "red": 78,
+      "green": 101,
+      "blue": 205,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-blue-700",
+      "red": 63,
+      "green": 81,
+      "blue": 174,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-blue-800",
+      "red": 55,
+      "green": 66,
+      "blue": 145,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-blue-900",
+      "red": 48,
+      "green": 52,
+      "blue": 112,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-blue-950",
+      "red": 42,
+      "green": 43,
+      "blue": 89,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-green-100",
+      "red": 198,
+      "green": 237,
+      "blue": 148,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-green-200",
+      "red": 176,
+      "green": 217,
+      "blue": 123,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-green-300",
+      "red": 148,
+      "green": 194,
+      "blue": 94,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-green-400",
+      "red": 129,
+      "green": 172,
+      "blue": 65,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-green-50",
+      "red": 221,
+      "green": 250,
+      "blue": 183,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-green-500",
+      "red": 97,
+      "green": 144,
+      "blue": 37,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-green-600",
+      "red": 78,
+      "green": 127,
+      "blue": 14,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-green-700",
+      "red": 54,
+      "green": 104,
+      "blue": 0,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-green-800",
+      "red": 39,
+      "green": 86,
+      "blue": 0,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-green-900",
+      "red": 26,
+      "green": 69,
+      "blue": 0,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-green-950",
+      "red": 19,
+      "green": 58,
+      "blue": 3,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-magenta-100",
+      "red": 255,
+      "green": 204,
+      "blue": 219,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-magenta-200",
+      "red": 252,
+      "green": 172,
+      "blue": 197,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-magenta-300",
+      "red": 248,
+      "green": 138,
+      "blue": 175,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-magenta-400",
+      "red": 232,
+      "green": 110,
+      "blue": 154,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-magenta-50",
+      "red": 255,
+      "green": 227,
+      "blue": 235,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-magenta-500",
+      "red": 207,
+      "green": 77,
+      "blue": 129,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-magenta-600",
+      "red": 185,
+      "green": 61,
+      "blue": 113,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-magenta-700",
+      "red": 154,
+      "green": 46,
+      "blue": 93,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-magenta-800",
+      "red": 124,
+      "green": 33,
+      "blue": 79,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-magenta-900",
+      "red": 102,
+      "green": 30,
+      "blue": 58,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-magenta-950",
+      "red": 84,
+      "green": 29,
+      "blue": 49,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-orange-100",
+      "red": 245,
+      "green": 214,
+      "blue": 179,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-orange-200",
+      "red": 238,
+      "green": 189,
+      "blue": 140,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-orange-300",
+      "red": 233,
+      "green": 155,
+      "blue": 96,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-orange-400",
+      "red": 224,
+      "green": 126,
+      "blue": 65,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-orange-50",
+      "red": 250,
+      "green": 232,
+      "blue": 209,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-orange-500",
+      "red": 201,
+      "green": 93,
+      "blue": 46,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-orange-600",
+      "red": 177,
+      "green": 79,
+      "blue": 24,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-orange-700",
+      "red": 146,
+      "green": 67,
+      "blue": 10,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-orange-800",
+      "red": 111,
+      "green": 53,
+      "blue": 0,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-orange-900",
+      "red": 94,
+      "green": 47,
+      "blue": 5,
+      "alpha": 1
+    },
+    {
+      "name": "data-viz-orange-950",
+      "red": 75,
+      "green": 39,
+      "blue": 7,
+      "alpha": 1
+    },
+    {
+      "name": "action-confirm-foreground-color-active",
+      "red": 5,
+      "green": 4,
+      "blue": 8,
+      "alpha": 1
+    },
+    {
+      "name": "action-confirm-foreground-color-default",
+      "red": 58,
+      "green": 56,
+      "blue": 61,
+      "alpha": 1
+    },
+    {
+      "name": "action-confirm-foreground-color-focus",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "action-confirm-foreground-color-hover",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "action-danger-foreground-color-active",
+      "red": 62,
+      "green": 26,
+      "blue": 20,
+      "alpha": 1
+    },
+    {
+      "name": "action-danger-foreground-color-default",
+      "red": 192,
+      "green": 47,
+      "blue": 18,
+      "alpha": 1
+    },
+    {
+      "name": "action-danger-foreground-color-focus",
+      "red": 129,
+      "green": 39,
+      "blue": 19,
+      "alpha": 1
+    },
+    {
+      "name": "action-danger-foreground-color-hover",
+      "red": 129,
+      "green": 39,
+      "blue": 19,
+      "alpha": 1
+    },
+    {
+      "name": "action-disabled-background-color",
+      "red": 236,
+      "green": 235,
+      "blue": 234,
+      "alpha": 1
+    },
+    {
+      "name": "action-disabled-border-color",
+      "red": 220,
+      "green": 219,
+      "blue": 217,
+      "alpha": 1
+    },
+    {
+      "name": "action-disabled-foreground-color",
+      "red": 138,
+      "green": 136,
+      "blue": 136,
+      "alpha": 1
+    },
+    {
+      "name": "action-neutral-foreground-color-active",
+      "red": 40,
+      "green": 39,
+      "blue": 45,
+      "alpha": 1
+    },
+    {
+      "name": "action-neutral-foreground-color-default",
+      "red": 40,
+      "green": 39,
+      "blue": 45,
+      "alpha": 1
+    },
+    {
+      "name": "action-neutral-foreground-color-focus",
+      "red": 40,
+      "green": 39,
+      "blue": 45,
+      "alpha": 1
+    },
+    {
+      "name": "action-neutral-foreground-color-hover",
+      "red": 40,
+      "green": 39,
+      "blue": 45,
+      "alpha": 1
+    },
+    {
+      "name": "action-selected-background-color-active",
+      "red": 5,
+      "green": 4,
+      "blue": 8,
+      "alpha": 1
+    },
+    {
+      "name": "action-selected-background-color-default",
+      "red": 58,
+      "green": 56,
+      "blue": 61,
+      "alpha": 1
+    },
+    {
+      "name": "action-selected-background-color-disabled",
+      "red": 138,
+      "green": 136,
+      "blue": 136,
+      "alpha": 1
+    },
+    {
+      "name": "action-selected-background-color-focus",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "action-selected-background-color-hover",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "action-selected-border-color-active",
+      "red": 5,
+      "green": 4,
+      "blue": 8,
+      "alpha": 1
+    },
+    {
+      "name": "action-selected-border-color-default",
+      "red": 58,
+      "green": 56,
+      "blue": 61,
+      "alpha": 1
+    },
+    {
+      "name": "action-selected-border-color-focus",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "action-selected-border-color-hover",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "action-strong-confirm-background-color-active",
+      "red": 47,
+      "green": 92,
+      "blue": 160,
+      "alpha": 1
+    },
+    {
+      "name": "action-strong-confirm-background-color-default",
+      "red": 31,
+      "green": 117,
+      "blue": 203,
+      "alpha": 1
+    },
+    {
+      "name": "action-strong-confirm-background-color-focus",
+      "red": 47,
+      "green": 104,
+      "blue": 180,
+      "alpha": 1
+    },
+    {
+      "name": "action-strong-confirm-background-color-hover",
+      "red": 47,
+      "green": 104,
+      "blue": 180,
+      "alpha": 1
+    },
+    {
+      "name": "action-strong-neutral-background-color-active",
+      "red": 58,
+      "green": 56,
+      "blue": 61,
+      "alpha": 1
+    },
+    {
+      "name": "action-strong-neutral-background-color-default",
+      "red": 100,
+      "green": 97,
+      "blue": 99,
+      "alpha": 1
+    },
+    {
+      "name": "action-strong-neutral-background-color-focus",
+      "red": 77,
+      "green": 75,
+      "blue": 78,
+      "alpha": 1
+    },
+    {
+      "name": "action-strong-neutral-background-color-hover",
+      "red": 77,
+      "green": 75,
+      "blue": 78,
+      "alpha": 1
+    },
+    {
+      "name": "alert-danger-background-color",
+      "red": 252,
+      "green": 241,
+      "blue": 239,
+      "alpha": 1
+    },
+    {
+      "name": "alert-danger-border-color",
+      "red": 221,
+      "green": 43,
+      "blue": 14,
+      "alpha": 1
+    },
+    {
+      "name": "alert-danger-title-color",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "alert-info-background-color",
+      "red": 233,
+      "green": 243,
+      "blue": 252,
+      "alpha": 1
+    },
+    {
+      "name": "alert-info-border-color",
+      "red": 157,
+      "green": 199,
+      "blue": 241,
+      "alpha": 1
+    },
+    {
+      "name": "alert-info-title-color",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "alert-neutral-background-color",
+      "red": 236,
+      "green": 235,
+      "blue": 234,
+      "alpha": 1
+    },
+    {
+      "name": "alert-neutral-border-color",
+      "red": 193,
+      "green": 191,
+      "blue": 190,
+      "alpha": 1
+    },
+    {
+      "name": "alert-neutral-title-color",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "alert-success-background-color",
+      "red": 236,
+      "green": 244,
+      "blue": 238,
+      "alpha": 1
+    },
+    {
+      "name": "alert-success-border-color",
+      "red": 145,
+      "green": 212,
+      "blue": 168,
+      "alpha": 1
+    },
+    {
+      "name": "alert-success-title-color",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "alert-warning-background-color",
+      "red": 253,
+      "green": 241,
+      "blue": 221,
+      "alpha": 1
+    },
+    {
+      "name": "alert-warning-border-color",
+      "red": 233,
+      "green": 190,
+      "blue": 116,
+      "alpha": 1
+    },
+    {
+      "name": "alert-warning-title-color",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "application-chrome-background-color",
+      "red": 236,
+      "green": 235,
+      "blue": 234,
+      "alpha": 1
+    },
+    {
+      "name": "avatar-fallback-text-color-blue",
+      "red": 40,
+      "green": 71,
+      "blue": 121,
+      "alpha": 1
+    },
+    {
+      "name": "avatar-fallback-text-color-green",
+      "red": 34,
+      "green": 81,
+      "blue": 49,
+      "alpha": 1
+    },
+    {
+      "name": "avatar-fallback-text-color-neutral",
+      "red": 58,
+      "green": 56,
+      "blue": 61,
+      "alpha": 1
+    },
+    {
+      "name": "avatar-fallback-text-color-orange",
+      "red": 105,
+      "green": 60,
+      "blue": 20,
+      "alpha": 1
+    },
+    {
+      "name": "avatar-fallback-text-color-purple",
+      "red": 73,
+      "green": 60,
+      "blue": 131,
+      "alpha": 1
+    },
+    {
+      "name": "avatar-fallback-text-color-red",
+      "red": 129,
+      "green": 39,
+      "blue": 19,
+      "alpha": 1
+    },
+    {
+      "name": "background-color-disabled",
+      "red": 247,
+      "green": 247,
+      "blue": 245,
+      "alpha": 1
+    },
+    {
+      "name": "background-color-strong",
+      "red": 236,
+      "green": 235,
+      "blue": 234,
+      "alpha": 1
+    },
+    {
+      "name": "background-color-subtle",
+      "red": 247,
+      "green": 247,
+      "blue": 245,
+      "alpha": 1
+    },
+    {
+      "name": "badge-danger-background-color-active",
+      "red": 252,
+      "green": 181,
+      "blue": 170,
+      "alpha": 1
+    },
+    {
+      "name": "badge-danger-background-color-default",
+      "red": 253,
+      "green": 212,
+      "blue": 205,
+      "alpha": 1
+    },
+    {
+      "name": "badge-danger-background-color-focus",
+      "red": 253,
+      "green": 212,
+      "blue": 205,
+      "alpha": 1
+    },
+    {
+      "name": "badge-danger-background-color-hover",
+      "red": 253,
+      "green": 212,
+      "blue": 205,
+      "alpha": 1
+    },
+    {
+      "name": "badge-danger-border-color-hover",
+      "red": 252,
+      "green": 181,
+      "blue": 170,
+      "alpha": 1
+    },
+    {
+      "name": "badge-danger-icon-color-active",
+      "red": 88,
+      "green": 32,
+      "blue": 20,
+      "alpha": 1
+    },
+    {
+      "name": "badge-danger-icon-color-default",
+      "red": 163,
+      "green": 44,
+      "blue": 18,
+      "alpha": 1
+    },
+    {
+      "name": "badge-danger-icon-color-focus",
+      "red": 129,
+      "green": 39,
+      "blue": 19,
+      "alpha": 1
+    },
+    {
+      "name": "badge-danger-icon-color-hover",
+      "red": 129,
+      "green": 39,
+      "blue": 19,
+      "alpha": 1
+    },
+    {
+      "name": "badge-danger-text-color-active",
+      "red": 88,
+      "green": 32,
+      "blue": 20,
+      "alpha": 1
+    },
+    {
+      "name": "badge-danger-text-color-default",
+      "red": 163,
+      "green": 44,
+      "blue": 18,
+      "alpha": 1
+    },
+    {
+      "name": "badge-danger-text-color-focus",
+      "red": 129,
+      "green": 39,
+      "blue": 19,
+      "alpha": 1
+    },
+    {
+      "name": "badge-danger-text-color-hover",
+      "red": 129,
+      "green": 39,
+      "blue": 19,
+      "alpha": 1
+    },
+    {
+      "name": "badge-info-background-color-active",
+      "red": 157,
+      "green": 199,
+      "blue": 241,
+      "alpha": 1
+    },
+    {
+      "name": "badge-info-background-color-default",
+      "red": 203,
+      "green": 226,
+      "blue": 249,
+      "alpha": 1
+    },
+    {
+      "name": "badge-info-background-color-focus",
+      "red": 203,
+      "green": 226,
+      "blue": 249,
+      "alpha": 1
+    },
+    {
+      "name": "badge-info-background-color-hover",
+      "red": 203,
+      "green": 226,
+      "blue": 249,
+      "alpha": 1
+    },
+    {
+      "name": "badge-info-border-color-hover",
+      "red": 157,
+      "green": 199,
+      "blue": 241,
+      "alpha": 1
+    },
+    {
+      "name": "badge-info-icon-color-active",
+      "red": 47,
+      "green": 92,
+      "blue": 160,
+      "alpha": 1
+    },
+    {
+      "name": "badge-info-icon-color-default",
+      "red": 31,
+      "green": 117,
+      "blue": 203,
+      "alpha": 1
+    },
+    {
+      "name": "badge-info-icon-color-focus",
+      "red": 47,
+      "green": 104,
+      "blue": 180,
+      "alpha": 1
+    },
+    {
+      "name": "badge-info-icon-color-hover",
+      "red": 47,
+      "green": 104,
+      "blue": 180,
+      "alpha": 1
+    },
+    {
+      "name": "badge-info-text-color-active",
+      "red": 33,
+      "green": 52,
+      "blue": 84,
+      "alpha": 1
+    },
+    {
+      "name": "badge-info-text-color-default",
+      "red": 47,
+      "green": 92,
+      "blue": 160,
+      "alpha": 1
+    },
+    {
+      "name": "badge-info-text-color-focus",
+      "red": 40,
+      "green": 71,
+      "blue": 121,
+      "alpha": 1
+    },
+    {
+      "name": "badge-info-text-color-hover",
+      "red": 40,
+      "green": 71,
+      "blue": 121,
+      "alpha": 1
+    },
+    {
+      "name": "badge-muted-background-color-active",
+      "red": 220,
+      "green": 219,
+      "blue": 217,
+      "alpha": 1
+    },
+    {
+      "name": "badge-muted-background-color-default",
+      "red": 236,
+      "green": 235,
+      "blue": 234,
+      "alpha": 1
+    },
+    {
+      "name": "badge-muted-background-color-focus",
+      "red": 236,
+      "green": 235,
+      "blue": 234,
+      "alpha": 1
+    },
+    {
+      "name": "badge-muted-background-color-hover",
+      "red": 236,
+      "green": 235,
+      "blue": 234,
+      "alpha": 1
+    },
+    {
+      "name": "badge-muted-border-color-hover",
+      "red": 193,
+      "green": 191,
+      "blue": 190,
+      "alpha": 1
+    },
+    {
+      "name": "badge-muted-icon-color-active",
+      "red": 77,
+      "green": 75,
+      "blue": 78,
+      "alpha": 1
+    },
+    {
+      "name": "badge-muted-icon-color-default",
+      "red": 116,
+      "green": 114,
+      "blue": 115,
+      "alpha": 1
+    },
+    {
+      "name": "badge-muted-icon-color-focus",
+      "red": 100,
+      "green": 97,
+      "blue": 99,
+      "alpha": 1
+    },
+    {
+      "name": "badge-muted-icon-color-hover",
+      "red": 100,
+      "green": 97,
+      "blue": 99,
+      "alpha": 1
+    },
+    {
+      "name": "badge-muted-text-color-active",
+      "red": 58,
+      "green": 56,
+      "blue": 61,
+      "alpha": 1
+    },
+    {
+      "name": "badge-muted-text-color-default",
+      "red": 100,
+      "green": 97,
+      "blue": 99,
+      "alpha": 1
+    },
+    {
+      "name": "badge-muted-text-color-focus",
+      "red": 77,
+      "green": 75,
+      "blue": 78,
+      "alpha": 1
+    },
+    {
+      "name": "badge-muted-text-color-hover",
+      "red": 77,
+      "green": 75,
+      "blue": 78,
+      "alpha": 1
+    },
+    {
+      "name": "badge-neutral-background-color-active",
+      "red": 193,
+      "green": 191,
+      "blue": 190,
+      "alpha": 1
+    },
+    {
+      "name": "badge-neutral-background-color-default",
+      "red": 220,
+      "green": 219,
+      "blue": 217,
+      "alpha": 1
+    },
+    {
+      "name": "badge-neutral-background-color-focus",
+      "red": 220,
+      "green": 219,
+      "blue": 217,
+      "alpha": 1
+    },
+    {
+      "name": "badge-neutral-background-color-hover",
+      "red": 220,
+      "green": 219,
+      "blue": 217,
+      "alpha": 1
+    },
+    {
+      "name": "badge-neutral-border-color-hover",
+      "red": 193,
+      "green": 191,
+      "blue": 190,
+      "alpha": 1
+    },
+    {
+      "name": "badge-neutral-icon-color-active",
+      "red": 77,
+      "green": 75,
+      "blue": 78,
+      "alpha": 1
+    },
+    {
+      "name": "badge-neutral-icon-color-default",
+      "red": 116,
+      "green": 114,
+      "blue": 115,
+      "alpha": 1
+    },
+    {
+      "name": "badge-neutral-icon-color-focus",
+      "red": 100,
+      "green": 97,
+      "blue": 99,
+      "alpha": 1
+    },
+    {
+      "name": "badge-neutral-icon-color-hover",
+      "red": 100,
+      "green": 97,
+      "blue": 99,
+      "alpha": 1
+    },
+    {
+      "name": "badge-neutral-text-color-active",
+      "red": 40,
+      "green": 39,
+      "blue": 45,
+      "alpha": 1
+    },
+    {
+      "name": "badge-neutral-text-color-default",
+      "red": 77,
+      "green": 75,
+      "blue": 78,
+      "alpha": 1
+    },
+    {
+      "name": "badge-neutral-text-color-focus",
+      "red": 58,
+      "green": 56,
+      "blue": 61,
+      "alpha": 1
+    },
+    {
+      "name": "badge-neutral-text-color-hover",
+      "red": 58,
+      "green": 56,
+      "blue": 61,
+      "alpha": 1
+    },
+    {
+      "name": "badge-success-background-color-active",
+      "red": 145,
+      "green": 212,
+      "blue": 168,
+      "alpha": 1
+    },
+    {
+      "name": "badge-success-background-color-default",
+      "red": 195,
+      "green": 230,
+      "blue": 205,
+      "alpha": 1
+    },
+    {
+      "name": "badge-success-background-color-focus",
+      "red": 195,
+      "green": 230,
+      "blue": 205,
+      "alpha": 1
+    },
+    {
+      "name": "badge-success-background-color-hover",
+      "red": 195,
+      "green": 230,
+      "blue": 205,
+      "alpha": 1
+    },
+    {
+      "name": "badge-success-border-color-hover",
+      "red": 145,
+      "green": 212,
+      "blue": 168,
+      "alpha": 1
+    },
+    {
+      "name": "badge-success-icon-color-active",
+      "red": 48,
+      "green": 100,
+      "blue": 64,
+      "alpha": 1
+    },
+    {
+      "name": "badge-success-icon-color-default",
+      "red": 16,
+      "green": 133,
+      "blue": 72,
+      "alpha": 1
+    },
+    {
+      "name": "badge-success-icon-color-focus",
+      "red": 47,
+      "green": 117,
+      "blue": 73,
+      "alpha": 1
+    },
+    {
+      "name": "badge-success-icon-color-hover",
+      "red": 47,
+      "green": 117,
+      "blue": 73,
+      "alpha": 1
+    },
+    {
+      "name": "badge-success-text-color-active",
+      "red": 30,
+      "green": 62,
+      "blue": 40,
+      "alpha": 1
+    },
+    {
+      "name": "badge-success-text-color-default",
+      "red": 48,
+      "green": 100,
+      "blue": 64,
+      "alpha": 1
+    },
+    {
+      "name": "badge-success-text-color-focus",
+      "red": 34,
+      "green": 81,
+      "blue": 49,
+      "alpha": 1
+    },
+    {
+      "name": "badge-success-text-color-hover",
+      "red": 34,
+      "green": 81,
+      "blue": 49,
+      "alpha": 1
+    },
+    {
+      "name": "badge-tier-background-color-active",
+      "red": 203,
+      "green": 187,
+      "blue": 242,
+      "alpha": 1
+    },
+    {
+      "name": "badge-tier-background-color-default",
+      "red": 225,
+      "green": 216,
+      "blue": 249,
+      "alpha": 1
+    },
+    {
+      "name": "badge-tier-background-color-focus",
+      "red": 225,
+      "green": 216,
+      "blue": 249,
+      "alpha": 1
+    },
+    {
+      "name": "badge-tier-background-color-hover",
+      "red": 225,
+      "green": 216,
+      "blue": 249,
+      "alpha": 1
+    },
+    {
+      "name": "badge-tier-border-color-hover",
+      "red": 203,
+      "green": 187,
+      "blue": 242,
+      "alpha": 1
+    },
+    {
+      "name": "badge-tier-icon-color-active",
+      "red": 52,
+      "green": 45,
+      "blue": 89,
+      "alpha": 1
+    },
+    {
+      "name": "badge-tier-icon-color-default",
+      "red": 92,
+      "green": 71,
+      "blue": 166,
+      "alpha": 1
+    },
+    {
+      "name": "badge-tier-icon-color-focus",
+      "red": 73,
+      "green": 60,
+      "blue": 131,
+      "alpha": 1
+    },
+    {
+      "name": "badge-tier-icon-color-hover",
+      "red": 73,
+      "green": 60,
+      "blue": 131,
+      "alpha": 1
+    },
+    {
+      "name": "badge-tier-text-color-active",
+      "red": 52,
+      "green": 45,
+      "blue": 89,
+      "alpha": 1
+    },
+    {
+      "name": "badge-tier-text-color-default",
+      "red": 92,
+      "green": 71,
+      "blue": 166,
+      "alpha": 1
+    },
+    {
+      "name": "badge-tier-text-color-focus",
+      "red": 73,
+      "green": 60,
+      "blue": 131,
+      "alpha": 1
+    },
+    {
+      "name": "badge-tier-text-color-hover",
+      "red": 73,
+      "green": 60,
+      "blue": 131,
+      "alpha": 1
+    },
+    {
+      "name": "badge-warning-background-color-active",
+      "red": 233,
+      "green": 190,
+      "blue": 116,
+      "alpha": 1
+    },
+    {
+      "name": "badge-warning-background-color-default",
+      "red": 245,
+      "green": 217,
+      "blue": 168,
+      "alpha": 1
+    },
+    {
+      "name": "badge-warning-background-color-focus",
+      "red": 245,
+      "green": 217,
+      "blue": 168,
+      "alpha": 1
+    },
+    {
+      "name": "badge-warning-background-color-hover",
+      "red": 245,
+      "green": 217,
+      "blue": 168,
+      "alpha": 1
+    },
+    {
+      "name": "badge-warning-border-color-hover",
+      "red": 233,
+      "green": 190,
+      "blue": 116,
+      "alpha": 1
+    },
+    {
+      "name": "badge-warning-icon-color-active",
+      "red": 137,
+      "green": 75,
+      "blue": 22,
+      "alpha": 1
+    },
+    {
+      "name": "badge-warning-icon-color-default",
+      "red": 171,
+      "green": 97,
+      "blue": 0,
+      "alpha": 1
+    },
+    {
+      "name": "badge-warning-icon-color-focus",
+      "red": 153,
+      "green": 87,
+      "blue": 21,
+      "alpha": 1
+    },
+    {
+      "name": "badge-warning-icon-color-hover",
+      "red": 153,
+      "green": 87,
+      "blue": 21,
+      "alpha": 1
+    },
+    {
+      "name": "badge-warning-text-color-active",
+      "red": 83,
+      "green": 46,
+      "blue": 22,
+      "alpha": 1
+    },
+    {
+      "name": "badge-warning-text-color-default",
+      "red": 137,
+      "green": 75,
+      "blue": 22,
+      "alpha": 1
+    },
+    {
+      "name": "badge-warning-text-color-focus",
+      "red": 105,
+      "green": 60,
+      "blue": 20,
+      "alpha": 1
+    },
+    {
+      "name": "badge-warning-text-color-hover",
+      "red": 105,
+      "green": 60,
+      "blue": 20,
+      "alpha": 1
+    },
+    {
+      "name": "banner-intro-border-color",
+      "red": 157,
+      "green": 199,
+      "blue": 241,
+      "alpha": 1
+    },
+    {
+      "name": "banner-promo-background-color",
+      "red": 244,
+      "green": 240,
+      "blue": 255,
+      "alpha": 1
+    },
+    {
+      "name": "banner-promo-border-color",
+      "red": 203,
+      "green": 187,
+      "blue": 242,
+      "alpha": 1
+    },
+    {
+      "name": "border-color-default",
+      "red": 220,
+      "green": 219,
+      "blue": 217,
+      "alpha": 1
+    },
+    {
+      "name": "border-color-section",
+      "red": 220,
+      "green": 219,
+      "blue": 217,
+      "alpha": 1
+    },
+    {
+      "name": "border-color-strong",
+      "red": 193,
+      "green": 191,
+      "blue": 190,
+      "alpha": 1
+    },
+    {
+      "name": "border-color-subtle",
+      "red": 236,
+      "green": 235,
+      "blue": 234,
+      "alpha": 1
+    },
+    {
+      "name": "breadcrumb-separator-color",
+      "red": 138,
+      "green": 136,
+      "blue": 136,
+      "alpha": 1
+    },
+    {
+      "name": "broadcast-banner-background-color-blue",
+      "red": 35,
+      "green": 81,
+      "blue": 128,
+      "alpha": 1
+    },
+    {
+      "name": "broadcast-banner-background-color-dark",
+      "red": 116,
+      "green": 114,
+      "blue": 115,
+      "alpha": 1
+    },
+    {
+      "name": "broadcast-banner-background-color-green",
+      "red": 27,
+      "green": 101,
+      "blue": 63,
+      "alpha": 1
+    },
+    {
+      "name": "broadcast-banner-background-color-indigo",
+      "red": 65,
+      "green": 65,
+      "blue": 159,
+      "alpha": 1
+    },
+    {
+      "name": "broadcast-banner-background-color-light",
+      "red": 236,
+      "green": 235,
+      "blue": 234,
+      "alpha": 1
+    },
+    {
+      "name": "broadcast-banner-background-color-lightblue",
+      "red": 73,
+      "green": 119,
+      "blue": 165,
+      "alpha": 1
+    },
+    {
+      "name": "broadcast-banner-background-color-lightgreen",
+      "red": 48,
+      "green": 130,
+      "blue": 88,
+      "alpha": 1
+    },
+    {
+      "name": "broadcast-banner-background-color-lightindigo",
+      "red": 102,
+      "green": 102,
+      "blue": 196,
+      "alpha": 1
+    },
+    {
+      "name": "broadcast-banner-background-color-lightred",
+      "red": 173,
+      "green": 74,
+      "blue": 59,
+      "alpha": 1
+    },
+    {
+      "name": "broadcast-banner-background-color-red",
+      "red": 143,
+      "green": 33,
+      "blue": 16,
+      "alpha": 1
+    },
+    {
+      "name": "broadcast-banner-border-color-blue",
+      "red": 11,
+      "green": 38,
+      "blue": 64,
+      "alpha": 1
+    },
+    {
+      "name": "broadcast-banner-border-color-dark",
+      "red": 77,
+      "green": 75,
+      "blue": 78,
+      "alpha": 1
+    },
+    {
+      "name": "broadcast-banner-border-color-green",
+      "red": 14,
+      "green": 67,
+      "blue": 40,
+      "alpha": 1
+    },
+    {
+      "name": "broadcast-banner-border-color-indigo",
+      "red": 34,
+      "green": 34,
+      "blue": 97,
+      "alpha": 1
+    },
+    {
+      "name": "broadcast-banner-border-color-light",
+      "red": 220,
+      "green": 219,
+      "blue": 217,
+      "alpha": 1
+    },
+    {
+      "name": "broadcast-banner-border-color-lightblue",
+      "red": 35,
+      "green": 81,
+      "blue": 128,
+      "alpha": 1
+    },
+    {
+      "name": "broadcast-banner-border-color-lightgreen",
+      "red": 27,
+      "green": 101,
+      "blue": 63,
+      "alpha": 1
+    },
+    {
+      "name": "broadcast-banner-border-color-lightindigo",
+      "red": 65,
+      "green": 65,
+      "blue": 159,
+      "alpha": 1
+    },
+    {
+      "name": "broadcast-banner-border-color-lightred",
+      "red": 143,
+      "green": 33,
+      "blue": 16,
+      "alpha": 1
+    },
+    {
+      "name": "broadcast-banner-border-color-red",
+      "red": 88,
+      "green": 13,
+      "blue": 2,
+      "alpha": 1
+    },
+    {
+      "name": "broadcast-banner-icon-color-light",
+      "red": 40,
+      "green": 39,
+      "blue": 45,
+      "alpha": 1
+    },
+    {
+      "name": "broadcast-banner-text-color-light",
+      "red": 40,
+      "green": 39,
+      "blue": 45,
+      "alpha": 1
+    },
+    {
+      "name": "button-confirm-primary-background-color-active",
+      "red": 5,
+      "green": 4,
+      "blue": 8,
+      "alpha": 1
+    },
+    {
+      "name": "button-confirm-primary-background-color-default",
+      "red": 58,
+      "green": 56,
+      "blue": 61,
+      "alpha": 1
+    },
+    {
+      "name": "button-confirm-primary-background-color-focus",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "button-confirm-primary-background-color-hover",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "button-confirm-secondary-background-color-active",
+      "red": 220,
+      "green": 219,
+      "blue": 217,
+      "alpha": 1
+    },
+    {
+      "name": "button-confirm-secondary-background-color-focus",
+      "red": 236,
+      "green": 235,
+      "blue": 234,
+      "alpha": 1
+    },
+    {
+      "name": "button-confirm-secondary-background-color-hover",
+      "red": 236,
+      "green": 235,
+      "blue": 234,
+      "alpha": 1
+    },
+    {
+      "name": "button-confirm-secondary-border-color-active",
+      "red": 5,
+      "green": 4,
+      "blue": 8,
+      "alpha": 1
+    },
+    {
+      "name": "button-confirm-secondary-border-color-default",
+      "red": 58,
+      "green": 56,
+      "blue": 61,
+      "alpha": 1
+    },
+    {
+      "name": "button-confirm-secondary-border-color-focus",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "button-confirm-secondary-border-color-hover",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "button-confirm-secondary-foreground-color-active",
+      "red": 5,
+      "green": 4,
+      "blue": 8,
+      "alpha": 1
+    },
+    {
+      "name": "button-confirm-secondary-foreground-color-default",
+      "red": 58,
+      "green": 56,
+      "blue": 61,
+      "alpha": 1
+    },
+    {
+      "name": "button-confirm-secondary-foreground-color-focus",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "button-confirm-secondary-foreground-color-hover",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "button-confirm-tertiary-foreground-color-active",
+      "red": 5,
+      "green": 4,
+      "blue": 8,
+      "alpha": 1
+    },
+    {
+      "name": "button-confirm-tertiary-foreground-color-default",
+      "red": 58,
+      "green": 56,
+      "blue": 61,
+      "alpha": 1
+    },
+    {
+      "name": "button-confirm-tertiary-foreground-color-focus",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "button-confirm-tertiary-foreground-color-hover",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "button-danger-primary-background-color-active",
+      "red": 129,
+      "green": 39,
+      "blue": 19,
+      "alpha": 1
+    },
+    {
+      "name": "button-danger-primary-background-color-default",
+      "red": 221,
+      "green": 43,
+      "blue": 14,
+      "alpha": 1
+    },
+    {
+      "name": "button-danger-primary-background-color-focus",
+      "red": 192,
+      "green": 47,
+      "blue": 18,
+      "alpha": 1
+    },
+    {
+      "name": "button-danger-primary-background-color-hover",
+      "red": 192,
+      "green": 47,
+      "blue": 18,
+      "alpha": 1
+    },
+    {
+      "name": "button-danger-primary-border-color-active",
+      "red": 88,
+      "green": 32,
+      "blue": 20,
+      "alpha": 1
+    },
+    {
+      "name": "button-danger-primary-border-color-default",
+      "red": 192,
+      "green": 47,
+      "blue": 18,
+      "alpha": 1
+    },
+    {
+      "name": "button-danger-primary-border-color-focus",
+      "red": 129,
+      "green": 39,
+      "blue": 19,
+      "alpha": 1
+    },
+    {
+      "name": "button-danger-primary-border-color-hover",
+      "red": 129,
+      "green": 39,
+      "blue": 19,
+      "alpha": 1
+    },
+    {
+      "name": "button-danger-secondary-background-color-active",
+      "red": 253,
+      "green": 212,
+      "blue": 205,
+      "alpha": 1
+    },
+    {
+      "name": "button-danger-secondary-background-color-focus",
+      "red": 252,
+      "green": 241,
+      "blue": 239,
+      "alpha": 1
+    },
+    {
+      "name": "button-danger-secondary-background-color-hover",
+      "red": 252,
+      "green": 241,
+      "blue": 239,
+      "alpha": 1
+    },
+    {
+      "name": "button-danger-secondary-border-color-active",
+      "red": 88,
+      "green": 32,
+      "blue": 20,
+      "alpha": 1
+    },
+    {
+      "name": "button-danger-secondary-border-color-default",
+      "red": 221,
+      "green": 43,
+      "blue": 14,
+      "alpha": 1
+    },
+    {
+      "name": "button-danger-secondary-border-color-focus",
+      "red": 163,
+      "green": 44,
+      "blue": 18,
+      "alpha": 1
+    },
+    {
+      "name": "button-danger-secondary-border-color-hover",
+      "red": 163,
+      "green": 44,
+      "blue": 18,
+      "alpha": 1
+    },
+    {
+      "name": "button-danger-secondary-foreground-color-active",
+      "red": 88,
+      "green": 32,
+      "blue": 20,
+      "alpha": 1
+    },
+    {
+      "name": "button-danger-secondary-foreground-color-default",
+      "red": 221,
+      "green": 43,
+      "blue": 14,
+      "alpha": 1
+    },
+    {
+      "name": "button-danger-secondary-foreground-color-focus",
+      "red": 163,
+      "green": 44,
+      "blue": 18,
+      "alpha": 1
+    },
+    {
+      "name": "button-danger-secondary-foreground-color-hover",
+      "red": 163,
+      "green": 44,
+      "blue": 18,
+      "alpha": 1
+    },
+    {
+      "name": "button-danger-tertiary-foreground-color-active",
+      "red": 62,
+      "green": 26,
+      "blue": 20,
+      "alpha": 1
+    },
+    {
+      "name": "button-danger-tertiary-foreground-color-default",
+      "red": 192,
+      "green": 47,
+      "blue": 18,
+      "alpha": 1
+    },
+    {
+      "name": "button-danger-tertiary-foreground-color-focus",
+      "red": 129,
+      "green": 39,
+      "blue": 19,
+      "alpha": 1
+    },
+    {
+      "name": "button-danger-tertiary-foreground-color-hover",
+      "red": 129,
+      "green": 39,
+      "blue": 19,
+      "alpha": 1
+    },
+    {
+      "name": "button-dashed-border-color-active",
+      "red": 100,
+      "green": 97,
+      "blue": 99,
+      "alpha": 1
+    },
+    {
+      "name": "button-dashed-border-color-default",
+      "red": 138,
+      "green": 136,
+      "blue": 136,
+      "alpha": 1
+    },
+    {
+      "name": "button-dashed-border-color-focus",
+      "red": 138,
+      "green": 136,
+      "blue": 136,
+      "alpha": 1
+    },
+    {
+      "name": "button-dashed-border-color-hover",
+      "red": 138,
+      "green": 136,
+      "blue": 136,
+      "alpha": 1
+    },
+    {
+      "name": "button-default-primary-background-color-active",
+      "red": 220,
+      "green": 219,
+      "blue": 217,
+      "alpha": 1
+    },
+    {
+      "name": "button-default-primary-background-color-focus",
+      "red": 236,
+      "green": 235,
+      "blue": 234,
+      "alpha": 1
+    },
+    {
+      "name": "button-default-primary-background-color-hover",
+      "red": 236,
+      "green": 235,
+      "blue": 234,
+      "alpha": 1
+    },
+    {
+      "name": "button-default-primary-border-color-active",
+      "red": 100,
+      "green": 97,
+      "blue": 99,
+      "alpha": 1
+    },
+    {
+      "name": "button-default-primary-border-color-default",
+      "red": 193,
+      "green": 191,
+      "blue": 190,
+      "alpha": 1
+    },
+    {
+      "name": "button-default-primary-border-color-focus",
+      "red": 138,
+      "green": 136,
+      "blue": 136,
+      "alpha": 1
+    },
+    {
+      "name": "button-default-primary-border-color-hover",
+      "red": 138,
+      "green": 136,
+      "blue": 136,
+      "alpha": 1
+    },
+    {
+      "name": "button-default-primary-foreground-color-active",
+      "red": 58,
+      "green": 56,
+      "blue": 61,
+      "alpha": 1
+    },
+    {
+      "name": "button-default-primary-foreground-color-default",
+      "red": 58,
+      "green": 56,
+      "blue": 61,
+      "alpha": 1
+    },
+    {
+      "name": "button-default-primary-foreground-color-focus",
+      "red": 58,
+      "green": 56,
+      "blue": 61,
+      "alpha": 1
+    },
+    {
+      "name": "button-default-primary-foreground-color-hover",
+      "red": 58,
+      "green": 56,
+      "blue": 61,
+      "alpha": 1
+    },
+    {
+      "name": "button-default-tertiary-foreground-color-active",
+      "red": 40,
+      "green": 39,
+      "blue": 45,
+      "alpha": 1
+    },
+    {
+      "name": "button-default-tertiary-foreground-color-default",
+      "red": 40,
+      "green": 39,
+      "blue": 45,
+      "alpha": 1
+    },
+    {
+      "name": "button-default-tertiary-foreground-color-focus",
+      "red": 40,
+      "green": 39,
+      "blue": 45,
+      "alpha": 1
+    },
+    {
+      "name": "button-default-tertiary-foreground-color-hover",
+      "red": 40,
+      "green": 39,
+      "blue": 45,
+      "alpha": 1
+    },
+    {
+      "name": "button-disabled-background-color",
+      "red": 247,
+      "green": 247,
+      "blue": 245,
+      "alpha": 1
+    },
+    {
+      "name": "button-disabled-border-color",
+      "red": 220,
+      "green": 219,
+      "blue": 217,
+      "alpha": 1
+    },
+    {
+      "name": "button-disabled-foreground-color",
+      "red": 116,
+      "green": 114,
+      "blue": 115,
+      "alpha": 1
+    },
+    {
+      "name": "button-link-text-color-active",
+      "red": 47,
+      "green": 92,
+      "blue": 160,
+      "alpha": 1
+    },
+    {
+      "name": "button-link-text-color-default",
+      "red": 47,
+      "green": 92,
+      "blue": 160,
+      "alpha": 1
+    },
+    {
+      "name": "button-link-text-color-focus",
+      "red": 47,
+      "green": 92,
+      "blue": 160,
+      "alpha": 1
+    },
+    {
+      "name": "button-link-text-color-hover",
+      "red": 47,
+      "green": 92,
+      "blue": 160,
+      "alpha": 1
+    },
+    {
+      "name": "button-selected-background-color-active",
+      "red": 220,
+      "green": 219,
+      "blue": 217,
+      "alpha": 1
+    },
+    {
+      "name": "button-selected-background-color-default",
+      "red": 236,
+      "green": 235,
+      "blue": 234,
+      "alpha": 1
+    },
+    {
+      "name": "button-selected-background-color-focus",
+      "red": 236,
+      "green": 235,
+      "blue": 234,
+      "alpha": 1
+    },
+    {
+      "name": "button-selected-background-color-hover",
+      "red": 236,
+      "green": 235,
+      "blue": 234,
+      "alpha": 1
+    },
+    {
+      "name": "button-selected-border-color-active",
+      "red": 100,
+      "green": 97,
+      "blue": 99,
+      "alpha": 1
+    },
+    {
+      "name": "button-selected-border-color-default",
+      "red": 165,
+      "green": 163,
+      "blue": 163,
+      "alpha": 1
+    },
+    {
+      "name": "button-selected-border-color-focus",
+      "red": 138,
+      "green": 136,
+      "blue": 136,
+      "alpha": 1
+    },
+    {
+      "name": "button-selected-border-color-hover",
+      "red": 138,
+      "green": 136,
+      "blue": 136,
+      "alpha": 1
+    },
+    {
+      "name": "button-selected-foreground-color-active",
+      "red": 58,
+      "green": 56,
+      "blue": 61,
+      "alpha": 1
+    },
+    {
+      "name": "button-selected-foreground-color-default",
+      "red": 58,
+      "green": 56,
+      "blue": 61,
+      "alpha": 1
+    },
+    {
+      "name": "button-selected-foreground-color-focus",
+      "red": 58,
+      "green": 56,
+      "blue": 61,
+      "alpha": 1
+    },
+    {
+      "name": "button-selected-foreground-color-hover",
+      "red": 58,
+      "green": 56,
+      "blue": 61,
+      "alpha": 1
+    },
+    {
+      "name": "chart-axis-line-color",
+      "red": 193,
+      "green": 191,
+      "blue": 190,
+      "alpha": 1
+    },
+    {
+      "name": "chart-axis-pointer-color",
+      "red": 100,
+      "green": 97,
+      "blue": 99,
+      "alpha": 1
+    },
+    {
+      "name": "chart-axis-text-color",
+      "red": 100,
+      "green": 97,
+      "blue": 99,
+      "alpha": 1
+    },
+    {
+      "name": "chart-threshold-line-color",
+      "red": 221,
+      "green": 43,
+      "blue": 14,
+      "alpha": 1
+    },
+    {
+      "name": "chart-zoom-handle-color",
+      "red": 100,
+      "green": 97,
+      "blue": 99,
+      "alpha": 1
+    },
+    {
+      "name": "color-blue-100",
+      "red": 203,
+      "green": 226,
+      "blue": 249,
+      "alpha": 1
+    },
+    {
+      "name": "color-blue-200",
+      "red": 157,
+      "green": 199,
+      "blue": 241,
+      "alpha": 1
+    },
+    {
+      "name": "color-blue-300",
+      "red": 99,
+      "green": 166,
+      "blue": 233,
+      "alpha": 1
+    },
+    {
+      "name": "color-blue-400",
+      "red": 66,
+      "green": 143,
+      "blue": 220,
+      "alpha": 1
+    },
+    {
+      "name": "color-blue-50",
+      "red": 233,
+      "green": 243,
+      "blue": 252,
+      "alpha": 1
+    },
+    {
+      "name": "color-blue-500",
+      "red": 31,
+      "green": 117,
+      "blue": 203,
+      "alpha": 1
+    },
+    {
+      "name": "color-blue-600",
+      "red": 47,
+      "green": 104,
+      "blue": 180,
+      "alpha": 1
+    },
+    {
+      "name": "color-blue-700",
+      "red": 47,
+      "green": 92,
+      "blue": 160,
+      "alpha": 1
+    },
+    {
+      "name": "color-blue-800",
+      "red": 40,
+      "green": 71,
+      "blue": 121,
+      "alpha": 1
+    },
+    {
+      "name": "color-blue-900",
+      "red": 33,
+      "green": 52,
+      "blue": 84,
+      "alpha": 1
+    },
+    {
+      "name": "color-blue-950",
+      "red": 29,
+      "green": 40,
+      "blue": 62,
+      "alpha": 1
+    },
+    {
+      "name": "color-brand-charcoal",
+      "red": 23,
+      "green": 19,
+      "blue": 33,
+      "alpha": 1
+    },
+    {
+      "name": "color-brand-gray-01",
+      "red": 209,
+      "green": 208,
+      "blue": 211,
+      "alpha": 1
+    },
+    {
+      "name": "color-brand-gray-02",
+      "red": 162,
+      "green": 161,
+      "blue": 166,
+      "alpha": 1
+    },
+    {
+      "name": "color-brand-gray-03",
+      "red": 116,
+      "green": 113,
+      "blue": 122,
+      "alpha": 1
+    },
+    {
+      "name": "color-brand-gray-04",
+      "red": 69,
+      "green": 66,
+      "blue": 77,
+      "alpha": 1
+    },
+    {
+      "name": "color-brand-gray-05",
+      "red": 43,
+      "green": 40,
+      "blue": 56,
+      "alpha": 1
+    },
+    {
+      "name": "color-brand-orange-01g",
+      "red": 255,
+      "green": 209,
+      "blue": 191,
+      "alpha": 1
+    },
+    {
+      "name": "color-brand-orange-01p",
+      "red": 252,
+      "green": 163,
+      "blue": 38,
+      "alpha": 1
+    },
+    {
+      "name": "color-brand-orange-02p",
+      "red": 252,
+      "green": 109,
+      "blue": 38,
+      "alpha": 1
+    },
+    {
+      "name": "color-brand-orange-03p",
+      "red": 226,
+      "green": 67,
+      "blue": 41,
+      "alpha": 1
+    },
+    {
+      "name": "color-brand-pink-01g",
+      "red": 255,
+      "green": 185,
+      "blue": 201,
+      "alpha": 1
+    },
+    {
+      "name": "color-brand-purple-01g",
+      "red": 206,
+      "green": 179,
+      "blue": 239,
+      "alpha": 1
+    },
+    {
+      "name": "color-brand-purple-01p",
+      "red": 169,
+      "green": 137,
+      "blue": 245,
+      "alpha": 1
+    },
+    {
+      "name": "color-brand-purple-02p",
+      "red": 119,
+      "green": 89,
+      "blue": 194,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-aqua-100",
+      "red": 147,
+      "green": 242,
+      "blue": 239,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-aqua-200",
+      "red": 94,
+      "green": 222,
+      "blue": 227,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-aqua-300",
+      "red": 50,
+      "green": 197,
+      "blue": 210,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-aqua-400",
+      "red": 0,
+      "green": 172,
+      "blue": 196,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-aqua-50",
+      "red": 181,
+      "green": 254,
+      "blue": 253,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-aqua-500",
+      "red": 0,
+      "green": 144,
+      "blue": 177,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-aqua-600",
+      "red": 0,
+      "green": 123,
+      "blue": 155,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-aqua-700",
+      "red": 0,
+      "green": 99,
+      "blue": 129,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-aqua-800",
+      "red": 0,
+      "green": 81,
+      "blue": 108,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-aqua-900",
+      "red": 0,
+      "green": 64,
+      "blue": 89,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-aqua-950",
+      "red": 0,
+      "green": 52,
+      "blue": 75,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-blue-100",
+      "red": 210,
+      "green": 220,
+      "blue": 255,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-blue-200",
+      "red": 183,
+      "green": 198,
+      "blue": 255,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-blue-300",
+      "red": 151,
+      "green": 172,
+      "blue": 255,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-blue-400",
+      "red": 121,
+      "green": 146,
+      "blue": 245,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-blue-50",
+      "red": 233,
+      "green": 235,
+      "blue": 255,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-blue-500",
+      "red": 97,
+      "green": 122,
+      "blue": 226,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-blue-600",
+      "red": 78,
+      "green": 101,
+      "blue": 205,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-blue-700",
+      "red": 63,
+      "green": 81,
+      "blue": 174,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-blue-800",
+      "red": 55,
+      "green": 66,
+      "blue": 145,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-blue-900",
+      "red": 48,
+      "green": 52,
+      "blue": 112,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-blue-950",
+      "red": 42,
+      "green": 43,
+      "blue": 89,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-green-100",
+      "red": 198,
+      "green": 237,
+      "blue": 148,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-green-200",
+      "red": 176,
+      "green": 217,
+      "blue": 123,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-green-300",
+      "red": 148,
+      "green": 194,
+      "blue": 94,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-green-400",
+      "red": 129,
+      "green": 172,
+      "blue": 65,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-green-50",
+      "red": 221,
+      "green": 250,
+      "blue": 183,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-green-500",
+      "red": 97,
+      "green": 144,
+      "blue": 37,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-green-600",
+      "red": 78,
+      "green": 127,
+      "blue": 14,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-green-700",
+      "red": 54,
+      "green": 104,
+      "blue": 0,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-green-800",
+      "red": 39,
+      "green": 86,
+      "blue": 0,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-green-900",
+      "red": 26,
+      "green": 69,
+      "blue": 0,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-green-950",
+      "red": 19,
+      "green": 58,
+      "blue": 3,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-magenta-100",
+      "red": 255,
+      "green": 204,
+      "blue": 219,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-magenta-200",
+      "red": 252,
+      "green": 172,
+      "blue": 197,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-magenta-300",
+      "red": 248,
+      "green": 138,
+      "blue": 175,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-magenta-400",
+      "red": 232,
+      "green": 110,
+      "blue": 154,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-magenta-50",
+      "red": 255,
+      "green": 227,
+      "blue": 235,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-magenta-500",
+      "red": 207,
+      "green": 77,
+      "blue": 129,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-magenta-600",
+      "red": 185,
+      "green": 61,
+      "blue": 113,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-magenta-700",
+      "red": 154,
+      "green": 46,
+      "blue": 93,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-magenta-800",
+      "red": 124,
+      "green": 33,
+      "blue": 79,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-magenta-900",
+      "red": 102,
+      "green": 30,
+      "blue": 58,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-magenta-950",
+      "red": 84,
+      "green": 29,
+      "blue": 49,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-orange-100",
+      "red": 245,
+      "green": 214,
+      "blue": 179,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-orange-200",
+      "red": 238,
+      "green": 189,
+      "blue": 140,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-orange-300",
+      "red": 233,
+      "green": 155,
+      "blue": 96,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-orange-400",
+      "red": 224,
+      "green": 126,
+      "blue": 65,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-orange-50",
+      "red": 250,
+      "green": 232,
+      "blue": 209,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-orange-500",
+      "red": 201,
+      "green": 93,
+      "blue": 46,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-orange-600",
+      "red": 177,
+      "green": 79,
+      "blue": 24,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-orange-700",
+      "red": 146,
+      "green": 67,
+      "blue": 10,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-orange-800",
+      "red": 111,
+      "green": 53,
+      "blue": 0,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-orange-900",
+      "red": 94,
+      "green": 47,
+      "blue": 5,
+      "alpha": 1
+    },
+    {
+      "name": "color-data-orange-950",
+      "red": 75,
+      "green": 39,
+      "blue": 7,
+      "alpha": 1
+    },
+    {
+      "name": "color-green-100",
+      "red": 195,
+      "green": 230,
+      "blue": 205,
+      "alpha": 1
+    },
+    {
+      "name": "color-green-200",
+      "red": 145,
+      "green": 212,
+      "blue": 168,
+      "alpha": 1
+    },
+    {
+      "name": "color-green-300",
+      "red": 82,
+      "green": 184,
+      "blue": 122,
+      "alpha": 1
+    },
+    {
+      "name": "color-green-400",
+      "red": 45,
+      "green": 161,
+      "blue": 96,
+      "alpha": 1
+    },
+    {
+      "name": "color-green-50",
+      "red": 236,
+      "green": 244,
+      "blue": 238,
+      "alpha": 1
+    },
+    {
+      "name": "color-green-500",
+      "red": 16,
+      "green": 133,
+      "blue": 72,
+      "alpha": 1
+    },
+    {
+      "name": "color-green-600",
+      "red": 47,
+      "green": 117,
+      "blue": 73,
+      "alpha": 1
+    },
+    {
+      "name": "color-green-700",
+      "red": 48,
+      "green": 100,
+      "blue": 64,
+      "alpha": 1
+    },
+    {
+      "name": "color-green-800",
+      "red": 34,
+      "green": 81,
+      "blue": 49,
+      "alpha": 1
+    },
+    {
+      "name": "color-green-900",
+      "red": 30,
+      "green": 62,
+      "blue": 40,
+      "alpha": 1
+    },
+    {
+      "name": "color-green-950",
+      "red": 23,
+      "green": 41,
+      "blue": 28,
+      "alpha": 1
+    },
+    {
+      "name": "color-neutral-10",
+      "red": 247,
+      "green": 247,
+      "blue": 245,
+      "alpha": 1
+    },
+    {
+      "name": "color-neutral-100",
+      "red": 220,
+      "green": 219,
+      "blue": 217,
+      "alpha": 1
+    },
+    {
+      "name": "color-neutral-1000",
+      "red": 5,
+      "green": 4,
+      "blue": 8,
+      "alpha": 1
+    },
+    {
+      "name": "color-neutral-200",
+      "red": 193,
+      "green": 191,
+      "blue": 190,
+      "alpha": 1
+    },
+    {
+      "name": "color-neutral-300",
+      "red": 165,
+      "green": 163,
+      "blue": 163,
+      "alpha": 1
+    },
+    {
+      "name": "color-neutral-400",
+      "red": 138,
+      "green": 136,
+      "blue": 136,
+      "alpha": 1
+    },
+    {
+      "name": "color-neutral-50",
+      "red": 236,
+      "green": 235,
+      "blue": 234,
+      "alpha": 1
+    },
+    {
+      "name": "color-neutral-500",
+      "red": 116,
+      "green": 114,
+      "blue": 115,
+      "alpha": 1
+    },
+    {
+      "name": "color-neutral-600",
+      "red": 100,
+      "green": 97,
+      "blue": 99,
+      "alpha": 1
+    },
+    {
+      "name": "color-neutral-700",
+      "red": 77,
+      "green": 75,
+      "blue": 78,
+      "alpha": 1
+    },
+    {
+      "name": "color-neutral-800",
+      "red": 58,
+      "green": 56,
+      "blue": 61,
+      "alpha": 1
+    },
+    {
+      "name": "color-neutral-900",
+      "red": 40,
+      "green": 39,
+      "blue": 45,
+      "alpha": 1
+    },
+    {
+      "name": "color-neutral-950",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "color-orange-100",
+      "red": 245,
+      "green": 217,
+      "blue": 168,
+      "alpha": 1
+    },
+    {
+      "name": "color-orange-200",
+      "red": 233,
+      "green": 190,
+      "blue": 116,
+      "alpha": 1
+    },
+    {
+      "name": "color-orange-300",
+      "red": 217,
+      "green": 149,
+      "blue": 48,
+      "alpha": 1
+    },
+    {
+      "name": "color-orange-400",
+      "red": 193,
+      "green": 125,
+      "blue": 16,
+      "alpha": 1
+    },
+    {
+      "name": "color-orange-50",
+      "red": 253,
+      "green": 241,
+      "blue": 221,
+      "alpha": 1
+    },
+    {
+      "name": "color-orange-500",
+      "red": 171,
+      "green": 97,
+      "blue": 0,
+      "alpha": 1
+    },
+    {
+      "name": "color-orange-600",
+      "red": 153,
+      "green": 87,
+      "blue": 21,
+      "alpha": 1
+    },
+    {
+      "name": "color-orange-700",
+      "red": 137,
+      "green": 75,
+      "blue": 22,
+      "alpha": 1
+    },
+    {
+      "name": "color-orange-800",
+      "red": 105,
+      "green": 60,
+      "blue": 20,
+      "alpha": 1
+    },
+    {
+      "name": "color-orange-900",
+      "red": 83,
+      "green": 46,
+      "blue": 22,
+      "alpha": 1
+    },
+    {
+      "name": "color-orange-950",
+      "red": 56,
+      "green": 35,
+      "blue": 21,
+      "alpha": 1
+    },
+    {
+      "name": "color-purple-100",
+      "red": 225,
+      "green": 216,
+      "blue": 249,
+      "alpha": 1
+    },
+    {
+      "name": "color-purple-200",
+      "red": 203,
+      "green": 187,
+      "blue": 242,
+      "alpha": 1
+    },
+    {
+      "name": "color-purple-300",
+      "red": 172,
+      "green": 147,
+      "blue": 230,
+      "alpha": 1
+    },
+    {
+      "name": "color-purple-400",
+      "red": 148,
+      "green": 117,
+      "blue": 219,
+      "alpha": 1
+    },
+    {
+      "name": "color-purple-50",
+      "red": 244,
+      "green": 240,
+      "blue": 255,
+      "alpha": 1
+    },
+    {
+      "name": "color-purple-500",
+      "red": 123,
+      "green": 88,
+      "blue": 207,
+      "alpha": 1
+    },
+    {
+      "name": "color-purple-600",
+      "red": 106,
+      "green": 79,
+      "blue": 180,
+      "alpha": 1
+    },
+    {
+      "name": "color-purple-700",
+      "red": 92,
+      "green": 71,
+      "blue": 166,
+      "alpha": 1
+    },
+    {
+      "name": "color-purple-800",
+      "red": 73,
+      "green": 60,
+      "blue": 131,
+      "alpha": 1
+    },
+    {
+      "name": "color-purple-900",
+      "red": 52,
+      "green": 45,
+      "blue": 89,
+      "alpha": 1
+    },
+    {
+      "name": "color-purple-950",
+      "red": 39,
+      "green": 36,
+      "blue": 62,
+      "alpha": 1
+    },
+    {
+      "name": "color-red-100",
+      "red": 253,
+      "green": 212,
+      "blue": 205,
+      "alpha": 1
+    },
+    {
+      "name": "color-red-200",
+      "red": 252,
+      "green": 181,
+      "blue": 170,
+      "alpha": 1
+    },
+    {
+      "name": "color-red-300",
+      "red": 246,
+      "green": 128,
+      "blue": 109,
+      "alpha": 1
+    },
+    {
+      "name": "color-red-400",
+      "red": 236,
+      "green": 89,
+      "blue": 65,
+      "alpha": 1
+    },
+    {
+      "name": "color-red-50",
+      "red": 252,
+      "green": 241,
+      "blue": 239,
+      "alpha": 1
+    },
+    {
+      "name": "color-red-500",
+      "red": 221,
+      "green": 43,
+      "blue": 14,
+      "alpha": 1
+    },
+    {
+      "name": "color-red-600",
+      "red": 192,
+      "green": 47,
+      "blue": 18,
+      "alpha": 1
+    },
+    {
+      "name": "color-red-700",
+      "red": 163,
+      "green": 44,
+      "blue": 18,
+      "alpha": 1
+    },
+    {
+      "name": "color-red-800",
+      "red": 129,
+      "green": 39,
+      "blue": 19,
+      "alpha": 1
+    },
+    {
+      "name": "color-red-900",
+      "red": 88,
+      "green": 32,
+      "blue": 20,
+      "alpha": 1
+    },
+    {
+      "name": "color-red-950",
+      "red": 62,
+      "green": 26,
+      "blue": 20,
+      "alpha": 1
+    },
+    {
+      "name": "control-background-color-concatenation",
+      "red": 247,
+      "green": 247,
+      "blue": 245,
+      "alpha": 1
+    },
+    {
+      "name": "control-background-color-disabled",
+      "red": 247,
+      "green": 247,
+      "blue": 245,
+      "alpha": 1
+    },
+    {
+      "name": "control-background-color-selected-default",
+      "red": 58,
+      "green": 56,
+      "blue": 61,
+      "alpha": 1
+    },
+    {
+      "name": "control-background-color-selected-focus",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "control-background-color-selected-hover",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "control-border-color-default",
+      "red": 138,
+      "green": 136,
+      "blue": 136,
+      "alpha": 1
+    },
+    {
+      "name": "control-border-color-disabled",
+      "red": 220,
+      "green": 219,
+      "blue": 217,
+      "alpha": 1
+    },
+    {
+      "name": "control-border-color-error",
+      "red": 221,
+      "green": 43,
+      "blue": 14,
+      "alpha": 1
+    },
+    {
+      "name": "control-border-color-focus",
+      "red": 40,
+      "green": 39,
+      "blue": 45,
+      "alpha": 1
+    },
+    {
+      "name": "control-border-color-hover",
+      "red": 100,
+      "green": 97,
+      "blue": 99,
+      "alpha": 1
+    },
+    {
+      "name": "control-border-color-selected-default",
+      "red": 58,
+      "green": 56,
+      "blue": 61,
+      "alpha": 1
+    },
+    {
+      "name": "control-border-color-selected-focus",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "control-border-color-selected-hover",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "control-indicator-color-disabled",
+      "red": 116,
+      "green": 114,
+      "blue": 115,
+      "alpha": 1
+    },
+    {
+      "name": "control-placeholder-color",
+      "red": 116,
+      "green": 114,
+      "blue": 115,
+      "alpha": 1
+    },
+    {
+      "name": "control-text-color-error",
+      "red": 192,
+      "green": 47,
+      "blue": 18,
+      "alpha": 1
+    },
+    {
+      "name": "control-text-color-valid",
+      "red": 47,
+      "green": 117,
+      "blue": 73,
+      "alpha": 1
+    },
+    {
+      "name": "dropdown-border-color",
+      "red": 193,
+      "green": 191,
+      "blue": 190,
+      "alpha": 1
+    },
+    {
+      "name": "dropdown-divider-color",
+      "red": 220,
+      "green": 219,
+      "blue": 217,
+      "alpha": 1
+    },
+    {
+      "name": "dropdown-option-background-color-selected-active",
+      "red": 193,
+      "green": 191,
+      "blue": 190,
+      "alpha": 1
+    },
+    {
+      "name": "dropdown-option-background-color-selected-default",
+      "red": 236,
+      "green": 235,
+      "blue": 234,
+      "alpha": 1
+    },
+    {
+      "name": "dropdown-option-background-color-selected-focus",
+      "red": 220,
+      "green": 219,
+      "blue": 217,
+      "alpha": 1
+    },
+    {
+      "name": "dropdown-option-background-color-selected-hover",
+      "red": 220,
+      "green": 219,
+      "blue": 217,
+      "alpha": 1
+    },
+    {
+      "name": "dropdown-option-indicator-color-selected-active",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "dropdown-option-indicator-color-selected-default",
+      "red": 58,
+      "green": 56,
+      "blue": 61,
+      "alpha": 1
+    },
+    {
+      "name": "dropdown-option-indicator-color-selected-focus",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "dropdown-option-indicator-color-selected-hover",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "dropdown-option-text-color-active",
+      "red": 40,
+      "green": 39,
+      "blue": 45,
+      "alpha": 1
+    },
+    {
+      "name": "dropdown-option-text-color-default",
+      "red": 40,
+      "green": 39,
+      "blue": 45,
+      "alpha": 1
+    },
+    {
+      "name": "dropdown-option-text-color-disabled",
+      "red": 138,
+      "green": 136,
+      "blue": 136,
+      "alpha": 1
+    },
+    {
+      "name": "dropdown-option-text-color-focus",
+      "red": 40,
+      "green": 39,
+      "blue": 45,
+      "alpha": 1
+    },
+    {
+      "name": "dropdown-option-text-color-hover",
+      "red": 40,
+      "green": 39,
+      "blue": 45,
+      "alpha": 1
+    },
+    {
+      "name": "feedback-brand-background-color",
+      "red": 244,
+      "green": 240,
+      "blue": 255,
+      "alpha": 1
+    },
+    {
+      "name": "feedback-brand-border-color",
+      "red": 203,
+      "green": 187,
+      "blue": 242,
+      "alpha": 1
+    },
+    {
+      "name": "feedback-brand-icon-color",
+      "red": 106,
+      "green": 79,
+      "blue": 180,
+      "alpha": 1
+    },
+    {
+      "name": "feedback-brand-text-color",
+      "red": 92,
+      "green": 71,
+      "blue": 166,
+      "alpha": 1
+    },
+    {
+      "name": "feedback-danger-background-color",
+      "red": 252,
+      "green": 241,
+      "blue": 239,
+      "alpha": 1
+    },
+    {
+      "name": "feedback-danger-border-color",
+      "red": 221,
+      "green": 43,
+      "blue": 14,
+      "alpha": 1
+    },
+    {
+      "name": "feedback-danger-icon-color",
+      "red": 192,
+      "green": 47,
+      "blue": 18,
+      "alpha": 1
+    },
+    {
+      "name": "feedback-danger-text-color",
+      "red": 163,
+      "green": 44,
+      "blue": 18,
+      "alpha": 1
+    },
+    {
+      "name": "feedback-info-background-color",
+      "red": 233,
+      "green": 243,
+      "blue": 252,
+      "alpha": 1
+    },
+    {
+      "name": "feedback-info-border-color",
+      "red": 157,
+      "green": 199,
+      "blue": 241,
+      "alpha": 1
+    },
+    {
+      "name": "feedback-info-icon-color",
+      "red": 47,
+      "green": 104,
+      "blue": 180,
+      "alpha": 1
+    },
+    {
+      "name": "feedback-info-text-color",
+      "red": 47,
+      "green": 92,
+      "blue": 160,
+      "alpha": 1
+    },
+    {
+      "name": "feedback-neutral-background-color",
+      "red": 236,
+      "green": 235,
+      "blue": 234,
+      "alpha": 1
+    },
+    {
+      "name": "feedback-neutral-border-color",
+      "red": 193,
+      "green": 191,
+      "blue": 190,
+      "alpha": 1
+    },
+    {
+      "name": "feedback-neutral-icon-color",
+      "red": 100,
+      "green": 97,
+      "blue": 99,
+      "alpha": 1
+    },
+    {
+      "name": "feedback-neutral-text-color",
+      "red": 77,
+      "green": 75,
+      "blue": 78,
+      "alpha": 1
+    },
+    {
+      "name": "feedback-strong-background-color",
+      "red": 58,
+      "green": 56,
+      "blue": 61,
+      "alpha": 1
+    },
+    {
+      "name": "feedback-strong-border-color",
+      "red": 5,
+      "green": 4,
+      "blue": 8,
+      "alpha": 1
+    },
+    {
+      "name": "feedback-strong-link-color",
+      "red": 99,
+      "green": 166,
+      "blue": 233,
+      "alpha": 1
+    },
+    {
+      "name": "feedback-success-background-color",
+      "red": 236,
+      "green": 244,
+      "blue": 238,
+      "alpha": 1
+    },
+    {
+      "name": "feedback-success-border-color",
+      "red": 145,
+      "green": 212,
+      "blue": 168,
+      "alpha": 1
+    },
+    {
+      "name": "feedback-success-icon-color",
+      "red": 47,
+      "green": 117,
+      "blue": 73,
+      "alpha": 1
+    },
+    {
+      "name": "feedback-success-text-color",
+      "red": 48,
+      "green": 100,
+      "blue": 64,
+      "alpha": 1
+    },
+    {
+      "name": "feedback-warning-background-color",
+      "red": 253,
+      "green": 241,
+      "blue": 221,
+      "alpha": 1
+    },
+    {
+      "name": "feedback-warning-border-color",
+      "red": 233,
+      "green": 190,
+      "blue": 116,
+      "alpha": 1
+    },
+    {
+      "name": "feedback-warning-icon-color",
+      "red": 153,
+      "green": 87,
+      "blue": 21,
+      "alpha": 1
+    },
+    {
+      "name": "feedback-warning-text-color",
+      "red": 137,
+      "green": 75,
+      "blue": 22,
+      "alpha": 1
+    },
+    {
+      "name": "filtered-search-token-data-background-color-default",
+      "red": 220,
+      "green": 219,
+      "blue": 217,
+      "alpha": 1
+    },
+    {
+      "name": "filtered-search-token-data-background-color-hover",
+      "red": 193,
+      "green": 191,
+      "blue": 190,
+      "alpha": 1
+    },
+    {
+      "name": "filtered-search-token-operator-background-color-default",
+      "red": 236,
+      "green": 235,
+      "blue": 234,
+      "alpha": 1
+    },
+    {
+      "name": "filtered-search-token-operator-background-color-hover",
+      "red": 220,
+      "green": 219,
+      "blue": 217,
+      "alpha": 1
+    },
+    {
+      "name": "filtered-search-token-type-background-color-default",
+      "red": 236,
+      "green": 235,
+      "blue": 234,
+      "alpha": 1
+    },
+    {
+      "name": "filtered-search-token-type-background-color-hover",
+      "red": 220,
+      "green": 219,
+      "blue": 217,
+      "alpha": 1
+    },
+    {
+      "name": "focus-ring-outer-color",
+      "red": 31,
+      "green": 117,
+      "blue": 203,
+      "alpha": 1
+    },
+    {
+      "name": "heading-1-color",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "heading-1-fixed-color",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "heading-2-color",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "heading-2-fixed-color",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "heading-3-color",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "heading-3-fixed-color",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "heading-4-color",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "heading-4-fixed-color",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "heading-5-color",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "heading-5-fixed-color",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "heading-6-color",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "heading-6-fixed-color",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "heading-display-color",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "heading-scale-100-color",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "heading-scale-100-fixed-color",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "heading-scale-200-color",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "heading-scale-200-fixed-color",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "heading-scale-300-color",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "heading-scale-300-fixed-color",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "heading-scale-400-color",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "heading-scale-400-fixed-color",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "heading-scale-500-color",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "heading-scale-500-fixed-color",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "heading-scale-600-color",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "heading-scale-600-fixed-color",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "heading-scale-700-color",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "heading-scale-700-fixed-color",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "heading-scale-800-color",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "heading-scale-800-fixed-color",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "highlight-match-background-color",
+      "red": 171,
+      "green": 97,
+      "blue": 0,
+      "alpha": 1
+    },
+    {
+      "name": "highlight-target-background-color",
+      "red": 233,
+      "green": 243,
+      "blue": 252,
+      "alpha": 1
+    },
+    {
+      "name": "highlight-target-border-color",
+      "red": 157,
+      "green": 199,
+      "blue": 241,
+      "alpha": 1
+    },
+    {
+      "name": "icon-color-danger",
+      "red": 192,
+      "green": 47,
+      "blue": 18,
+      "alpha": 1
+    },
+    {
+      "name": "icon-color-default",
+      "red": 58,
+      "green": 56,
+      "blue": 61,
+      "alpha": 1
+    },
+    {
+      "name": "icon-color-disabled",
+      "red": 138,
+      "green": 136,
+      "blue": 136,
+      "alpha": 1
+    },
+    {
+      "name": "icon-color-info",
+      "red": 47,
+      "green": 92,
+      "blue": 160,
+      "alpha": 1
+    },
+    {
+      "name": "icon-color-link",
+      "red": 47,
+      "green": 92,
+      "blue": 160,
+      "alpha": 1
+    },
+    {
+      "name": "icon-color-strong",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "icon-color-subtle",
+      "red": 100,
+      "green": 97,
+      "blue": 99,
+      "alpha": 1
+    },
+    {
+      "name": "icon-color-success",
+      "red": 47,
+      "green": 117,
+      "blue": 73,
+      "alpha": 1
+    },
+    {
+      "name": "icon-color-warning",
+      "red": 153,
+      "green": 87,
+      "blue": 21,
+      "alpha": 1
+    },
+    {
+      "name": "illustration-accent-fill-color-orange",
+      "red": 255,
+      "green": 157,
+      "blue": 115,
+      "alpha": 1
+    },
+    {
+      "name": "illustration-accent-fill-color-strong",
+      "red": 174,
+      "green": 165,
+      "blue": 214,
+      "alpha": 1
+    },
+    {
+      "name": "illustration-accent-fill-color-subtle",
+      "red": 208,
+      "green": 197,
+      "blue": 226,
+      "alpha": 1
+    },
+    {
+      "name": "illustration-accent-fill-color-teal",
+      "red": 111,
+      "green": 218,
+      "blue": 201,
+      "alpha": 1
+    },
+    {
+      "name": "illustration-accent-stroke-color-orange",
+      "red": 255,
+      "green": 157,
+      "blue": 115,
+      "alpha": 1
+    },
+    {
+      "name": "illustration-accent-stroke-color-strong",
+      "red": 174,
+      "green": 165,
+      "blue": 214,
+      "alpha": 1
+    },
+    {
+      "name": "illustration-accent-stroke-color-teal",
+      "red": 111,
+      "green": 218,
+      "blue": 201,
+      "alpha": 1
+    },
+    {
+      "name": "illustration-base-fill-color",
+      "red": 231,
+      "green": 228,
+      "blue": 242,
+      "alpha": 1
+    },
+    {
+      "name": "illustration-isometric-accent-front-fill-color",
+      "red": 116,
+      "green": 113,
+      "blue": 122,
+      "alpha": 1
+    },
+    {
+      "name": "illustration-isometric-accent-side-fill-color",
+      "red": 43,
+      "green": 40,
+      "blue": 56,
+      "alpha": 1
+    },
+    {
+      "name": "illustration-isometric-accent-top-fill-color",
+      "red": 69,
+      "green": 66,
+      "blue": 77,
+      "alpha": 1
+    },
+    {
+      "name": "illustration-isometric-base-front-fill-color",
+      "red": 213,
+      "green": 208,
+      "blue": 232,
+      "alpha": 1
+    },
+    {
+      "name": "illustration-isometric-base-side-fill-color",
+      "red": 174,
+      "green": 165,
+      "blue": 214,
+      "alpha": 1
+    },
+    {
+      "name": "illustration-isometric-base-top-fill-color",
+      "red": 231,
+      "green": 228,
+      "blue": 242,
+      "alpha": 1
+    },
+    {
+      "name": "illustration-isometric-glyph-shadow-fill-color",
+      "red": 16,
+      "green": 177,
+      "blue": 177,
+      "alpha": 1
+    },
+    {
+      "name": "illustration-isometric-glyph-side-fill-color",
+      "red": 111,
+      "green": 218,
+      "blue": 201,
+      "alpha": 1
+    },
+    {
+      "name": "illustration-isometric-glyph-top-fill-color",
+      "red": 197,
+      "green": 244,
+      "blue": 236,
+      "alpha": 1
+    },
+    {
+      "name": "illustration-isometric-object-front-fill-color",
+      "red": 255,
+      "green": 194,
+      "blue": 168,
+      "alpha": 1
+    },
+    {
+      "name": "illustration-isometric-object-shadow-fill-color",
+      "red": 226,
+      "green": 67,
+      "blue": 41,
+      "alpha": 1
+    },
+    {
+      "name": "illustration-isometric-object-side-fill-color",
+      "red": 255,
+      "green": 123,
+      "blue": 66,
+      "alpha": 1
+    },
+    {
+      "name": "illustration-isometric-object-top-fill-color",
+      "red": 255,
+      "green": 157,
+      "blue": 115,
+      "alpha": 1
+    },
+    {
+      "name": "illustration-isometric-stroke-color-default",
+      "red": 23,
+      "green": 19,
+      "blue": 33,
+      "alpha": 1
+    },
+    {
+      "name": "illustration-status-fill-color-danger",
+      "red": 255,
+      "green": 157,
+      "blue": 115,
+      "alpha": 1
+    },
+    {
+      "name": "illustration-status-fill-color-neutral",
+      "red": 174,
+      "green": 165,
+      "blue": 214,
+      "alpha": 1
+    },
+    {
+      "name": "illustration-status-fill-color-success",
+      "red": 111,
+      "green": 218,
+      "blue": 201,
+      "alpha": 1
+    },
+    {
+      "name": "illustration-status-fill-color-warning",
+      "red": 252,
+      "green": 163,
+      "blue": 38,
+      "alpha": 1
+    },
+    {
+      "name": "illustration-stroke-color-default",
+      "red": 23,
+      "green": 19,
+      "blue": 33,
+      "alpha": 1
+    },
+    {
+      "name": "label-light-button-background-color-hover",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "label-light-button-icon-color-default",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "label-light-text-color",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "label-scoped-button-background-color-hover",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "label-scoped-button-icon-color-default",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "label-scoped-text-color",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "link-mention-background-color-current",
+      "red": 245,
+      "green": 217,
+      "blue": 168,
+      "alpha": 1
+    },
+    {
+      "name": "link-mention-background-color-default",
+      "red": 203,
+      "green": 226,
+      "blue": 249,
+      "alpha": 1
+    },
+    {
+      "name": "link-mention-text-color-current",
+      "red": 105,
+      "green": 60,
+      "blue": 20,
+      "alpha": 1
+    },
+    {
+      "name": "link-mention-text-color-default",
+      "red": 40,
+      "green": 71,
+      "blue": 121,
+      "alpha": 1
+    },
+    {
+      "name": "nav-item-background-color-active",
+      "red": 193,
+      "green": 191,
+      "blue": 190,
+      "alpha": 1
+    },
+    {
+      "name": "nav-item-background-color-focus",
+      "red": 220,
+      "green": 219,
+      "blue": 217,
+      "alpha": 1
+    },
+    {
+      "name": "nav-item-background-color-hover",
+      "red": 220,
+      "green": 219,
+      "blue": 217,
+      "alpha": 1
+    },
+    {
+      "name": "nav-item-foreground-color-active",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "nav-item-foreground-color-default",
+      "red": 100,
+      "green": 97,
+      "blue": 99,
+      "alpha": 1
+    },
+    {
+      "name": "nav-item-foreground-color-focus",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "nav-item-foreground-color-hover",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "nav-item-selected-background-color-active",
+      "red": 193,
+      "green": 191,
+      "blue": 190,
+      "alpha": 1
+    },
+    {
+      "name": "nav-item-selected-background-color-default",
+      "red": 220,
+      "green": 219,
+      "blue": 217,
+      "alpha": 1
+    },
+    {
+      "name": "nav-item-selected-background-color-focus",
+      "red": 220,
+      "green": 219,
+      "blue": 217,
+      "alpha": 1
+    },
+    {
+      "name": "nav-item-selected-background-color-hover",
+      "red": 220,
+      "green": 219,
+      "blue": 217,
+      "alpha": 1
+    },
+    {
+      "name": "nav-item-selected-foreground-color-active",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "nav-item-selected-foreground-color-default",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "nav-item-selected-foreground-color-focus",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "nav-item-selected-foreground-color-hover",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "progress-bar-indicator-color-danger",
+      "red": 221,
+      "green": 43,
+      "blue": 14,
+      "alpha": 1
+    },
+    {
+      "name": "progress-bar-indicator-color-default",
+      "red": 31,
+      "green": 117,
+      "blue": 203,
+      "alpha": 1
+    },
+    {
+      "name": "progress-bar-indicator-color-success",
+      "red": 16,
+      "green": 133,
+      "blue": 72,
+      "alpha": 1
+    },
+    {
+      "name": "progress-bar-indicator-color-warning",
+      "red": 171,
+      "green": 97,
+      "blue": 0,
+      "alpha": 1
+    },
+    {
+      "name": "progress-bar-track-color",
+      "red": 193,
+      "green": 191,
+      "blue": 190,
+      "alpha": 1
+    },
+    {
+      "name": "skeleton-loader-background-color",
+      "red": 220,
+      "green": 219,
+      "blue": 217,
+      "alpha": 1
+    },
+    {
+      "name": "skeleton-loader-shimmer-color",
+      "red": 236,
+      "green": 235,
+      "blue": 234,
+      "alpha": 1
+    },
+    {
+      "name": "spinner-segment-color-default",
+      "red": 77,
+      "green": 75,
+      "blue": 78,
+      "alpha": 1
+    },
+    {
+      "name": "spinner-segment-color-light",
+      "red": 193,
+      "green": 191,
+      "blue": 190,
+      "alpha": 1
+    },
+    {
+      "name": "spinner-track-color-default",
+      "red": 220,
+      "green": 219,
+      "blue": 217,
+      "alpha": 1
+    },
+    {
+      "name": "spinner-track-color-light",
+      "red": 58,
+      "green": 56,
+      "blue": 61,
+      "alpha": 1
+    },
+    {
+      "name": "status-brand-background-color",
+      "red": 225,
+      "green": 216,
+      "blue": 249,
+      "alpha": 1
+    },
+    {
+      "name": "status-brand-icon-color",
+      "red": 123,
+      "green": 88,
+      "blue": 207,
+      "alpha": 1
+    },
+    {
+      "name": "status-brand-text-color",
+      "red": 92,
+      "green": 71,
+      "blue": 166,
+      "alpha": 1
+    },
+    {
+      "name": "status-danger-background-color",
+      "red": 253,
+      "green": 212,
+      "blue": 205,
+      "alpha": 1
+    },
+    {
+      "name": "status-danger-icon-color",
+      "red": 221,
+      "green": 43,
+      "blue": 14,
+      "alpha": 1
+    },
+    {
+      "name": "status-danger-text-color",
+      "red": 163,
+      "green": 44,
+      "blue": 18,
+      "alpha": 1
+    },
+    {
+      "name": "status-info-background-color",
+      "red": 203,
+      "green": 226,
+      "blue": 249,
+      "alpha": 1
+    },
+    {
+      "name": "status-info-icon-color",
+      "red": 31,
+      "green": 117,
+      "blue": 203,
+      "alpha": 1
+    },
+    {
+      "name": "status-info-text-color",
+      "red": 47,
+      "green": 92,
+      "blue": 160,
+      "alpha": 1
+    },
+    {
+      "name": "status-neutral-background-color",
+      "red": 220,
+      "green": 219,
+      "blue": 217,
+      "alpha": 1
+    },
+    {
+      "name": "status-neutral-icon-color",
+      "red": 116,
+      "green": 114,
+      "blue": 115,
+      "alpha": 1
+    },
+    {
+      "name": "status-neutral-text-color",
+      "red": 77,
+      "green": 75,
+      "blue": 78,
+      "alpha": 1
+    },
+    {
+      "name": "status-success-background-color",
+      "red": 195,
+      "green": 230,
+      "blue": 205,
+      "alpha": 1
+    },
+    {
+      "name": "status-success-icon-color",
+      "red": 16,
+      "green": 133,
+      "blue": 72,
+      "alpha": 1
+    },
+    {
+      "name": "status-success-text-color",
+      "red": 48,
+      "green": 100,
+      "blue": 64,
+      "alpha": 1
+    },
+    {
+      "name": "status-warning-background-color",
+      "red": 245,
+      "green": 217,
+      "blue": 168,
+      "alpha": 1
+    },
+    {
+      "name": "status-warning-icon-color",
+      "red": 171,
+      "green": 97,
+      "blue": 0,
+      "alpha": 1
+    },
+    {
+      "name": "status-warning-text-color",
+      "red": 137,
+      "green": 75,
+      "blue": 22,
+      "alpha": 1
+    },
+    {
+      "name": "table-row-background-color-hover",
+      "red": 233,
+      "green": 243,
+      "blue": 252,
+      "alpha": 1
+    },
+    {
+      "name": "table-sorting-icon-color",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "tab-selected-indicator-color-default",
+      "red": 5,
+      "green": 4,
+      "blue": 8,
+      "alpha": 1
+    },
+    {
+      "name": "text-color-danger",
+      "red": 192,
+      "green": 47,
+      "blue": 18,
+      "alpha": 1
+    },
+    {
+      "name": "text-color-default",
+      "red": 58,
+      "green": 56,
+      "blue": 61,
+      "alpha": 1
+    },
+    {
+      "name": "text-color-disabled",
+      "red": 138,
+      "green": 136,
+      "blue": 136,
+      "alpha": 1
+    },
+    {
+      "name": "text-color-heading",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "text-color-link",
+      "red": 47,
+      "green": 92,
+      "blue": 160,
+      "alpha": 1
+    },
+    {
+      "name": "text-color-strong",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "text-color-subtle",
+      "red": 100,
+      "green": 97,
+      "blue": 99,
+      "alpha": 1
+    },
+    {
+      "name": "text-color-success",
+      "red": 47,
+      "green": 117,
+      "blue": 73,
+      "alpha": 1
+    },
+    {
+      "name": "text-color-warning",
+      "red": 153,
+      "green": 87,
+      "blue": 21,
+      "alpha": 1
+    },
+    {
+      "name": "text-primary",
+      "red": 58,
+      "green": 56,
+      "blue": 61,
+      "alpha": 1
+    },
+    {
+      "name": "text-secondary",
+      "red": 100,
+      "green": 97,
+      "blue": 99,
+      "alpha": 1
+    },
+    {
+      "name": "text-tertiary",
+      "red": 138,
+      "green": 136,
+      "blue": 136,
+      "alpha": 1
+    },
+    {
+      "name": "toggle-switch-background-color-disabled",
+      "red": 138,
+      "green": 136,
+      "blue": 136,
+      "alpha": 1
+    },
+    {
+      "name": "toggle-switch-background-color-unchecked-active",
+      "red": 58,
+      "green": 56,
+      "blue": 61,
+      "alpha": 1
+    },
+    {
+      "name": "toggle-switch-background-color-unchecked-default",
+      "red": 58,
+      "green": 56,
+      "blue": 61,
+      "alpha": 1
+    },
+    {
+      "name": "toggle-switch-background-color-unchecked-disabled",
+      "red": 138,
+      "green": 136,
+      "blue": 136,
+      "alpha": 1
+    },
+    {
+      "name": "toggle-switch-background-color-unchecked-focus",
+      "red": 58,
+      "green": 56,
+      "blue": 61,
+      "alpha": 1
+    },
+    {
+      "name": "toggle-switch-background-color-unchecked-hover",
+      "red": 58,
+      "green": 56,
+      "blue": 61,
+      "alpha": 1
+    },
+    {
+      "name": "toggle-switch-icon-color-checked-active",
+      "red": 5,
+      "green": 4,
+      "blue": 8,
+      "alpha": 1
+    },
+    {
+      "name": "toggle-switch-icon-color-checked-default",
+      "red": 58,
+      "green": 56,
+      "blue": 61,
+      "alpha": 1
+    },
+    {
+      "name": "toggle-switch-icon-color-checked-focus",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "toggle-switch-icon-color-checked-hover",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "toggle-switch-icon-color-disabled",
+      "red": 236,
+      "green": 235,
+      "blue": 234,
+      "alpha": 1
+    },
+    {
+      "name": "toggle-switch-track-border-color-checked-active",
+      "red": 5,
+      "green": 4,
+      "blue": 8,
+      "alpha": 1
+    },
+    {
+      "name": "toggle-switch-track-border-color-checked-default",
+      "red": 58,
+      "green": 56,
+      "blue": 61,
+      "alpha": 1
+    },
+    {
+      "name": "toggle-switch-track-border-color-checked-disabled",
+      "red": 138,
+      "green": 136,
+      "blue": 136,
+      "alpha": 1
+    },
+    {
+      "name": "toggle-switch-track-border-color-checked-focus",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "toggle-switch-track-border-color-checked-hover",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "toggle-switch-track-border-color-loading",
+      "red": 236,
+      "green": 235,
+      "blue": 234,
+      "alpha": 1
+    },
+    {
+      "name": "toggle-switch-track-border-color-unchecked-active",
+      "red": 100,
+      "green": 97,
+      "blue": 99,
+      "alpha": 1
+    },
+    {
+      "name": "toggle-switch-track-border-color-unchecked-default",
+      "red": 138,
+      "green": 136,
+      "blue": 136,
+      "alpha": 1
+    },
+    {
+      "name": "toggle-switch-track-border-color-unchecked-disabled",
+      "red": 220,
+      "green": 219,
+      "blue": 217,
+      "alpha": 1
+    },
+    {
+      "name": "toggle-switch-track-border-color-unchecked-focus",
+      "red": 100,
+      "green": 97,
+      "blue": 99,
+      "alpha": 1
+    },
+    {
+      "name": "toggle-switch-track-border-color-unchecked-hover",
+      "red": 100,
+      "green": 97,
+      "blue": 99,
+      "alpha": 1
+    },
+    {
+      "name": "toggle-switch-track-color-checked-active",
+      "red": 5,
+      "green": 4,
+      "blue": 8,
+      "alpha": 1
+    },
+    {
+      "name": "toggle-switch-track-color-checked-default",
+      "red": 58,
+      "green": 56,
+      "blue": 61,
+      "alpha": 1
+    },
+    {
+      "name": "toggle-switch-track-color-checked-disabled",
+      "red": 138,
+      "green": 136,
+      "blue": 136,
+      "alpha": 1
+    },
+    {
+      "name": "toggle-switch-track-color-checked-focus",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "toggle-switch-track-color-checked-hover",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "toggle-switch-track-color-loading",
+      "red": 236,
+      "green": 235,
+      "blue": 234,
+      "alpha": 1
+    },
+    {
+      "name": "token-background-color",
+      "red": 220,
+      "green": 219,
+      "blue": 217,
+      "alpha": 1
+    },
+    {
+      "name": "token-foreground-color",
+      "red": 58,
+      "green": 56,
+      "blue": 61,
+      "alpha": 1
+    },
+    {
+      "name": "token-selector-token-container-token-background-color-focus",
+      "red": 165,
+      "green": 163,
+      "blue": 163,
+      "alpha": 1
+    },
+    {
+      "name": "tooltip-text-color-subtle",
+      "red": 193,
+      "green": 191,
+      "blue": 190,
+      "alpha": 1
+    },
+    {
+      "name": "gray-10",
+      "red": 247,
+      "green": 247,
+      "blue": 245,
+      "alpha": 1
+    },
+    {
+      "name": "gray-100",
+      "red": 220,
+      "green": 219,
+      "blue": 217,
+      "alpha": 1
+    },
+    {
+      "name": "gray-200",
+      "red": 193,
+      "green": 191,
+      "blue": 190,
+      "alpha": 1
+    },
+    {
+      "name": "gray-300",
+      "red": 165,
+      "green": 163,
+      "blue": 163,
+      "alpha": 1
+    },
+    {
+      "name": "gray-400",
+      "red": 138,
+      "green": 136,
+      "blue": 136,
+      "alpha": 1
+    },
+    {
+      "name": "gray-50",
+      "red": 236,
+      "green": 235,
+      "blue": 234,
+      "alpha": 1
+    },
+    {
+      "name": "gray-500",
+      "red": 116,
+      "green": 114,
+      "blue": 115,
+      "alpha": 1
+    },
+    {
+      "name": "gray-600",
+      "red": 100,
+      "green": 97,
+      "blue": 99,
+      "alpha": 1
+    },
+    {
+      "name": "gray-700",
+      "red": 77,
+      "green": 75,
+      "blue": 78,
+      "alpha": 1
+    },
+    {
+      "name": "gray-800",
+      "red": 58,
+      "green": 56,
+      "blue": 61,
+      "alpha": 1
+    },
+    {
+      "name": "gray-900",
+      "red": 40,
+      "green": 39,
+      "blue": 45,
+      "alpha": 1
+    },
+    {
+      "name": "gray-950",
+      "red": 24,
+      "green": 23,
+      "blue": 29,
+      "alpha": 1
+    },
+    {
+      "name": "green-100",
+      "red": 195,
+      "green": 230,
+      "blue": 205,
+      "alpha": 1
+    },
+    {
+      "name": "green-200",
+      "red": 145,
+      "green": 212,
+      "blue": 168,
+      "alpha": 1
+    },
+    {
+      "name": "green-300",
+      "red": 82,
+      "green": 184,
+      "blue": 122,
+      "alpha": 1
+    },
+    {
+      "name": "green-400",
+      "red": 45,
+      "green": 161,
+      "blue": 96,
+      "alpha": 1
+    },
+    {
+      "name": "green-50",
+      "red": 236,
+      "green": 244,
+      "blue": 238,
+      "alpha": 1
+    },
+    {
+      "name": "green-500",
+      "red": 16,
+      "green": 133,
+      "blue": 72,
+      "alpha": 1
+    },
+    {
+      "name": "green-600",
+      "red": 47,
+      "green": 117,
+      "blue": 73,
+      "alpha": 1
+    },
+    {
+      "name": "green-700",
+      "red": 48,
+      "green": 100,
+      "blue": 64,
+      "alpha": 1
+    },
+    {
+      "name": "green-800",
+      "red": 34,
+      "green": 81,
+      "blue": 49,
+      "alpha": 1
+    },
+    {
+      "name": "green-900",
+      "red": 30,
+      "green": 62,
+      "blue": 40,
+      "alpha": 1
+    },
+    {
+      "name": "green-950",
+      "red": 23,
+      "green": 41,
+      "blue": 28,
+      "alpha": 1
+    },
+    {
+      "name": "orange-100",
+      "red": 245,
+      "green": 217,
+      "blue": 168,
+      "alpha": 1
+    },
+    {
+      "name": "orange-200",
+      "red": 233,
+      "green": 190,
+      "blue": 116,
+      "alpha": 1
+    },
+    {
+      "name": "orange-300",
+      "red": 217,
+      "green": 149,
+      "blue": 48,
+      "alpha": 1
+    },
+    {
+      "name": "orange-400",
+      "red": 193,
+      "green": 125,
+      "blue": 16,
+      "alpha": 1
+    },
+    {
+      "name": "orange-50",
+      "red": 253,
+      "green": 241,
+      "blue": 221,
+      "alpha": 1
+    },
+    {
+      "name": "orange-500",
+      "red": 171,
+      "green": 97,
+      "blue": 0,
+      "alpha": 1
+    },
+    {
+      "name": "orange-600",
+      "red": 153,
+      "green": 87,
+      "blue": 21,
+      "alpha": 1
+    },
+    {
+      "name": "orange-700",
+      "red": 137,
+      "green": 75,
+      "blue": 22,
+      "alpha": 1
+    },
+    {
+      "name": "orange-800",
+      "red": 105,
+      "green": 60,
+      "blue": 20,
+      "alpha": 1
+    },
+    {
+      "name": "orange-900",
+      "red": 83,
+      "green": 46,
+      "blue": 22,
+      "alpha": 1
+    },
+    {
+      "name": "orange-950",
+      "red": 56,
+      "green": 35,
+      "blue": 21,
+      "alpha": 1
+    },
+    {
+      "name": "purple-100",
+      "red": 225,
+      "green": 216,
+      "blue": 249,
+      "alpha": 1
+    },
+    {
+      "name": "purple-200",
+      "red": 203,
+      "green": 187,
+      "blue": 242,
+      "alpha": 1
+    },
+    {
+      "name": "purple-300",
+      "red": 172,
+      "green": 147,
+      "blue": 230,
+      "alpha": 1
+    },
+    {
+      "name": "purple-400",
+      "red": 148,
+      "green": 117,
+      "blue": 219,
+      "alpha": 1
+    },
+    {
+      "name": "purple-50",
+      "red": 244,
+      "green": 240,
+      "blue": 255,
+      "alpha": 1
+    },
+    {
+      "name": "purple-500",
+      "red": 123,
+      "green": 88,
+      "blue": 207,
+      "alpha": 1
+    },
+    {
+      "name": "purple-600",
+      "red": 106,
+      "green": 79,
+      "blue": 180,
+      "alpha": 1
+    },
+    {
+      "name": "purple-700",
+      "red": 92,
+      "green": 71,
+      "blue": 166,
+      "alpha": 1
+    },
+    {
+      "name": "purple-800",
+      "red": 73,
+      "green": 60,
+      "blue": 131,
+      "alpha": 1
+    },
+    {
+      "name": "purple-900",
+      "red": 52,
+      "green": 45,
+      "blue": 89,
+      "alpha": 1
+    },
+    {
+      "name": "purple-950",
+      "red": 39,
+      "green": 36,
+      "blue": 62,
+      "alpha": 1
+    },
+    {
+      "name": "red-100",
+      "red": 253,
+      "green": 212,
+      "blue": 205,
+      "alpha": 1
+    },
+    {
+      "name": "red-200",
+      "red": 252,
+      "green": 181,
+      "blue": 170,
+      "alpha": 1
+    },
+    {
+      "name": "red-300",
+      "red": 246,
+      "green": 128,
+      "blue": 109,
+      "alpha": 1
+    },
+    {
+      "name": "red-400",
+      "red": 236,
+      "green": 89,
+      "blue": 65,
+      "alpha": 1
+    },
+    {
+      "name": "red-50",
+      "red": 252,
+      "green": 241,
+      "blue": 239,
+      "alpha": 1
+    },
+    {
+      "name": "red-500",
+      "red": 221,
+      "green": 43,
+      "blue": 14,
+      "alpha": 1
+    },
+    {
+      "name": "red-600",
+      "red": 192,
+      "green": 47,
+      "blue": 18,
+      "alpha": 1
+    },
+    {
+      "name": "red-700",
+      "red": 163,
+      "green": 44,
+      "blue": 18,
+      "alpha": 1
+    },
+    {
+      "name": "red-800",
+      "red": 129,
+      "green": 39,
+      "blue": 19,
+      "alpha": 1
+    },
+    {
+      "name": "red-900",
+      "red": 88,
+      "green": 32,
+      "blue": 20,
+      "alpha": 1
+    },
+    {
+      "name": "red-950",
+      "red": 62,
+      "green": 26,
+      "blue": 20,
+      "alpha": 1
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Pajamas 基础文本样式 -->
+<resources>
+    <style name="PajamasText" parent="android:Widget.Material.TextView">
+        <item name="android:textSize">@dimen/gl_font_size_base</item>
+        <item name="android:textColor">@color/gl_color_neutral_800</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+</resources>

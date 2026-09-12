@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tabs</title>
+<link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="base.css">
+    <style>
+.gl-tabs-wrapper { border-bottom: 1px solid var(--gl-border-color-default); }
+.gl-tabs { display: flex; gap: var(--gl-spacing-scale-2); overflow-x: auto; }
+.gl-tab-item {
+  position: relative;
+  display: inline-flex; align-items: center; gap: var(--gl-spacing-scale-2);
+  padding: var(--gl-spacing-scale-4) var(--gl-spacing-scale-4);
+  font-size: var(--gl-font-size-base);
+  color: var(--gl-text-color-subtle);
+  cursor: pointer; background: none; border: none; white-space: nowrap;
+}
+.gl-tab-item::after {
+  content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 2px;
+  background-color: transparent; border-radius: 1px;
+}
+.gl-tab-item:hover { color: var(--gl-text-color-strong); }
+.gl-tab-item:hover::after { background-color: var(--gl-border-color-strong); }
+.gl-tab-item--active { color: var(--gl-text-color-strong); font-weight: var(--gl-font-weight-bold); }
+.gl-tab-item--active::after { background-color: var(--gl-tab-selected-indicator-color-default); }
+.gl-tab-item:disabled { color: var(--gl-action-disabled-foreground-color); cursor: not-allowed; }
+.gl-tab-content { padding: var(--gl-spacing-scale-4) 0; }
+.gl-tab-pane[hidden] { display: none; }
+.gl-badge {
+  display: inline-flex; align-items: center; gap: var(--gl-spacing-scale-1);
+  padding: 0 var(--gl-spacing-scale-2);
+  border-radius: var(--gl-border-radius-full);
+  font-size: var(--gl-font-size-sm);
+  font-weight: var(--gl-font-weight-bold);
+  line-height: var(--gl-line-height-16);
+  background-color: var(--gl-badge-neutral-background-color-default);
+  color: var(--gl-badge-neutral-text-color-default);
+}</style>
+</head>
+<body>
+  <main class="gl-page">
+    <h1 class="gl-title">Tabs</h1>
+    <p class="gl-sub">Active item indicator bar, count badges, disabled item, content panes.</p>
+
+    <section class="gl-section">
+      <div class="gl-tabs-wrapper">
+        <div class="gl-tabs" role="tablist">
+          <button class="gl-tab-item gl-tab-item--active" role="tab" aria-selected="true">Overview <span class="gl-badge gl-badge--neutral">3</span></button>
+          <button class="gl-tab-item" role="tab" aria-selected="false">Commits <span class="gl-badge gl-badge--neutral">48</span></button>
+          <button class="gl-tab-item" role="tab" aria-selected="false">Pipelines <span class="gl-badge gl-badge--neutral">12</span></button>
+          <button class="gl-tab-item" role="tab" aria-selected="false" disabled>Locked</button>
+        </div>
+      </div>
+      <div class="gl-tab-content">
+        <div class="gl-tab-pane" role="tabpanel">Overview content is active.</div>
+        <div class="gl-tab-pane" role="tabpanel" hidden>Commits pane (hidden).</div>
+        <div class="gl-tab-pane" role="tabpanel" hidden>Pipelines pane (hidden).</div>
+        <div class="gl-tab-pane" role="tabpanel" hidden>Locked pane cannot be activated.</div>
+      </div>
+    </section>
+
+    <script>
+      (function () {
+        var items = document.querySelectorAll('.gl-tab-item');
+        var panes = document.querySelectorAll('.gl-tab-pane');
+        items.forEach(function (tab, i) {
+          tab.addEventListener('click', function () {
+            if (tab.disabled) return;
+            items.forEach(function (x) {
+              x.classList.remove('gl-tab-item--active');
+              x.setAttribute('aria-selected', 'false');
+            });
+            tab.classList.add('gl-tab-item--active');
+            tab.setAttribute('aria-selected', 'true');
+            panes.forEach(function (p, j) { p.hidden = j !== i; });
+          });
+        });
+      })();
+    </script>
+  </main>
+</body>
+</html>

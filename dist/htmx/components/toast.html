@@ -1,0 +1,22 @@
+<!-- Pajamas-inspired (MIT). htmx fragment: toast -->
+<style>
+      :focus-visible { outline: none; box-shadow: 0 0 0 2px var(--gl-focus-ring-inner-color), 0 0 0 4px var(--gl-focus-ring-outer-color); }
+      .spin { animation: gl-spin .8s linear infinite; }
+      @keyframes gl-spin { to { transform: rotate(360deg); } }
+      .htmx-indicator { display: none; }
+      .htmx-request .htmx-indicator, .htmx-request.htmx-indicator { display: inline-flex; }
+    </style>
+<div aria-live="polite">
+  <button hx-get="/toast/new.html" hx-target="#toaster" hx-swap="beforeend"
+          class="rounded-[var(--gl-button-border-radius)] bg-[var(--gl-button-default-primary-background-color-default)] text-[color:var(--gl-button-default-primary-foreground-color-default)] px-3 py-3 font-bold">Show toast</button>
+
+  <div id="toaster" class="fixed flex flex-col gap-3 pointer-events-none" style="bottom: var(--gl-spacing-scale-6); left: var(--gl-spacing-scale-6); z-index: var(--gl-zindex-200); max-width: calc(100vw - var(--gl-spacing-scale-12))">
+    <div class="flex items-center gap-3 rounded-[var(--gl-border-radius-full)] pointer-events-auto"
+         style="background-color: var(--gl-feedback-strong-background-color); color: var(--gl-feedback-strong-text-color); box-shadow: var(--gl-shadow-md); padding: var(--gl-spacing-scale-3) var(--gl-spacing-scale-4)"
+         hx-delete="/dismiss" hx-trigger="load delay:5s" hx-swap="outerHTML">
+      <span class="flex-1">Auto-hides after 5s (hx-trigger="load delay:5s").</span>
+      <button class="font-bold bg-transparent border-0 cursor-pointer" style="color: var(--gl-feedback-strong-link-color)" hx-post="/undo">Undo</button>
+      <button class="bg-transparent border-0 cursor-pointer" style="color: var(--gl-feedback-strong-text-color)" hx-delete="/dismiss" hx-target="closest div" hx-swap="outerHTML" aria-label="Dismiss"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+    </div>
+  </div>
+</div>

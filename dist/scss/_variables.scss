@@ -1,0 +1,1276 @@
+//  GitLab Pajamas design tokens (MIT)
+//  Generated from @gitlab/ui by scripts/build-tokens.js. Do not edit.
+$black: #050408 !default;  // color
+$blue-100: #cbe2f9 !default;  // color
+$blue-200: #9dc7f1 !default;  // color
+$blue-300: #63a6e9 !default;  // color
+$blue-400: #428fdc !default;  // color
+$blue-50: #e9f3fc !default;  // color
+$blue-500: #1f75cb !default;  // color
+$blue-600: #2f68b4 !default;  // color
+$blue-700: #2f5ca0 !default;  // color
+$blue-800: #284779 !default;  // color
+$blue-900: #213454 !default;  // color
+$blue-950: #1d283e !default;  // color
+$brand-charcoal: #171321 !default;  // color
+$brand-gray-01: #d1d0d3 !default;  // color
+$brand-gray-02: #a2a1a6 !default;  // color
+$brand-gray-03: #74717a !default;  // color
+$brand-gray-04: #45424d !default;  // color
+$brand-gray-05: #2b2838 !default;  // color
+$brand-orange-01: #fca326 !default;  // color
+$brand-orange-02: #fc6d26 !default;  // color
+$brand-orange-03: #e24329 !default;  // color
+$brand-purple-01: #a989f5 !default;  // color
+$brand-purple-02: #7759c2 !default;  // color
+$data-viz-aqua-100: #93f2ef !default;  // color
+$data-viz-aqua-200: #5edee3 !default;  // color
+$data-viz-aqua-300: #32c5d2 !default;  // color
+$data-viz-aqua-400: #00acc4 !default;  // color
+$data-viz-aqua-50: #b5fefd !default;  // color
+$data-viz-aqua-500: #0090b1 !default;  // color
+$data-viz-aqua-600: #007b9b !default;  // color
+$data-viz-aqua-700: #006381 !default;  // color
+$data-viz-aqua-800: #00516c !default;  // color
+$data-viz-aqua-900: #004059 !default;  // color
+$data-viz-aqua-950: #00344b !default;  // color
+$data-viz-blue-100: #d2dcff !default;  // color
+$data-viz-blue-200: #b7c6ff !default;  // color
+$data-viz-blue-300: #97acff !default;  // color
+$data-viz-blue-400: #7992f5 !default;  // color
+$data-viz-blue-50: #e9ebff !default;  // color
+$data-viz-blue-500: #617ae2 !default;  // color
+$data-viz-blue-600: #4e65cd !default;  // color
+$data-viz-blue-700: #3f51ae !default;  // color
+$data-viz-blue-800: #374291 !default;  // color
+$data-viz-blue-900: #303470 !default;  // color
+$data-viz-blue-950: #2a2b59 !default;  // color
+$data-viz-green-100: #c6ed94 !default;  // color
+$data-viz-green-200: #b0d97b !default;  // color
+$data-viz-green-300: #94c25e !default;  // color
+$data-viz-green-400: #81ac41 !default;  // color
+$data-viz-green-50: #ddfab7 !default;  // color
+$data-viz-green-500: #619025 !default;  // color
+$data-viz-green-600: #4e7f0e !default;  // color
+$data-viz-green-700: #366800 !default;  // color
+$data-viz-green-800: #275600 !default;  // color
+$data-viz-green-900: #1a4500 !default;  // color
+$data-viz-green-950: #133a03 !default;  // color
+$data-viz-magenta-100: #ffccdb !default;  // color
+$data-viz-magenta-200: #fcacc5 !default;  // color
+$data-viz-magenta-300: #f88aaf !default;  // color
+$data-viz-magenta-400: #e86e9a !default;  // color
+$data-viz-magenta-50: #ffe3eb !default;  // color
+$data-viz-magenta-500: #cf4d81 !default;  // color
+$data-viz-magenta-600: #b93d71 !default;  // color
+$data-viz-magenta-700: #9a2e5d !default;  // color
+$data-viz-magenta-800: #7c214f !default;  // color
+$data-viz-magenta-900: #661e3a !default;  // color
+$data-viz-magenta-950: #541d31 !default;  // color
+$data-viz-orange-100: #f5d6b3 !default;  // color
+$data-viz-orange-200: #eebd8c !default;  // color
+$data-viz-orange-300: #e99b60 !default;  // color
+$data-viz-orange-400: #e07e41 !default;  // color
+$data-viz-orange-50: #fae8d1 !default;  // color
+$data-viz-orange-500: #c95d2e !default;  // color
+$data-viz-orange-600: #b14f18 !default;  // color
+$data-viz-orange-700: #92430a !default;  // color
+$data-viz-orange-800: #6f3500 !default;  // color
+$data-viz-orange-900: #5e2f05 !default;  // color
+$data-viz-orange-950: #4b2707 !default;  // color
+$gl-action-border-radius: 0.5rem !default;  // dimension
+$gl-action-confirm-background-color-active: rgba(5, 5, 6, 0.16) !default;  // color
+$gl-action-confirm-background-color-default: rgba(0, 0, 0, 0) !default;  // color
+$gl-action-confirm-background-color-focus: rgba(5, 5, 6, 0.06) !default;  // color
+$gl-action-confirm-background-color-hover: rgba(5, 5, 6, 0.06) !default;  // color
+$gl-action-confirm-border-color-active: rgba(0, 0, 0, 0) !default;  // color
+$gl-action-confirm-border-color-default: rgba(0, 0, 0, 0) !default;  // color
+$gl-action-confirm-border-color-focus: rgba(0, 0, 0, 0) !default;  // color
+$gl-action-confirm-border-color-hover: rgba(0, 0, 0, 0) !default;  // color
+$gl-action-confirm-foreground-color-active: #050408 !default;  // color
+$gl-action-confirm-foreground-color-default: #3a383d !default;  // color
+$gl-action-confirm-foreground-color-focus: #18171d !default;  // color
+$gl-action-confirm-foreground-color-hover: #18171d !default;  // color
+$gl-action-danger-background-color-active: rgba(174, 24, 0, 0.24) !default;  // color
+$gl-action-danger-background-color-default: rgba(245, 127, 108, 0) !default;  // color
+$gl-action-danger-background-color-focus: rgba(245, 127, 108, 0.16) !default;  // color
+$gl-action-danger-background-color-hover: rgba(245, 127, 108, 0.16) !default;  // color
+$gl-action-danger-border-color-active: rgba(0, 0, 0, 0) !default;  // color
+$gl-action-danger-border-color-default: rgba(0, 0, 0, 0) !default;  // color
+$gl-action-danger-border-color-focus: rgba(0, 0, 0, 0) !default;  // color
+$gl-action-danger-border-color-hover: rgba(0, 0, 0, 0) !default;  // color
+$gl-action-danger-foreground-color-active: #3e1a14 !default;  // color
+$gl-action-danger-foreground-color-default: #c02f12 !default;  // color
+$gl-action-danger-foreground-color-focus: #812713 !default;  // color
+$gl-action-danger-foreground-color-hover: #812713 !default;  // color
+$gl-action-disabled-background-color: #ecebea !default;  // color
+$gl-action-disabled-border-color: #dcdbd9 !default;  // color
+$gl-action-disabled-foreground-color: #8a8888 !default;  // color
+$gl-action-neutral-background-color-active: rgba(5, 5, 6, 0.16) !default;  // color
+$gl-action-neutral-background-color-default: rgba(0, 0, 0, 0) !default;  // color
+$gl-action-neutral-background-color-focus: rgba(5, 5, 6, 0.06) !default;  // color
+$gl-action-neutral-background-color-hover: rgba(5, 5, 6, 0.06) !default;  // color
+$gl-action-neutral-border-color-active: rgba(0, 0, 0, 0) !default;  // color
+$gl-action-neutral-border-color-default: rgba(0, 0, 0, 0) !default;  // color
+$gl-action-neutral-border-color-focus: rgba(0, 0, 0, 0) !default;  // color
+$gl-action-neutral-border-color-hover: rgba(0, 0, 0, 0) !default;  // color
+$gl-action-neutral-foreground-color-active: #28272d !default;  // color
+$gl-action-neutral-foreground-color-default: #28272d !default;  // color
+$gl-action-neutral-foreground-color-focus: #28272d !default;  // color
+$gl-action-neutral-foreground-color-hover: #28272d !default;  // color
+$gl-action-selected-background-color-active: #050408 !default;  // color
+$gl-action-selected-background-color-default: #3a383d !default;  // color
+$gl-action-selected-background-color-disabled: #8a8888 !default;  // color
+$gl-action-selected-background-color-focus: #18171d !default;  // color
+$gl-action-selected-background-color-hover: #18171d !default;  // color
+$gl-action-selected-border-color-active: #050408 !default;  // color
+$gl-action-selected-border-color-default: #3a383d !default;  // color
+$gl-action-selected-border-color-focus: #18171d !default;  // color
+$gl-action-selected-border-color-hover: #18171d !default;  // color
+$gl-action-selected-foreground-color-active: #fff !default;  // color
+$gl-action-selected-foreground-color-default: #fff !default;  // color
+$gl-action-selected-foreground-color-focus: #fff !default;  // color
+$gl-action-selected-foreground-color-hover: #fff !default;  // color
+$gl-action-strong-confirm-background-color-active: #2f5ca0 !default;  // color
+$gl-action-strong-confirm-background-color-default: #1f75cb !default;  // color
+$gl-action-strong-confirm-background-color-focus: #2f68b4 !default;  // color
+$gl-action-strong-confirm-background-color-hover: #2f68b4 !default;  // color
+$gl-action-strong-confirm-border-color-active: rgba(0, 0, 0, 0) !default;  // color
+$gl-action-strong-confirm-border-color-default: rgba(0, 0, 0, 0) !default;  // color
+$gl-action-strong-confirm-border-color-focus: rgba(0, 0, 0, 0) !default;  // color
+$gl-action-strong-confirm-border-color-hover: rgba(0, 0, 0, 0) !default;  // color
+$gl-action-strong-confirm-foreground-color-active: #fff !default;  // color
+$gl-action-strong-confirm-foreground-color-default: #fff !default;  // color
+$gl-action-strong-confirm-foreground-color-focus: #fff !default;  // color
+$gl-action-strong-confirm-foreground-color-hover: #fff !default;  // color
+$gl-action-strong-neutral-background-color-active: #3a383d !default;  // color
+$gl-action-strong-neutral-background-color-default: #646163 !default;  // color
+$gl-action-strong-neutral-background-color-focus: #4d4b4e !default;  // color
+$gl-action-strong-neutral-background-color-hover: #4d4b4e !default;  // color
+$gl-action-strong-neutral-border-color-active: rgba(0, 0, 0, 0) !default;  // color
+$gl-action-strong-neutral-border-color-default: rgba(0, 0, 0, 0) !default;  // color
+$gl-action-strong-neutral-border-color-focus: rgba(0, 0, 0, 0) !default;  // color
+$gl-action-strong-neutral-border-color-hover: rgba(0, 0, 0, 0) !default;  // color
+$gl-action-strong-neutral-foreground-color-active: #fff !default;  // color
+$gl-action-strong-neutral-foreground-color-default: #fff !default;  // color
+$gl-action-strong-neutral-foreground-color-focus: #fff !default;  // color
+$gl-action-strong-neutral-foreground-color-hover: #fff !default;  // color
+$gl-alert-border-radius: 0.5rem !default;  // dimension
+$gl-alert-danger-background-color: #fcf1ef !default;  // color
+$gl-alert-danger-border-bottom-color: rgba(0, 0, 0, 0) !default;  // color
+$gl-alert-danger-border-color: #dd2b0e !default;  // color
+$gl-alert-danger-border-top-color: rgba(0, 0, 0, 0) !default;  // color
+$gl-alert-danger-title-color: #18171d !default;  // color
+$gl-alert-info-background-color: #e9f3fc !default;  // color
+$gl-alert-info-border-bottom-color: rgba(0, 0, 0, 0) !default;  // color
+$gl-alert-info-border-color: #9dc7f1 !default;  // color
+$gl-alert-info-border-top-color: rgba(0, 0, 0, 0) !default;  // color
+$gl-alert-info-title-color: #18171d !default;  // color
+$gl-alert-neutral-background-color: #ecebea !default;  // color
+$gl-alert-neutral-border-bottom-color: rgba(0, 0, 0, 0) !default;  // color
+$gl-alert-neutral-border-color: #c1bfbe !default;  // color
+$gl-alert-neutral-border-top-color: rgba(0, 0, 0, 0) !default;  // color
+$gl-alert-neutral-title-color: #18171d !default;  // color
+$gl-alert-success-background-color: #ecf4ee !default;  // color
+$gl-alert-success-border-bottom-color: rgba(0, 0, 0, 0) !default;  // color
+$gl-alert-success-border-color: #91d4a8 !default;  // color
+$gl-alert-success-border-top-color: rgba(0, 0, 0, 0) !default;  // color
+$gl-alert-success-title-color: #18171d !default;  // color
+$gl-alert-warning-background-color: #fdf1dd !default;  // color
+$gl-alert-warning-border-bottom-color: rgba(0, 0, 0, 0) !default;  // color
+$gl-alert-warning-border-color: #e9be74 !default;  // color
+$gl-alert-warning-border-top-color: rgba(0, 0, 0, 0) !default;  // color
+$gl-alert-warning-title-color: #18171d !default;  // color
+$gl-application-chrome-background-color: #ecebea !default;  // color
+$gl-avatar-border-color-default: rgba(5, 5, 6, 0.08) !default;  // color
+$gl-avatar-border-color-hover: rgba(5, 5, 6, 0.24) !default;  // color
+$gl-avatar-circle-border-radius-default: 9999px !default;  // dimension
+$gl-avatar-fallback-background-color-blue: rgba(157, 199, 241, 0.23921568627450981) !default;  // color
+$gl-avatar-fallback-background-color-green: rgba(145, 212, 168, 0.23921568627450981) !default;  // color
+$gl-avatar-fallback-background-color-neutral: rgba(191, 191, 195, 0.23921568627450981) !default;  // color
+$gl-avatar-fallback-background-color-orange: rgba(233, 190, 116, 0.23921568627450981) !default;  // color
+$gl-avatar-fallback-background-color-purple: rgba(203, 187, 242, 0.23921568627450981) !default;  // color
+$gl-avatar-fallback-background-color-red: rgba(252, 181, 170, 0.23921568627450981) !default;  // color
+$gl-avatar-fallback-text-color-blue: #284779 !default;  // color
+$gl-avatar-fallback-text-color-green: #225131 !default;  // color
+$gl-avatar-fallback-text-color-neutral: #3a383d !default;  // color
+$gl-avatar-fallback-text-color-orange: #693c14 !default;  // color
+$gl-avatar-fallback-text-color-purple: #493c83 !default;  // color
+$gl-avatar-fallback-text-color-red: #812713 !default;  // color
+$gl-avatar-square-border-radius-default: 0.25rem !default;  // dimension
+$gl-avatar-square-border-radius-lg: 0.5rem !default;  // dimension
+$gl-background-color-default: #fff !default;  // color
+$gl-background-color-disabled: #f7f7f5 !default;  // color
+$gl-background-color-overlap: #fff !default;  // color
+$gl-background-color-overlay: rgba(5, 5, 6, 0.24) !default;  // color
+$gl-background-color-section: #fff !default;  // color
+$gl-background-color-strong: #ecebea !default;  // color
+$gl-background-color-subtle: #f7f7f5 !default;  // color
+$gl-badge-danger-background-color-active: #fcb5aa !default;  // color
+$gl-badge-danger-background-color-default: #fdd4cd !default;  // color
+$gl-badge-danger-background-color-focus: #fdd4cd !default;  // color
+$gl-badge-danger-background-color-hover: #fdd4cd !default;  // color
+$gl-badge-danger-border-color-active: rgba(0, 0, 0, 0) !default;  // color
+$gl-badge-danger-border-color-default: rgba(0, 0, 0, 0) !default;  // color
+$gl-badge-danger-border-color-focus: rgba(0, 0, 0, 0) !default;  // color
+$gl-badge-danger-border-color-hover: #fcb5aa !default;  // color
+$gl-badge-danger-icon-color-active: #582014 !default;  // color
+$gl-badge-danger-icon-color-default: #a32c12 !default;  // color
+$gl-badge-danger-icon-color-focus: #812713 !default;  // color
+$gl-badge-danger-icon-color-hover: #812713 !default;  // color
+$gl-badge-danger-text-color-active: #582014 !default;  // color
+$gl-badge-danger-text-color-default: #a32c12 !default;  // color
+$gl-badge-danger-text-color-focus: #812713 !default;  // color
+$gl-badge-danger-text-color-hover: #812713 !default;  // color
+$gl-badge-info-background-color-active: #9dc7f1 !default;  // color
+$gl-badge-info-background-color-default: #cbe2f9 !default;  // color
+$gl-badge-info-background-color-focus: #cbe2f9 !default;  // color
+$gl-badge-info-background-color-hover: #cbe2f9 !default;  // color
+$gl-badge-info-border-color-active: rgba(0, 0, 0, 0) !default;  // color
+$gl-badge-info-border-color-default: rgba(0, 0, 0, 0) !default;  // color
+$gl-badge-info-border-color-focus: rgba(0, 0, 0, 0) !default;  // color
+$gl-badge-info-border-color-hover: #9dc7f1 !default;  // color
+$gl-badge-info-icon-color-active: #2f5ca0 !default;  // color
+$gl-badge-info-icon-color-default: #1f75cb !default;  // color
+$gl-badge-info-icon-color-focus: #2f68b4 !default;  // color
+$gl-badge-info-icon-color-hover: #2f68b4 !default;  // color
+$gl-badge-info-text-color-active: #213454 !default;  // color
+$gl-badge-info-text-color-default: #2f5ca0 !default;  // color
+$gl-badge-info-text-color-focus: #284779 !default;  // color
+$gl-badge-info-text-color-hover: #284779 !default;  // color
+$gl-badge-muted-background-color-active: #dcdbd9 !default;  // color
+$gl-badge-muted-background-color-default: #ecebea !default;  // color
+$gl-badge-muted-background-color-focus: #ecebea !default;  // color
+$gl-badge-muted-background-color-hover: #ecebea !default;  // color
+$gl-badge-muted-border-color-active: rgba(0, 0, 0, 0) !default;  // color
+$gl-badge-muted-border-color-default: rgba(0, 0, 0, 0) !default;  // color
+$gl-badge-muted-border-color-focus: rgba(0, 0, 0, 0) !default;  // color
+$gl-badge-muted-border-color-hover: #c1bfbe !default;  // color
+$gl-badge-muted-icon-color-active: #4d4b4e !default;  // color
+$gl-badge-muted-icon-color-default: #747273 !default;  // color
+$gl-badge-muted-icon-color-focus: #646163 !default;  // color
+$gl-badge-muted-icon-color-hover: #646163 !default;  // color
+$gl-badge-muted-text-color-active: #3a383d !default;  // color
+$gl-badge-muted-text-color-default: #646163 !default;  // color
+$gl-badge-muted-text-color-focus: #4d4b4e !default;  // color
+$gl-badge-muted-text-color-hover: #4d4b4e !default;  // color
+$gl-badge-neutral-background-color-active: #c1bfbe !default;  // color
+$gl-badge-neutral-background-color-default: #dcdbd9 !default;  // color
+$gl-badge-neutral-background-color-focus: #dcdbd9 !default;  // color
+$gl-badge-neutral-background-color-hover: #dcdbd9 !default;  // color
+$gl-badge-neutral-border-color-active: rgba(0, 0, 0, 0) !default;  // color
+$gl-badge-neutral-border-color-default: rgba(0, 0, 0, 0) !default;  // color
+$gl-badge-neutral-border-color-focus: rgba(0, 0, 0, 0) !default;  // color
+$gl-badge-neutral-border-color-hover: #c1bfbe !default;  // color
+$gl-badge-neutral-icon-color-active: #4d4b4e !default;  // color
+$gl-badge-neutral-icon-color-default: #747273 !default;  // color
+$gl-badge-neutral-icon-color-focus: #646163 !default;  // color
+$gl-badge-neutral-icon-color-hover: #646163 !default;  // color
+$gl-badge-neutral-text-color-active: #28272d !default;  // color
+$gl-badge-neutral-text-color-default: #4d4b4e !default;  // color
+$gl-badge-neutral-text-color-focus: #3a383d !default;  // color
+$gl-badge-neutral-text-color-hover: #3a383d !default;  // color
+$gl-badge-success-background-color-active: #91d4a8 !default;  // color
+$gl-badge-success-background-color-default: #c3e6cd !default;  // color
+$gl-badge-success-background-color-focus: #c3e6cd !default;  // color
+$gl-badge-success-background-color-hover: #c3e6cd !default;  // color
+$gl-badge-success-border-color-active: rgba(0, 0, 0, 0) !default;  // color
+$gl-badge-success-border-color-default: rgba(0, 0, 0, 0) !default;  // color
+$gl-badge-success-border-color-focus: rgba(0, 0, 0, 0) !default;  // color
+$gl-badge-success-border-color-hover: #91d4a8 !default;  // color
+$gl-badge-success-icon-color-active: #306440 !default;  // color
+$gl-badge-success-icon-color-default: #108548 !default;  // color
+$gl-badge-success-icon-color-focus: #2f7549 !default;  // color
+$gl-badge-success-icon-color-hover: #2f7549 !default;  // color
+$gl-badge-success-text-color-active: #1e3e28 !default;  // color
+$gl-badge-success-text-color-default: #306440 !default;  // color
+$gl-badge-success-text-color-focus: #225131 !default;  // color
+$gl-badge-success-text-color-hover: #225131 !default;  // color
+$gl-badge-tier-background-color-active: #cbbbf2 !default;  // color
+$gl-badge-tier-background-color-default: #e1d8f9 !default;  // color
+$gl-badge-tier-background-color-focus: #e1d8f9 !default;  // color
+$gl-badge-tier-background-color-hover: #e1d8f9 !default;  // color
+$gl-badge-tier-border-color-active: rgba(0, 0, 0, 0) !default;  // color
+$gl-badge-tier-border-color-default: rgba(0, 0, 0, 0) !default;  // color
+$gl-badge-tier-border-color-focus: rgba(0, 0, 0, 0) !default;  // color
+$gl-badge-tier-border-color-hover: #cbbbf2 !default;  // color
+$gl-badge-tier-icon-color-active: #342d59 !default;  // color
+$gl-badge-tier-icon-color-default: #5c47a6 !default;  // color
+$gl-badge-tier-icon-color-focus: #493c83 !default;  // color
+$gl-badge-tier-icon-color-hover: #493c83 !default;  // color
+$gl-badge-tier-text-color-active: #342d59 !default;  // color
+$gl-badge-tier-text-color-default: #5c47a6 !default;  // color
+$gl-badge-tier-text-color-focus: #493c83 !default;  // color
+$gl-badge-tier-text-color-hover: #493c83 !default;  // color
+$gl-badge-warning-background-color-active: #e9be74 !default;  // color
+$gl-badge-warning-background-color-default: #f5d9a8 !default;  // color
+$gl-badge-warning-background-color-focus: #f5d9a8 !default;  // color
+$gl-badge-warning-background-color-hover: #f5d9a8 !default;  // color
+$gl-badge-warning-border-color-active: rgba(0, 0, 0, 0) !default;  // color
+$gl-badge-warning-border-color-default: rgba(0, 0, 0, 0) !default;  // color
+$gl-badge-warning-border-color-focus: rgba(0, 0, 0, 0) !default;  // color
+$gl-badge-warning-border-color-hover: #e9be74 !default;  // color
+$gl-badge-warning-icon-color-active: #894b16 !default;  // color
+$gl-badge-warning-icon-color-default: #ab6100 !default;  // color
+$gl-badge-warning-icon-color-focus: #995715 !default;  // color
+$gl-badge-warning-icon-color-hover: #995715 !default;  // color
+$gl-badge-warning-text-color-active: #532e16 !default;  // color
+$gl-badge-warning-text-color-default: #894b16 !default;  // color
+$gl-badge-warning-text-color-focus: #693c14 !default;  // color
+$gl-badge-warning-text-color-hover: #693c14 !default;  // color
+$gl-banner-intro-border-color: #9dc7f1 !default;  // color
+$gl-banner-promo-background-color: #f4f0ff !default;  // color
+$gl-banner-promo-border-color: #cbbbf2 !default;  // color
+$gl-border-color-default: #dcdbd9 !default;  // color
+$gl-border-color-section: #dcdbd9 !default;  // color
+$gl-border-color-strong: #c1bfbe !default;  // color
+$gl-border-color-subtle: #ecebea !default;  // color
+$gl-border-color-transparent: rgba(0, 0, 0, 0) !default;  // color
+$gl-border-radius-2xl: 1rem !default;  // dimension
+$gl-border-radius-3xl: 1.5rem !default;  // dimension
+$gl-border-radius-default: 0.25rem !default;  // dimension
+$gl-border-radius-full: 9999px !default;  // dimension
+$gl-border-radius-lg: 0.5rem !default;  // dimension
+$gl-border-radius-md: 0.25rem !default;  // dimension
+$gl-border-radius-none: 0px !default;  // dimension
+$gl-border-radius-sm: 0.125rem !default;  // dimension
+$gl-border-radius-xl: 0.75rem !default;  // dimension
+$gl-border-radius-xs: 1px !default;  // dimension
+$gl-breadcrumb-separator-color: #8a8888 !default;  // color
+$gl-broadcast-banner-background-color-blue: #235180 !default;  // color
+$gl-broadcast-banner-background-color-dark: #747273 !default;  // color
+$gl-broadcast-banner-background-color-green: #1b653f !default;  // color
+$gl-broadcast-banner-background-color-indigo: #41419f !default;  // color
+$gl-broadcast-banner-background-color-light: #ecebea !default;  // color
+$gl-broadcast-banner-background-color-lightblue: #4977a5 !default;  // color
+$gl-broadcast-banner-background-color-lightgreen: #308258 !default;  // color
+$gl-broadcast-banner-background-color-lightindigo: #6666c4 !default;  // color
+$gl-broadcast-banner-background-color-lightred: #ad4a3b !default;  // color
+$gl-broadcast-banner-background-color-red: #8f2110 !default;  // color
+$gl-broadcast-banner-border-color-blue: #0b2640 !default;  // color
+$gl-broadcast-banner-border-color-dark: #4d4b4e !default;  // color
+$gl-broadcast-banner-border-color-green: #0e4328 !default;  // color
+$gl-broadcast-banner-border-color-indigo: #222261 !default;  // color
+$gl-broadcast-banner-border-color-light: #dcdbd9 !default;  // color
+$gl-broadcast-banner-border-color-lightblue: #235180 !default;  // color
+$gl-broadcast-banner-border-color-lightgreen: #1b653f !default;  // color
+$gl-broadcast-banner-border-color-lightindigo: #41419f !default;  // color
+$gl-broadcast-banner-border-color-lightred: #8f2110 !default;  // color
+$gl-broadcast-banner-border-color-red: #580d02 !default;  // color
+$gl-broadcast-banner-border-radius: 0.25rem !default;  // dimension
+$gl-broadcast-banner-icon-color-blue: #fff !default;  // color
+$gl-broadcast-banner-icon-color-dark: #fff !default;  // color
+$gl-broadcast-banner-icon-color-green: #fff !default;  // color
+$gl-broadcast-banner-icon-color-indigo: #fff !default;  // color
+$gl-broadcast-banner-icon-color-light: #28272d !default;  // color
+$gl-broadcast-banner-icon-color-lightblue: #fff !default;  // color
+$gl-broadcast-banner-icon-color-lightgreen: #fff !default;  // color
+$gl-broadcast-banner-icon-color-lightindigo: #fff !default;  // color
+$gl-broadcast-banner-icon-color-lightred: #fff !default;  // color
+$gl-broadcast-banner-icon-color-red: #fff !default;  // color
+$gl-broadcast-banner-text-color-blue: #fff !default;  // color
+$gl-broadcast-banner-text-color-dark: #fff !default;  // color
+$gl-broadcast-banner-text-color-green: #fff !default;  // color
+$gl-broadcast-banner-text-color-indigo: #fff !default;  // color
+$gl-broadcast-banner-text-color-light: #28272d !default;  // color
+$gl-broadcast-banner-text-color-lightblue: #fff !default;  // color
+$gl-broadcast-banner-text-color-lightgreen: #fff !default;  // color
+$gl-broadcast-banner-text-color-lightindigo: #fff !default;  // color
+$gl-broadcast-banner-text-color-lightred: #fff !default;  // color
+$gl-broadcast-banner-text-color-red: #fff !default;  // color
+$gl-button-border-radius: 0.5rem !default;  // dimension
+$gl-button-confirm-primary-background-color-active: #050408 !default;  // color
+$gl-button-confirm-primary-background-color-default: #3a383d !default;  // color
+$gl-button-confirm-primary-background-color-focus: #18171d !default;  // color
+$gl-button-confirm-primary-background-color-hover: #18171d !default;  // color
+$gl-button-confirm-primary-border-color-active: rgba(0, 0, 0, 0) !default;  // color
+$gl-button-confirm-primary-border-color-default: rgba(0, 0, 0, 0) !default;  // color
+$gl-button-confirm-primary-border-color-focus: rgba(0, 0, 0, 0) !default;  // color
+$gl-button-confirm-primary-border-color-hover: rgba(0, 0, 0, 0) !default;  // color
+$gl-button-confirm-primary-foreground-color-active: #fff !default;  // color
+$gl-button-confirm-primary-foreground-color-default: #fff !default;  // color
+$gl-button-confirm-primary-foreground-color-focus: #fff !default;  // color
+$gl-button-confirm-primary-foreground-color-hover: #fff !default;  // color
+$gl-button-confirm-secondary-background-color-active: #dcdbd9 !default;  // color
+$gl-button-confirm-secondary-background-color-default: #fff !default;  // color
+$gl-button-confirm-secondary-background-color-focus: #ecebea !default;  // color
+$gl-button-confirm-secondary-background-color-hover: #ecebea !default;  // color
+$gl-button-confirm-secondary-border-color-active: #050408 !default;  // color
+$gl-button-confirm-secondary-border-color-default: #3a383d !default;  // color
+$gl-button-confirm-secondary-border-color-focus: #18171d !default;  // color
+$gl-button-confirm-secondary-border-color-hover: #18171d !default;  // color
+$gl-button-confirm-secondary-foreground-color-active: #050408 !default;  // color
+$gl-button-confirm-secondary-foreground-color-default: #3a383d !default;  // color
+$gl-button-confirm-secondary-foreground-color-focus: #18171d !default;  // color
+$gl-button-confirm-secondary-foreground-color-hover: #18171d !default;  // color
+$gl-button-confirm-tertiary-background-color-active: rgba(5, 5, 6, 0.16) !default;  // color
+$gl-button-confirm-tertiary-background-color-default: rgba(0, 0, 0, 0) !default;  // color
+$gl-button-confirm-tertiary-background-color-focus: rgba(5, 5, 6, 0.06) !default;  // color
+$gl-button-confirm-tertiary-background-color-hover: rgba(5, 5, 6, 0.06) !default;  // color
+$gl-button-confirm-tertiary-border-color-active: rgba(0, 0, 0, 0) !default;  // color
+$gl-button-confirm-tertiary-border-color-default: rgba(0, 0, 0, 0) !default;  // color
+$gl-button-confirm-tertiary-border-color-focus: rgba(0, 0, 0, 0) !default;  // color
+$gl-button-confirm-tertiary-border-color-hover: rgba(0, 0, 0, 0) !default;  // color
+$gl-button-confirm-tertiary-foreground-color-active: #050408 !default;  // color
+$gl-button-confirm-tertiary-foreground-color-default: #3a383d !default;  // color
+$gl-button-confirm-tertiary-foreground-color-focus: #18171d !default;  // color
+$gl-button-confirm-tertiary-foreground-color-hover: #18171d !default;  // color
+$gl-button-count-background-color: rgba(5, 5, 6, 0.08) !default;  // color
+$gl-button-danger-primary-background-color-active: #812713 !default;  // color
+$gl-button-danger-primary-background-color-default: #dd2b0e !default;  // color
+$gl-button-danger-primary-background-color-focus: #c02f12 !default;  // color
+$gl-button-danger-primary-background-color-hover: #c02f12 !default;  // color
+$gl-button-danger-primary-border-color-active: #582014 !default;  // color
+$gl-button-danger-primary-border-color-default: #c02f12 !default;  // color
+$gl-button-danger-primary-border-color-focus: #812713 !default;  // color
+$gl-button-danger-primary-border-color-hover: #812713 !default;  // color
+$gl-button-danger-primary-foreground-color-active: #fff !default;  // color
+$gl-button-danger-primary-foreground-color-default: #fff !default;  // color
+$gl-button-danger-primary-foreground-color-focus: #fff !default;  // color
+$gl-button-danger-primary-foreground-color-hover: #fff !default;  // color
+$gl-button-danger-secondary-background-color-active: #fdd4cd !default;  // color
+$gl-button-danger-secondary-background-color-default: #fff !default;  // color
+$gl-button-danger-secondary-background-color-focus: #fcf1ef !default;  // color
+$gl-button-danger-secondary-background-color-hover: #fcf1ef !default;  // color
+$gl-button-danger-secondary-border-color-active: #582014 !default;  // color
+$gl-button-danger-secondary-border-color-default: #dd2b0e !default;  // color
+$gl-button-danger-secondary-border-color-focus: #a32c12 !default;  // color
+$gl-button-danger-secondary-border-color-hover: #a32c12 !default;  // color
+$gl-button-danger-secondary-foreground-color-active: #582014 !default;  // color
+$gl-button-danger-secondary-foreground-color-default: #dd2b0e !default;  // color
+$gl-button-danger-secondary-foreground-color-focus: #a32c12 !default;  // color
+$gl-button-danger-secondary-foreground-color-hover: #a32c12 !default;  // color
+$gl-button-danger-tertiary-background-color-active: rgba(174, 24, 0, 0.24) !default;  // color
+$gl-button-danger-tertiary-background-color-default: rgba(245, 127, 108, 0) !default;  // color
+$gl-button-danger-tertiary-background-color-focus: rgba(245, 127, 108, 0.16) !default;  // color
+$gl-button-danger-tertiary-background-color-hover: rgba(245, 127, 108, 0.16) !default;  // color
+$gl-button-danger-tertiary-border-color-active: rgba(0, 0, 0, 0) !default;  // color
+$gl-button-danger-tertiary-border-color-default: rgba(0, 0, 0, 0) !default;  // color
+$gl-button-danger-tertiary-border-color-focus: rgba(0, 0, 0, 0) !default;  // color
+$gl-button-danger-tertiary-border-color-hover: rgba(0, 0, 0, 0) !default;  // color
+$gl-button-danger-tertiary-foreground-color-active: #3e1a14 !default;  // color
+$gl-button-danger-tertiary-foreground-color-default: #c02f12 !default;  // color
+$gl-button-danger-tertiary-foreground-color-focus: #812713 !default;  // color
+$gl-button-danger-tertiary-foreground-color-hover: #812713 !default;  // color
+$gl-button-dashed-border-color-active: #646163 !default;  // color
+$gl-button-dashed-border-color-default: #8a8888 !default;  // color
+$gl-button-dashed-border-color-focus: #8a8888 !default;  // color
+$gl-button-dashed-border-color-hover: #8a8888 !default;  // color
+$gl-button-default-primary-background-color-active: #dcdbd9 !default;  // color
+$gl-button-default-primary-background-color-default: #fff !default;  // color
+$gl-button-default-primary-background-color-focus: #ecebea !default;  // color
+$gl-button-default-primary-background-color-hover: #ecebea !default;  // color
+$gl-button-default-primary-border-color-active: #646163 !default;  // color
+$gl-button-default-primary-border-color-default: #c1bfbe !default;  // color
+$gl-button-default-primary-border-color-focus: #8a8888 !default;  // color
+$gl-button-default-primary-border-color-hover: #8a8888 !default;  // color
+$gl-button-default-primary-foreground-color-active: #3a383d !default;  // color
+$gl-button-default-primary-foreground-color-default: #3a383d !default;  // color
+$gl-button-default-primary-foreground-color-focus: #3a383d !default;  // color
+$gl-button-default-primary-foreground-color-hover: #3a383d !default;  // color
+$gl-button-default-tertiary-background-color-active: rgba(5, 5, 6, 0.16) !default;  // color
+$gl-button-default-tertiary-background-color-default: rgba(0, 0, 0, 0) !default;  // color
+$gl-button-default-tertiary-background-color-focus: rgba(5, 5, 6, 0.06) !default;  // color
+$gl-button-default-tertiary-background-color-hover: rgba(5, 5, 6, 0.06) !default;  // color
+$gl-button-default-tertiary-border-color-active: rgba(0, 0, 0, 0) !default;  // color
+$gl-button-default-tertiary-border-color-default: rgba(0, 0, 0, 0) !default;  // color
+$gl-button-default-tertiary-border-color-focus: rgba(0, 0, 0, 0) !default;  // color
+$gl-button-default-tertiary-border-color-hover: rgba(0, 0, 0, 0) !default;  // color
+$gl-button-default-tertiary-foreground-color-active: #28272d !default;  // color
+$gl-button-default-tertiary-foreground-color-default: #28272d !default;  // color
+$gl-button-default-tertiary-foreground-color-focus: #28272d !default;  // color
+$gl-button-default-tertiary-foreground-color-hover: #28272d !default;  // color
+$gl-button-disabled-background-color: #f7f7f5 !default;  // color
+$gl-button-disabled-border-color: #dcdbd9 !default;  // color
+$gl-button-disabled-foreground-color: #747273 !default;  // color
+$gl-button-link-border-radius: 0.25rem !default;  // dimension
+$gl-button-link-text-color-active: #2f5ca0 !default;  // color
+$gl-button-link-text-color-default: #2f5ca0 !default;  // color
+$gl-button-link-text-color-focus: #2f5ca0 !default;  // color
+$gl-button-link-text-color-hover: #2f5ca0 !default;  // color
+$gl-button-selected-background-color-active: #dcdbd9 !default;  // color
+$gl-button-selected-background-color-default: #ecebea !default;  // color
+$gl-button-selected-background-color-focus: #ecebea !default;  // color
+$gl-button-selected-background-color-hover: #ecebea !default;  // color
+$gl-button-selected-border-color-active: #646163 !default;  // color
+$gl-button-selected-border-color-default: #a5a3a3 !default;  // color
+$gl-button-selected-border-color-focus: #8a8888 !default;  // color
+$gl-button-selected-border-color-hover: #8a8888 !default;  // color
+$gl-button-selected-foreground-color-active: #3a383d !default;  // color
+$gl-button-selected-foreground-color-default: #3a383d !default;  // color
+$gl-button-selected-foreground-color-focus: #3a383d !default;  // color
+$gl-button-selected-foreground-color-hover: #3a383d !default;  // color
+$gl-card-border-radius: 0.75rem !default;  // dimension
+$gl-chart-axis-line-color: #c1bfbe !default;  // color
+$gl-chart-axis-pointer-color: #646163 !default;  // color
+$gl-chart-axis-text-color: #646163 !default;  // color
+$gl-chart-threshold-area-color: rgba(221, 43, 14, 0.1) !default;  // color
+$gl-chart-threshold-line-color: #dd2b0e !default;  // color
+$gl-chart-zoom-filler-color: rgba(5, 5, 6, 0.08) !default;  // color
+$gl-chart-zoom-handle-color: #646163 !default;  // color
+$gl-color-alpha-0: rgba(0, 0, 0, 0) !default;  // color
+$gl-color-alpha-dark-16: rgba(5, 5, 6, 0.16) !default;  // color
+$gl-color-alpha-dark-2: rgba(5, 5, 6, 0.02) !default;  // color
+$gl-color-alpha-dark-24: rgba(5, 5, 6, 0.24) !default;  // color
+$gl-color-alpha-dark-4: rgba(5, 5, 6, 0.04) !default;  // color
+$gl-color-alpha-dark-40: rgba(5, 5, 6, 0.4) !default;  // color
+$gl-color-alpha-dark-6: rgba(5, 5, 6, 0.06) !default;  // color
+$gl-color-alpha-dark-8: rgba(5, 5, 6, 0.08) !default;  // color
+$gl-color-alpha-light-16: rgba(255, 255, 255, 0.16) !default;  // color
+$gl-color-alpha-light-2: rgba(255, 255, 255, 0.02) !default;  // color
+$gl-color-alpha-light-24: rgba(255, 255, 255, 0.24) !default;  // color
+$gl-color-alpha-light-36: rgba(255, 255, 255, 0.36) !default;  // color
+$gl-color-alpha-light-4: rgba(255, 255, 255, 0.04) !default;  // color
+$gl-color-alpha-light-40: rgba(255, 255, 255, 0.4) !default;  // color
+$gl-color-alpha-light-6: rgba(255, 255, 255, 0.06) !default;  // color
+$gl-color-alpha-light-8: rgba(255, 255, 255, 0.08) !default;  // color
+$gl-color-blue-100: #cbe2f9 !default;  // color
+$gl-color-blue-200: #9dc7f1 !default;  // color
+$gl-color-blue-300: #63a6e9 !default;  // color
+$gl-color-blue-400: #428fdc !default;  // color
+$gl-color-blue-50: #e9f3fc !default;  // color
+$gl-color-blue-500: #1f75cb !default;  // color
+$gl-color-blue-600: #2f68b4 !default;  // color
+$gl-color-blue-700: #2f5ca0 !default;  // color
+$gl-color-blue-800: #284779 !default;  // color
+$gl-color-blue-900: #213454 !default;  // color
+$gl-color-blue-950: #1d283e !default;  // color
+$gl-color-brand-charcoal: #171321 !default;  // color
+$gl-color-brand-gray-01: #d1d0d3 !default;  // color
+$gl-color-brand-gray-02: #a2a1a6 !default;  // color
+$gl-color-brand-gray-03: #74717a !default;  // color
+$gl-color-brand-gray-04: #45424d !default;  // color
+$gl-color-brand-gray-05: #2b2838 !default;  // color
+$gl-color-brand-orange-01g: #ffd1bf !default;  // color
+$gl-color-brand-orange-01p: #fca326 !default;  // color
+$gl-color-brand-orange-02p: #fc6d26 !default;  // color
+$gl-color-brand-orange-03p: #e24329 !default;  // color
+$gl-color-brand-pink-01g: #ffb9c9 !default;  // color
+$gl-color-brand-purple-01g: #ceb3ef !default;  // color
+$gl-color-brand-purple-01p: #a989f5 !default;  // color
+$gl-color-brand-purple-02p: #7759c2 !default;  // color
+$gl-color-brand-white: #fff !default;  // color
+$gl-color-data-aqua-100: #93f2ef !default;  // color
+$gl-color-data-aqua-200: #5edee3 !default;  // color
+$gl-color-data-aqua-300: #32c5d2 !default;  // color
+$gl-color-data-aqua-400: #00acc4 !default;  // color
+$gl-color-data-aqua-50: #b5fefd !default;  // color
+$gl-color-data-aqua-500: #0090b1 !default;  // color
+$gl-color-data-aqua-600: #007b9b !default;  // color
+$gl-color-data-aqua-700: #006381 !default;  // color
+$gl-color-data-aqua-800: #00516c !default;  // color
+$gl-color-data-aqua-900: #004059 !default;  // color
+$gl-color-data-aqua-950: #00344b !default;  // color
+$gl-color-data-blue-100: #d2dcff !default;  // color
+$gl-color-data-blue-200: #b7c6ff !default;  // color
+$gl-color-data-blue-300: #97acff !default;  // color
+$gl-color-data-blue-400: #7992f5 !default;  // color
+$gl-color-data-blue-50: #e9ebff !default;  // color
+$gl-color-data-blue-500: #617ae2 !default;  // color
+$gl-color-data-blue-600: #4e65cd !default;  // color
+$gl-color-data-blue-700: #3f51ae !default;  // color
+$gl-color-data-blue-800: #374291 !default;  // color
+$gl-color-data-blue-900: #303470 !default;  // color
+$gl-color-data-blue-950: #2a2b59 !default;  // color
+$gl-color-data-green-100: #c6ed94 !default;  // color
+$gl-color-data-green-200: #b0d97b !default;  // color
+$gl-color-data-green-300: #94c25e !default;  // color
+$gl-color-data-green-400: #81ac41 !default;  // color
+$gl-color-data-green-50: #ddfab7 !default;  // color
+$gl-color-data-green-500: #619025 !default;  // color
+$gl-color-data-green-600: #4e7f0e !default;  // color
+$gl-color-data-green-700: #366800 !default;  // color
+$gl-color-data-green-800: #275600 !default;  // color
+$gl-color-data-green-900: #1a4500 !default;  // color
+$gl-color-data-green-950: #133a03 !default;  // color
+$gl-color-data-magenta-100: #ffccdb !default;  // color
+$gl-color-data-magenta-200: #fcacc5 !default;  // color
+$gl-color-data-magenta-300: #f88aaf !default;  // color
+$gl-color-data-magenta-400: #e86e9a !default;  // color
+$gl-color-data-magenta-50: #ffe3eb !default;  // color
+$gl-color-data-magenta-500: #cf4d81 !default;  // color
+$gl-color-data-magenta-600: #b93d71 !default;  // color
+$gl-color-data-magenta-700: #9a2e5d !default;  // color
+$gl-color-data-magenta-800: #7c214f !default;  // color
+$gl-color-data-magenta-900: #661e3a !default;  // color
+$gl-color-data-magenta-950: #541d31 !default;  // color
+$gl-color-data-orange-100: #f5d6b3 !default;  // color
+$gl-color-data-orange-200: #eebd8c !default;  // color
+$gl-color-data-orange-300: #e99b60 !default;  // color
+$gl-color-data-orange-400: #e07e41 !default;  // color
+$gl-color-data-orange-50: #fae8d1 !default;  // color
+$gl-color-data-orange-500: #c95d2e !default;  // color
+$gl-color-data-orange-600: #b14f18 !default;  // color
+$gl-color-data-orange-700: #92430a !default;  // color
+$gl-color-data-orange-800: #6f3500 !default;  // color
+$gl-color-data-orange-900: #5e2f05 !default;  // color
+$gl-color-data-orange-950: #4b2707 !default;  // color
+$gl-color-green-100: #c3e6cd !default;  // color
+$gl-color-green-200: #91d4a8 !default;  // color
+$gl-color-green-300: #52b87a !default;  // color
+$gl-color-green-400: #2da160 !default;  // color
+$gl-color-green-50: #ecf4ee !default;  // color
+$gl-color-green-500: #108548 !default;  // color
+$gl-color-green-600: #2f7549 !default;  // color
+$gl-color-green-700: #306440 !default;  // color
+$gl-color-green-800: #225131 !default;  // color
+$gl-color-green-900: #1e3e28 !default;  // color
+$gl-color-green-950: #17291c !default;  // color
+$gl-color-neutral-0: #fff !default;  // color
+$gl-color-neutral-10: #f7f7f5 !default;  // color
+$gl-color-neutral-100: #dcdbd9 !default;  // color
+$gl-color-neutral-1000: #050408 !default;  // color
+$gl-color-neutral-200: #c1bfbe !default;  // color
+$gl-color-neutral-300: #a5a3a3 !default;  // color
+$gl-color-neutral-400: #8a8888 !default;  // color
+$gl-color-neutral-50: #ecebea !default;  // color
+$gl-color-neutral-500: #747273 !default;  // color
+$gl-color-neutral-600: #646163 !default;  // color
+$gl-color-neutral-700: #4d4b4e !default;  // color
+$gl-color-neutral-800: #3a383d !default;  // color
+$gl-color-neutral-900: #28272d !default;  // color
+$gl-color-neutral-950: #18171d !default;  // color
+$gl-color-orange-100: #f5d9a8 !default;  // color
+$gl-color-orange-200: #e9be74 !default;  // color
+$gl-color-orange-300: #d99530 !default;  // color
+$gl-color-orange-400: #c17d10 !default;  // color
+$gl-color-orange-50: #fdf1dd !default;  // color
+$gl-color-orange-500: #ab6100 !default;  // color
+$gl-color-orange-600: #995715 !default;  // color
+$gl-color-orange-700: #894b16 !default;  // color
+$gl-color-orange-800: #693c14 !default;  // color
+$gl-color-orange-900: #532e16 !default;  // color
+$gl-color-orange-950: #382315 !default;  // color
+$gl-color-purple-100: #e1d8f9 !default;  // color
+$gl-color-purple-200: #cbbbf2 !default;  // color
+$gl-color-purple-300: #ac93e6 !default;  // color
+$gl-color-purple-400: #9475db !default;  // color
+$gl-color-purple-50: #f4f0ff !default;  // color
+$gl-color-purple-500: #7b58cf !default;  // color
+$gl-color-purple-600: #6a4fb4 !default;  // color
+$gl-color-purple-700: #5c47a6 !default;  // color
+$gl-color-purple-800: #493c83 !default;  // color
+$gl-color-purple-900: #342d59 !default;  // color
+$gl-color-purple-950: #27243e !default;  // color
+$gl-color-red-100: #fdd4cd !default;  // color
+$gl-color-red-200: #fcb5aa !default;  // color
+$gl-color-red-300: #f6806d !default;  // color
+$gl-color-red-400: #ec5941 !default;  // color
+$gl-color-red-50: #fcf1ef !default;  // color
+$gl-color-red-500: #dd2b0e !default;  // color
+$gl-color-red-600: #c02f12 !default;  // color
+$gl-color-red-700: #a32c12 !default;  // color
+$gl-color-red-800: #812713 !default;  // color
+$gl-color-red-900: #582014 !default;  // color
+$gl-color-red-950: #3e1a14 !default;  // color
+$gl-control-background-color-concatenation: #f7f7f5 !default;  // color
+$gl-control-background-color-default: #fff !default;  // color
+$gl-control-background-color-disabled: #f7f7f5 !default;  // color
+$gl-control-background-color-readonly: rgba(5, 5, 6, 0.02) !default;  // color
+$gl-control-background-color-selected-default: #3a383d !default;  // color
+$gl-control-background-color-selected-focus: #18171d !default;  // color
+$gl-control-background-color-selected-hover: #18171d !default;  // color
+$gl-control-border-color-default: #8a8888 !default;  // color
+$gl-control-border-color-disabled: #dcdbd9 !default;  // color
+$gl-control-border-color-error: #dd2b0e !default;  // color
+$gl-control-border-color-focus: #28272d !default;  // color
+$gl-control-border-color-hover: #646163 !default;  // color
+$gl-control-border-color-selected-default: #3a383d !default;  // color
+$gl-control-border-color-selected-focus: #18171d !default;  // color
+$gl-control-border-color-selected-hover: #18171d !default;  // color
+$gl-control-border-radius: 0.5rem !default;  // dimension
+$gl-control-indicator-color-disabled: #747273 !default;  // color
+$gl-control-indicator-color-selected: #fff !default;  // color
+$gl-control-placeholder-color: #747273 !default;  // color
+$gl-control-text-color-error: #c02f12 !default;  // color
+$gl-control-text-color-valid: #2f7549 !default;  // color
+$gl-datepicker-background-color: #fff !default;  // color
+$gl-datepicker-date-text-color-selected: #fff !default;  // color
+$gl-drawer-border-radius: 1rem !default;  // dimension
+$gl-dropdown-background-color: #fff !default;  // color
+$gl-dropdown-border-color: #c1bfbe !default;  // color
+$gl-dropdown-border-radius: 0.5rem !default;  // dimension
+$gl-dropdown-divider-color: #dcdbd9 !default;  // color
+$gl-dropdown-option-background-color-selected-active: #c1bfbe !default;  // color
+$gl-dropdown-option-background-color-selected-default: #ecebea !default;  // color
+$gl-dropdown-option-background-color-selected-focus: #dcdbd9 !default;  // color
+$gl-dropdown-option-background-color-selected-hover: #dcdbd9 !default;  // color
+$gl-dropdown-option-background-color-unselected-active: rgba(5, 5, 6, 0.16) !default;  // color
+$gl-dropdown-option-background-color-unselected-default: rgba(0, 0, 0, 0) !default;  // color
+$gl-dropdown-option-background-color-unselected-focus: rgba(5, 5, 6, 0.06) !default;  // color
+$gl-dropdown-option-background-color-unselected-hover: rgba(5, 5, 6, 0.06) !default;  // color
+$gl-dropdown-option-indicator-color-selected-active: #18171d !default;  // color
+$gl-dropdown-option-indicator-color-selected-default: #3a383d !default;  // color
+$gl-dropdown-option-indicator-color-selected-focus: #18171d !default;  // color
+$gl-dropdown-option-indicator-color-selected-hover: #18171d !default;  // color
+$gl-dropdown-option-text-color-active: #28272d !default;  // color
+$gl-dropdown-option-text-color-default: #28272d !default;  // color
+$gl-dropdown-option-text-color-disabled: #8a8888 !default;  // color
+$gl-dropdown-option-text-color-focus: #28272d !default;  // color
+$gl-dropdown-option-text-color-hover: #28272d !default;  // color
+$gl-dropdown-search-background-color: rgba(5, 5, 6, 0.02) !default;  // color
+$gl-feedback-border-radius: 0.5rem !default;  // dimension
+$gl-feedback-brand-background-color: #f4f0ff !default;  // color
+$gl-feedback-brand-border-color: #cbbbf2 !default;  // color
+$gl-feedback-brand-icon-color: #6a4fb4 !default;  // color
+$gl-feedback-brand-text-color: #5c47a6 !default;  // color
+$gl-feedback-danger-background-color: #fcf1ef !default;  // color
+$gl-feedback-danger-border-color: #dd2b0e !default;  // color
+$gl-feedback-danger-icon-color: #c02f12 !default;  // color
+$gl-feedback-danger-text-color: #a32c12 !default;  // color
+$gl-feedback-info-background-color: #e9f3fc !default;  // color
+$gl-feedback-info-border-color: #9dc7f1 !default;  // color
+$gl-feedback-info-icon-color: #2f68b4 !default;  // color
+$gl-feedback-info-text-color: #2f5ca0 !default;  // color
+$gl-feedback-neutral-background-color: #ecebea !default;  // color
+$gl-feedback-neutral-border-color: #c1bfbe !default;  // color
+$gl-feedback-neutral-icon-color: #646163 !default;  // color
+$gl-feedback-neutral-text-color: #4d4b4e !default;  // color
+$gl-feedback-strong-background-color: #3a383d !default;  // color
+$gl-feedback-strong-border-color: #050408 !default;  // color
+$gl-feedback-strong-icon-color: #fff !default;  // color
+$gl-feedback-strong-link-color: #63a6e9 !default;  // color
+$gl-feedback-strong-text-color: #fff !default;  // color
+$gl-feedback-success-background-color: #ecf4ee !default;  // color
+$gl-feedback-success-border-color: #91d4a8 !default;  // color
+$gl-feedback-success-icon-color: #2f7549 !default;  // color
+$gl-feedback-success-text-color: #306440 !default;  // color
+$gl-feedback-warning-background-color: #fdf1dd !default;  // color
+$gl-feedback-warning-border-color: #e9be74 !default;  // color
+$gl-feedback-warning-icon-color: #995715 !default;  // color
+$gl-feedback-warning-text-color: #894b16 !default;  // color
+$gl-filtered-search-token-data-background-color-default: #dcdbd9 !default;  // color
+$gl-filtered-search-token-data-background-color-hover: #c1bfbe !default;  // color
+$gl-filtered-search-token-operator-background-color-default: #ecebea !default;  // color
+$gl-filtered-search-token-operator-background-color-hover: #dcdbd9 !default;  // color
+$gl-filtered-search-token-type-background-color-default: #ecebea !default;  // color
+$gl-filtered-search-token-type-background-color-hover: #dcdbd9 !default;  // color
+$gl-focus-ring-inner-color: #fff !default;  // color
+$gl-focus-ring-outer-color: #1f75cb !default;  // color
+$gl-font-family-monospace: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0 !default;  // string
+$gl-font-family-regular: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0 !default;  // string
+$gl-font-size-100: 0.75rem !default;  // dimension
+$gl-font-size-100-fixed: 0.75rem !default;  // dimension
+$gl-font-size-200: 0.8125rem !default;  // dimension
+$gl-font-size-200-fixed: 0.8125rem !default;  // dimension
+$gl-font-size-300: 0.875rem !default;  // dimension
+$gl-font-size-300-fixed: 0.875rem !default;  // dimension
+$gl-font-size-400: 1rem !default;  // dimension
+$gl-font-size-400-fixed: 1rem !default;  // dimension
+$gl-font-size-500: clamp(1.125rem, 0.9027777778rem + 0.462962963vw, 1.25rem) !default;  // string
+$gl-font-size-500-fixed: 1.125rem !default;  // dimension
+$gl-font-size-600: clamp(1.3125rem, 0.8680555556rem + 0.9259259259vw, 1.5625rem) !default;  // string
+$gl-font-size-600-fixed: 1.3125rem !default;  // dimension
+$gl-font-size-700: clamp(1.5rem, 0.8333333333rem + 1.3888888889vw, 1.875rem) !default;  // string
+$gl-font-size-700-fixed: 1.5rem !default;  // dimension
+$gl-font-size-800: clamp(1.75rem, 0.8611111111rem + 1.8518518519vw, 2.25rem) !default;  // string
+$gl-font-size-800-fixed: 1.75rem !default;  // dimension
+$gl-font-size-base: 0.875rem !default;  // dimension
+$gl-font-size-lg: 1rem !default;  // dimension
+$gl-font-size-md: 0.875rem !default;  // dimension
+$gl-font-size-sm: 0.75rem !default;  // dimension
+$gl-font-size-xs: 0.625rem !default;  // dimension
+$gl-font-weight-100: 100 !default;  // fontWeight
+$gl-font-weight-300: 300 !default;  // fontWeight
+$gl-font-weight-bold: 600 !default;  // fontWeight
+$gl-font-weight-heading: 600 !default;  // fontWeight
+$gl-font-weight-normal: 400 !default;  // fontWeight
+$gl-font-weight-semibold: 500 !default;  // fontWeight
+$gl-heading-1-color: #18171d !default;  // color
+$gl-heading-1-fixed-color: #18171d !default;  // color
+$gl-heading-1-fixed-font-size: 1.5rem !default;  // dimension
+$gl-heading-1-fixed-font-weight: 600 !default;  // fontWeight
+$gl-heading-1-fixed-letter-spacing: -0.01em !default;  // dimension
+$gl-heading-1-fixed-line-height: 1.25 !default;  // number
+$gl-heading-1-fixed-margin-bottom: 1rem !default;  // dimension
+$gl-heading-1-fixed-margin-top: 0px !default;  // dimension
+$gl-heading-1-font-size: clamp(1.5rem, 0.8333333333rem + 1.3888888889vw, 1.875rem) !default;  // string
+$gl-heading-1-font-weight: 600 !default;  // fontWeight
+$gl-heading-1-letter-spacing: -0.01em !default;  // dimension
+$gl-heading-1-line-height: 1.25 !default;  // number
+$gl-heading-1-margin-bottom: 1rem !default;  // dimension
+$gl-heading-1-margin-top: 0px !default;  // dimension
+$gl-heading-2-color: #18171d !default;  // color
+$gl-heading-2-fixed-color: #18171d !default;  // color
+$gl-heading-2-fixed-font-size: 1.3125rem !default;  // dimension
+$gl-heading-2-fixed-font-weight: 600 !default;  // fontWeight
+$gl-heading-2-fixed-letter-spacing: -0.01em !default;  // dimension
+$gl-heading-2-fixed-line-height: 1.25 !default;  // number
+$gl-heading-2-fixed-margin-bottom: 1rem !default;  // dimension
+$gl-heading-2-fixed-margin-top: 0px !default;  // dimension
+$gl-heading-2-font-size: clamp(1.3125rem, 0.8680555556rem + 0.9259259259vw, 1.5625rem) !default;  // string
+$gl-heading-2-font-weight: 600 !default;  // fontWeight
+$gl-heading-2-letter-spacing: -0.01em !default;  // dimension
+$gl-heading-2-line-height: 1.25 !default;  // number
+$gl-heading-2-margin-bottom: 1rem !default;  // dimension
+$gl-heading-2-margin-top: 0px !default;  // dimension
+$gl-heading-3-color: #18171d !default;  // color
+$gl-heading-3-fixed-color: #18171d !default;  // color
+$gl-heading-3-fixed-font-size: 1.125rem !default;  // dimension
+$gl-heading-3-fixed-font-weight: 600 !default;  // fontWeight
+$gl-heading-3-fixed-letter-spacing: inherit !default;  // string
+$gl-heading-3-fixed-line-height: 1.25 !default;  // number
+$gl-heading-3-fixed-margin-bottom: 1rem !default;  // dimension
+$gl-heading-3-fixed-margin-top: 0px !default;  // dimension
+$gl-heading-3-font-size: clamp(1.125rem, 0.9027777778rem + 0.462962963vw, 1.25rem) !default;  // string
+$gl-heading-3-font-weight: 600 !default;  // fontWeight
+$gl-heading-3-letter-spacing: inherit !default;  // string
+$gl-heading-3-line-height: 1.25 !default;  // number
+$gl-heading-3-margin-bottom: 1rem !default;  // dimension
+$gl-heading-3-margin-top: 0px !default;  // dimension
+$gl-heading-4-color: #18171d !default;  // color
+$gl-heading-4-fixed-color: #18171d !default;  // color
+$gl-heading-4-fixed-font-size: 1rem !default;  // dimension
+$gl-heading-4-fixed-font-weight: 600 !default;  // fontWeight
+$gl-heading-4-fixed-letter-spacing: inherit !default;  // string
+$gl-heading-4-fixed-line-height: 1.25 !default;  // number
+$gl-heading-4-fixed-margin-bottom: 1rem !default;  // dimension
+$gl-heading-4-fixed-margin-top: 0px !default;  // dimension
+$gl-heading-4-font-size: 1rem !default;  // dimension
+$gl-heading-4-font-weight: 600 !default;  // fontWeight
+$gl-heading-4-letter-spacing: inherit !default;  // string
+$gl-heading-4-line-height: 1.25 !default;  // number
+$gl-heading-4-margin-bottom: 1rem !default;  // dimension
+$gl-heading-4-margin-top: 0px !default;  // dimension
+$gl-heading-5-color: #18171d !default;  // color
+$gl-heading-5-fixed-color: #18171d !default;  // color
+$gl-heading-5-fixed-font-size: 0.875rem !default;  // dimension
+$gl-heading-5-fixed-font-weight: 600 !default;  // fontWeight
+$gl-heading-5-fixed-letter-spacing: inherit !default;  // string
+$gl-heading-5-fixed-line-height: 1.25 !default;  // number
+$gl-heading-5-fixed-margin-bottom: 1rem !default;  // dimension
+$gl-heading-5-fixed-margin-top: 0px !default;  // dimension
+$gl-heading-5-font-size: 0.875rem !default;  // dimension
+$gl-heading-5-font-weight: 600 !default;  // fontWeight
+$gl-heading-5-letter-spacing: inherit !default;  // string
+$gl-heading-5-line-height: 1.25 !default;  // number
+$gl-heading-5-margin-bottom: 1rem !default;  // dimension
+$gl-heading-5-margin-top: 0px !default;  // dimension
+$gl-heading-6-color: #18171d !default;  // color
+$gl-heading-6-fixed-color: #18171d !default;  // color
+$gl-heading-6-fixed-font-size: 0.8125rem !default;  // dimension
+$gl-heading-6-fixed-font-weight: 600 !default;  // fontWeight
+$gl-heading-6-fixed-letter-spacing: inherit !default;  // string
+$gl-heading-6-fixed-line-height: 1.25 !default;  // number
+$gl-heading-6-fixed-margin-bottom: 1rem !default;  // dimension
+$gl-heading-6-fixed-margin-top: 0px !default;  // dimension
+$gl-heading-6-font-size: 0.8125rem !default;  // dimension
+$gl-heading-6-font-weight: 600 !default;  // fontWeight
+$gl-heading-6-letter-spacing: inherit !default;  // string
+$gl-heading-6-line-height: 1.25 !default;  // number
+$gl-heading-6-margin-bottom: 1rem !default;  // dimension
+$gl-heading-6-margin-top: 0px !default;  // dimension
+$gl-heading-default-margin-bottom: 1rem !default;  // dimension
+$gl-heading-default-margin-top: 0px !default;  // dimension
+$gl-heading-display-color: #18171d !default;  // color
+$gl-heading-display-font-size: clamp(1.75rem, 0.8611111111rem + 1.8518518519vw, 2.25rem) !default;  // string
+$gl-heading-display-font-weight: 600 !default;  // fontWeight
+$gl-heading-display-letter-spacing: -0.01em !default;  // dimension
+$gl-heading-display-line-height: 1.125 !default;  // number
+$gl-heading-display-margin-bottom: 1.5rem !default;  // dimension
+$gl-heading-display-margin-top: 0px !default;  // dimension
+$gl-heading-scale-100-color: #18171d !default;  // color
+$gl-heading-scale-100-fixed-color: #18171d !default;  // color
+$gl-heading-scale-100-fixed-font-size: 0.75rem !default;  // dimension
+$gl-heading-scale-100-fixed-font-weight: 600 !default;  // fontWeight
+$gl-heading-scale-100-fixed-letter-spacing: inherit !default;  // string
+$gl-heading-scale-100-fixed-line-height: 1.25 !default;  // number
+$gl-heading-scale-100-fixed-margin-top: 0px !default;  // dimension
+$gl-heading-scale-100-font-size: 0.75rem !default;  // dimension
+$gl-heading-scale-100-font-weight: 600 !default;  // fontWeight
+$gl-heading-scale-100-letter-spacing: inherit !default;  // string
+$gl-heading-scale-100-line-height: 1.25 !default;  // number
+$gl-heading-scale-100-margin-top: 0px !default;  // dimension
+$gl-heading-scale-200-color: #18171d !default;  // color
+$gl-heading-scale-200-fixed-color: #18171d !default;  // color
+$gl-heading-scale-200-fixed-font-size: 0.8125rem !default;  // dimension
+$gl-heading-scale-200-fixed-font-weight: 600 !default;  // fontWeight
+$gl-heading-scale-200-fixed-letter-spacing: inherit !default;  // string
+$gl-heading-scale-200-fixed-line-height: 1.25 !default;  // number
+$gl-heading-scale-200-fixed-margin-top: 0px !default;  // dimension
+$gl-heading-scale-200-font-size: 0.8125rem !default;  // dimension
+$gl-heading-scale-200-font-weight: 600 !default;  // fontWeight
+$gl-heading-scale-200-letter-spacing: inherit !default;  // string
+$gl-heading-scale-200-line-height: 1.25 !default;  // number
+$gl-heading-scale-200-margin-top: 0px !default;  // dimension
+$gl-heading-scale-300-color: #18171d !default;  // color
+$gl-heading-scale-300-fixed-color: #18171d !default;  // color
+$gl-heading-scale-300-fixed-font-size: 0.875rem !default;  // dimension
+$gl-heading-scale-300-fixed-font-weight: 600 !default;  // fontWeight
+$gl-heading-scale-300-fixed-letter-spacing: inherit !default;  // string
+$gl-heading-scale-300-fixed-line-height: 1.25 !default;  // number
+$gl-heading-scale-300-fixed-margin-top: 0px !default;  // dimension
+$gl-heading-scale-300-font-size: 0.875rem !default;  // dimension
+$gl-heading-scale-300-font-weight: 600 !default;  // fontWeight
+$gl-heading-scale-300-letter-spacing: inherit !default;  // string
+$gl-heading-scale-300-line-height: 1.25 !default;  // number
+$gl-heading-scale-300-margin-top: 0px !default;  // dimension
+$gl-heading-scale-400-color: #18171d !default;  // color
+$gl-heading-scale-400-fixed-color: #18171d !default;  // color
+$gl-heading-scale-400-fixed-font-size: 1rem !default;  // dimension
+$gl-heading-scale-400-fixed-font-weight: 600 !default;  // fontWeight
+$gl-heading-scale-400-fixed-letter-spacing: inherit !default;  // string
+$gl-heading-scale-400-fixed-line-height: 1.25 !default;  // number
+$gl-heading-scale-400-fixed-margin-top: 0px !default;  // dimension
+$gl-heading-scale-400-font-size: 1rem !default;  // dimension
+$gl-heading-scale-400-font-weight: 600 !default;  // fontWeight
+$gl-heading-scale-400-letter-spacing: inherit !default;  // string
+$gl-heading-scale-400-line-height: 1.25 !default;  // number
+$gl-heading-scale-400-margin-top: 0px !default;  // dimension
+$gl-heading-scale-500-color: #18171d !default;  // color
+$gl-heading-scale-500-fixed-color: #18171d !default;  // color
+$gl-heading-scale-500-fixed-font-size: 1.125rem !default;  // dimension
+$gl-heading-scale-500-fixed-font-weight: 600 !default;  // fontWeight
+$gl-heading-scale-500-fixed-letter-spacing: inherit !default;  // string
+$gl-heading-scale-500-fixed-line-height: 1.25 !default;  // number
+$gl-heading-scale-500-fixed-margin-top: 0px !default;  // dimension
+$gl-heading-scale-500-font-size: clamp(1.125rem, 0.9027777778rem + 0.462962963vw, 1.25rem) !default;  // string
+$gl-heading-scale-500-font-weight: 600 !default;  // fontWeight
+$gl-heading-scale-500-letter-spacing: inherit !default;  // string
+$gl-heading-scale-500-line-height: 1.25 !default;  // number
+$gl-heading-scale-500-margin-top: 0px !default;  // dimension
+$gl-heading-scale-600-color: #18171d !default;  // color
+$gl-heading-scale-600-fixed-color: #18171d !default;  // color
+$gl-heading-scale-600-fixed-font-size: 1.3125rem !default;  // dimension
+$gl-heading-scale-600-fixed-font-weight: 600 !default;  // fontWeight
+$gl-heading-scale-600-fixed-letter-spacing: -0.01em !default;  // dimension
+$gl-heading-scale-600-fixed-line-height: 1.25 !default;  // number
+$gl-heading-scale-600-fixed-margin-top: 0px !default;  // dimension
+$gl-heading-scale-600-font-size: clamp(1.3125rem, 0.8680555556rem + 0.9259259259vw, 1.5625rem) !default;  // string
+$gl-heading-scale-600-font-weight: 600 !default;  // fontWeight
+$gl-heading-scale-600-letter-spacing: -0.01em !default;  // dimension
+$gl-heading-scale-600-line-height: 1.25 !default;  // number
+$gl-heading-scale-600-margin-top: 0px !default;  // dimension
+$gl-heading-scale-700-color: #18171d !default;  // color
+$gl-heading-scale-700-fixed-color: #18171d !default;  // color
+$gl-heading-scale-700-fixed-font-size: 1.5rem !default;  // dimension
+$gl-heading-scale-700-fixed-font-weight: 600 !default;  // fontWeight
+$gl-heading-scale-700-fixed-letter-spacing: -0.01em !default;  // dimension
+$gl-heading-scale-700-fixed-line-height: 1.25 !default;  // number
+$gl-heading-scale-700-fixed-margin-top: 0px !default;  // dimension
+$gl-heading-scale-700-font-size: clamp(1.5rem, 0.8333333333rem + 1.3888888889vw, 1.875rem) !default;  // string
+$gl-heading-scale-700-font-weight: 600 !default;  // fontWeight
+$gl-heading-scale-700-letter-spacing: -0.01em !default;  // dimension
+$gl-heading-scale-700-line-height: 1.25 !default;  // number
+$gl-heading-scale-700-margin-top: 0px !default;  // dimension
+$gl-heading-scale-800-color: #18171d !default;  // color
+$gl-heading-scale-800-fixed-color: #18171d !default;  // color
+$gl-heading-scale-800-fixed-font-size: 1.75rem !default;  // dimension
+$gl-heading-scale-800-fixed-font-weight: 600 !default;  // fontWeight
+$gl-heading-scale-800-fixed-letter-spacing: -0.01em !default;  // dimension
+$gl-heading-scale-800-fixed-line-height: 1.125 !default;  // number
+$gl-heading-scale-800-fixed-margin-top: 0px !default;  // dimension
+$gl-heading-scale-800-font-size: clamp(1.75rem, 0.8611111111rem + 1.8518518519vw, 2.25rem) !default;  // string
+$gl-heading-scale-800-font-weight: 600 !default;  // fontWeight
+$gl-heading-scale-800-letter-spacing: -0.01em !default;  // dimension
+$gl-heading-scale-800-line-height: 1.125 !default;  // number
+$gl-heading-scale-800-margin-top: 0px !default;  // dimension
+$gl-highlight-match-background-color: #ab6100 !default;  // color
+$gl-highlight-match-text-color: #fff !default;  // color
+$gl-highlight-target-background-color: #e9f3fc !default;  // color
+$gl-highlight-target-border-color: #9dc7f1 !default;  // color
+$gl-icon-color-danger: #c02f12 !default;  // color
+$gl-icon-color-default: #3a383d !default;  // color
+$gl-icon-color-disabled: #8a8888 !default;  // color
+$gl-icon-color-info: #2f5ca0 !default;  // color
+$gl-icon-color-link: #2f5ca0 !default;  // color
+$gl-icon-color-strong: #18171d !default;  // color
+$gl-icon-color-subtle: #646163 !default;  // color
+$gl-icon-color-success: #2f7549 !default;  // color
+$gl-icon-color-warning: #995715 !default;  // color
+$gl-illustration-accent-fill-color-orange: #ff9d73 !default;  // color
+$gl-illustration-accent-fill-color-strong: #aea5d6 !default;  // color
+$gl-illustration-accent-fill-color-subtle: #d0c5e2 !default;  // color
+$gl-illustration-accent-fill-color-teal: #6fdac9 !default;  // color
+$gl-illustration-accent-stroke-color-orange: #ff9d73 !default;  // color
+$gl-illustration-accent-stroke-color-strong: #aea5d6 !default;  // color
+$gl-illustration-accent-stroke-color-teal: #6fdac9 !default;  // color
+$gl-illustration-base-fill-color: #e7e4f2 !default;  // color
+$gl-illustration-fill-color-default: #fff !default;  // color
+$gl-illustration-isometric-accent-front-fill-color: #74717a !default;  // color
+$gl-illustration-isometric-accent-side-fill-color: #2b2838 !default;  // color
+$gl-illustration-isometric-accent-top-fill-color: #45424d !default;  // color
+$gl-illustration-isometric-base-front-fill-color: #d5d0e8 !default;  // color
+$gl-illustration-isometric-base-side-fill-color: #aea5d6 !default;  // color
+$gl-illustration-isometric-base-top-fill-color: #e7e4f2 !default;  // color
+$gl-illustration-isometric-glyph-front-fill-color: #fff !default;  // color
+$gl-illustration-isometric-glyph-shadow-fill-color: #10b1b1 !default;  // color
+$gl-illustration-isometric-glyph-side-fill-color: #6fdac9 !default;  // color
+$gl-illustration-isometric-glyph-top-fill-color: #c5f4ec !default;  // color
+$gl-illustration-isometric-object-front-fill-color: #ffc2a8 !default;  // color
+$gl-illustration-isometric-object-highlight-fill-color: #fff !default;  // color
+$gl-illustration-isometric-object-shadow-fill-color: #e24329 !default;  // color
+$gl-illustration-isometric-object-side-fill-color: #ff7b42 !default;  // color
+$gl-illustration-isometric-object-top-fill-color: #ff9d73 !default;  // color
+$gl-illustration-isometric-stroke-color-default: #171321 !default;  // color
+$gl-illustration-isometric-stroke-width-default: 2 !default;  // string
+$gl-illustration-status-fill-color-danger: #ff9d73 !default;  // color
+$gl-illustration-status-fill-color-neutral: #aea5d6 !default;  // color
+$gl-illustration-status-fill-color-success: #6fdac9 !default;  // color
+$gl-illustration-status-fill-color-warning: #fca326 !default;  // color
+$gl-illustration-stroke-color-default: #171321 !default;  // color
+$gl-illustration-stroke-width-default: 2 !default;  // string
+$gl-label-dark-button-background-color-default: rgba(0, 0, 0, 0) !default;  // color
+$gl-label-dark-button-background-color-hover: #fff !default;  // color
+$gl-label-dark-button-icon-color-default: #fff !default;  // color
+$gl-label-dark-text-color: #fff !default;  // color
+$gl-label-light-button-background-color-default: rgba(0, 0, 0, 0) !default;  // color
+$gl-label-light-button-background-color-hover: #18171d !default;  // color
+$gl-label-light-button-icon-color-default: #18171d !default;  // color
+$gl-label-light-text-color: #18171d !default;  // color
+$gl-label-scoped-button-background-color-hover: #18171d !default;  // color
+$gl-label-scoped-button-icon-color-default: #18171d !default;  // color
+$gl-label-scoped-button-icon-color-hover: #fff !default;  // color
+$gl-label-scoped-text-color: #18171d !default;  // color
+$gl-letter-spacing-heading: -0.01em !default;  // dimension
+$gl-line-height-12: 0.75rem !default;  // dimension
+$gl-line-height-16: 1rem !default;  // dimension
+$gl-line-height-20: 1.25rem !default;  // dimension
+$gl-line-height-24: 1.5rem !default;  // dimension
+$gl-line-height-28: 1.75rem !default;  // dimension
+$gl-line-height-32: 2rem !default;  // dimension
+$gl-line-height-36: 2.25rem !default;  // dimension
+$gl-line-height-42: 2.625rem !default;  // dimension
+$gl-line-height-44: 2.75rem !default;  // dimension
+$gl-line-height-52: 3.25rem !default;  // dimension
+$gl-line-height-heading: 1.25 !default;  // number
+$gl-link-mention-background-color-current: #f5d9a8 !default;  // color
+$gl-link-mention-background-color-default: #cbe2f9 !default;  // color
+$gl-link-mention-text-color-current: #693c14 !default;  // color
+$gl-link-mention-text-color-default: #284779 !default;  // color
+$gl-modal-border-radius: 1rem !default;  // dimension
+$gl-nav-item-background-color-active: #c1bfbe !default;  // color
+$gl-nav-item-background-color-default: rgba(0, 0, 0, 0) !default;  // color
+$gl-nav-item-background-color-focus: #dcdbd9 !default;  // color
+$gl-nav-item-background-color-hover: #dcdbd9 !default;  // color
+$gl-nav-item-border-radius: 0.5rem !default;  // dimension
+$gl-nav-item-font-size: 0.875rem !default;  // dimension
+$gl-nav-item-font-weight: 425 !default;  // fontWeight
+$gl-nav-item-foreground-color-active: #18171d !default;  // color
+$gl-nav-item-foreground-color-default: #646163 !default;  // color
+$gl-nav-item-foreground-color-focus: #18171d !default;  // color
+$gl-nav-item-foreground-color-hover: #18171d !default;  // color
+$gl-nav-item-selected-background-color-active: #c1bfbe !default;  // color
+$gl-nav-item-selected-background-color-default: #dcdbd9 !default;  // color
+$gl-nav-item-selected-background-color-focus: #dcdbd9 !default;  // color
+$gl-nav-item-selected-background-color-hover: #dcdbd9 !default;  // color
+$gl-nav-item-selected-font-weight: 600 !default;  // fontWeight
+$gl-nav-item-selected-foreground-color-active: #18171d !default;  // color
+$gl-nav-item-selected-foreground-color-default: #18171d !default;  // color
+$gl-nav-item-selected-foreground-color-focus: #18171d !default;  // color
+$gl-nav-item-selected-foreground-color-hover: #18171d !default;  // color
+$gl-opacity-0: 0 !default;  // string
+$gl-opacity-1: .1 !default;  // string
+$gl-opacity-10: 1 !default;  // string
+$gl-opacity-2: .2 !default;  // string
+$gl-opacity-3: .3 !default;  // string
+$gl-opacity-4: .4 !default;  // string
+$gl-opacity-5: .5 !default;  // string
+$gl-opacity-6: .6 !default;  // string
+$gl-opacity-7: .7 !default;  // string
+$gl-opacity-8: .8 !default;  // string
+$gl-opacity-9: .9 !default;  // string
+$gl-progress-bar-indicator-color-danger: #dd2b0e !default;  // color
+$gl-progress-bar-indicator-color-default: #1f75cb !default;  // color
+$gl-progress-bar-indicator-color-success: #108548 !default;  // color
+$gl-progress-bar-indicator-color-warning: #ab6100 !default;  // color
+$gl-progress-bar-track-color: #c1bfbe !default;  // color
+$gl-shadow-color-default: rgba(5, 5, 6, 0.16) !default;  // color
+$gl-shadow-lg: rgba(5, 5, 6, 0.16) 0 0 2px 0, rgba(5, 5, 6, 0.16) 0 0 2px 0, rgba(5, 5, 6, 0.16) 0 4px 12px 0 !default;  // string
+$gl-shadow-md: rgba(5, 5, 6, 0.16) 0 0 1px 0, rgba(5, 5, 6, 0.16) 0 0 2px 0, rgba(5, 5, 6, 0.16) 0 2px 8px 0 !default;  // string
+$gl-shadow-sm: rgba(5, 5, 6, 0.16) 0 0 2px 0, rgba(5, 5, 6, 0.16) 0 1px 4px 0 !default;  // string
+$gl-skeleton-loader-background-color: #dcdbd9 !default;  // color
+$gl-skeleton-loader-shimmer-color: #ecebea !default;  // color
+$gl-spacing-scale-0: 0px !default;  // dimension
+$gl-spacing-scale-1: 0.125rem !default;  // dimension
+$gl-spacing-scale-10: 3.5rem !default;  // dimension
+$gl-spacing-scale-11: 4rem !default;  // dimension
+$gl-spacing-scale-11-5: 4.5rem !default;  // dimension
+$gl-spacing-scale-12: 5rem !default;  // dimension
+$gl-spacing-scale-13: 6rem !default;  // dimension
+$gl-spacing-scale-15: 7.5rem !default;  // dimension
+$gl-spacing-scale-18: 9rem !default;  // dimension
+$gl-spacing-scale-2: 0.25rem !default;  // dimension
+$gl-spacing-scale-20: 10rem !default;  // dimension
+$gl-spacing-scale-26: 13rem !default;  // dimension
+$gl-spacing-scale-28: 14rem !default;  // dimension
+$gl-spacing-scale-2-5: 0.375rem !default;  // dimension
+$gl-spacing-scale-3: 0.5rem !default;  // dimension
+$gl-spacing-scale-30: 15rem !default;  // dimension
+$gl-spacing-scale-31: 15.5rem !default;  // dimension
+$gl-spacing-scale-33: 16.5rem !default;  // dimension
+$gl-spacing-scale-34: 17rem !default;  // dimension
+$gl-spacing-scale-37: 18.5rem !default;  // dimension
+$gl-spacing-scale-4: 0.75rem !default;  // dimension
+$gl-spacing-scale-48: 24rem !default;  // dimension
+$gl-spacing-scale-5: 1rem !default;  // dimension
+$gl-spacing-scale-6: 1.5rem !default;  // dimension
+$gl-spacing-scale-62: 31rem !default;  // dimension
+$gl-spacing-scale-7: 2rem !default;  // dimension
+$gl-spacing-scale-75: 37.5rem !default;  // dimension
+$gl-spacing-scale-8: 2.5rem !default;  // dimension
+$gl-spacing-scale-80: 40rem !default;  // dimension
+$gl-spacing-scale-88: 44rem !default;  // dimension
+$gl-spacing-scale-9: 3rem !default;  // dimension
+$gl-spacing-scale-px: 1px !default;  // dimension
+$gl-spinner-segment-color-default: #4d4b4e !default;  // color
+$gl-spinner-segment-color-light: #c1bfbe !default;  // color
+$gl-spinner-track-color-default: #dcdbd9 !default;  // color
+$gl-spinner-track-color-light: #3a383d !default;  // color
+$gl-status-brand-background-color: #e1d8f9 !default;  // color
+$gl-status-brand-icon-color: #7b58cf !default;  // color
+$gl-status-brand-text-color: #5c47a6 !default;  // color
+$gl-status-danger-background-color: #fdd4cd !default;  // color
+$gl-status-danger-icon-color: #dd2b0e !default;  // color
+$gl-status-danger-text-color: #a32c12 !default;  // color
+$gl-status-info-background-color: #cbe2f9 !default;  // color
+$gl-status-info-icon-color: #1f75cb !default;  // color
+$gl-status-info-text-color: #2f5ca0 !default;  // color
+$gl-status-neutral-background-color: #dcdbd9 !default;  // color
+$gl-status-neutral-icon-color: #747273 !default;  // color
+$gl-status-neutral-text-color: #4d4b4e !default;  // color
+$gl-status-success-background-color: #c3e6cd !default;  // color
+$gl-status-success-icon-color: #108548 !default;  // color
+$gl-status-success-text-color: #306440 !default;  // color
+$gl-status-warning-background-color: #f5d9a8 !default;  // color
+$gl-status-warning-icon-color: #ab6100 !default;  // color
+$gl-status-warning-text-color: #894b16 !default;  // color
+$gl-table-row-background-color-hover: #e9f3fc !default;  // color
+$gl-table-sorting-icon-color: #18171d !default;  // color
+$gl-tab-selected-indicator-color-default: #050408 !default;  // color
+$gl-text-color-danger: #c02f12 !default;  // color
+$gl-text-color-default: #3a383d !default;  // color
+$gl-text-color-disabled: #8a8888 !default;  // color
+$gl-text-color-heading: #18171d !default;  // color
+$gl-text-color-link: #2f5ca0 !default;  // color
+$gl-text-color-strong: #18171d !default;  // color
+$gl-text-color-subtle: #646163 !default;  // color
+$gl-text-color-success: #2f7549 !default;  // color
+$gl-text-color-warning: #995715 !default;  // color
+$gl-text-primary: #3a383d !default;  // color
+$gl-text-secondary: #646163 !default;  // color
+$gl-text-tertiary: #8a8888 !default;  // color
+$gl-toggle-switch-background-color-checked-active: #fff !default;  // color
+$gl-toggle-switch-background-color-checked-default: #fff !default;  // color
+$gl-toggle-switch-background-color-checked-disabled: #fff !default;  // color
+$gl-toggle-switch-background-color-checked-focus: #fff !default;  // color
+$gl-toggle-switch-background-color-checked-hover: #fff !default;  // color
+$gl-toggle-switch-background-color-disabled: #8a8888 !default;  // color
+$gl-toggle-switch-background-color-unchecked-active: #3a383d !default;  // color
+$gl-toggle-switch-background-color-unchecked-default: #3a383d !default;  // color
+$gl-toggle-switch-background-color-unchecked-disabled: #8a8888 !default;  // color
+$gl-toggle-switch-background-color-unchecked-focus: #3a383d !default;  // color
+$gl-toggle-switch-background-color-unchecked-hover: #3a383d !default;  // color
+$gl-toggle-switch-icon-color-checked-active: #050408 !default;  // color
+$gl-toggle-switch-icon-color-checked-default: #3a383d !default;  // color
+$gl-toggle-switch-icon-color-checked-focus: #18171d !default;  // color
+$gl-toggle-switch-icon-color-checked-hover: #18171d !default;  // color
+$gl-toggle-switch-icon-color-disabled: #ecebea !default;  // color
+$gl-toggle-switch-icon-color-unchecked-active: #fff !default;  // color
+$gl-toggle-switch-icon-color-unchecked-default: #fff !default;  // color
+$gl-toggle-switch-icon-color-unchecked-focus: #fff !default;  // color
+$gl-toggle-switch-icon-color-unchecked-hover: #fff !default;  // color
+$gl-toggle-switch-track-border-color-checked-active: #050408 !default;  // color
+$gl-toggle-switch-track-border-color-checked-default: #3a383d !default;  // color
+$gl-toggle-switch-track-border-color-checked-disabled: #8a8888 !default;  // color
+$gl-toggle-switch-track-border-color-checked-focus: #18171d !default;  // color
+$gl-toggle-switch-track-border-color-checked-hover: #18171d !default;  // color
+$gl-toggle-switch-track-border-color-loading: #ecebea !default;  // color
+$gl-toggle-switch-track-border-color-unchecked-active: #646163 !default;  // color
+$gl-toggle-switch-track-border-color-unchecked-default: #8a8888 !default;  // color
+$gl-toggle-switch-track-border-color-unchecked-disabled: #dcdbd9 !default;  // color
+$gl-toggle-switch-track-border-color-unchecked-focus: #646163 !default;  // color
+$gl-toggle-switch-track-border-color-unchecked-hover: #646163 !default;  // color
+$gl-toggle-switch-track-color-checked-active: #050408 !default;  // color
+$gl-toggle-switch-track-color-checked-default: #3a383d !default;  // color
+$gl-toggle-switch-track-color-checked-disabled: #8a8888 !default;  // color
+$gl-toggle-switch-track-color-checked-focus: #18171d !default;  // color
+$gl-toggle-switch-track-color-checked-hover: #18171d !default;  // color
+$gl-toggle-switch-track-color-loading: #ecebea !default;  // color
+$gl-toggle-switch-track-color-unchecked-active: rgba(5, 5, 6, 0.16) !default;  // color
+$gl-toggle-switch-track-color-unchecked-default: #fff !default;  // color
+$gl-toggle-switch-track-color-unchecked-disabled: #fff !default;  // color
+$gl-toggle-switch-track-color-unchecked-focus: #fff !default;  // color
+$gl-toggle-switch-track-color-unchecked-hover: #fff !default;  // color
+$gl-token-background-color: #dcdbd9 !default;  // color
+$gl-token-border-radius: 0.25rem !default;  // dimension
+$gl-token-foreground-color: #3a383d !default;  // color
+$gl-token-selector-token-container-token-background-color-focus: #a5a3a3 !default;  // color
+$gl-tooltip-text-color-subtle: #c1bfbe !default;  // color
+$gl-zindex-0: 0 !default;  // string
+$gl-zindex-1: 1 !default;  // string
+$gl-zindex-2: 2 !default;  // string
+$gl-zindex-200: 200 !default;  // string
+$gl-zindex-3: 3 !default;  // string
+$gl-zindex-4: 4 !default;  // string
+$gl-zindex-9999: 9999 !default;  // string
+$gray-10: #f7f7f5 !default;  // color
+$gray-100: #dcdbd9 !default;  // color
+$gray-200: #c1bfbe !default;  // color
+$gray-300: #a5a3a3 !default;  // color
+$gray-400: #8a8888 !default;  // color
+$gray-50: #ecebea !default;  // color
+$gray-500: #747273 !default;  // color
+$gray-600: #646163 !default;  // color
+$gray-700: #4d4b4e !default;  // color
+$gray-800: #3a383d !default;  // color
+$gray-900: #28272d !default;  // color
+$gray-950: #18171d !default;  // color
+$green-100: #c3e6cd !default;  // color
+$green-200: #91d4a8 !default;  // color
+$green-300: #52b87a !default;  // color
+$green-400: #2da160 !default;  // color
+$green-50: #ecf4ee !default;  // color
+$green-500: #108548 !default;  // color
+$green-600: #2f7549 !default;  // color
+$green-700: #306440 !default;  // color
+$green-800: #225131 !default;  // color
+$green-900: #1e3e28 !default;  // color
+$green-950: #17291c !default;  // color
+$orange-100: #f5d9a8 !default;  // color
+$orange-200: #e9be74 !default;  // color
+$orange-300: #d99530 !default;  // color
+$orange-400: #c17d10 !default;  // color
+$orange-50: #fdf1dd !default;  // color
+$orange-500: #ab6100 !default;  // color
+$orange-600: #995715 !default;  // color
+$orange-700: #894b16 !default;  // color
+$orange-800: #693c14 !default;  // color
+$orange-900: #532e16 !default;  // color
+$orange-950: #382315 !default;  // color
+$purple-100: #e1d8f9 !default;  // color
+$purple-200: #cbbbf2 !default;  // color
+$purple-300: #ac93e6 !default;  // color
+$purple-400: #9475db !default;  // color
+$purple-50: #f4f0ff !default;  // color
+$purple-500: #7b58cf !default;  // color
+$purple-600: #6a4fb4 !default;  // color
+$purple-700: #5c47a6 !default;  // color
+$purple-800: #493c83 !default;  // color
+$purple-900: #342d59 !default;  // color
+$purple-950: #27243e !default;  // color
+$red-100: #fdd4cd !default;  // color
+$red-200: #fcb5aa !default;  // color
+$red-300: #f6806d !default;  // color
+$red-400: #ec5941 !default;  // color
+$red-50: #fcf1ef !default;  // color
+$red-500: #dd2b0e !default;  // color
+$red-600: #c02f12 !default;  // color
+$red-700: #a32c12 !default;  // color
+$red-800: #812713 !default;  // color
+$red-900: #582014 !default;  // color
+$red-950: #3e1a14 !default;  // color
+$t-gray-a-02: rgba(5, 5, 6, 0.02) !default;  // color
+$t-gray-a-04: rgba(5, 5, 6, 0.04) !default;  // color
+$t-gray-a-06: rgba(5, 5, 6, 0.06) !default;  // color
+$t-gray-a-08: rgba(5, 5, 6, 0.08) !default;  // color
+$t-gray-a-16: rgba(5, 5, 6, 0.16) !default;  // color
+$t-gray-a-24: rgba(5, 5, 6, 0.24) !default;  // color
+$t-white-a-02: rgba(255, 255, 255, 0.02) !default;  // color
+$t-white-a-04: rgba(255, 255, 255, 0.04) !default;  // color
+$t-white-a-06: rgba(255, 255, 255, 0.06) !default;  // color
+$t-white-a-08: rgba(255, 255, 255, 0.08) !default;  // color
+$t-white-a-16: rgba(255, 255, 255, 0.16) !default;  // color
+$t-white-a-24: rgba(255, 255, 255, 0.24) !default;  // color
+$t-white-a-36: rgba(255, 255, 255, 0.36) !default;  // color
+$white: #fff !default;  // color

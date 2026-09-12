@@ -1,0 +1,31 @@
+<!-- Pajamas-inspired (MIT). htmx fragment: modal -->
+<style>
+      :focus-visible { outline: none; box-shadow: 0 0 0 2px var(--gl-focus-ring-inner-color), 0 0 0 4px var(--gl-focus-ring-outer-color); }
+      .spin { animation: gl-spin .8s linear infinite; }
+      @keyframes gl-spin { to { transform: rotate(360deg); } }
+      .htmx-indicator { display: none; }
+      .htmx-request .htmx-indicator, .htmx-request.htmx-indicator { display: inline-flex; }
+    </style>
+<div>
+  <button
+    hx-get="/more/modal-content.html" hx-target="#modal-slot" hx-swap="innerHTML"
+    class="rounded-[var(--gl-button-border-radius)] bg-[var(--gl-button-default-primary-background-color-default)] text-[color:var(--gl-button-default-primary-foreground-color-default)] px-[var(--gl-spacing-scale-3)] py-[var(--gl-spacing-scale-3)] font-bold"
+    onclick="document.getElementById('gl-dialog').showModal()">Open dialog</button>
+
+  <dialog id="gl-dialog" class="w-full rounded-[var(--gl-modal-border-radius)]" style="max-width: var(--gl-spacing-scale-48); background-color: var(--gl-background-color-default); color: var(--gl-text-color-default); box-shadow: var(--gl-shadow-lg); border: 0; padding: 0">
+    <div>
+      <div class="flex items-center justify-between" style="padding: var(--gl-spacing-scale-4) var(--gl-spacing-scale-5)">
+        <h3 class="text-[length:var(--gl-heading-scale-500-font-size)] font-bold m-0" style="color: var(--gl-text-color-heading)">Delete project</h3>
+        <form method="dialog"><button class="bg-transparent border-0 cursor-pointer rounded" style="color: var(--gl-text-color-subtle)"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></form>
+      </div>
+      <div style="padding: var(--gl-spacing-scale-3) var(--gl-spacing-scale-5) var(--gl-spacing-scale-5)">
+        <p>You are about to remove <strong id="modal-slot">my-project</strong>. This action cannot be undone.</p>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-3" style="padding: var(--gl-spacing-scale-4) var(--gl-spacing-scale-5) var(--gl-spacing-scale-5)">
+        <button hx-post="/projects/delete" hx-target="#modal-slot"
+                class="rounded-[var(--gl-button-border-radius)] bg-[var(--gl-button-danger-primary-background-color-default)] text-[color:var(--gl-button-danger-primary-foreground-color-default)] px-[var(--gl-spacing-scale-3)] py-[var(--gl-spacing-scale-3)] font-bold">Delete</button>
+        <form method="dialog"><button class="rounded-[var(--gl-button-border-radius)] bg-[var(--gl-button-default-secondary-background-color-default)] text-[color:var(--gl-button-default-secondary-foreground-color-default)] px-[var(--gl-spacing-scale-3)] py-[var(--gl-spacing-scale-3)] font-bold">Cancel</button></form>
+      </div>
+    </div>
+  </dialog>
+</div>

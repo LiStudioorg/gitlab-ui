@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Input</title>
+<link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="base.css">
+    <style>
+.gl-form-group { margin-bottom: var(--gl-spacing-scale-5); }
+.gl-label { display: block; margin-bottom: var(--gl-spacing-scale-2); }
+.gl-input {
+  width: 100%;
+  padding: var(--gl-spacing-scale-3);
+  font-size: var(--gl-font-size-base);
+  line-height: var(--gl-line-height-20);
+  color: var(--gl-text-color-default);
+  background-color: var(--gl-control-background-color-default);
+  border: 1px solid var(--gl-control-border-color-default);
+  border-radius: var(--gl-control-border-radius);
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+.gl-input::placeholder { color: var(--gl-control-placeholder-color); }
+.gl-input:hover { border-color: var(--gl-control-border-color-hover); }
+.gl-input:focus { outline: none; border-color: var(--gl-control-border-color-focus); outline: none; box-shadow: 0 0 0 2px var(--gl-focus-ring-inner-color), 0 0 0 4px var(--gl-focus-ring-outer-color); }
+.gl-input:disabled { background-color: var(--gl-control-background-color-disabled); cursor: not-allowed; color: var(--gl-text-color-disabled); }
+.gl-input[readonly] { background-color: var(--gl-control-background-color-readonly); }
+.gl-input--invalid, .gl-input.is-invalid { border-color: var(--gl-control-border-color-error); }
+.gl-input--valid, .gl-input.is-valid { box-shadow: inset 0 0 0 1px var(--gl-control-text-color-valid); }
+.gl-input--width-xs { max-width: var(--gl-spacing-scale-31); }
+.gl-input--width-sm { max-width: var(--gl-spacing-scale-37); }
+.gl-input--width-md { max-width: var(--gl-spacing-scale-48); }
+.gl-input--width-lg { max-width: var(--gl-spacing-scale-62); }
+.gl-input-feedback { font-size: var(--gl-font-size-sm); margin-top: var(--gl-spacing-scale-2); }
+.gl-input-feedback--error { color: var(--gl-control-text-color-error); }
+.gl-input-feedback--valid { color: var(--gl-control-text-color-valid); }</style>
+</head>
+<body>
+  <main class="gl-page">
+    <h1 class="gl-title">Input</h1>
+    <p class="gl-sub">Types text/email/number/password/search/url/tel/date/time; states default, hover, focus, valid, invalid, disabled, readonly.</p>
+
+    <section class="gl-section">
+      <div class="gl-form-group">
+        <label class="gl-label" for="inp-default">Default</label>
+        <input id="inp-default" class="gl-input" type="text" placeholder="Placeholder text">
+      </div>
+      <div class="gl-form-group">
+        <label class="gl-label" for="inp-email">Email (with width lg)</label>
+        <input id="inp-email" class="gl-input gl-input--width-lg" type="email" value="dev@example.co">
+      </div>
+      <div class="gl-form-group">
+        <label class="gl-label" for="inp-invalid">Invalid</label>
+        <input id="inp-invalid" class="gl-input gl-input--invalid" type="text" aria-invalid="true" value="x">
+        <p class="gl-input-feedback gl-input-feedback--error">A project slug must be longer than 2 characters.</p>
+      </div>
+      <div class="gl-form-group">
+        <label class="gl-label" for="inp-valid">Valid</label>
+        <input id="inp-valid" class="gl-input gl-input--valid" type="text" value="my-project">
+        <p class="gl-input-feedback gl-input-feedback--valid">This name is available.</p>
+      </div>
+      <div class="gl-row">
+        <div class="gl-form-group">
+          <label class="gl-label" for="inp-disabled">Disabled</label>
+          <input id="inp-disabled" class="gl-input" type="text" disabled value="disabled">
+        </div>
+        <div class="gl-form-group">
+          <label class="gl-label" for="inp-readonly">Readonly</label>
+          <input id="inp-readonly" class="gl-input" type="text" readonly value="read only">
+        </div>
+      </div>
+      <div class="gl-row">
+        <div class="gl-form-group"><label class="gl-label">Widths</label>
+          <input class="gl-input gl-input--width-xs" type="text" placeholder="xs">
+          <input class="gl-input gl-input--width-sm" type="text" placeholder="sm">
+          <input class="gl-input gl-input--width-md" type="text" placeholder="md">
+          <input class="gl-input gl-input--width-lg" type="text" placeholder="lg">
+        </div>
+      </div>
+      <div class="gl-form-group">
+        <label class="gl-label" for="inp-live">Live validation</label>
+        <input id="inp-live" class="gl-input gl-input--width-md" type="text" placeholder="min 3 characters">
+        <p id="inp-live-fb" class="gl-input-feedback"></p>
+      </div>
+    </section>
+
+    <section class="gl-section">
+      <div class="gl-row">
+        <input class="gl-input gl-input--width-md" type="search" placeholder="Search&hellip;">
+        <input class="gl-input gl-input--width-sm" type="password" placeholder="Password">
+        <input class="gl-input gl-input--width-sm" type="date">
+      </div>
+    </section>
+
+    <script>
+      (function () {
+        var el = document.getElementById('inp-live');
+        var fb = document.getElementById('inp-live-fb');
+        el.addEventListener('blur', function () {
+          var valid = el.value.trim().length >= 3;
+          el.classList.toggle('gl-input--invalid', !valid);
+          el.classList.toggle('gl-input--valid', valid);
+          fb.className = 'gl-input-feedback ' + (valid ? 'gl-input-feedback--valid' : 'gl-input-feedback--error');
+          fb.textContent = valid ? 'Looks good.' : 'Value must be at least 3 characters.';
+        });
+      })();
+    </script>
+  </main>
+</body>
+</html>

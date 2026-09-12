@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Toast</title>
+<link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="base.css">
+    <style>
+.gl-toaster {
+  position: fixed; bottom: var(--gl-spacing-scale-6); left: var(--gl-spacing-scale-6);
+  z-index: var(--gl-zindex-200);
+  display: flex; flex-direction: column; gap: var(--gl-spacing-scale-3);
+  max-width: calc(100vw - var(--gl-spacing-scale-12));
+}
+.gl-toast {
+  display: flex; align-items: center; gap: var(--gl-spacing-scale-3);
+  background-color: var(--gl-feedback-strong-background-color);
+  color: var(--gl-feedback-strong-text-color);
+  border-radius: var(--gl-border-radius-full);
+  box-shadow: var(--gl-shadow-md);
+  padding: var(--gl-spacing-scale-3) var(--gl-spacing-scale-4);
+  font-size: var(--gl-font-size-base);
+}
+.gl-toast-body { flex: 1; }
+.gl-toast-action {
+  color: var(--gl-feedback-strong-link-color);
+  font-weight: var(--gl-font-weight-bold);
+  text-decoration: none; background: none; border: none; cursor: pointer;
+}
+.gl-toast-close {
+  background: none; border: none; cursor: pointer;
+  color: var(--gl-feedback-strong-text-color);
+  display: inline-flex; padding: var(--gl-spacing-scale-1);
+}
+.gl-toast.is-leaving { opacity: 0; transform: translateY(-8px); transition: opacity 200ms ease, transform 200ms ease; }</style>
+</head>
+<body>
+  <main class="gl-page">
+    <h1 class="gl-title">Toast</h1>
+    <p class="gl-sub">Stacked, fixed bottom-left; deep background and high-contrast text. Auto-hides after 5000ms by default.</p>
+
+    <div class="gl-toaster" aria-live="polite">
+      <div class="gl-toast" data-toast>
+        <span class="gl-toast-body">Changes saved.</span>
+        <button class="gl-toast-action">Undo</button>
+        <button class="gl-toast-close" aria-label="Dismiss"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      </div>
+      <div class="gl-toast" data-toast>
+        <span class="gl-toast-body">Pipeline #4821 passed.</span>
+        <button class="gl-toast-action">View</button>
+        <button class="gl-toast-close" aria-label="Dismiss"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      </div>
+    </div>
+
+    <script>
+      document.querySelectorAll('[data-toast]').forEach(function (t) {
+        t.querySelector('.gl-toast-close').addEventListener('click', function () {
+          t.classList.add('is-leaving');
+          setTimeout(function () { t.style.display = 'none'; }, 250);
+        });
+      });
+    </script>
+  </main>
+</body>
+</html>

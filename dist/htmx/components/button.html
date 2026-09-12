@@ -1,0 +1,26 @@
+<!-- Pajamas-inspired (MIT). htmx fragment: button -->
+<style>
+      :focus-visible { outline: none; box-shadow: 0 0 0 2px var(--gl-focus-ring-inner-color), 0 0 0 4px var(--gl-focus-ring-outer-color); }
+      .spin { animation: gl-spin .8s linear infinite; }
+      @keyframes gl-spin { to { transform: rotate(360deg); } }
+      .htmx-indicator { display: none; }
+      .htmx-request .htmx-indicator, .htmx-request.htmx-indicator { display: inline-flex; }
+    </style>
+<div class="flex flex-wrap gap-3 items-center" style="color: var(--gl-text-color-default)">
+  <button
+    hx-post="/save" hx-target="#btn-result" hx-swap="innerHTML"
+    hx-indicator="#btn-spinner" hx-disabled-elt="this"
+    class="inline-flex items-center gap-2 rounded-[var(--gl-button-border-radius)] bg-[var(--gl-button-confirm-primary-background-color-default)] text-[color:var(--gl-button-confirm-primary-foreground-color-default)] px-[var(--gl-spacing-scale-3)] py-[var(--gl-spacing-scale-3)] font-bold htmx-request:bg-[var(--gl-action-disabled-background-color)]">
+    <svg id="btn-spinner" class="htmx-indicator w-4 h-4 spin" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6" fill="none" stroke="currentColor" stroke-width="2" opacity="0.35"/><path d="M14 8a6 6 0 0 0-6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    Save changes
+  </button>
+  <button
+    hx-post="/delete" hx-target="#btn-result" hx-swap="innerHTML" hx-confirm="Delete? This cannot be undone."
+    class="inline-flex items-center rounded-[var(--gl-button-border-radius)] bg-[var(--gl-button-danger-primary-background-color-default)] text-[color:var(--gl-button-danger-primary-foreground-color-default)] px-[var(--gl-spacing-scale-3)] py-[var(--gl-spacing-scale-3)] font-bold">Danger (confirm)</button>
+  <button disabled class="inline-flex items-center rounded-[var(--gl-button-border-radius)] bg-[var(--gl-action-disabled-background-color)] text-[color:var(--gl-action-disabled-foreground-color)] px-[var(--gl-spacing-scale-3)] py-[var(--gl-spacing-scale-3)] font-bold cursor-not-allowed">Disabled</button>
+  <a href="#"
+     class="inline-flex items-center rounded-[var(--gl-button-link-border-radius)] px-[var(--gl-spacing-scale-3)] py-[var(--gl-spacing-scale-3)] font-bold underline"
+     style="color: var(--gl-button-link-text-color-default); border: 1px solid transparent">Link</a>
+  <button hx-boost="true" class="w-full flex items-center justify-center rounded-[var(--gl-button-border-radius)] bg-[var(--gl-button-danger-secondary-background-color-default)] text-[color:var(--gl-button-danger-secondary-foreground-color-default)] px-[var(--gl-spacing-scale-3)] py-[var(--gl-spacing-scale-3)] font-bold">Block (hx-boost)</button>
+</div>
+<div id="btn-result" role="status" style="color: var(--gl-text-color-subtle); margin-top: var(--gl-spacing-scale-3)">Server response lands here.</div>

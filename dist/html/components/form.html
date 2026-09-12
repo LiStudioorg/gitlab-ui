@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Form</title>
+<link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="base.css">
+    <style>
+.gl-form { display: flex; flex-direction: column; }
+.gl-form-group { margin-bottom: var(--gl-spacing-scale-5); }
+.gl-label {
+  display: block; font-weight: var(--gl-font-weight-bold);
+  font-size: var(--gl-font-size-base);
+  color: var(--gl-text-color-strong);
+  margin-bottom: var(--gl-spacing-scale-2);
+}
+.gl-label .gl-optional { color: var(--gl-text-color-subtle); font-weight: var(--gl-font-weight-normal); }
+.gl-label-desc { display: block; color: var(--gl-text-color-subtle); font-size: var(--gl-font-size-sm); font-weight: var(--gl-font-weight-normal); margin-top: var(--gl-spacing-scale-1); }
+.gl-helper { font-size: var(--gl-font-size-sm); color: var(--gl-text-color-subtle); margin-top: var(--gl-spacing-scale-2); }
+.gl-feedback { font-size: var(--gl-font-size-sm); margin-top: var(--gl-spacing-scale-2); }
+.gl-feedback--error { color: var(--gl-control-text-color-error); }
+.gl-feedback--valid { color: var(--gl-control-text-color-valid); }</style>
+</head>
+<body>
+  <main class="gl-page">
+    <h1 class="gl-title">Form</h1>
+    <p class="gl-sub">Form group with label (+ optional), description, helper text, validity feedback; uniform field spacing.</p>
+
+    <form class="gl-form">
+      <div class="gl-form-group">
+        <label class="gl-label" for="f-name">Project name</label>
+        <span class="gl-label-desc">Remember: the name cannot be changed later.</span>
+        <input id="f-name" class="gl-input gl-input--width-lg" type="text" value="my-project">
+        <p class="gl-feedback gl-feedback--valid">This name is available.</p>
+      </div>
+
+      <div class="gl-form-group">
+        <label class="gl-label" for="f-slug">Slug <span class="gl-optional">(optional)</span></label>
+        <input id="f-slug" class="gl-input" type="text" placeholder="auto-generated">
+        <p class="gl-helper">Used in the repository URL.</p>
+      </div>
+
+      <div class="gl-form-group">
+        <label class="gl-label" for="f-email">Email</label>
+        <input id="f-email" class="gl-input gl-input--invalid" type="email" value="dev@example">
+        <p class="gl-feedback gl-feedback--error">Please enter a valid email address.</p>
+      </div>
+
+      <div class="gl-form-group">
+        <label class="gl-label" for="f-desc">Description</label>
+        <textarea id="f-desc" class="gl-input gl-input--width-lg" rows="3" placeholder="Short description"></textarea>
+      </div>
+
+      <div>
+        <button class="gl-button gl-button--primary--confirm" type="submit">Create project</button>
+        <button class="gl-button gl-button--default--secondary" type="button">Cancel</button>
+      </div>
+    </form>
+
+    <script>
+      (function () {
+        var form = document.querySelector('.gl-form');
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          var name = document.getElementById('f-name');
+          var email = document.getElementById('f-email');
+          var rgx = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+          var ok = true;
+          var set = function (el, valid) {
+            var group = el.closest('.gl-form-group');
+            var p = group.querySelector('.gl-feedback');
+            el.classList.toggle('gl-input--invalid', !valid);
+            el.classList.toggle('gl-input--valid', valid);
+            p.className = 'gl-feedback ' + (valid ? 'gl-feedback--valid' : 'gl-feedback--error');
+            p.textContent = valid ? 'Looks good.' : 'Please check this field.';
+            ok = ok && valid;
+          };
+          set(name, name.value.trim().length >= 3);
+          set(email, rgx.test(email.value));
+          if (ok) form.reset();
+        });
+      })();
+    </script>
+  </main>
+</body>
+</html>

@@ -1,0 +1,13 @@
+//  GitLab Pajamas design tokens (MIT)
+//  Generated from @gitlab/ui by scripts/build-tokens.js. Do not edit.
+// Margin/padding/typography helpers built on tokens.
+@mixin gl-focus($color: var(--gl-focus-ring-outer-color), $width: 2px) {
+  outline: none;
+  box-shadow: 0 0 0 $width $color;
+}
+@mixin gl-bg($color) { background-color: $color; }
+@mixin gl-text($color) { color: $color; }
+@mixin gl-border-radius($radius: var(--gl-border-radius-md)) { border-radius: $radius; }
+@mixin gl-transition($props: all) {
+  transition: $props var(--gl-transition-duration-medium, 0.15s) var(--gl-easing-out-cubic, ease-out);
+}

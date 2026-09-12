@@ -1,0 +1,22 @@
+<!-- Pajamas-inspired (MIT). htmx fragment: badge -->
+<style>
+      :focus-visible { outline: none; box-shadow: 0 0 0 2px var(--gl-focus-ring-inner-color), 0 0 0 4px var(--gl-focus-ring-outer-color); }
+      .spin { animation: gl-spin .8s linear infinite; }
+      @keyframes gl-spin { to { transform: rotate(360deg); } }
+      .htmx-indicator { display: none; }
+      .htmx-request .htmx-indicator, .htmx-request.htmx-indicator { display: inline-flex; }
+    </style>
+<div style="color: var(--gl-text-color-default)">
+  <div class="flex flex-wrap gap-3 items-center">
+    <span class="inline-flex items-center gap-2 rounded-[var(--gl-border-radius-full)] bg-[var(--gl-badge-neutral-background-color-default)] text-[color:var(--gl-badge-neutral-text-color-default)] px-2 py-1 text-[length:var(--gl-font-size-sm)] font-bold">neutral</span>
+    <span class="inline-flex items-center gap-2 rounded-[var(--gl-border-radius-full)] bg-[var(--gl-badge-info-background-color-default)] text-[color:var(--gl-badge-info-text-color-default)] px-2 py-1 text-[length:var(--gl-font-size-sm)] font-bold">info</span>
+    <span class="inline-flex items-center gap-2 rounded-[var(--gl-border-radius-full)] bg-[var(--gl-badge-success-background-color-default)] text-[color:var(--gl-badge-success-text-color-default)] px-2 py-1 text-[length:var(--gl-font-size-sm)] font-bold"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8l3.5 3.5L13 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Passed</span>
+    <span class="inline-flex items-center gap-2 rounded-[var(--gl-border-radius-full)] bg-[var(--gl-badge-warning-background-color-default)] text-[color:var(--gl-badge-warning-text-color-default)] px-2 py-1 text-[length:var(--gl-font-size-sm)] font-bold">warning</span>
+    <span class="inline-flex items-center gap-2 rounded-[var(--gl-border-radius-full)] bg-[var(--gl-badge-danger-background-color-default)] text-[color:var(--gl-badge-danger-text-color-default)] px-2 py-1 text-[length:var(--gl-font-size-sm)] font-bold">undefined Failed</span>
+    <span class="inline-flex items-center gap-2 rounded-[var(--gl-border-radius-full)] bg-[var(--gl-badge-tier-background-color-default)] text-[color:var(--gl-badge-tier-text-color-default)] px-2 py-1 text-[length:var(--gl-font-size-sm)] font-bold">Premium</span>
+    <a href="#" class="inline-flex items-center rounded-[var(--gl-border-radius-full)] bg-[var(--gl-badge-success-background-color-default)] text-[color:var(--gl-badge-success-text-color-default)] px-2 py-1 text-[length:var(--gl-font-size-sm)] font-bold no-underline hover:shadow-[inset_0_0_0_1px_var(--gl-border-color-strong)]">link badge</a>
+    <button hx-get="/badge.html" hx-target="#badge-slot" hx-swap="innerHTML"
+            class="inline-flex items-center rounded-[var(--gl-border-radius-full)] bg-[var(--gl-button-link-text-color-default)] px-2 py-1 text-[length:var(--gl-font-size-sm)] font-bold cursor-pointer" style="color: var(--gl-button-link-text-color-default)">+ load ></button>
+  </div>
+  <div id="badge-slot" class="mt-3"></div>
+</div>

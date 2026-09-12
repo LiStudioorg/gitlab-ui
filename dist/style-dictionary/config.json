@@ -1,0 +1,58 @@
+{
+  "source": [
+    "dist/json/tokens.json",
+    "dist/figma/tokens.json"
+  ],
+  "platforms": {
+    "css": {
+      "transformGroup": "css",
+      "buildPath": "build/css/",
+      "files": [
+        {
+          "destination": "tokens.css",
+          "format": "css/variables"
+        }
+      ]
+    },
+    "scss": {
+      "transformGroup": "scss",
+      "buildPath": "build/scss/",
+      "files": [
+        {
+          "destination": "_variables.scss",
+          "format": "scss/variables"
+        }
+      ]
+    },
+    "json-flat": {
+      "transformGroup": "js",
+      "buildPath": "build/json/",
+      "files": [
+        {
+          "destination": "tokens.json",
+          "format": "json/flat"
+        }
+      ]
+    },
+    "android": {
+      "transformGroup": "android",
+      "buildPath": "build/android/",
+      "files": [
+        {
+          "destination": "tokens.xml",
+          "format": "android/resources"
+        }
+      ]
+    },
+    "ios-swift": {
+      "transformGroup": "ios-swift",
+      "buildPath": "build/ios/",
+      "files": [
+        {
+          "destination": "tokens.swift",
+          "format": "ios-swift/class.swift"
+        }
+      ]
+    }
+  }
+}

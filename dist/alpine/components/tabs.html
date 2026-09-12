@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tabs</title>
+<link rel="stylesheet" href="../../css/variables.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <style>
+      :focus-visible { outline: none; box-shadow: 0 0 0 2px var(--gl-focus-ring-inner-color), 0 0 0 4px var(--gl-focus-ring-outer-color); }
+      .spin { animation: gl-spin .8s linear infinite; }
+      @keyframes gl-spin { to { transform: rotate(360deg); } }
+      .gl-tab-btn { position: relative; }
+      .gl-tab-btn::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; border-radius: 1px; background-color: var(--gl-color-alpha-0); }
+      .gl-tab-btn:hover::after { background-color: var(--gl-border-color-strong); }
+      .gl-tab-btn[data-active='true'] { font-weight: var(--gl-font-weight-bold); }
+      .gl-tab-btn[data-active='true']::after { background-color: var(--gl-tab-selected-indicator-color-default); }
+      body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    </style>
+</head>
+<body>
+  <main class="max-w-3xl mx-auto my-8 px-8" x-data="{
+      tabs: [
+        { title: 'Overview', count: 3, content: 'Overview content' },
+        { title: 'Commits', count: 48, content: 'Commits content' },
+        { title: 'Pipelines', count: 12, content: 'Pipelines content' },
+        { title: 'Locked', count: null, content: '', disabled: true },
+      ],
+      active: 0,
+    }">
+    <h1 class="text-[length:var(--gl-heading-scale-500-font-size)] font-bold mb-4" style="color: var(--gl-text-color-heading)">Tabs</h1>
+    <p class="mb-6" style="color: var(--gl-text-color-subtle)">Active indicator + count badges; content panes via x-show.</p>
+
+    <div class="border-b border-[var(--gl-border-color-default)]">
+      <div class="flex gap-[var(--gl-spacing-scale-2)] overflow-x-auto">
+        <button x-for="(t, i) in tabs" :key="i" @click="!t.disabled && (active = i)"
+          class="gl-tab-btn relative inline-flex items-center gap-2 px-[var(--gl-spacing-scale-4)] py-[var(--gl-spacing-scale-4)] text-[length:var(--gl-font-size-base)] whitespace-nowrap bg-transparent border-0 cursor-pointer"
+          :class="t.disabled ? 'text-[color:var(--gl-action-disabled-foreground-color)] cursor-not-allowed' : 'hover:text-[color:var(--gl-text-color-strong)]'"
+          :data-active="active === i && !t.disabled"
+          :style="t.disabled ? { color: 'var(--gl-action-disabled-foreground-color)' } : active === i ? { color: 'var(--gl-text-color-strong)' } : { color: 'var(--gl-text-color-subtle)' }">
+          <span x-text="t.title"></span>
+          <span x-show="t.count != null" class="inline-flex items-center rounded-[var(--gl-border-radius-full)] bg-[var(--gl-badge-neutral-background-color-default)] px-[var(--gl-spacing-scale-2)] text-[length:var(--gl-font-size-sm)] font-bold" style="color: var(--gl-badge-neutral-text-color-default)" x-text="t.count"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="py-[var(--gl-spacing-scale-4)]" style="color: var(--gl-text-color-default)">
+      <template x-for="(t, i) in tabs" :key="i">
+        <div x-show="active === i" role="tabpanel" class="p-[var(--gl-spacing-scale-4)]" style="padding-top: var(--gl-spacing-scale-5)" x-text="t.content"></div>
+      </template>
+    </div>
+  </main>
+</body>
+</html>

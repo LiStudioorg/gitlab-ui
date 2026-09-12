@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alert</title>
+<link rel="stylesheet" href="../../css/variables.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <style>
+      :focus-visible { outline: none; box-shadow: 0 0 0 2px var(--gl-focus-ring-inner-color), 0 0 0 4px var(--gl-focus-ring-outer-color); }
+      .spin { animation: gl-spin .8s linear infinite; }
+      @keyframes gl-spin { to { transform: rotate(360deg); } }
+      .gl-tab-btn { position: relative; }
+      .gl-tab-btn::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; border-radius: 1px; background-color: var(--gl-color-alpha-0); }
+      .gl-tab-btn:hover::after { background-color: var(--gl-border-color-strong); }
+      .gl-tab-btn[data-active='true'] { font-weight: var(--gl-font-weight-bold); }
+      .gl-tab-btn[data-active='true']::after { background-color: var(--gl-tab-selected-indicator-color-default); }
+      body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    </style>
+</head>
+<body>
+  <main class="max-w-3xl mx-auto my-8 px-8" style="color: var(--gl-text-color-default)">
+    <h1 class="text-[length:var(--gl-heading-scale-500-font-size)] font-bold mb-4" style="color: var(--gl-text-color-heading)">Alert</h1>
+    <p class="mb-6" style="color: var(--gl-text-color-subtle)">Embedded alerts with icon + title; dismissible; role=alert for danger; sticky option.</p>
+
+    <div class="space-y-[var(--gl-spacing-scale-3)]" style="margin-bottom: var(--gl-spacing-scale-6)">
+
+      <div x-data="{ gone: false }" x-show="!gone" class="flex gap-3 rounded-[var(--gl-alert-border-radius)]" role="status" style="background-color: var(--gl-alert-info-background-color); border: 1px solid var(--gl-alert-info-border-color); padding: var(--gl-spacing-scale-4)">
+        <span class="inline-flex" style="color: var(--gl-feedback-info-icon-color)"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 11V7.5M8 5v.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+        <div class="flex-1 min-w-0">
+          <h3 class="font-bold m-0 mb-1" style="color: var(--gl-alert-info-title-color); font-size: var(--gl-font-size-base)">Information</h3>
+          <p class="m-0" style="color: var(--gl-text-color-default)">A scheduled maintenance window starts at 02:00 UTC.</p>
+        </div>
+        <button class="bg-transparent border-0 cursor-pointer rounded" style="color: var(--gl-text-color-subtle); padding: var(--gl-spacing-scale-1)" aria-label="Dismiss" @click="gone = true"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      </div>
+      <div x-data="{ gone: false }" x-show="!gone" class="flex gap-3 rounded-[var(--gl-alert-border-radius)]" role="status" style="background-color: var(--gl-alert-success-background-color); border: 1px solid var(--gl-alert-success-border-color); padding: var(--gl-spacing-scale-4)">
+        <span class="inline-flex" style="color: var(--gl-feedback-success-icon-color)"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8l3.5 3.5L13 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <div class="flex-1 min-w-0">
+          <h3 class="font-bold m-0 mb-1" style="color: var(--gl-alert-success-title-color); font-size: var(--gl-font-size-base)">Success</h3>
+          <p class="m-0" style="color: var(--gl-text-color-default)">Your changes were published.</p>
+        </div>
+        <button class="bg-transparent border-0 cursor-pointer rounded" style="color: var(--gl-text-color-subtle); padding: var(--gl-spacing-scale-1)" aria-label="Dismiss" @click="gone = true"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      </div>
+      <div x-data="{ gone: false }" x-show="!gone" class="flex gap-3 rounded-[var(--gl-alert-border-radius)]" role="status" style="background-color: var(--gl-alert-warning-background-color); border: 1px solid var(--gl-alert-warning-border-color); padding: var(--gl-spacing-scale-4)">
+        <span class="inline-flex" style="color: var(--gl-feedback-warning-icon-color)">undefined</span>
+        <div class="flex-1 min-w-0">
+          <h3 class="font-bold m-0 mb-1" style="color: var(--gl-alert-warning-title-color); font-size: var(--gl-font-size-base)">Warning</h3>
+          <p class="m-0" style="color: var(--gl-text-color-default)">This branch has unmerged changes.</p>
+        </div>
+        <button class="bg-transparent border-0 cursor-pointer rounded" style="color: var(--gl-text-color-subtle); padding: var(--gl-spacing-scale-1)" aria-label="Dismiss" @click="gone = true"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      </div>
+      <div x-data="{ gone: false }" x-show="!gone" class="flex gap-3 rounded-[var(--gl-alert-border-radius)]" role="alert" style="background-color: var(--gl-alert-danger-background-color); border: 1px solid var(--gl-alert-danger-border-color); padding: var(--gl-spacing-scale-4)">
+        <span class="inline-flex" style="color: var(--gl-feedback-danger-icon-color)">undefined</span>
+        <div class="flex-1 min-w-0">
+          <h3 class="font-bold m-0 mb-1" style="color: var(--gl-alert-danger-title-color); font-size: var(--gl-font-size-base)">Build failed</h3>
+          <p class="m-0" style="color: var(--gl-text-color-default)">Job 3 timed out after 10 minutes. Retry or inspect the logs.</p>
+        </div>
+        <button class="bg-transparent border-0 cursor-pointer rounded" style="color: var(--gl-text-color-subtle); padding: var(--gl-spacing-scale-1)" aria-label="Dismiss" @click="gone = true"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      </div>
+    </div>
+
+    <div class="sticky flex gap-3 rounded-[var(--gl-alert-border-radius)]" style="background-color: var(--gl-alert-info-background-color); border: 1px solid var(--gl-alert-info-border-color); padding: var(--gl-spacing-scale-4); top: var(--gl-spacing-scale-5)">
+      <span class="inline-flex" style="color: var(--gl-feedback-info-icon-color)"><svg class="gl-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.5a4.5 4.5 0 0 0-3 7.9c.6.5 1 1.3 1 2.1v.5h4v-.5c0-.8.4-1.6 1-2.1A4.5 4.5 0 0 0 8 1.5z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M6.5 13.5h3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+      <div class="flex-1">
+        <h3 class="font-bold m-0 mb-1" style="color: var(--gl-alert-info-title-color); font-size: var(--gl-font-size-base)">Tip (sticky)</h3>
+        <p class="m-0" style="color: var(--gl-text-color-default)">This alert stays pinned to the top of the viewport.</p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
